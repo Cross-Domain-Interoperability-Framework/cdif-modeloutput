@@ -1,0 +1,9 @@
+# class DataStore
+# based on the UML class CDIF::DDSC::Classes::DataStore
+ddsc:DataStoreShape CLOSED {
+	a [ddsc:DataStore];
+	ddsc:DataStore-name	@ddsc:ObjectNameShape;
+	ddsc:DataStore_has_LogicalRecord	@ddsc:LogicalRecordShape +;
+	
+	}
+

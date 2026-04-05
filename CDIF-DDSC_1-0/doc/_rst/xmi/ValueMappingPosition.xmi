@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.ValueMappingPosition"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.ValueMappingPosition-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Denotes the position of a value mapping in a sequence.</body>
+      <annotatedElement xmi:idref="ddsc.ValueMappingPosition"/>
+   </ownedComment>
+   <name>ValueMappingPosition</name>
+   <ownedAttribute xmi:id="ddsc.ValueMappingPosition-value"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition-value"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ValueMappingPosition-value-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition-value-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Index value of the member in an ordered array.</body>
+         <annotatedElement xmi:idref="ddsc.ValueMappingPosition-value"/>
+      </ownedComment>
+      <name>value</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMappingPosition-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.ValueMapping"/>
+      <upperValue xmi:id="ddsc.ValueMappingPosition-ownedAttribute-2-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition-ownedAttribute-2-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.ValueMappingPosition_indexes_ValueMapping"/>
+   </ownedAttribute>
+</packagedElement>

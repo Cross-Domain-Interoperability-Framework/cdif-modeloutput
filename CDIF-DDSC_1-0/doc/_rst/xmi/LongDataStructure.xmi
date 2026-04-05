@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.LongDataStructure"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.LongDataStructure-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.
+
+Examples
+==========
+The structure described by [Unit id, Income, Province, Variable name, Variable value] where Unit id identifies a statistical unit, Income and Province are two instance variables capturing characteristics, and other instance variables are represented by Variable name (a variable descriptor component) and Variable Value (a variable value component).</body>
+      <annotatedElement xmi:idref="ddsc.LongDataStructure"/>
+   </ownedComment>
+   <name>LongDataStructure</name>
+   <ownedAttribute xmi:id="ddsc.LongDataStructure-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.IdentifierComponent"/>
+      <upperValue xmi:id="ddsc.LongDataStructure-ownedAttribute-1-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-1-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LongDataStructure_has_IdentifierComponent"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LongDataStructure-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.AttributeComponent"/>
+      <upperValue xmi:id="ddsc.LongDataStructure-ownedAttribute-2-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-2-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LongDataStructure_has_AttributeComponent"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LongDataStructure-ownedAttribute-3"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-3"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.VariableDescriptorComponent"/>
+      <upperValue xmi:id="ddsc.LongDataStructure-ownedAttribute-3-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-3-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LongDataStructure_has_VariableDescriptorComponent"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LongDataStructure-ownedAttribute-4"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-4"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.VariableValueComponent"/>
+      <upperValue xmi:id="ddsc.LongDataStructure-ownedAttribute-4-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure-ownedAttribute-4-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LongDataStructure_has_VariableValueComponent"/>
+   </ownedAttribute>
+</packagedElement>

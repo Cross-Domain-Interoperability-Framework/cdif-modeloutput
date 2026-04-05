@@ -1,0 +1,21 @@
+# class ValueMapping
+# based on the UML class CDIF::DDSC::Classes::ValueMapping
+ddsc:ValueMappingShape CLOSED {
+	a [ddsc:ValueMapping];
+	ddsc:ValueMapping-decimalPositions	xsd:integer;
+	ddsc:ValueMapping-defaultDecimalSeparator	xsd:string;
+	ddsc:ValueMapping-length	xsd:integer;
+	ddsc:ValueMapping-maximumLength	xsd:integer;
+	ddsc:ValueMapping-minimumLength	xsd:integer;
+	^ddsc:PhysicalSegmentLayout_has_ValueMapping @ddsc:PhysicalSegmentLayoutShape +;
+	ddsc:ValueMapping_formats_InstanceVariable	@ddsc:InstanceVariableShape +;
+	
+	ddsc:ValueMapping_formats_RepresentedVariable	@ddsc:RepresentedVariableShape +;
+	
+	ddsc:ValueMapping_formats_ReferenceVariable	@ddsc:ReferenceVariableShape +;
+	
+	ddsc:ValueMapping_formats_DescriptorVariable	@ddsc:DescriptorVariableShape +;
+	
+	^ddsc:ValueMappingPosition_indexes_ValueMapping @ddsc:ValueMappingPositionShape +;
+	}
+

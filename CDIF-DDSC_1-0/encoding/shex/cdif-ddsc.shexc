@@ -1,0 +1,563 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc:    <http://purl.org/dc/elements/1.1/>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX ddsc:   <http://w3id.org/cdif/ddsc/1.0/ddsc/>
+PREFIX ucmis: <http://ddialliance.org/Specification/UCMIS/1.0/RDF>
+
+start = @http://w3id.org/cdif/ddsc/1.0/ddsc/:WideDataSetShape
+
+# class AttributeComponent
+# based on the UML class CDIF::DDSC::Classes::AttributeComponent
+ddsc:AttributeComponentShape CLOSED {
+	a [ddsc:AttributeComponent];
+	^ddsc:WideDataStructure_has_AttributeComponent @ddsc:WideDataStructureShape ;
+	^ddsc:LongDataStructure_has_AttributeComponent @ddsc:LongDataStructureShape ;
+	^ddsc:DimensionalDataStructure_has_AttributeComponent @ddsc:DimensionalDataStructureShape ;
+	ddsc:AttributeComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	}
+
+# class ComponentPosition
+# based on the UML class CDIF::DDSC::Classes::ComponentPosition
+ddsc:ComponentPositionShape CLOSED {
+	a [ddsc:ComponentPosition];
+	ddsc:ComponentPosition-value	xsd:integer;
+	^ddsc:DimensionalDataStructure_has_ComponentPosition @ddsc:DimensionalDataStructureShape ;
+	ddsc:ComponentPosition_indexes_DimensionComponent	@ddsc:DimensionComponentShape ;
+	
+	}
+
+# class DataStore
+# based on the UML class CDIF::DDSC::Classes::DataStore
+ddsc:DataStoreShape CLOSED {
+	a [ddsc:DataStore];
+	ddsc:DataStore-name	@ddsc:ObjectNameShape;
+	ddsc:DataStore_has_LogicalRecord	@ddsc:LogicalRecordShape +;
+	
+	}
+
+# class Descriptor
+# based on the UML class CDIF::DDSC::Classes::Descriptor
+ddsc:DescriptorShape CLOSED {
+	a [ddsc:Descriptor];
+	ddsc:Descriptor-content	@ddsc:TypedStringShape;
+	ddsc:Descriptor_identifies_InstanceVariable	@ddsc:InstanceVariableShape +;
+	
+	}
+
+# class DescriptorValueDomain
+# based on the UML class CDIF::DDSC::Classes::DescriptorValueDomain
+ddsc:DescriptorValueDomainShape CLOSED {
+	a [ddsc:DescriptorValueDomain];
+	^ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain @ddsc:DescriptorVariableShape ;
+	}
+
+# class DescriptorVariable
+# based on the UML class CDIF::DDSC::Classes::DescriptorVariable
+ddsc:DescriptorVariableShape CLOSED {
+	a [ddsc:DescriptorVariable];
+	ddsc:DescriptorVariable-name	@ddsc:ObjectNameShape;
+	ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain	@ddsc:DescriptorValueDomainShape +;
+	
+	^ddsc:ValueMapping_formats_DescriptorVariable @ddsc:ValueMappingShape ;
+	}
+
+# class DimensionComponent
+# based on the UML class CDIF::DDSC::Classes::DimensionComponent
+ddsc:DimensionComponentShape CLOSED {
+	a [ddsc:DimensionComponent];
+	ddsc:DimensionComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	^ddsc:ComponentPosition_indexes_DimensionComponent @ddsc:ComponentPositionShape +;
+	}
+
+# class DimensionalDataSet
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataSet
+ddsc:DimensionalDataSetShape CLOSED {
+	a [ddsc:DimensionalDataSet];
+	ddsc:DimensionalDataSet-name	@ddsc:ObjectNameShape;
+	ddsc:DimensionalDataSet-physicalFileName	xsd:string;
+	^ddsc:LogicalRecord_organizes_DimensionalDataSet @ddsc:LogicalRecordShape +;
+	}
+
+# class DimensionalDataStructure
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataStructure
+ddsc:DimensionalDataStructureShape CLOSED {
+	a [ddsc:DimensionalDataStructure];
+	ddsc:DimensionalDataStructure_has_IdentifierComponent	@ddsc:IdentifierComponentShape +;
+	
+	ddsc:DimensionalDataStructure_has_AttributeComponent	@ddsc:AttributeComponentShape +;
+	
+	ddsc:DimensionalDataStructure_has_MeasureComponent	@ddsc:MeasureComponentShape +;
+	
+	ddsc:DimensionalDataStructure_has_ComponentPosition	@ddsc:ComponentPositionShape +;
+	
+	}
+
+# class IdentifierComponent
+# based on the UML class CDIF::DDSC::Classes::IdentifierComponent
+ddsc:IdentifierComponentShape CLOSED {
+	a [ddsc:IdentifierComponent];
+	^ddsc:WideDataStructure_has_IdentifierComponent @ddsc:WideDataStructureShape ;
+	^ddsc:LongDataStructure_has_IdentifierComponent @ddsc:LongDataStructureShape ;
+	^ddsc:DimensionalDataStructure_has_IdentifierComponent @ddsc:DimensionalDataStructureShape ;
+	ddsc:IdentifierComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	^ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent @ddsc:PrimaryKeyComponentShape ;
+	}
+
+# class InstanceVariable
+# based on the UML class CDIF::DDSC::Classes::InstanceVariable
+ddsc:InstanceVariableShape CLOSED {
+	a [ddsc:InstanceVariable];
+	ddsc:InstanceVariable-definition	@ddsc:InternationalStringShape;
+	ddsc:InstanceVariable-describedUnitOfMeasure	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:InstanceVariable-name	@ddsc:ObjectNameShape;
+	ddsc:InstanceVariable-unitOfMeasureKind	@ddsc:ControlledVocabularyEntryShape;
+	^ddsc:LogicalRecord_has_InstanceVariable @ddsc:LogicalRecordShape +;
+	ddsc:InstanceVariable_measures_Population	@ddsc:PopulationShape +;
+	
+	ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@ddsc:SubstantiveValueDomainShape ;
+	
+	ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain	@ddsc:SentinelValueDomainShape +;
+	
+	^ddsc:Descriptor_identifies_InstanceVariable @ddsc:DescriptorShape +;
+	^ddsc:IdentifierComponent_isDefinedBy_InstanceVariable @ddsc:IdentifierComponentShape ;
+	^ddsc:MeasureComponent_isDefinedBy_InstanceVariable @ddsc:MeasureComponentShape ;
+	^ddsc:AttributeComponent_isDefinedBy_InstanceVariable @ddsc:AttributeComponentShape ;
+	^ddsc:DimensionComponent_isDefinedBy_InstanceVariable @ddsc:DimensionComponentShape ;
+	^ddsc:ValueMapping_formats_InstanceVariable @ddsc:ValueMappingShape ;
+	}
+
+# class LogicalRecord
+# based on the UML class CDIF::DDSC::Classes::LogicalRecord
+ddsc:LogicalRecordShape CLOSED {
+	a [ddsc:LogicalRecord];
+	^ddsc:DataStore_has_LogicalRecord @ddsc:DataStoreShape +;
+	ddsc:LogicalRecord_organizes_WideDataSet	@ddsc:WideDataSetShape +;
+	
+	ddsc:LogicalRecord_organizes_LongDataSet	@ddsc:LongDataSetShape +;
+	
+	ddsc:LogicalRecord_organizes_DimensionalDataSet	@ddsc:DimensionalDataSetShape +;
+	
+	ddsc:LogicalRecord_has_InstanceVariable	@ddsc:InstanceVariableShape +;
+	
+	ddsc:LogicalRecord_isDefinedBy_UnitType	@ddsc:UnitTypeShape +;
+	
+	ddsc:LogicalRecord_isDefinedBy_Universe	@ddsc:UniverseShape +;
+	
+	ddsc:LogicalRecord_isDefinedBy_Population	@ddsc:PopulationShape +;
+	
+	^ddsc:PhysicalSegmentLayout_formats_LogicalRecord @ddsc:PhysicalSegmentLayoutShape +;
+	}
+
+# class LongDataSet
+# based on the UML class CDIF::DDSC::Classes::LongDataSet
+ddsc:LongDataSetShape CLOSED {
+	a [ddsc:LongDataSet];
+	ddsc:LongDataSet-name	@ddsc:ObjectNameShape;
+	ddsc:LongDataSet-physicalFileName	xsd:string;
+	^ddsc:LogicalRecord_organizes_LongDataSet @ddsc:LogicalRecordShape +;
+	}
+
+# class LongDataStructure
+# based on the UML class CDIF::DDSC::Classes::LongDataStructure
+ddsc:LongDataStructureShape CLOSED {
+	a [ddsc:LongDataStructure];
+	ddsc:LongDataStructure_has_IdentifierComponent	@ddsc:IdentifierComponentShape +;
+	
+	ddsc:LongDataStructure_has_AttributeComponent	@ddsc:AttributeComponentShape +;
+	
+	ddsc:LongDataStructure_has_VariableDescriptorComponent	@ddsc:VariableDescriptorComponentShape +;
+	
+	ddsc:LongDataStructure_has_VariableValueComponent	@ddsc:VariableValueComponentShape +;
+	
+	}
+
+# class MeasureComponent
+# based on the UML class CDIF::DDSC::Classes::MeasureComponent
+ddsc:MeasureComponentShape CLOSED {
+	a [ddsc:MeasureComponent];
+	^ddsc:WideDataStructure_has_MeasureComponent @ddsc:WideDataStructureShape ;
+	^ddsc:DimensionalDataStructure_has_MeasureComponent @ddsc:DimensionalDataStructureShape ;
+	ddsc:MeasureComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	}
+
+# class PhysicalSegmentLayout
+# based on the UML class CDIF::DDSC::Classes::PhysicalSegmentLayout
+ddsc:PhysicalSegmentLayoutShape CLOSED {
+	a [ddsc:PhysicalSegmentLayout];
+	ddsc:PhysicalSegmentLayout-delimiter	xsd:string;
+	ddsc:PhysicalSegmentLayout-encoding	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:PhysicalSegmentLayout-escapeCharacter	xsd:string;
+	ddsc:PhysicalSegmentLayout-hasHeader	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-headerRowCount	xsd:integer;
+	ddsc:PhysicalSegmentLayout-isDelimited	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-isFixedWidth	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-lineTerminator	xsd:string+;
+	ddsc:PhysicalSegmentLayout-quoteCharacter	xsd:string;
+	ddsc:PhysicalSegmentLayout-skipInitialSpace	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-trim	@ddsc:TrimValuesShape;
+	ddsc:PhysicalSegmentLayout_formats_LogicalRecord	@ddsc:LogicalRecordShape ;
+	
+	ddsc:PhysicalSegmentLayout_has_ValueMapping	@ddsc:ValueMappingShape +;
+	
+	ddsc:PhysicalSegmentLayout_has_ValueMappingPosition	@ddsc:ValueMappingPositionShape +;
+	
+	}
+
+# class Population
+# based on the UML class CDIF::DDSC::Classes::Population
+ddsc:PopulationShape CLOSED {
+	a [ddsc:Population];
+	ddsc:Population-descriptiveText	@ddsc:InternationalStringShape;
+	ddsc:Population-name	@ddsc:ObjectNameShape;
+	^ddsc:LogicalRecord_isDefinedBy_Population @ddsc:LogicalRecordShape +;
+	^ddsc:InstanceVariable_measures_Population @ddsc:InstanceVariableShape ;
+	ddsc:Population_uses_Universe	@ddsc:UniverseShape ;
+	
+	}
+
+# class PrimaryKey
+# based on the UML class CDIF::DDSC::Classes::PrimaryKey
+ddsc:PrimaryKeyShape CLOSED {
+	a [ddsc:PrimaryKey];
+	^ddsc:WideDataStructure_has_PrimaryKey @ddsc:WideDataStructureShape ;
+	ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent	@ddsc:PrimaryKeyComponentShape +;
+	
+	}
+
+# class PrimaryKeyComponent
+# based on the UML class CDIF::DDSC::Classes::PrimaryKeyComponent
+ddsc:PrimaryKeyComponentShape CLOSED {
+	a [ddsc:PrimaryKeyComponent];
+	^ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent @ddsc:PrimaryKeyShape ;
+	ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent	@ddsc:IdentifierComponentShape ;
+	
+	}
+
+# class ReferenceVariable
+# based on the UML class CDIF::DDSC::Classes::ReferenceVariable
+ddsc:ReferenceVariableShape CLOSED {
+	a [ddsc:ReferenceVariable];
+	ddsc:ReferenceVariable-name	@ddsc:ObjectNameShape;
+	ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@ddsc:SubstantiveValueDomainShape ;
+	
+	ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain	@ddsc:SentinelValueDomainShape +;
+	
+	^ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable @ddsc:VariableValueComponentShape ;
+	^ddsc:ValueMapping_formats_ReferenceVariable @ddsc:ValueMappingShape ;
+	}
+
+# class RepresentedVariable
+# based on the UML class CDIF::DDSC::Classes::RepresentedVariable
+ddsc:RepresentedVariableShape CLOSED {
+	a [ddsc:RepresentedVariable];
+	ddsc:RepresentedVariable-definition	@ddsc:InternationalStringShape;
+	ddsc:RepresentedVariable-describedUnitOfMeasure	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:RepresentedVariable-name	@ddsc:ObjectNameShape;
+	ddsc:RepresentedVariable-unitOfMeasureKind	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:RepresentedVariable_measures_Universe	@ddsc:UniverseShape +;
+	
+	ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@ddsc:SubstantiveValueDomainShape ;
+	
+	ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain	@ddsc:SentinelValueDomainShape +;
+	
+	^ddsc:ValueMapping_formats_RepresentedVariable @ddsc:ValueMappingShape ;
+	}
+
+# class SentinelValueDomain
+# based on the UML class CDIF::DDSC::Classes::SentinelValueDomain
+ddsc:SentinelValueDomainShape CLOSED {
+	a [ddsc:SentinelValueDomain];
+	ddsc:SentinelValueDomain-recommendedDataType	@ddsc:ControlledVocabularyEntryShape;
+	^ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain @ddsc:InstanceVariableShape ;
+	^ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain @ddsc:RepresentedVariableShape +;
+	^ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain @ddsc:ReferenceVariableShape ;
+	}
+
+# class SubstantiveValueDomain
+# based on the UML class CDIF::DDSC::Classes::SubstantiveValueDomain
+ddsc:SubstantiveValueDomainShape CLOSED {
+	a [ddsc:SubstantiveValueDomain];
+	ddsc:SubstantiveValueDomain-recommendedDataType	@ddsc:ControlledVocabularyEntryShape;
+	^ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @ddsc:InstanceVariableShape ;
+	^ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @ddsc:RepresentedVariableShape +;
+	^ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @ddsc:ReferenceVariableShape ;
+	}
+
+# class UnitType
+# based on the UML class CDIF::DDSC::Classes::UnitType
+ddsc:UnitTypeShape CLOSED {
+	a [ddsc:UnitType];
+	ddsc:UnitType-descriptiveText	@ddsc:InternationalStringShape;
+	ddsc:UnitType-name	@ddsc:ObjectNameShape;
+	^ddsc:LogicalRecord_isDefinedBy_UnitType @ddsc:LogicalRecordShape +;
+	^ddsc:Universe_uses_UnitType @ddsc:UniverseShape ;
+	}
+
+# class Universe
+# based on the UML class CDIF::DDSC::Classes::Universe
+ddsc:UniverseShape CLOSED {
+	a [ddsc:Universe];
+	ddsc:Universe-descriptiveText	@ddsc:InternationalStringShape;
+	ddsc:Universe-name	@ddsc:ObjectNameShape;
+	^ddsc:LogicalRecord_isDefinedBy_Universe @ddsc:LogicalRecordShape +;
+	^ddsc:RepresentedVariable_measures_Universe @ddsc:RepresentedVariableShape ;
+	ddsc:Universe_uses_UnitType	@ddsc:UnitTypeShape +;
+	
+	^ddsc:Population_uses_Universe @ddsc:PopulationShape ;
+	}
+
+# class ValueMapping
+# based on the UML class CDIF::DDSC::Classes::ValueMapping
+ddsc:ValueMappingShape CLOSED {
+	a [ddsc:ValueMapping];
+	ddsc:ValueMapping-decimalPositions	xsd:integer;
+	ddsc:ValueMapping-defaultDecimalSeparator	xsd:string;
+	ddsc:ValueMapping-length	xsd:integer;
+	ddsc:ValueMapping-maximumLength	xsd:integer;
+	ddsc:ValueMapping-minimumLength	xsd:integer;
+	^ddsc:PhysicalSegmentLayout_has_ValueMapping @ddsc:PhysicalSegmentLayoutShape +;
+	ddsc:ValueMapping_formats_InstanceVariable	@ddsc:InstanceVariableShape +;
+	
+	ddsc:ValueMapping_formats_RepresentedVariable	@ddsc:RepresentedVariableShape +;
+	
+	ddsc:ValueMapping_formats_ReferenceVariable	@ddsc:ReferenceVariableShape +;
+	
+	ddsc:ValueMapping_formats_DescriptorVariable	@ddsc:DescriptorVariableShape +;
+	
+	^ddsc:ValueMappingPosition_indexes_ValueMapping @ddsc:ValueMappingPositionShape +;
+	}
+
+# class ValueMappingPosition
+# based on the UML class CDIF::DDSC::Classes::ValueMappingPosition
+ddsc:ValueMappingPositionShape CLOSED {
+	a [ddsc:ValueMappingPosition];
+	ddsc:ValueMappingPosition-value	xsd:integer;
+	^ddsc:PhysicalSegmentLayout_has_ValueMappingPosition @ddsc:PhysicalSegmentLayoutShape ;
+	ddsc:ValueMappingPosition_indexes_ValueMapping	@ddsc:ValueMappingShape +;
+	
+	}
+
+# class VariableDescriptorComponent
+# based on the UML class CDIF::DDSC::Classes::VariableDescriptorComponent
+ddsc:VariableDescriptorComponentShape CLOSED {
+	a [ddsc:VariableDescriptorComponent];
+	^ddsc:LongDataStructure_has_VariableDescriptorComponent @ddsc:LongDataStructureShape ;
+	ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent	@ddsc:VariableValueComponentShape ;
+	
+	}
+
+# class VariableValueComponent
+# based on the UML class CDIF::DDSC::Classes::VariableValueComponent
+ddsc:VariableValueComponentShape CLOSED {
+	a [ddsc:VariableValueComponent];
+	^ddsc:LongDataStructure_has_VariableValueComponent @ddsc:LongDataStructureShape ;
+	ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable	@ddsc:ReferenceVariableShape ;
+	
+	^ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent @ddsc:VariableDescriptorComponentShape ;
+	}
+
+# class WideDataSet
+# based on the UML class CDIF::DDSC::Classes::WideDataSet
+ddsc:WideDataSetShape CLOSED {
+	a [ddsc:WideDataSet];
+	ddsc:WideDataSet-name	@ddsc:ObjectNameShape;
+	ddsc:WideDataSet-physicalFileName	xsd:string;
+	^ddsc:LogicalRecord_organizes_WideDataSet @ddsc:LogicalRecordShape +;
+	}
+
+# class WideDataStructure
+# based on the UML class CDIF::DDSC::Classes::WideDataStructure
+ddsc:WideDataStructureShape CLOSED {
+	a [ddsc:WideDataStructure];
+	ddsc:WideDataStructure_has_PrimaryKey	@ddsc:PrimaryKeyShape ;
+	
+	ddsc:WideDataStructure_has_IdentifierComponent	@ddsc:IdentifierComponentShape +;
+	
+	ddsc:WideDataStructure_has_AttributeComponent	@ddsc:AttributeComponentShape +;
+	
+	ddsc:WideDataStructure_has_MeasureComponent	@ddsc:MeasureComponentShape +;
+	
+	}
+
+# datatype BibliographicName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::BibliographicName
+ddsc:BibliographicNameShape CLOSED {
+	a [ddsc:BibliographicName];
+	ddsc:BibliographicName-affiliation	xsd:string;
+	}
+
+# datatype CombinedDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::CombinedDate
+ddsc:CombinedDateShape CLOSED {
+	a [ddsc:CombinedDate];
+	ddsc:CombinedDate-isoDate	xsd:date;
+	ddsc:CombinedDate-nonIsoDate	@ddsc:NonIsoDateShape+;
+	ddsc:CombinedDate-semantics	@ddsc:ControlledVocabularyEntryShape;
+	}
+
+# datatype ControlledVocabularyEntry
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ControlledVocabularyEntry
+ddsc:ControlledVocabularyEntryShape CLOSED {
+	a [ddsc:ControlledVocabularyEntry];
+	ddsc:ControlledVocabularyEntry-entryReference	@ddsc:ReferenceShape+;
+	ddsc:ControlledVocabularyEntry-entryValue	xsd:string+;
+	ddsc:ControlledVocabularyEntry-name	xsd:string;
+	ddsc:ControlledVocabularyEntry-valueForOther	xsd:string;
+	ddsc:ControlledVocabularyEntry-vocabulary	@ddsc:ReferenceShape;
+	}
+
+# datatype DateRange
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::DateRange
+ddsc:DateRangeShape CLOSED {
+	a [ddsc:DateRange];
+	ddsc:DateRange-endDate	@ddsc:CombinedDateShape;
+	ddsc:DateRange-startDate	@ddsc:CombinedDateShape;
+	}
+
+# datatype InternationalRegistrationDataIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalRegistrationDataIdentifier
+ddsc:InternationalRegistrationDataIdentifierShape CLOSED {
+	a [ddsc:InternationalRegistrationDataIdentifier];
+	ddsc:InternationalRegistrationDataIdentifier-dataIdentifier	xsd:string;
+	ddsc:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier	xsd:string;
+	ddsc:InternationalRegistrationDataIdentifier-versionIdentifier	xsd:string;
+	}
+
+# datatype InternationalString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalString
+ddsc:InternationalStringShape CLOSED {
+	a [ddsc:InternationalString];
+	ddsc:InternationalString-languageSpecificString	@ddsc:LanguageStringShape+;
+	}
+
+# datatype LabelForDisplay
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LabelForDisplay
+ddsc:LabelForDisplayShape CLOSED {
+	a [ddsc:LabelForDisplay];
+	ddsc:LabelForDisplay-locationVariant	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:LabelForDisplay-maxLength	xsd:integer;
+	ddsc:LabelForDisplay-validDates	@ddsc:DateRangeShape;
+	}
+
+# datatype LanguageString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LanguageString
+ddsc:LanguageStringShape CLOSED {
+	a [ddsc:LanguageString];
+	ddsc:LanguageString-content	xsd:string;
+	ddsc:LanguageString-isTranslatable	xsd:boolean;
+	ddsc:LanguageString-isTranslated	xsd:boolean;
+	ddsc:LanguageString-language	xsd:language;
+	ddsc:LanguageString-scope	xsd:string;
+	ddsc:LanguageString-structureUsed	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:LanguageString-translationDate	xsd:date;
+	ddsc:LanguageString-translationSourceLanguage	xsd:language+;
+	}
+
+# datatype ModelIdentification
+# based on the UML data type CDIF::DDSC::ModelIdentification
+ddsc:ModelIdentificationShape CLOSED {
+	a [ddsc:ModelIdentification];
+	ddsc:ModelIdentification-acronym	xsd:string;
+	ddsc:ModelIdentification-language	xsd:string;
+	ddsc:ModelIdentification-majorVersion	xsd:integer;
+	ddsc:ModelIdentification-minorVersion	xsd:integer;
+	ddsc:ModelIdentification-subtitle	xsd:string;
+	ddsc:ModelIdentification-title	xsd:string;
+	ddsc:ModelIdentification-uri	xsd:string;
+	}
+
+# datatype NonDdiIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonDdiIdentifier
+ddsc:NonDdiIdentifierShape CLOSED {
+	a [ddsc:NonDdiIdentifier];
+	ddsc:NonDdiIdentifier-managingAgency	xsd:string;
+	ddsc:NonDdiIdentifier-type	xsd:string;
+	ddsc:NonDdiIdentifier-value	xsd:string;
+	ddsc:NonDdiIdentifier-version	xsd:string;
+	}
+
+# datatype NonIsoDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonIsoDate
+ddsc:NonIsoDateShape CLOSED {
+	a [ddsc:NonIsoDate];
+	ddsc:NonIsoDate-calendar	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:NonIsoDate-dateContent	xsd:string;
+	ddsc:NonIsoDate-nonIsoDateFormat	@ddsc:ControlledVocabularyEntryShape;
+	}
+
+# datatype ObjectAttributeSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectAttributeSelector
+ddsc:ObjectAttributeSelectorShape CLOSED {
+	a [ddsc:ObjectAttributeSelector];
+	ddsc:ObjectAttributeSelector-refinedBy	@ddsc:ObjectAttributeSelectorShape;
+	ddsc:ObjectAttributeSelector-refinedByOrderNumber	xsd:integer;
+	ddsc:ObjectAttributeSelector-value	xsd:string;
+	}
+
+# datatype ObjectName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectName
+ddsc:ObjectNameShape CLOSED {
+	a [ddsc:ObjectName];
+	ddsc:ObjectName-context	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:ObjectName-name	xsd:string;
+	}
+
+# datatype OrganizationName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::OrganizationName
+ddsc:OrganizationNameShape CLOSED {
+	a [ddsc:OrganizationName];
+	ddsc:OrganizationName-abbreviation	@ddsc:InternationalStringShape;
+	ddsc:OrganizationName-effectiveDates	@ddsc:DateRangeShape;
+	ddsc:OrganizationName-isFormal	xsd:boolean;
+	ddsc:OrganizationName-typeOfOrganizationName	@ddsc:ControlledVocabularyEntryShape;
+	}
+
+# datatype Reference
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Reference
+ddsc:ReferenceShape CLOSED {
+	a [ddsc:Reference];
+	ddsc:Reference-ddiReference	@ddsc:InternationalRegistrationDataIdentifierShape;
+	ddsc:Reference-deepLink	@ddsc:SelectorShape;
+	ddsc:Reference-description	xsd:string;
+	ddsc:Reference-location	@ddsc:InternationalStringShape;
+	ddsc:Reference-nonDdiReference	@ddsc:NonDdiIdentifierShape+;
+	ddsc:Reference-semantic	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:Reference-uri	xsd:anyURI;
+	ddsc:Reference-validType	xsd:string+;
+	}
+
+# datatype Selector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Selector
+ddsc:SelectorShape CLOSED {
+	a [ddsc:Selector];
+	}
+
+# datatype TextPositionSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TextPositionSelector
+ddsc:TextPositionSelectorShape CLOSED {
+	a [ddsc:TextPositionSelector];
+	ddsc:TextPositionSelector-end	xsd:integer;
+	ddsc:TextPositionSelector-start	xsd:integer;
+	}
+
+# datatype TrimValues
+# based on the UML data type CDIF::DDSC::DataTypes::Enumerations::TrimValues
+ddsc:TrimValuesShape CLOSED {
+	a [ddsc:TrimValues];
+	}
+
+# datatype TypedString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TypedString
+ddsc:TypedStringShape CLOSED {
+	a [ddsc:TypedString];
+	ddsc:TypedString-content	xsd:string;
+	ddsc:TypedString-typeOfContent	@ddsc:ControlledVocabularyEntryShape;
+	}
+

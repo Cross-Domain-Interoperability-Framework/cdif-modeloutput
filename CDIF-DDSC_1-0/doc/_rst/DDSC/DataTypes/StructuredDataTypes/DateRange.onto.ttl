@@ -1,0 +1,27 @@
+# datatype DateRange
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::DateRange
+ddsc:DateRange
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "DateRange";
+  rdfs:comment "Definition\n============\nExpresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc."@en;
+  
+  owl:hasKey (ddsc:DateRange-endDate ddsc:DateRange-startDate);
+.
+
+ddsc:DateRange-endDate
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "endDate";
+  
+  rdfs:domain ddsc:DateRange;
+  rdfs:range ddsc:CombinedDate;
+.
+
+ddsc:DateRange-startDate
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "startDate";
+  
+  rdfs:domain ddsc:DateRange;
+  rdfs:range ddsc:CombinedDate;
+.
+
+

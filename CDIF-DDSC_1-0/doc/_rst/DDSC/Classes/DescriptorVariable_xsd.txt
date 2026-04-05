@@ -1,0 +1,72 @@
+  <xs:element name="DescriptorVariable"
+              type="DescriptorVariableXsdType"
+              xml:id="DescriptorVariable">
+    <!-- based on the UML class CDIF::DDSC::Classes::DescriptorVariable -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Variable that provides codes for variable identification in the context of a data structure.
+            Variable playing the role of a variable descriptor component.
+            
+            Examples
+            ==========
+            Consider two variables, i.e. income and age, with values apearing in the same column. 
+            Codes "income" and "age" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DescriptorVariableXsdType"
+                  xml:id="DescriptorVariableXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Variable that provides codes for variable identification in the context of a data structure.
+            Variable playing the role of a variable descriptor component.
+            
+            Examples
+            ==========
+            Consider two variables, i.e. income and age, with values apearing in the same column. 
+            Codes "income" and "age" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DescriptorVariable-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain">
+        <xs:annotation>
+          <xs:documentation>The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="DescriptorValueDomain"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

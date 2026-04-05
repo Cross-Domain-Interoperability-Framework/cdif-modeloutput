@@ -1,0 +1,48 @@
+  <xs:element name="ObjectAttributeSelector"
+              type="ObjectAttributeSelectorXsdType"
+              xml:id="ObjectAttributeSelector">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectAttributeSelector -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A resource which describes a specific attribute of an object. It is defined in the style of selectors of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/. The selector can be nested dependent on the structure of the referenced object.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ObjectAttributeSelectorXsdType"
+                  xml:id="ObjectAttributeSelectorXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A resource which describes a specific attribute of an object. It is defined in the style of selectors of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/. The selector can be nested dependent on the structure of the referenced object.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="refinedBy"
+                  type="ObjectAttributeSelectorXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ObjectAttributeSelector-refinedBy">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="refinedByOrderNumber"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ObjectAttributeSelector-refinedByOrderNumber">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="value"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ObjectAttributeSelector-value">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

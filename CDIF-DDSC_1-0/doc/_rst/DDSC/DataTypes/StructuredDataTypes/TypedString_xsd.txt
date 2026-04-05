@@ -1,0 +1,55 @@
+  <xs:element name="TypedString"
+              type="TypedStringXsdType"
+              xml:id="TypedString">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TypedString -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            TypedString combines a type with content defined as a simple string. May be used wherever a simple string needs to support a type definition to clarify its content.
+            
+            Examples
+            ==========
+            Content is a regular expression and the typeOfContent attribute is used to define the syntax of the regular expression content.
+            
+            Explanatory notes
+            ===================
+            This is a generic type + string where property name and documentation should be used to define any specification for the content. If international structured string content is required use TypedStructuredString.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="TypedStringXsdType"
+                  xml:id="TypedStringXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            TypedString combines a type with content defined as a simple string. May be used wherever a simple string needs to support a type definition to clarify its content.
+            
+            Examples
+            ==========
+            Content is a regular expression and the typeOfContent attribute is used to define the syntax of the regular expression content.
+            
+            Explanatory notes
+            ===================
+            This is a generic type + string where property name and documentation should be used to define any specification for the content. If international structured string content is required use TypedStructuredString.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="content"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="TypedString-content">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="typeOfContent"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="TypedString-typeOfContent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

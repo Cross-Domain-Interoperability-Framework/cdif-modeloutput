@@ -1,0 +1,9 @@
+# datatype CombinedDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::CombinedDate
+ddsc:CombinedDateShape CLOSED {
+	a [ddsc:CombinedDate];
+	ddsc:CombinedDate-isoDate	xsd:date;
+	ddsc:CombinedDate-nonIsoDate	@ddsc:NonIsoDateShape+;
+	ddsc:CombinedDate-semantics	@ddsc:ControlledVocabularyEntryShape;
+	}
+

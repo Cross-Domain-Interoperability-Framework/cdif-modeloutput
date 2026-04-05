@@ -1,0 +1,19 @@
+# datatype XsdLanguage
+# based on the UML data type CDIF::DDSC::DataTypes::XMLSchemaDataTypes::XsdLanguage
+<#XsdLanguage> a sh:NodeShape;
+    sh:targetClass xsd:language;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/XsdLanguage";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   xsd:language
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+

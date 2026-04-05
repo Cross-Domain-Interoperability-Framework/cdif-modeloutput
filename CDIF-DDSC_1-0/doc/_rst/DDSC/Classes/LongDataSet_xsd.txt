@@ -1,0 +1,46 @@
+  <xs:element name="LongDataSet"
+              type="LongDataSetXsdType"
+              xml:id="LongDataSet">
+    <!-- based on the UML class CDIF::DDSC::Classes::LongDataSet -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Organized collection of long data. It is structured by a long data structure.
+            
+            Examples
+            ==========
+            A unit dataset where each row corresponds to a set of data points capturing different characteristics of a unit, some of which can be transposed into variable descriptor and variable value components.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="LongDataSetXsdType"
+                  xml:id="LongDataSetXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Organized collection of long data. It is structured by a long data structure.
+            
+            Examples
+            ==========
+            A unit dataset where each row corresponds to a set of data points capturing different characteristics of a unit, some of which can be transposed into variable descriptor and variable value components.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LongDataSet-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="physicalFileName"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LongDataSet-physicalFileName">
+        <xs:annotation>
+          <xs:documentation>Use when multiple physical segments are stored in a single file.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

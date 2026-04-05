@@ -1,0 +1,104 @@
+# class RepresentedVariable
+# based on the UML class CDIF::DDSC::Classes::RepresentedVariable
+<#RepresentedVariable> a sh:NodeShape;
+    sh:targetClass ddsc:RepresentedVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/RepresentedVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:RepresentedVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#RepresentedVariable-definition>;
+    sh:property <#RepresentedVariable-describedUnitOfMeasure>;
+    sh:property <#RepresentedVariable-name>;
+    sh:property <#RepresentedVariable-unitOfMeasureKind>;
+    # associations from RepresentedVariable
+    sh:property <#RepresentedVariable_measures_Universe>;
+    sh:property <#RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    # associations to RepresentedVariable
+    sh:property <#rev_ValueMapping_formats_RepresentedVariable>;
+
+
+
+.
+
+<#RepresentedVariable-definition> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-definition;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable-describedUnitOfMeasure> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-describedUnitOfMeasure;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable-unitOfMeasureKind> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-unitOfMeasureKind;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#RepresentedVariable_measures_Universe> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable_measures_Universe;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Universe
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_RepresentedVariable_measures_Universe> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:RepresentedVariable_measures_Universe ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SubstantiveValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ];
+    sh:minCount 1;
+.
+<#RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SentinelValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain ];
+    sh:minCount 1;
+.
+

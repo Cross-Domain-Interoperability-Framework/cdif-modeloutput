@@ -1,0 +1,50 @@
+  <xs:element name="InternationalRegistrationDataIdentifier"
+              type="InternationalRegistrationDataIdentifierXsdType"
+              xml:id="InternationalRegistrationDataIdentifier">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalRegistrationDataIdentifier -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Persistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip.
+            The uniqueness of an InternationalRegistrationDataIdentifier (IRDI) is determined by the combination of the values of three identifying attributes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="InternationalRegistrationDataIdentifierXsdType"
+                  xml:id="InternationalRegistrationDataIdentifierXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Persistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip.
+            The uniqueness of an InternationalRegistrationDataIdentifier (IRDI) is determined by the combination of the values of three identifying attributes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="dataIdentifier"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="InternationalRegistrationDataIdentifier-dataIdentifier">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="registrationAuthorityIdentifier"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="versionIdentifier"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="InternationalRegistrationDataIdentifier-versionIdentifier">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

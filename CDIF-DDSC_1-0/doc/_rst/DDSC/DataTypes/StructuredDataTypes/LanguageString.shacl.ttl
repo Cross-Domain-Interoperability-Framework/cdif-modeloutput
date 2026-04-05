@@ -1,0 +1,77 @@
+# datatype LanguageString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LanguageString
+<#LanguageString> a sh:NodeShape;
+    sh:targetClass ddsc:LanguageString;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LanguageString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LanguageString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LanguageString-content>;
+    sh:property <#LanguageString-isTranslatable>;
+    sh:property <#LanguageString-isTranslated>;
+    sh:property <#LanguageString-language>;
+    sh:property <#LanguageString-scope>;
+    sh:property <#LanguageString-structureUsed>;
+    sh:property <#LanguageString-translationDate>;
+    sh:property <#LanguageString-translationSourceLanguage>;
+
+
+
+.
+
+<#LanguageString-content> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-content;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-isTranslatable> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-isTranslatable;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-isTranslated> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-isTranslated;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-language> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-language;
+    sh:datatype xsd:language;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-scope> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-scope;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-structureUsed> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-structureUsed;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-translationDate> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-translationDate;
+    sh:datatype xsd:date;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-translationSourceLanguage> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-translationSourceLanguage;
+    sh:datatype xsd:language;
+    sh:minCount 1;
+.
+

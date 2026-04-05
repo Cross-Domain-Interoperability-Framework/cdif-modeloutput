@@ -1,0 +1,13 @@
+# class Universe
+# based on the UML class CDIF::DDSC::Classes::Universe
+ddsc:UniverseShape CLOSED {
+	a [ddsc:Universe];
+	ddsc:Universe-descriptiveText	@ddsc:InternationalStringShape;
+	ddsc:Universe-name	@ddsc:ObjectNameShape;
+	^ddsc:LogicalRecord_isDefinedBy_Universe @ddsc:LogicalRecordShape +;
+	^ddsc:RepresentedVariable_measures_Universe @ddsc:RepresentedVariableShape ;
+	ddsc:Universe_uses_UnitType	@ddsc:UnitTypeShape +;
+	
+	^ddsc:Population_uses_Universe @ddsc:PopulationShape ;
+	}
+

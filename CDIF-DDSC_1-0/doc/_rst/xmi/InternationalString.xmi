@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.InternationalString"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalString"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.InternationalString-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalString-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.</body>
+      <annotatedElement xmi:idref="ddsc.InternationalString"/>
+   </ownedComment>
+   <name>InternationalString</name>
+   <ownedAttribute xmi:id="ddsc.InternationalString-languageSpecificString"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalString-languageSpecificString"
+                    xmi:type="uml:Property">
+      <name>languageSpecificString</name>
+      <type xmi:idref="ddsc.LanguageString"/>
+      <upperValue xmi:id="ddsc.InternationalString-languageSpecificString-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalString-languageSpecificString-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+</packagedElement>

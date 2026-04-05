@@ -1,0 +1,52 @@
+"cls-DescriptorVariable": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorVariable",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "DescriptorVariable"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:DescriptorVariable",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "takesSubstantiveValuesFrom_DescriptorValueDomain": {
+      "description": "DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-DescriptorValueDomain"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-DescriptorValueDomain"
+          }
+        }
+      ]
+    },
+    "formats_DescriptorVariable_OF_ValueMapping": {
+      "description": "ValueMapping_formats_DescriptorVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ValueMapping"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["name","takesSubstantiveValuesFrom_DescriptorValueDomain","@type"],
+  "additionalProperties": false
+},
+"target-DescriptorVariable": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorVariable",
+  "anyOf": [
+    { "$ref": "#/defs/cls-DescriptorVariable" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

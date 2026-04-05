@@ -1,0 +1,57 @@
+  <xs:element name="NonDdiIdentifier"
+              type="NonDdiIdentifierXsdType"
+              xml:id="NonDdiIdentifier">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonDdiIdentifier -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            A unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="NonDdiIdentifierXsdType"
+                  xml:id="NonDdiIdentifierXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            A unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="managingAgency"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonDdiIdentifier-managingAgency">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="type"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonDdiIdentifier-type">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="value"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonDdiIdentifier-value">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="version"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonDdiIdentifier-version">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

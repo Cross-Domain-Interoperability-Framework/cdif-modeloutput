@@ -1,0 +1,61 @@
+  <xs:element name="PrimaryKeyComponent"
+              type="PrimaryKeyComponentXsdType"
+              xml:id="PrimaryKeyComponent">
+    <!-- based on the UML class CDIF::DDSC::Classes::PrimaryKeyComponent -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Role of a data structure component for content identification purposes
+            
+            Explanatory notes
+            ===================
+            Equivalent to a primary key attribute (i.e. column) in the relational model.
+            It can be used in conjunction with a foreign key component to link data structures and their related datasets.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="PrimaryKeyComponentXsdType"
+                  xml:id="PrimaryKeyComponentXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Role of a data structure component for content identification purposes
+            
+            Explanatory notes
+            ===================
+            Equivalent to a primary key attribute (i.e. column) in the relational model.
+            It can be used in conjunction with a foreign key component to link data structures and their related datasets.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PrimaryKeyComponent_correspondsTo_IdentifierComponent"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="PrimaryKeyComponent_correspondsTo_IdentifierComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="PrimaryKeyComponent_correspondsTo_IdentifierComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="PrimaryKeyComponent_correspondsTo_IdentifierComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="IdentifierComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

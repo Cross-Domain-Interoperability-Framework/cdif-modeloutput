@@ -1,0 +1,9 @@
+# datatype InternationalRegistrationDataIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalRegistrationDataIdentifier
+ddsc:InternationalRegistrationDataIdentifierShape CLOSED {
+	a [ddsc:InternationalRegistrationDataIdentifier];
+	ddsc:InternationalRegistrationDataIdentifier-dataIdentifier	xsd:string;
+	ddsc:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier	xsd:string;
+	ddsc:InternationalRegistrationDataIdentifier-versionIdentifier	xsd:string;
+	}
+

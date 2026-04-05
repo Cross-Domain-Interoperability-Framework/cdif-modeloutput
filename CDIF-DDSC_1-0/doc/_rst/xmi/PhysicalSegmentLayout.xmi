@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.PhysicalSegmentLayout"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Used as an extension point in the description of the different layout styles of data structure descriptions.  
+
+Examples 
+========== 
+Examples include unit segment layouts, event data layouts, and cube layouts (e.g. summary data).  
+
+Explanatory notes 
+=================== 
+A physical segment layout is a physical description (e.g. unit segment layout) of the associated logical record Layout consisting of a collection of value mappings describing the physical interrelationship of each related value mapping and associated instance variable.</body>
+      <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout"/>
+   </ownedComment>
+   <name>PhysicalSegmentLayout</name>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-delimiter"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-delimiter"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-delimiter-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-delimiter-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The Delimiting character in the data. Must be used if isDelimited is True. "The separator between cells, set by the delimiter property of a dialect description. The default is ,. See the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-data-model/#encoding). From the "CSV Dialect" specification (https://specs.frictionlessdata.io/csv-dialect/#specification): "delimiter: specifies a one-character string to use as the field separator. Default = ,."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-delimiter"/>
+      </ownedComment>
+      <name>delimiter</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-encoding"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-encoding"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-encoding-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-encoding-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The character encoding of the represented data. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 5.9 Dialect: "encoding - An atomic property that sets the encoding flag to the single provided string value, which MUST be a defined in [encoding]. The default is 'utf-8'." From the same W3C recommendation 7.2 Encoding: "CSV files should be encoded using UTF-8, and should be in Unicode Normal Form C as defined in [UAX15]. If a CSV file is not encoded using UTF-8, the encoding should be specified through the charset parameter in the Content-Type header."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-encoding"/>
+      </ownedComment>
+      <name>encoding</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-escapeCharacter"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-escapeCharacter"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-escapeCharacter-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-escapeCharacter-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>"The string that is used to escape the quote character within escaped cells, or null" see https://www.w3.org/TR/tabular-data-model/#encoding. From https://www.w3.org/TR/tabular-metadata/ 5.9 Dialect "doubleQuote: A boolean atomic property that, if true, sets the escape character flag to ". If false, to \. The default is true." From http://specs.frictionlessdata.io/csv-dialect/ "doubleQuote: controls the handling of quotes inside fields. If true, two consecutive quotes should be interpreted as one. Default = true".</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-escapeCharacter"/>
+      </ownedComment>
+      <name>escapeCharacter</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-hasHeader"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-hasHeader"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-hasHeader-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-hasHeader-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>True if the file contains a header containing column names. From https://www.w3.org/TR/tabular-metadata/ 5.9 Dialect "header: A boolean atomic property that, if true, sets the header row count flag to 1, and if false to 0, unless headerRowCount is provided, in which case the value provided for the header property is ignored. The default is true." From http://specs.frictionlessdata.io/csv-dialect/ "header: indicates whether the file includes a header row. If true the first row in the file is a header row, not data. Default = true".</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-hasHeader"/>
+      </ownedComment>
+      <name>hasHeader</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-headerRowCount"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-headerRowCount"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-headerRowCount-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-headerRowCount-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The number of lines in the header From https://www.w3.org/TR/tabular-metadata/ 5.9 Dialect "headerRowCount: A numeric atomic property that sets the header row count flag to the single provided value, which MUST be a non-negative integer. The default is 1."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-headerRowCount"/>
+      </ownedComment>
+      <name>headerRowCount</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-isDelimited"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-isDelimited"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-isDelimited-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-isDelimited-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Indicates whether the data are in a delimited format. If "true," the format is delimited, and the isFixedWidth property must be set to "false." If not set to "true," the property isFixedWitdh must be set to "true."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-isDelimited"/>
+      </ownedComment>
+      <name>isDelimited</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-isFixedWidth"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-isFixedWidth"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-isFixedWidth-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-isFixedWidth-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Set to true if the file is fixed-width. If true, isDelimited must be set to false.</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-isFixedWidth"/>
+      </ownedComment>
+      <name>isFixedWidth</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-lineTerminator"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-lineTerminator"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-lineTerminator-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-lineTerminator-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The strings that can be used at the end of a row, set by the lineTerminators property of a dialect description. The default is [CRLF, LF]. See the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-data-model/#encoding) 5.9 Dialect "lineTerminators: An atomic property that sets the line terminators flag to either an array containing the single provided string value, or the provided array. The default is ['rn', 'n']." Also, from the "CSV Dialect" specification (http://specs.frictionlessdata.io/csv-dialect/): "lineTerminator: specifies the character sequence which should terminate rows. Default = rn."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-lineTerminator"/>
+      </ownedComment>
+      <name>lineTerminator</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <upperValue xmi:id="ddsc.PhysicalSegmentLayout-lineTerminator-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-lineTerminator-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-quoteCharacter"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-quoteCharacter"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-quoteCharacter-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-quoteCharacter-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>"The string that is used around escaped cells, or null, set by the quoteChar property of a dialect description. The default is ".". See W3C Recommendation "Model for Tabular Data and Metadata on the Web", https://www.w3.org/TR/tabular-data-model/#parsing. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 5.9 Dialect: "quoteChar: An atomic property that sets the quote character flag to the single provided value, which MUST be a string or null. If the value is null, the escape character flag is also set to null. The default is '"'." From the CSV Dialect specification (http://specs.frictionlessdata.io/csv-dialect/): "quoteChar: specifies a one-character string to use as the quoting character. Default = "."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-quoteCharacter"/>
+      </ownedComment>
+      <name>quoteCharacter</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-skipInitialSpace"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-skipInitialSpace"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-skipInitialSpace-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-skipInitialSpace-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>If the value is True, skip whitespace at the beginning of a line or following a delimiter. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 5.9 Dialect: "skipInitialSpace: A boolean atomic property that, if true, sets the trim flag to 'start' and if false, to false. If the trim property is provided, the skipInitialSpace property is ignored. The default is false." From the CSV Dialect specification (http://specs.frictionlessdata.io/csv-dialect/): "skipInitialSpace: specifies how to interpret whitespace which immediately follows a delimiter; if false, it means that whitespace immediately after a delimiter should be treated as part of the following field. Default = true."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-skipInitialSpace"/>
+      </ownedComment>
+      <name>skipInitialSpace</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-trim"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-trim"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.PhysicalSegmentLayout-trim-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-trim-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Specifies which spaces to remove from a data value (start, end, both, neither) From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 5.9 Dialect: "trim: An atomic property that, if the boolean true, sets the trim flag to true and if the boolean false to false. If the value provided is a string, sets the trim flag to the provided value, which MUST be one of 'true', 'false', 'start', or 'end'. The default is true."</body>
+         <annotatedElement xmi:idref="ddsc.PhysicalSegmentLayout-trim"/>
+      </ownedComment>
+      <name>trim</name>
+      <type xmi:idref="ddsc.TrimValues"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-ownedAttribute-12"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-ownedAttribute-12"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.LogicalRecord"/>
+      <association xmi:idref="ddsc.PhysicalSegmentLayout_formats_LogicalRecord"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-ownedAttribute-13"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-ownedAttribute-13"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.ValueMapping"/>
+      <upperValue xmi:id="ddsc.PhysicalSegmentLayout-ownedAttribute-13-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-ownedAttribute-13-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.PhysicalSegmentLayout_has_ValueMapping"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.PhysicalSegmentLayout-ownedAttribute-14"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-ownedAttribute-14"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.ValueMappingPosition"/>
+      <upperValue xmi:id="ddsc.PhysicalSegmentLayout-ownedAttribute-14-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout-ownedAttribute-14-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.PhysicalSegmentLayout_has_ValueMappingPosition"/>
+   </ownedAttribute>
+</packagedElement>

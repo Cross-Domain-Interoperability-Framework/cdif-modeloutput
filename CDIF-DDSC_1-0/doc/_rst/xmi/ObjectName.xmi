@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.ObjectName"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectName"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.ObjectName-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectName-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.
+
+Explanatory notes
+=================
+Use in model: In general the property name should be "name" as it is the name of the class object of which it is an attribute. Use a specific name (i.e. xxxName) only when naming something other than the class object of which it is an attribute.</body>
+      <annotatedElement xmi:idref="ddsc.ObjectName"/>
+   </ownedComment>
+   <name>ObjectName</name>
+   <ownedAttribute xmi:id="ddsc.ObjectName-context"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectName-context"
+                    xmi:type="uml:Property">
+      <name>context</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ObjectName-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectName-name"
+                    xmi:type="uml:Property">
+      <name>name</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

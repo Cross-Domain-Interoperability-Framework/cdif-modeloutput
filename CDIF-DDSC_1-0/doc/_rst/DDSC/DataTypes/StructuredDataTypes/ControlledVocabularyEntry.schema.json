@@ -1,0 +1,35 @@
+"dt-ControlledVocabularyEntry": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/ControlledVocabularyEntry",
+  "type": ["object"],
+  "properties": {
+    "entryReference": {
+      "$comment": "cardinality 1..-1 – from ddsc:ControlledVocabularyEntry",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-Reference" } },
+      "else": { "$ref": "#/defs/dt-Reference" }
+    },
+    "entryValue": {
+      "$comment": "cardinality 1..-1 – from ddsc:ControlledVocabularyEntry",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/xsd:string" } },
+      "else": { "$ref": "#/defs/xsd:string" }
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:ControlledVocabularyEntry",
+      "$ref": "#/defs/xsd:string"
+    },
+    "valueForOther": {
+      "$comment": "cardinality 1..1 – from ddsc:ControlledVocabularyEntry",
+      "$ref": "#/defs/xsd:string"
+    },
+    "vocabulary": {
+      "$comment": "cardinality 1..1 – from ddsc:ControlledVocabularyEntry",
+      "$ref": "#/defs/dt-Reference"
+    },
+    "@type": {
+      "const": "ControlledVocabularyEntry"
+    }
+  },
+  "required": ["entryReference","entryValue","name","valueForOther","vocabulary","@type"],
+  "additionalProperties": false
+},

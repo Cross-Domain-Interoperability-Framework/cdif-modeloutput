@@ -1,0 +1,84 @@
+"cls-RepresentedVariable": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/RepresentedVariable",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "RepresentedVariable"
+    },
+    "definition": {
+      "$comment": "cardinality 1..1 – from ddsc:RepresentedVariable",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "describedUnitOfMeasure": {
+      "$comment": "cardinality 1..1 – from ddsc:RepresentedVariable",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:RepresentedVariable",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "unitOfMeasureKind": {
+      "$comment": "cardinality 1..1 – from ddsc:RepresentedVariable",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "measures_Universe": {
+      "description": "RepresentedVariable_measures_Universe",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-Universe"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-Universe"
+          }
+        }
+      ]
+    },
+    "takesSubstantiveValuesFrom_SubstantiveValueDomain": {
+      "description": "RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-SubstantiveValueDomain"
+    },
+    "takesSentinelValuesFrom_SentinelValueDomain": {
+      "description": "RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-SentinelValueDomain"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-SentinelValueDomain"
+          }
+        }
+      ]
+    },
+    "formats_RepresentedVariable_OF_ValueMapping": {
+      "description": "ValueMapping_formats_RepresentedVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ValueMapping"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["definition","describedUnitOfMeasure","name","unitOfMeasureKind","measures_Universe", "takesSubstantiveValuesFrom_SubstantiveValueDomain", "takesSentinelValuesFrom_SentinelValueDomain","@type"],
+  "additionalProperties": false
+},
+"target-RepresentedVariable": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/RepresentedVariable",
+  "anyOf": [
+    { "$ref": "#/defs/cls-RepresentedVariable" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

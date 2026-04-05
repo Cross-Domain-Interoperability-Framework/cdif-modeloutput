@@ -1,0 +1,9 @@
+# datatype LabelForDisplay
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LabelForDisplay
+ddsc:LabelForDisplayShape CLOSED {
+	a [ddsc:LabelForDisplay];
+	ddsc:LabelForDisplay-locationVariant	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:LabelForDisplay-maxLength	xsd:integer;
+	ddsc:LabelForDisplay-validDates	@ddsc:DateRangeShape;
+	}
+

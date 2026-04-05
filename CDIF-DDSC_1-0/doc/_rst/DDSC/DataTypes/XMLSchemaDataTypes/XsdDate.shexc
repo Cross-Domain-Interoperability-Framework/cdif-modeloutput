@@ -1,0 +1,6 @@
+# datatype XsdDate
+# based on the UML data type CDIF::DDSC::DataTypes::XMLSchemaDataTypes::XsdDate
+xsd:dateShape CLOSED {
+	a [xsd:date];
+	}
+

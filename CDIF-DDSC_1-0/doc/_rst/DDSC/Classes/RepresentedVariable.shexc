@@ -1,0 +1,17 @@
+# class RepresentedVariable
+# based on the UML class CDIF::DDSC::Classes::RepresentedVariable
+ddsc:RepresentedVariableShape CLOSED {
+	a [ddsc:RepresentedVariable];
+	ddsc:RepresentedVariable-definition	@ddsc:InternationalStringShape;
+	ddsc:RepresentedVariable-describedUnitOfMeasure	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:RepresentedVariable-name	@ddsc:ObjectNameShape;
+	ddsc:RepresentedVariable-unitOfMeasureKind	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:RepresentedVariable_measures_Universe	@ddsc:UniverseShape +;
+	
+	ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@ddsc:SubstantiveValueDomainShape ;
+	
+	ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain	@ddsc:SentinelValueDomainShape +;
+	
+	^ddsc:ValueMapping_formats_RepresentedVariable @ddsc:ValueMappingShape ;
+	}
+

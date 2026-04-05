@@ -1,0 +1,58 @@
+# datatype ControlledVocabularyEntry
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ControlledVocabularyEntry
+<#ControlledVocabularyEntry> a sh:NodeShape;
+    sh:targetClass ddsc:ControlledVocabularyEntry;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ControlledVocabularyEntry";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ControlledVocabularyEntry
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ControlledVocabularyEntry-entryReference>;
+    sh:property <#ControlledVocabularyEntry-entryValue>;
+    sh:property <#ControlledVocabularyEntry-name>;
+    sh:property <#ControlledVocabularyEntry-valueForOther>;
+    sh:property <#ControlledVocabularyEntry-vocabulary>;
+
+
+
+.
+
+<#ControlledVocabularyEntry-entryReference> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-entryReference;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Reference
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#ControlledVocabularyEntry-entryValue> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-entryValue;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+.
+<#ControlledVocabularyEntry-name> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-name;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ControlledVocabularyEntry-valueForOther> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-valueForOther;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ControlledVocabularyEntry-vocabulary> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-vocabulary;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Reference
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

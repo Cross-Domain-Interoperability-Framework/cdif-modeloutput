@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.LabelForDisplay"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LabelForDisplay"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.LabelForDisplay-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LabelForDisplay-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+A structured display label. Label provides display content of a fully human readable display for the identification of the object.</body>
+      <annotatedElement xmi:idref="ddsc.LabelForDisplay"/>
+   </ownedComment>
+   <name>LabelForDisplay</name>
+   <ownedAttribute xmi:id="ddsc.LabelForDisplay-locationVariant"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LabelForDisplay-locationVariant"
+                    xmi:type="uml:Property">
+      <name>locationVariant</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LabelForDisplay-maxLength"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LabelForDisplay-maxLength"
+                    xmi:type="uml:Property">
+      <name>maxLength</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LabelForDisplay-validDates"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LabelForDisplay-validDates"
+                    xmi:type="uml:Property">
+      <name>validDates</name>
+      <type xmi:idref="ddsc.DateRange"/>
+   </ownedAttribute>
+</packagedElement>

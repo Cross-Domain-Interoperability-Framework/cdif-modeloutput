@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.DescriptorVariable"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.DescriptorVariable-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Variable that provides codes for variable identification in the context of a data structure.
+Variable playing the role of a variable descriptor component.
+
+Examples
+==========
+Consider two variables, i.e. income and age, with values apearing in the same column. 
+Codes "income" and "age" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable.</body>
+      <annotatedElement xmi:idref="ddsc.DescriptorVariable"/>
+   </ownedComment>
+   <name>DescriptorVariable</name>
+   <ownedAttribute xmi:id="ddsc.DescriptorVariable-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.DescriptorVariable-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.DescriptorVariable-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.DescriptorVariable-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.DescriptorValueDomain"/>
+      <upperValue xmi:id="ddsc.DescriptorVariable-ownedAttribute-2-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable-ownedAttribute-2-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain"/>
+   </ownedAttribute>
+</packagedElement>

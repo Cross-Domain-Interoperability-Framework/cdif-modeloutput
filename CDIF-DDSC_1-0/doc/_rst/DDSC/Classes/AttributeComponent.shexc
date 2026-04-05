@@ -1,0 +1,11 @@
+# class AttributeComponent
+# based on the UML class CDIF::DDSC::Classes::AttributeComponent
+ddsc:AttributeComponentShape CLOSED {
+	a [ddsc:AttributeComponent];
+	^ddsc:WideDataStructure_has_AttributeComponent @ddsc:WideDataStructureShape ;
+	^ddsc:LongDataStructure_has_AttributeComponent @ddsc:LongDataStructureShape ;
+	^ddsc:DimensionalDataStructure_has_AttributeComponent @ddsc:DimensionalDataStructureShape ;
+	ddsc:AttributeComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	}
+

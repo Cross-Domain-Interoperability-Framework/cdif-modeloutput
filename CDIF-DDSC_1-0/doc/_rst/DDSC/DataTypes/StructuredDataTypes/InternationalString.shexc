@@ -1,0 +1,7 @@
+# datatype InternationalString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalString
+ddsc:InternationalStringShape CLOSED {
+	a [ddsc:InternationalString];
+	ddsc:InternationalString-languageSpecificString	@ddsc:LanguageStringShape+;
+	}
+

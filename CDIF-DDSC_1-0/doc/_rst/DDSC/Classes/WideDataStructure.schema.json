@@ -1,0 +1,80 @@
+"cls-WideDataStructure": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/WideDataStructure",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "WideDataStructure"
+    },
+    
+    "has_PrimaryKey": {
+      "description": "WideDataStructure_has_PrimaryKey",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-PrimaryKey"
+    },
+    "has_IdentifierComponent": {
+      "description": "WideDataStructure_has_IdentifierComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-IdentifierComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-IdentifierComponent"
+          }
+        }
+      ]
+    },
+    "has_AttributeComponent": {
+      "description": "WideDataStructure_has_AttributeComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-AttributeComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-AttributeComponent"
+          }
+        }
+      ]
+    },
+    "has_MeasureComponent": {
+      "description": "WideDataStructure_has_MeasureComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-MeasureComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-MeasureComponent"
+          }
+        }
+      ]
+    },
+    
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["has_PrimaryKey", "has_IdentifierComponent", "has_AttributeComponent", "has_MeasureComponent","@type"],
+  "additionalProperties": false
+},
+"target-WideDataStructure": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/WideDataStructure",
+  "anyOf": [
+    { "$ref": "#/defs/cls-WideDataStructure" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

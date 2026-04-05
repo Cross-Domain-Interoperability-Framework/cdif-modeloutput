@@ -1,0 +1,45 @@
+# class DataStore
+# based on the UML class CDIF::DDSC::Classes::DataStore
+<#DataStore> a sh:NodeShape;
+    sh:targetClass ddsc:DataStore;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DataStore";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DataStore
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DataStore-name>;
+    # associations from DataStore
+    sh:property <#DataStore_has_LogicalRecord>;
+    # associations to DataStore
+
+
+
+.
+
+<#DataStore-name> a sh:PropertyShape ;
+    sh:path ddsc:DataStore-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#DataStore_has_LogicalRecord> a sh:PropertyShape ;
+    sh:path ddsc:DataStore_has_LogicalRecord;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LogicalRecord
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DataStore_has_LogicalRecord> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DataStore_has_LogicalRecord ];
+    sh:minCount 1;
+.
+

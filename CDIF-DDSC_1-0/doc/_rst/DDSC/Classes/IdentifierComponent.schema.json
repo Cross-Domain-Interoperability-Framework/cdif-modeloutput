@@ -1,0 +1,54 @@
+"cls-IdentifierComponent": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/IdentifierComponent",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "IdentifierComponent"
+    },
+    
+    "isDefinedBy_InstanceVariable": {
+      "description": "IdentifierComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-InstanceVariable"
+    },
+    "has_IdentifierComponent_OF_WideDataStructure": {
+      "description": "WideDataStructure_has_IdentifierComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-WideDataStructure"
+    },
+    "has_IdentifierComponent_OF_LongDataStructure": {
+      "description": "LongDataStructure_has_IdentifierComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-LongDataStructure"
+    },
+    "has_IdentifierComponent_OF_DimensionalDataStructure": {
+      "description": "DimensionalDataStructure_has_IdentifierComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-DimensionalDataStructure"
+    },
+    "correspondsTo_IdentifierComponent_OF_PrimaryKeyComponent": {
+      "description": "PrimaryKeyComponent_correspondsTo_IdentifierComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-PrimaryKeyComponent"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["isDefinedBy_InstanceVariable","@type"],
+  "additionalProperties": false
+},
+"target-IdentifierComponent": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/IdentifierComponent",
+  "anyOf": [
+    { "$ref": "#/defs/cls-IdentifierComponent" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

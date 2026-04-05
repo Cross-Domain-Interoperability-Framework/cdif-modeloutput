@@ -1,0 +1,90 @@
+"cls-LongDataStructure": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataStructure",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "LongDataStructure"
+    },
+    
+    "has_IdentifierComponent": {
+      "description": "LongDataStructure_has_IdentifierComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-IdentifierComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-IdentifierComponent"
+          }
+        }
+      ]
+    },
+    "has_AttributeComponent": {
+      "description": "LongDataStructure_has_AttributeComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-AttributeComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-AttributeComponent"
+          }
+        }
+      ]
+    },
+    "has_VariableDescriptorComponent": {
+      "description": "LongDataStructure_has_VariableDescriptorComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-VariableDescriptorComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-VariableDescriptorComponent"
+          }
+        }
+      ]
+    },
+    "has_VariableValueComponent": {
+      "description": "LongDataStructure_has_VariableValueComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-VariableValueComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-VariableValueComponent"
+          }
+        }
+      ]
+    },
+    
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["has_IdentifierComponent", "has_AttributeComponent", "has_VariableDescriptorComponent", "has_VariableValueComponent","@type"],
+  "additionalProperties": false
+},
+"target-LongDataStructure": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataStructure",
+  "anyOf": [
+    { "$ref": "#/defs/cls-LongDataStructure" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

@@ -1,0 +1,63 @@
+# class ReferenceVariable
+# based on the UML class CDIF::DDSC::Classes::ReferenceVariable
+<#ReferenceVariable> a sh:NodeShape;
+    sh:targetClass ddsc:ReferenceVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ReferenceVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ReferenceVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ReferenceVariable-name>;
+    # associations from ReferenceVariable
+    sh:property <#ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    # associations to ReferenceVariable
+    sh:property <#rev_VariableValueComponent_isDefinedBy_ReferenceVariable>;
+    sh:property <#rev_ValueMapping_formats_ReferenceVariable>;
+
+
+
+.
+
+<#ReferenceVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:ReferenceVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SubstantiveValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SentinelValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

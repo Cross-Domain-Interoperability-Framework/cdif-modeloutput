@@ -1,0 +1,25 @@
+"dt-CombinedDate": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/CombinedDate",
+  "type": ["object"],
+  "properties": {
+    "isoDate": {
+      "$comment": "cardinality 1..1 – from ddsc:CombinedDate",
+      "$ref": "#/defs/xsd:date"
+    },
+    "nonIsoDate": {
+      "$comment": "cardinality 1..-1 – from ddsc:CombinedDate",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-NonIsoDate" } },
+      "else": { "$ref": "#/defs/dt-NonIsoDate" }
+    },
+    "semantics": {
+      "$comment": "cardinality 1..1 – from ddsc:CombinedDate",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "@type": {
+      "const": "CombinedDate"
+    }
+  },
+  "required": ["isoDate","nonIsoDate","semantics","@type"],
+  "additionalProperties": false
+},

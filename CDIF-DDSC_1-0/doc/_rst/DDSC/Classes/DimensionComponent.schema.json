@@ -1,0 +1,49 @@
+"cls-DimensionComponent": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionComponent",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "DimensionComponent"
+    },
+    
+    "isDefinedBy_InstanceVariable": {
+      "description": "DimensionComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-InstanceVariable"
+    },
+    "indexes_DimensionComponent_OF_ComponentPosition": {
+      "description": "ComponentPosition_indexes_DimensionComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-ComponentPosition"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-ComponentPosition"
+          }
+        }
+      ]
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["isDefinedBy_InstanceVariable","@type"],
+  "additionalProperties": false
+},
+"target-DimensionComponent": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionComponent",
+  "anyOf": [
+    { "$ref": "#/defs/cls-DimensionComponent" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

@@ -1,0 +1,11 @@
+# datatype TrimValues
+# based on the UML data type CDIF::DDSC::DataTypes::Enumerations::TrimValues
+ddsc:TrimValues
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "TrimValues";
+  rdfs:comment "Definition\n============\nSpecifies which spaces to remove from a data value (start, end, both, neither)."@en;
+  
+  owl:hasKey ();
+.
+
+

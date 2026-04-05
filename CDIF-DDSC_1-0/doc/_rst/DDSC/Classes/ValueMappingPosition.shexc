@@ -1,0 +1,10 @@
+# class ValueMappingPosition
+# based on the UML class CDIF::DDSC::Classes::ValueMappingPosition
+ddsc:ValueMappingPositionShape CLOSED {
+	a [ddsc:ValueMappingPosition];
+	ddsc:ValueMappingPosition-value	xsd:integer;
+	^ddsc:PhysicalSegmentLayout_has_ValueMappingPosition @ddsc:PhysicalSegmentLayoutShape ;
+	ddsc:ValueMappingPosition_indexes_ValueMapping	@ddsc:ValueMappingShape +;
+	
+	}
+

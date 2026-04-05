@@ -1,0 +1,13 @@
+# class ReferenceVariable
+# based on the UML class CDIF::DDSC::Classes::ReferenceVariable
+ddsc:ReferenceVariableShape CLOSED {
+	a [ddsc:ReferenceVariable];
+	ddsc:ReferenceVariable-name	@ddsc:ObjectNameShape;
+	ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@ddsc:SubstantiveValueDomainShape ;
+	
+	ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain	@ddsc:SentinelValueDomainShape +;
+	
+	^ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable @ddsc:VariableValueComponentShape ;
+	^ddsc:ValueMapping_formats_ReferenceVariable @ddsc:ValueMappingShape ;
+	}
+

@@ -1,0 +1,8 @@
+# datatype TextPositionSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TextPositionSelector
+ddsc:TextPositionSelectorShape CLOSED {
+	a [ddsc:TextPositionSelector];
+	ddsc:TextPositionSelector-end	xsd:integer;
+	ddsc:TextPositionSelector-start	xsd:integer;
+	}
+

@@ -1,0 +1,20 @@
+  <xs:element name="Selector"
+              type="SelectorXsdType"
+              xml:id="Selector">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Selector -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="SelectorXsdType"
+                  xml:id="SelectorXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.</xs:documentation>
+    </xs:annotation>
+    
+  </xs:complexType>
+

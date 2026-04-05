@@ -1,0 +1,11 @@
+# datatype Selector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Selector
+ddsc:Selector
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "Selector";
+  rdfs:comment "Definition\n==========\nA resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector."@en;
+  
+  owl:hasKey ();
+.
+
+

@@ -1,0 +1,152 @@
+  <xs:element name="DimensionalDataStructure"
+              type="DimensionalDataStructureXsdType"
+              xml:id="DimensionalDataStructure">
+    <!-- based on the UML class CDIF::DDSC::Classes::DimensionalDataStructure -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.
+            
+            Examples
+            ==========
+            The structure described by [City, Average Income, Total Population] where City is a dimension and Average Income and Total Population are measures.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DimensionalDataStructureXsdType"
+                  xml:id="DimensionalDataStructureXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.
+            
+            Examples
+            ==========
+            The structure described by [City, Average Income, Total Population] where City is a dimension and Average Income and Total Population are measures.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DimensionalDataStructure_has_IdentifierComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="DimensionalDataStructure_has_IdentifierComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_IdentifierComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_IdentifierComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="IdentifierComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DimensionalDataStructure_has_AttributeComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="DimensionalDataStructure_has_AttributeComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_AttributeComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_AttributeComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="AttributeComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DimensionalDataStructure_has_MeasureComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="DimensionalDataStructure_has_MeasureComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_MeasureComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_MeasureComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="MeasureComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DimensionalDataStructure_has_ComponentPosition"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="DimensionalDataStructure_has_ComponentPosition">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_ComponentPosition-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="DimensionalDataStructure_has_ComponentPosition-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="ComponentPosition"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

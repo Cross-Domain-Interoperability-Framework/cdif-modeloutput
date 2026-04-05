@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.UnitType"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.UnitType-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+Unit type is a type or class of objects of interest (units).
+
+Examples
+========
+Person, Establishment, Household, State, Country, Dog, Automobile, Neutrino.
+
+Explanatory notes
+=================
+Unit type is the most general in the hierarchy of unit type, universe, and population. It is a description of the basic characteristics for a general set of Units. A universe is a set of entities defined by a specialization of a unit type. A Population further narrows the specification to a specific time and geography.
+
+A unit type is used to describe a class or group of Units based on a single characteristic with no specification of time and geography. For example, the unit type of "Person" groups together a set of Units based on the characteristic that they are "Persons".
+
+It concerns not only unit types used in dissemination, but anywhere in the statistical process. E.g. using administrative data might involve the use of a fiscal unit. [GSIM 1.1].</body>
+      <annotatedElement xmi:idref="ddsc.UnitType"/>
+   </ownedComment>
+   <name>UnitType</name>
+   <ownedAttribute xmi:id="ddsc.UnitType-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.UnitType-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.UnitType-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.UnitType-descriptiveText"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType-descriptiveText"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.UnitType-descriptiveText-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType-descriptiveText-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>A short natural language account of the characteristics of the object.</body>
+         <annotatedElement xmi:idref="ddsc.UnitType-descriptiveText"/>
+      </ownedComment>
+      <name>descriptiveText</name>
+      <type xmi:idref="ddsc.InternationalString"/>
+   </ownedAttribute>
+</packagedElement>

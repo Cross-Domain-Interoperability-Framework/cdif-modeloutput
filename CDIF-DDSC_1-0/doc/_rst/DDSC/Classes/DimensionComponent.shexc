@@ -1,0 +1,9 @@
+# class DimensionComponent
+# based on the UML class CDIF::DDSC::Classes::DimensionComponent
+ddsc:DimensionComponentShape CLOSED {
+	a [ddsc:DimensionComponent];
+	ddsc:DimensionComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	^ddsc:ComponentPosition_indexes_DimensionComponent @ddsc:ComponentPositionShape +;
+	}
+

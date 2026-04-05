@@ -1,0 +1,76 @@
+  <xs:element name="DataStore"
+              type="DataStoreXsdType"
+              xml:id="DataStore">
+    <!-- based on the UML class CDIF::DDSC::Classes::DataStore -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Collection of logical records.  
+            
+            Examples 
+            ========== 
+            The data lineage of an individual business process or an entire data pipeline are both examples of a logical record relation structures. In a data lineage we can observe how logical records are connected within a business process or across business processes.  
+            
+            Explanatory notes 
+            =================== 
+            Keep in mind that a logical records are definitions, not a "datasets". Logical records organized in a structured collection is called a logical record relation structure. Instances of logical records instantiated as organizations of data points hosting data are described in format description. A data store is reusable across studies. Each study has at most one data store.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DataStoreXsdType"
+                  xml:id="DataStoreXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Collection of logical records.  
+            
+            Examples 
+            ========== 
+            The data lineage of an individual business process or an entire data pipeline are both examples of a logical record relation structures. In a data lineage we can observe how logical records are connected within a business process or across business processes.  
+            
+            Explanatory notes 
+            =================== 
+            Keep in mind that a logical records are definitions, not a "datasets". Logical records organized in a structured collection is called a logical record relation structure. Instances of logical records instantiated as organizations of data points hosting data are described in format description. A data store is reusable across studies. Each study has at most one data store.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DataStore-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DataStore_has_LogicalRecord"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="DataStore_has_LogicalRecord">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DataStore_has_LogicalRecord-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="DataStore_has_LogicalRecord-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="LogicalRecord"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

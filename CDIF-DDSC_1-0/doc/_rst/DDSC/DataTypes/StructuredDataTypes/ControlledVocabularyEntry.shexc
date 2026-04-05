@@ -1,0 +1,11 @@
+# datatype ControlledVocabularyEntry
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ControlledVocabularyEntry
+ddsc:ControlledVocabularyEntryShape CLOSED {
+	a [ddsc:ControlledVocabularyEntry];
+	ddsc:ControlledVocabularyEntry-entryReference	@ddsc:ReferenceShape+;
+	ddsc:ControlledVocabularyEntry-entryValue	xsd:string+;
+	ddsc:ControlledVocabularyEntry-name	xsd:string;
+	ddsc:ControlledVocabularyEntry-valueForOther	xsd:string;
+	ddsc:ControlledVocabularyEntry-vocabulary	@ddsc:ReferenceShape;
+	}
+

@@ -1,0 +1,58 @@
+"cls-SentinelValueDomain": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/SentinelValueDomain",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "SentinelValueDomain"
+    },
+    "recommendedDataType": {
+      "$comment": "cardinality 1..1 – from ddsc:SentinelValueDomain",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    
+    "takesSentinelValuesFrom_SentinelValueDomain_OF_InstanceVariable": {
+      "description": "InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-InstanceVariable"
+    },
+    "takesSentinelValuesFrom_SentinelValueDomain_OF_RepresentedVariable": {
+      "description": "RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-RepresentedVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-RepresentedVariable"
+          }
+        }
+      ]
+    },
+    "takesSentinelValuesFrom_SentinelValueDomain_OF_ReferenceVariable": {
+      "description": "ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ReferenceVariable"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["recommendedDataType","@type"],
+  "additionalProperties": false
+},
+"target-SentinelValueDomain": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/SentinelValueDomain",
+  "anyOf": [
+    { "$ref": "#/defs/cls-SentinelValueDomain" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

@@ -1,0 +1,12 @@
+"dt-XsdLanguage": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/XsdLanguage",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "XsdLanguage"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

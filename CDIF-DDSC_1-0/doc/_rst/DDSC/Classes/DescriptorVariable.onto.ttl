@@ -1,0 +1,29 @@
+# class DescriptorVariable
+# based on the UML class CDIF::DDSC::Classes::DescriptorVariable
+ddsc:DescriptorVariable
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "DescriptorVariable";
+  rdfs:comment "Definition\n============\nVariable that provides codes for variable identification in the context of a data structure.\nVariable playing the role of a variable descriptor component.\n\nExamples\n==========\nConsider two variables, i.e. income and age, with values apearing in the same column. \nCodes \"income\" and \"age\" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable."@en;
+  
+.
+
+ddsc:DescriptorVariable-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:DescriptorVariable;
+  rdfs:range ddsc:ObjectName;
+.
+
+
+ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "takesSubstantiveValuesFrom_DescriptorValueDomain";
+  skos:altLabel "DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain";
+  rdfs:comment "The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship \"Measures\" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values."@en;
+  rdfs:domain ddsc:DescriptorVariable;
+  rdfs:range ddsc:DescriptorValueDomain;
+.
+
+

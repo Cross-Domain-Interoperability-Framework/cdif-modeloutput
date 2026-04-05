@@ -1,0 +1,10 @@
+# class SentinelValueDomain
+# based on the UML class CDIF::DDSC::Classes::SentinelValueDomain
+ddsc:SentinelValueDomainShape CLOSED {
+	a [ddsc:SentinelValueDomain];
+	ddsc:SentinelValueDomain-recommendedDataType	@ddsc:ControlledVocabularyEntryShape;
+	^ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain @ddsc:InstanceVariableShape ;
+	^ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain @ddsc:RepresentedVariableShape +;
+	^ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain @ddsc:ReferenceVariableShape ;
+	}
+

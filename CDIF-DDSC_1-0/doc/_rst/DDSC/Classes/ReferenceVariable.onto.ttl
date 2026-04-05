@@ -1,0 +1,39 @@
+# class ReferenceVariable
+# based on the UML class CDIF::DDSC::Classes::ReferenceVariable
+ddsc:ReferenceVariable
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "ReferenceVariable";
+  rdfs:comment "Definition\n============\nVariable that records values of multiple variables in the context of a data structure.\nVariable playing the role of a variable value component.\n\nExamples\n==========\nConsider two variables, i.e. income and age, with values appearing in the same column, e.g. 100000, 45, 85000, 34, etc. \nValues 100000, 45, 85000, 34 are reference values in the reference value domain corresponding to the reference variable."@en;
+  
+.
+
+ddsc:ReferenceVariable-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:ReferenceVariable;
+  rdfs:range ddsc:ObjectName;
+.
+
+
+ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "takesSubstantiveValuesFrom_SubstantiveValueDomain";
+  skos:altLabel "ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain";
+  rdfs:comment "The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship \"Measures\" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values."@en;
+  rdfs:domain ddsc:ReferenceVariable;
+  rdfs:range ddsc:SubstantiveValueDomain;
+.
+
+ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "takesSentinelValuesFrom_SentinelValueDomain";
+  skos:altLabel "ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain";
+  rdfs:comment "A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms."@en;
+  rdfs:domain ddsc:ReferenceVariable;
+  rdfs:range ddsc:SentinelValueDomain;
+.
+
+

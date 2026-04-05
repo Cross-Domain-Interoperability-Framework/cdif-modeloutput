@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <body onload="redirect()">
+    <script>
+      var mappingTable = {
+        "AttributeComponent": "DDSC/Classes/AttributeComponent.html",
+        "ComponentPosition": "DDSC/Classes/ComponentPosition.html",
+        "DataStore": "DDSC/Classes/DataStore.html",
+        "Descriptor": "DDSC/Classes/Descriptor.html",
+        "DescriptorValueDomain": "DDSC/Classes/DescriptorValueDomain.html",
+        "DescriptorVariable": "DDSC/Classes/DescriptorVariable.html",
+        "DimensionComponent": "DDSC/Classes/DimensionComponent.html",
+        "DimensionalDataSet": "DDSC/Classes/DimensionalDataSet.html",
+        "DimensionalDataStructure": "DDSC/Classes/DimensionalDataStructure.html",
+        "IdentifierComponent": "DDSC/Classes/IdentifierComponent.html",
+        "InstanceVariable": "DDSC/Classes/InstanceVariable.html",
+        "LogicalRecord": "DDSC/Classes/LogicalRecord.html",
+        "LongDataSet": "DDSC/Classes/LongDataSet.html",
+        "LongDataStructure": "DDSC/Classes/LongDataStructure.html",
+        "MeasureComponent": "DDSC/Classes/MeasureComponent.html",
+        "PhysicalSegmentLayout": "DDSC/Classes/PhysicalSegmentLayout.html",
+        "Population": "DDSC/Classes/Population.html",
+        "PrimaryKey": "DDSC/Classes/PrimaryKey.html",
+        "PrimaryKeyComponent": "DDSC/Classes/PrimaryKeyComponent.html",
+        "ReferenceVariable": "DDSC/Classes/ReferenceVariable.html",
+        "RepresentedVariable": "DDSC/Classes/RepresentedVariable.html",
+        "SentinelValueDomain": "DDSC/Classes/SentinelValueDomain.html",
+        "SubstantiveValueDomain": "DDSC/Classes/SubstantiveValueDomain.html",
+        "UnitType": "DDSC/Classes/UnitType.html",
+        "Universe": "DDSC/Classes/Universe.html",
+        "ValueMapping": "DDSC/Classes/ValueMapping.html",
+        "ValueMappingPosition": "DDSC/Classes/ValueMappingPosition.html",
+        "VariableDescriptorComponent": "DDSC/Classes/VariableDescriptorComponent.html",
+        "VariableValueComponent": "DDSC/Classes/VariableValueComponent.html",
+        "WideDataSet": "DDSC/Classes/WideDataSet.html",
+        "WideDataStructure": "DDSC/Classes/WideDataStructure.html",
+        "BibliographicName": "DDSC/DataTypes/StructuredDataTypes/BibliographicName.html",
+        "CombinedDate": "DDSC/DataTypes/StructuredDataTypes/CombinedDate.html",
+        "ControlledVocabularyEntry": "DDSC/DataTypes/StructuredDataTypes/ControlledVocabularyEntry.html",
+        "DateRange": "DDSC/DataTypes/StructuredDataTypes/DateRange.html",
+        "InternationalRegistrationDataIdentifier": "DDSC/DataTypes/StructuredDataTypes/InternationalRegistrationDataIdentifier.html",
+        "InternationalString": "DDSC/DataTypes/StructuredDataTypes/InternationalString.html",
+        "LabelForDisplay": "DDSC/DataTypes/StructuredDataTypes/LabelForDisplay.html",
+        "LanguageString": "DDSC/DataTypes/StructuredDataTypes/LanguageString.html",
+        "ModelIdentification": "DDSC/ModelIdentification.html",
+        "NonDdiIdentifier": "DDSC/DataTypes/StructuredDataTypes/NonDdiIdentifier.html",
+        "NonIsoDate": "DDSC/DataTypes/StructuredDataTypes/NonIsoDate.html",
+        "ObjectAttributeSelector": "DDSC/DataTypes/StructuredDataTypes/ObjectAttributeSelector.html",
+        "ObjectName": "DDSC/DataTypes/StructuredDataTypes/ObjectName.html",
+        "OrganizationName": "DDSC/DataTypes/StructuredDataTypes/OrganizationName.html",
+        "Reference": "DDSC/DataTypes/StructuredDataTypes/Reference.html",
+        "Selector": "DDSC/DataTypes/StructuredDataTypes/Selector.html",
+        "TextPositionSelector": "DDSC/DataTypes/StructuredDataTypes/TextPositionSelector.html",
+        "TrimValues": "DDSC/DataTypes/Enumerations/TrimValues.html",
+        "TypedString": "DDSC/DataTypes/StructuredDataTypes/TypedString.html",
+        "XsdAnyUri": "DDSC/DataTypes/XMLSchemaDataTypes/XsdAnyUri.html",
+        "XsdDate": "DDSC/DataTypes/XMLSchemaDataTypes/XsdDate.html",
+        "XsdLanguage": "DDSC/DataTypes/XMLSchemaDataTypes/XsdLanguage.html",
+      }
+      function redirect() {
+        pathname = window.location.pathname;
+        lastSlashPosition = pathname.lastIndexOf('/');
+        documentationRoot = pathname.substring(0, lastSlashPosition+1);
+        if (window.location.hash) {
+	      var fragmentIdentifier = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+	      window.location.replace(documentationRoot+mappingTable[[fragmentIdentifier]]);
+        } else {
+          window.location.replace(documentationRoot);
+        }
+      }
+    </script>
+  </body>
+</html>

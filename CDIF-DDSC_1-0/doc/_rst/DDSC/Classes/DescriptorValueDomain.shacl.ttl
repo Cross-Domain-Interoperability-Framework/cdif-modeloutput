@@ -1,0 +1,23 @@
+# class DescriptorValueDomain
+# based on the UML class CDIF::DDSC::Classes::DescriptorValueDomain
+<#DescriptorValueDomain> a sh:NodeShape;
+    sh:targetClass ddsc:DescriptorValueDomain;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorValueDomain";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DescriptorValueDomain
+			 ) ;
+    ];
+    # attributes
+    # associations from DescriptorValueDomain
+    # associations to DescriptorValueDomain
+    sh:property <#rev_DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain>;
+
+
+
+.
+
+
+

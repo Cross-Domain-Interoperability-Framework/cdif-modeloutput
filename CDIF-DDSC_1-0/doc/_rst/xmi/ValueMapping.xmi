@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.ValueMapping"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.ValueMapping-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+==========
+Physical characteristics for the value of an instance variable stored in a data point as part of a physical segment layout.
+
+Examples 
+========
+A variable "age" might be represented in a file as a string with a maximum length of 5 characters and a number pattern of ##0.0  
+
+Explanatory notes 
+=================
+An instance variable has details of value domain and data type, but will not have the final details of how a value is physically represented in a data file. A variable for height, for example, may be represented as a real number, but may be represented as a string in multiple ways. The decimal separator might be, for example a period or a comma. The string representing the value of a payment might be preceded by a currency symbol. The same numeric value might be written as "1,234,567" or "1.234567". A missing value might be written as ".", "NA", ".R" or as "R". The value mapping describes how the value of an instance variable is physically expressed. The properties of the value mapping as intended to be compatible with the W3C Metadata Vocabulary for Tabular Data (https://www.w3.org/TR/tabular-metadata/) as well as common programming languages and statistical packages. The 'format' property, for example, can draw from an external controlled vocabulary such as the set of formats for Stata, SPSS, or SAS.</body>
+      <annotatedElement xmi:idref="ddsc.ValueMapping"/>
+   </ownedComment>
+   <name>ValueMapping</name>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-decimalPositions"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-decimalPositions"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ValueMapping-decimalPositions-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-decimalPositions-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The number of decimal positions expressed as an integer. Used when the decimal position is implied (no decimal separator is present) See DDI 3.2 ManagedNumericRepresentation_decimalPositions</body>
+         <annotatedElement xmi:idref="ddsc.ValueMapping-decimalPositions"/>
+      </ownedComment>
+      <name>decimalPositions</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-defaultDecimalSeparator"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-defaultDecimalSeparator"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ValueMapping-defaultDecimalSeparator-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-defaultDecimalSeparator-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Default value is "." (period). The character separating the integer part from the fractional part of a decimal or real number. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 6.4.2: "decimalChar: A string whose value is used to represent a decimal point within the number. If the supplied value is not a string, implementations MUST issue a warning and proceed as if the property had not been specified."</body>
+         <annotatedElement xmi:idref="ddsc.ValueMapping-defaultDecimalSeparator"/>
+      </ownedComment>
+      <name>defaultDecimalSeparator</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-length"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-length"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ValueMapping-length-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-length-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The length in characters of the physical representation of the value. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/)  5.11.2 "length: A numeric atomic property that contains a single integer that is the exact length of the value. The value of this property becomes the length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details." Corresponds to DDI2.5 var/location/width and DDI 3.2 PhysicalLocation/Width.</body>
+         <annotatedElement xmi:idref="ddsc.ValueMapping-length"/>
+      </ownedComment>
+      <name>length</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-maximumLength"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-maximumLength"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ValueMapping-maximumLength-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-maximumLength-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The largest possible value of the length of the physical representation of the value. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 5.11.2: "maxLength: A numeric atomic property that contains a single integer that is the maximum length of the value. The value of this property becomes the maximum length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details."</body>
+         <annotatedElement xmi:idref="ddsc.ValueMapping-maximumLength"/>
+      </ownedComment>
+      <name>maximumLength</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-minimumLength"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-minimumLength"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ValueMapping-minimumLength-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-minimumLength-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The smallest possible value for the length of the physical representation of the value. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/)  5.11.2: "minLength: An atomic property that contains a single integer that is the minimum length of the value. The value of this property becomes the minimum length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details."</body>
+         <annotatedElement xmi:idref="ddsc.ValueMapping-minimumLength"/>
+      </ownedComment>
+      <name>minimumLength</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-ownedAttribute-6"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-6"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.InstanceVariable"/>
+      <upperValue xmi:id="ddsc.ValueMapping-ownedAttribute-6-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-6-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.ValueMapping_formats_InstanceVariable"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-ownedAttribute-7"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-7"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.RepresentedVariable"/>
+      <upperValue xmi:id="ddsc.ValueMapping-ownedAttribute-7-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-7-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.ValueMapping_formats_RepresentedVariable"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-ownedAttribute-8"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-8"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.ReferenceVariable"/>
+      <upperValue xmi:id="ddsc.ValueMapping-ownedAttribute-8-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-8-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.ValueMapping_formats_ReferenceVariable"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ValueMapping-ownedAttribute-9"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-9"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.DescriptorVariable"/>
+      <upperValue xmi:id="ddsc.ValueMapping-ownedAttribute-9-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping-ownedAttribute-9-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.ValueMapping_formats_DescriptorVariable"/>
+   </ownedAttribute>
+</packagedElement>

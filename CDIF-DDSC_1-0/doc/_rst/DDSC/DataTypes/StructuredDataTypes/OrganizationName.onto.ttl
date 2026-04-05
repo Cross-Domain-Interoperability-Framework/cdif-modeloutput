@@ -1,0 +1,43 @@
+# datatype OrganizationName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::OrganizationName
+ddsc:OrganizationName
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "OrganizationName";
+  rdfs:comment "Definition\n==========\nNames by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage."@en;
+  
+  owl:hasKey (ddsc:OrganizationName-abbreviation ddsc:OrganizationName-effectiveDates ddsc:OrganizationName-isFormal ddsc:OrganizationName-typeOfOrganizationName);
+.
+
+ddsc:OrganizationName-abbreviation
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "abbreviation";
+  
+  rdfs:domain ddsc:OrganizationName;
+  rdfs:range ddsc:InternationalString;
+.
+
+ddsc:OrganizationName-effectiveDates
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "effectiveDates";
+  
+  rdfs:domain ddsc:OrganizationName;
+  rdfs:range ddsc:DateRange;
+.
+
+ddsc:OrganizationName-isFormal
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "isFormal";
+  
+  rdfs:domain ddsc:OrganizationName;
+  rdfs:range xsd:boolean;
+.
+
+ddsc:OrganizationName-typeOfOrganizationName
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "typeOfOrganizationName";
+  
+  rdfs:domain ddsc:OrganizationName;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+

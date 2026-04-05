@@ -1,0 +1,75 @@
+# datatype LanguageString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LanguageString
+ddsc:LanguageString
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "LanguageString";
+  rdfs:comment "Definition\n============\nA data type which describes a string specific to a language/scope combination. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc."@en;
+  
+  owl:hasKey (ddsc:LanguageString-content ddsc:LanguageString-isTranslatable ddsc:LanguageString-isTranslated ddsc:LanguageString-language ddsc:LanguageString-scope ddsc:LanguageString-structureUsed ddsc:LanguageString-translationDate ddsc:LanguageString-translationSourceLanguage);
+.
+
+ddsc:LanguageString-content
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "content";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:string;
+.
+
+ddsc:LanguageString-isTranslatable
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "isTranslatable";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:boolean;
+.
+
+ddsc:LanguageString-isTranslated
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "isTranslated";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:boolean;
+.
+
+ddsc:LanguageString-language
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "language";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:language;
+.
+
+ddsc:LanguageString-scope
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "scope";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:string;
+.
+
+ddsc:LanguageString-structureUsed
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "structureUsed";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+ddsc:LanguageString-translationDate
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "translationDate";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:date;
+.
+
+ddsc:LanguageString-translationSourceLanguage
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "translationSourceLanguage";
+  
+  rdfs:domain ddsc:LanguageString;
+  rdfs:range xsd:language;
+.
+
+

@@ -1,0 +1,35 @@
+# class SentinelValueDomain
+# based on the UML class CDIF::DDSC::Classes::SentinelValueDomain
+<#SentinelValueDomain> a sh:NodeShape;
+    sh:targetClass ddsc:SentinelValueDomain;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/SentinelValueDomain";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:SentinelValueDomain
+			 ) ;
+    ];
+    # attributes
+    sh:property <#SentinelValueDomain-recommendedDataType>;
+    # associations from SentinelValueDomain
+    # associations to SentinelValueDomain
+    sh:property <#rev_InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    sh:property <#rev_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    sh:property <#rev_ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+
+
+
+.
+
+<#SentinelValueDomain-recommendedDataType> a sh:PropertyShape ;
+    sh:path ddsc:SentinelValueDomain-recommendedDataType;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+

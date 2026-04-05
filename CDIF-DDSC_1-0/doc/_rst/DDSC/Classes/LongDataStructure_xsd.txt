@@ -1,0 +1,152 @@
+  <xs:element name="LongDataStructure"
+              type="LongDataStructureXsdType"
+              xml:id="LongDataStructure">
+    <!-- based on the UML class CDIF::DDSC::Classes::LongDataStructure -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.
+            
+            Examples
+            ==========
+            The structure described by [Unit id, Income, Province, Variable name, Variable value] where Unit id identifies a statistical unit, Income and Province are two instance variables capturing characteristics, and other instance variables are represented by Variable name (a variable descriptor component) and Variable Value (a variable value component).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="LongDataStructureXsdType"
+                  xml:id="LongDataStructureXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.
+            
+            Examples
+            ==========
+            The structure described by [Unit id, Income, Province, Variable name, Variable value] where Unit id identifies a statistical unit, Income and Province are two instance variables capturing characteristics, and other instance variables are represented by Variable name (a variable descriptor component) and Variable Value (a variable value component).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LongDataStructure_has_IdentifierComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LongDataStructure_has_IdentifierComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_IdentifierComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_IdentifierComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="IdentifierComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LongDataStructure_has_AttributeComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LongDataStructure_has_AttributeComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_AttributeComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_AttributeComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="AttributeComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LongDataStructure_has_VariableDescriptorComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LongDataStructure_has_VariableDescriptorComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_VariableDescriptorComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_VariableDescriptorComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="VariableDescriptorComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LongDataStructure_has_VariableValueComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LongDataStructure_has_VariableValueComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_VariableValueComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="LongDataStructure_has_VariableValueComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="VariableValueComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

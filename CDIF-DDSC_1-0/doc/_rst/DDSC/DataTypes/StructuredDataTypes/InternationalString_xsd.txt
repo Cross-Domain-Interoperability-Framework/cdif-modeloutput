@@ -1,0 +1,30 @@
+  <xs:element name="InternationalString"
+              type="InternationalStringXsdType"
+              xml:id="InternationalString">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalString -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="InternationalStringXsdType"
+                  xml:id="InternationalStringXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Packaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="languageSpecificString"
+                  type="LanguageStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="InternationalString-languageSpecificString">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

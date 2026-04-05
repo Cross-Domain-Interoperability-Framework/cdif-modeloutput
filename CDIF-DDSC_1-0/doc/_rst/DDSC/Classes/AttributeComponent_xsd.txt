@@ -1,0 +1,59 @@
+  <xs:element name="AttributeComponent"
+              type="AttributeComponentXsdType"
+              xml:id="AttributeComponent">
+    <!-- based on the UML class CDIF::DDSC::Classes::AttributeComponent -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.  
+            
+            Examples 
+            ========== 
+            The publication status of an observation (e.g. provisional, final, revised).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="AttributeComponentXsdType"
+                  xml:id="AttributeComponentXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.  
+            
+            Examples 
+            ========== 
+            The publication status of an observation (e.g. provisional, final, revised).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AttributeComponent_isDefinedBy_InstanceVariable"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="AttributeComponent_isDefinedBy_InstanceVariable">
+        <xs:annotation>
+          <xs:documentation>Data structure component is defined by zero to one represented variable.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="AttributeComponent_isDefinedBy_InstanceVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="AttributeComponent_isDefinedBy_InstanceVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="InstanceVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

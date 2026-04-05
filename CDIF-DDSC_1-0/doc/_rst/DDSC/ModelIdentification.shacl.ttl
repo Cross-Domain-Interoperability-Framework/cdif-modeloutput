@@ -1,0 +1,68 @@
+# datatype ModelIdentification
+# based on the UML data type CDIF::DDSC::ModelIdentification
+<#ModelIdentification> a sh:NodeShape;
+    sh:targetClass ddsc:ModelIdentification;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ModelIdentification";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ModelIdentification
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ModelIdentification-acronym>;
+    sh:property <#ModelIdentification-language>;
+    sh:property <#ModelIdentification-majorVersion>;
+    sh:property <#ModelIdentification-minorVersion>;
+    sh:property <#ModelIdentification-subtitle>;
+    sh:property <#ModelIdentification-title>;
+    sh:property <#ModelIdentification-uri>;
+
+
+
+.
+
+<#ModelIdentification-acronym> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-acronym;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-language> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-language;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-majorVersion> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-majorVersion;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-minorVersion> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-minorVersion;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-subtitle> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-subtitle;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-title> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-title;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-uri> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-uri;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

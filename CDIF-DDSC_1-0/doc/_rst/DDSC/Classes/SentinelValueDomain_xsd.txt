@@ -1,0 +1,45 @@
+  <xs:element name="SentinelValueDomain"
+              type="SentinelValueDomainXsdType"
+              xml:id="SentinelValueDomain">
+    <!-- based on the UML class CDIF::DDSC::Classes::SentinelValueDomain -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Value domain for a sentinel conceptual domain.   
+            
+            Examples 
+            ========== 
+            Missing categories expressed as codes: -9, refused; -8, Don't Know; for a numeric variable with values greater than zero.    
+            
+            Explanatory notes 
+            =================== 
+            Sentinel values are defined in ISO 11404 as "element of a value space that is not completely consistent with a datatype's properties and characterizing operations...". A common example would be codes for missing values. Sentinel values are used for processing, not to describe subject matter. Typical examples include missing values or invalid entry codes. Sentinel value domains are typically of the enumerated type, but they can be the described type, too. This is not to say that sentinel values carry no information. Data on gender might be enumerated by "0, male" and "1, female". These are the substantive values (see substantive value domain). However, there may be the need to include missing values along with that data, such as "m, missing" and "r, refused". These are sentinel values.  ISO/IEC 11404 - General Purpose Datatypes, defines sentinel values in terms of how that standard defines datatypes. But, the fact that the sentinels don't fit in terms of the calculations and statistics one would perform on the "clean" data is a distinguishing characteristic. In the example above, one would not include missing or refused data in calculating a ratio of females to the total population. Sentinel values may be described rather than enumerated. For instance, there might be a range of values, each representing an out of range value, but there could be too many to enumerate. It is easier to describe the range.  In some software missing values are represented as values not in the datatype of the valid values. R has values of NA, NaN, Inf, and -Inf. SAS and Stata have values displayed as ".", ".A" through ".Z", and "._"  Other software might use values like 999 for missing that would otherwise be the same datatype as valid values but outside the parameters of the domain. In the gender example above: For SPSS the sentinel values might be represented as: 998 = "refused" 999 = "not recorded"  For SAS or Stata the sentinel values might be represented as: .R = "refused" .N = "not recorded"  Sentinel values can also be used for other purposes beyond missing. For a numeric variable "A" might represent a value somewhere in a defined range to prevent disclosure of information about an individual. This might be considered a "semi-missing value". In SAS or Stata for example: .A = "greater than or equal to 100 and less than 1000 ".</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="SentinelValueDomainXsdType"
+                  xml:id="SentinelValueDomainXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Value domain for a sentinel conceptual domain.   
+            
+            Examples 
+            ========== 
+            Missing categories expressed as codes: -9, refused; -8, Don't Know; for a numeric variable with values greater than zero.    
+            
+            Explanatory notes 
+            =================== 
+            Sentinel values are defined in ISO 11404 as "element of a value space that is not completely consistent with a datatype's properties and characterizing operations...". A common example would be codes for missing values. Sentinel values are used for processing, not to describe subject matter. Typical examples include missing values or invalid entry codes. Sentinel value domains are typically of the enumerated type, but they can be the described type, too. This is not to say that sentinel values carry no information. Data on gender might be enumerated by "0, male" and "1, female". These are the substantive values (see substantive value domain). However, there may be the need to include missing values along with that data, such as "m, missing" and "r, refused". These are sentinel values.  ISO/IEC 11404 - General Purpose Datatypes, defines sentinel values in terms of how that standard defines datatypes. But, the fact that the sentinels don't fit in terms of the calculations and statistics one would perform on the "clean" data is a distinguishing characteristic. In the example above, one would not include missing or refused data in calculating a ratio of females to the total population. Sentinel values may be described rather than enumerated. For instance, there might be a range of values, each representing an out of range value, but there could be too many to enumerate. It is easier to describe the range.  In some software missing values are represented as values not in the datatype of the valid values. R has values of NA, NaN, Inf, and -Inf. SAS and Stata have values displayed as ".", ".A" through ".Z", and "._"  Other software might use values like 999 for missing that would otherwise be the same datatype as valid values but outside the parameters of the domain. In the gender example above: For SPSS the sentinel values might be represented as: 998 = "refused" 999 = "not recorded"  For SAS or Stata the sentinel values might be represented as: .R = "refused" .N = "not recorded"  Sentinel values can also be used for other purposes beyond missing. For a numeric variable "A" might represent a value somewhere in a defined range to prevent disclosure of information about an individual. This might be considered a "semi-missing value". In SAS or Stata for example: .A = "greater than or equal to 100 and less than 1000 ".</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="recommendedDataType"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="SentinelValueDomain-recommendedDataType">
+        <xs:annotation>
+          <xs:documentation>The data types that are recommended for use with this domain.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

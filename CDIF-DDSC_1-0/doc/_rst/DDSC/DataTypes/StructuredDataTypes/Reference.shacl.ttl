@@ -1,0 +1,88 @@
+# datatype Reference
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Reference
+<#Reference> a sh:NodeShape;
+    sh:targetClass ddsc:Reference;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Reference";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Reference
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Reference-ddiReference>;
+    sh:property <#Reference-deepLink>;
+    sh:property <#Reference-description>;
+    sh:property <#Reference-location>;
+    sh:property <#Reference-nonDdiReference>;
+    sh:property <#Reference-semantic>;
+    sh:property <#Reference-uri>;
+    sh:property <#Reference-validType>;
+
+
+
+.
+
+<#Reference-ddiReference> a sh:PropertyShape ;
+    sh:path ddsc:Reference-ddiReference;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalRegistrationDataIdentifier
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-deepLink> a sh:PropertyShape ;
+    sh:path ddsc:Reference-deepLink;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Selector
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-description> a sh:PropertyShape ;
+    sh:path ddsc:Reference-description;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-location> a sh:PropertyShape ;
+    sh:path ddsc:Reference-location;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-nonDdiReference> a sh:PropertyShape ;
+    sh:path ddsc:Reference-nonDdiReference;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:NonDdiIdentifier
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#Reference-semantic> a sh:PropertyShape ;
+    sh:path ddsc:Reference-semantic;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-uri> a sh:PropertyShape ;
+    sh:path ddsc:Reference-uri;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-validType> a sh:PropertyShape ;
+    sh:path ddsc:Reference-validType;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+.
+

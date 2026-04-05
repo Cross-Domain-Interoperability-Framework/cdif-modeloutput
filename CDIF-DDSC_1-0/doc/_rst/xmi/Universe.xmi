@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.Universe"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.Universe-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Specialized unit type, with the specialization based upon characteristics other than time and geography.
+
+Examples
+==========
+1. Canadian adults (not limited to those residing in Canada)
+2. Computer companies 
+3. Universities
+
+Explanatory notes
+===================
+Universe sits in a hierarchy between unit type and population, with unit type being most general and Population most specific. A universe is a set of entities defined by a more narrow specification than that of an underlying unit type. A population further narrows the specification to a specific time and geography.
+
+If the Universe consists of people, a number of factors may be used in defining membership in the Universe, such as age, sex, residence, income, veteran status, criminal convictions, etc. The universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. A universe may be described as "inclusive" or "exclusive". 
+
+Not to be confused with Population, which includes the specification of time and geography.</body>
+      <annotatedElement xmi:idref="ddsc.Universe"/>
+   </ownedComment>
+   <name>Universe</name>
+   <ownedAttribute xmi:id="ddsc.Universe-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.Universe-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.Universe-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Universe-descriptiveText"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-descriptiveText"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.Universe-descriptiveText-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-descriptiveText-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>A short natural language account of the characteristics of the object.</body>
+         <annotatedElement xmi:idref="ddsc.Universe-descriptiveText"/>
+      </ownedComment>
+      <name>descriptiveText</name>
+      <type xmi:idref="ddsc.InternationalString"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Universe-ownedAttribute-3"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-ownedAttribute-3"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.UnitType"/>
+      <upperValue xmi:id="ddsc.Universe-ownedAttribute-3-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe-ownedAttribute-3-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.Universe_uses_UnitType"/>
+   </ownedAttribute>
+</packagedElement>

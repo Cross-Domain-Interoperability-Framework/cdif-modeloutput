@@ -1,0 +1,29 @@
+# class ComponentPosition
+# based on the UML class CDIF::DDSC::Classes::ComponentPosition
+ddsc:ComponentPosition
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "ComponentPosition";
+  rdfs:comment "Definition \n============ \nIndexes the components in a data structure using integers with a position indicated by incrementing upward from 0 or 1."@en;
+  
+.
+
+ddsc:ComponentPosition-value
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "value";
+  rdfs:comment "Index value of the member in an ordered array."@en;
+  rdfs:domain ddsc:ComponentPosition;
+  rdfs:range xsd:integer;
+.
+
+
+ddsc:ComponentPosition_indexes_DimensionComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "indexes_DimensionComponent";
+  skos:altLabel "ComponentPosition_indexes_DimensionComponent";
+  
+  rdfs:domain ddsc:ComponentPosition;
+  rdfs:range ddsc:DimensionComponent;
+.
+
+

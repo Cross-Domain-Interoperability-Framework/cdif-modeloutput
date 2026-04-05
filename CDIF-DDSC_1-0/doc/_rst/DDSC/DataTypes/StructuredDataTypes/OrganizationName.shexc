@@ -1,0 +1,10 @@
+# datatype OrganizationName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::OrganizationName
+ddsc:OrganizationNameShape CLOSED {
+	a [ddsc:OrganizationName];
+	ddsc:OrganizationName-abbreviation	@ddsc:InternationalStringShape;
+	ddsc:OrganizationName-effectiveDates	@ddsc:DateRangeShape;
+	ddsc:OrganizationName-isFormal	xsd:boolean;
+	ddsc:OrganizationName-typeOfOrganizationName	@ddsc:ControlledVocabularyEntryShape;
+	}
+

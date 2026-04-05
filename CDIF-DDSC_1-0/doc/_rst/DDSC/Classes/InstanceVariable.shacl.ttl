@@ -1,0 +1,112 @@
+# class InstanceVariable
+# based on the UML class CDIF::DDSC::Classes::InstanceVariable
+<#InstanceVariable> a sh:NodeShape;
+    sh:targetClass ddsc:InstanceVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/InstanceVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:InstanceVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#InstanceVariable-definition>;
+    sh:property <#InstanceVariable-describedUnitOfMeasure>;
+    sh:property <#InstanceVariable-name>;
+    sh:property <#InstanceVariable-unitOfMeasureKind>;
+    # associations from InstanceVariable
+    sh:property <#InstanceVariable_measures_Population>;
+    sh:property <#InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    # associations to InstanceVariable
+    sh:property <#rev_LogicalRecord_has_InstanceVariable>;
+    sh:property <#rev_Descriptor_identifies_InstanceVariable>;
+    sh:property <#rev_IdentifierComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_MeasureComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_AttributeComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_DimensionComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_ValueMapping_formats_InstanceVariable>;
+
+
+
+.
+
+<#InstanceVariable-definition> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-definition;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable-describedUnitOfMeasure> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-describedUnitOfMeasure;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable-unitOfMeasureKind> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-unitOfMeasureKind;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#InstanceVariable_measures_Population> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable_measures_Population;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Population
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_InstanceVariable_measures_Population> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:InstanceVariable_measures_Population ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SubstantiveValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SentinelValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

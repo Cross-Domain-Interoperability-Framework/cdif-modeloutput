@@ -1,0 +1,10 @@
+# class DescriptorVariable
+# based on the UML class CDIF::DDSC::Classes::DescriptorVariable
+ddsc:DescriptorVariableShape CLOSED {
+	a [ddsc:DescriptorVariable];
+	ddsc:DescriptorVariable-name	@ddsc:ObjectNameShape;
+	ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain	@ddsc:DescriptorValueDomainShape +;
+	
+	^ddsc:ValueMapping_formats_DescriptorVariable @ddsc:ValueMappingShape ;
+	}
+

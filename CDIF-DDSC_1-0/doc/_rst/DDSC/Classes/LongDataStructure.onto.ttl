@@ -1,0 +1,51 @@
+# class LongDataStructure
+# based on the UML class CDIF::DDSC::Classes::LongDataStructure
+ddsc:LongDataStructure
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "LongDataStructure";
+  rdfs:comment "Definition\n============\nStructure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.\n\nExamples\n==========\nThe structure described by [Unit id, Income, Province, Variable name, Variable value] where Unit id identifies a statistical unit, Income and Province are two instance variables capturing characteristics, and other instance variables are represented by Variable name (a variable descriptor component) and Variable Value (a variable value component)."@en;
+  
+.
+
+
+ddsc:LongDataStructure_has_IdentifierComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_IdentifierComponent";
+  skos:altLabel "LongDataStructure_has_IdentifierComponent";
+  
+  rdfs:domain ddsc:LongDataStructure;
+  rdfs:range ddsc:IdentifierComponent;
+.
+
+ddsc:LongDataStructure_has_AttributeComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_AttributeComponent";
+  skos:altLabel "LongDataStructure_has_AttributeComponent";
+  
+  rdfs:domain ddsc:LongDataStructure;
+  rdfs:range ddsc:AttributeComponent;
+.
+
+ddsc:LongDataStructure_has_VariableDescriptorComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_VariableDescriptorComponent";
+  skos:altLabel "LongDataStructure_has_VariableDescriptorComponent";
+  
+  rdfs:domain ddsc:LongDataStructure;
+  rdfs:range ddsc:VariableDescriptorComponent;
+.
+
+ddsc:LongDataStructure_has_VariableValueComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_VariableValueComponent";
+  skos:altLabel "LongDataStructure_has_VariableValueComponent";
+  
+  rdfs:domain ddsc:LongDataStructure;
+  rdfs:range ddsc:VariableValueComponent;
+.
+
+

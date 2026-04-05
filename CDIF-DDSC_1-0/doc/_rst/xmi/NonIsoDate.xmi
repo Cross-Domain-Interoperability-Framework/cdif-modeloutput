@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.NonIsoDate"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonIsoDate"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.NonIsoDate-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonIsoDate-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Used to preserve an historical date, formatted in a non-ISO fashion.</body>
+      <annotatedElement xmi:idref="ddsc.NonIsoDate"/>
+   </ownedComment>
+   <name>NonIsoDate</name>
+   <ownedAttribute xmi:id="ddsc.NonIsoDate-calendar"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonIsoDate-calendar"
+                    xmi:type="uml:Property">
+      <name>calendar</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.NonIsoDate-dateContent"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonIsoDate-dateContent"
+                    xmi:type="uml:Property">
+      <name>dateContent</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.NonIsoDate-nonIsoDateFormat"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonIsoDate-nonIsoDateFormat"
+                    xmi:type="uml:Property">
+      <name>nonIsoDateFormat</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+</packagedElement>

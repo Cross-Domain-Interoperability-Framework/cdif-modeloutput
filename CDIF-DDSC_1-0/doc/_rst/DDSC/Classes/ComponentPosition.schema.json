@@ -1,0 +1,42 @@
+"cls-ComponentPosition": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/ComponentPosition",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "ComponentPosition"
+    },
+    "value": {
+      "$comment": "cardinality 1..1 – from ddsc:ComponentPosition",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "indexes_DimensionComponent": {
+      "description": "ComponentPosition_indexes_DimensionComponent",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-DimensionComponent"
+    },
+    "has_ComponentPosition_OF_DimensionalDataStructure": {
+      "description": "DimensionalDataStructure_has_ComponentPosition",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-DimensionalDataStructure"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["value","indexes_DimensionComponent","@type"],
+  "additionalProperties": false
+},
+"target-ComponentPosition": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/ComponentPosition",
+  "anyOf": [
+    { "$ref": "#/defs/cls-ComponentPosition" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

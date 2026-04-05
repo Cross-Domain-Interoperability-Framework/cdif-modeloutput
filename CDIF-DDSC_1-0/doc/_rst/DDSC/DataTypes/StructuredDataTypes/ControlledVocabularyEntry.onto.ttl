@@ -1,0 +1,51 @@
+# datatype ControlledVocabularyEntry
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ControlledVocabularyEntry
+ddsc:ControlledVocabularyEntry
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "ControlledVocabularyEntry";
+  rdfs:comment "Definition\n============\nAllows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the identifying attributes as needed to adequately identify the controlled vocabulary. Note that DDI has published a number of controlled vocabularies applicable to several locations using the external controlled vocabulary entry structure. If the code portion of the controlled vocabulary entry is language specific (i.e. a list of keywords or subject headings) use language to specify that language. In most cases the code portion of an entry is not language specific although the description and usage may be managed in one or more languages. Use of shared controlled vocabularies helps support interoperability and machine actionability."@en;
+  
+  owl:hasKey (ddsc:ControlledVocabularyEntry-entryReference ddsc:ControlledVocabularyEntry-entryValue ddsc:ControlledVocabularyEntry-name ddsc:ControlledVocabularyEntry-valueForOther ddsc:ControlledVocabularyEntry-vocabulary);
+.
+
+ddsc:ControlledVocabularyEntry-entryReference
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "entryReference";
+  
+  rdfs:domain ddsc:ControlledVocabularyEntry;
+  rdfs:range ddsc:Reference;
+.
+
+ddsc:ControlledVocabularyEntry-entryValue
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "entryValue";
+  
+  rdfs:domain ddsc:ControlledVocabularyEntry;
+  rdfs:range xsd:string;
+.
+
+ddsc:ControlledVocabularyEntry-name
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "name";
+  
+  rdfs:domain ddsc:ControlledVocabularyEntry;
+  rdfs:range xsd:string;
+.
+
+ddsc:ControlledVocabularyEntry-valueForOther
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "valueForOther";
+  
+  rdfs:domain ddsc:ControlledVocabularyEntry;
+  rdfs:range xsd:string;
+.
+
+ddsc:ControlledVocabularyEntry-vocabulary
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "vocabulary";
+  
+  rdfs:domain ddsc:ControlledVocabularyEntry;
+  rdfs:range ddsc:Reference;
+.
+
+

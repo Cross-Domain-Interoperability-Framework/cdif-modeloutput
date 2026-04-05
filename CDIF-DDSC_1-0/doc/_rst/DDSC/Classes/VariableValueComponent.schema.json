@@ -1,0 +1,44 @@
+"cls-VariableValueComponent": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/VariableValueComponent",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "VariableValueComponent"
+    },
+    
+    "isDefinedBy_ReferenceVariable": {
+      "description": "VariableValueComponent_isDefinedBy_ReferenceVariable",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-ReferenceVariable"
+    },
+    "has_VariableValueComponent_OF_LongDataStructure": {
+      "description": "LongDataStructure_has_VariableValueComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-LongDataStructure"
+    },
+    "refersTo_VariableValueComponent_OF_VariableDescriptorComponent": {
+      "description": "VariableDescriptorComponent_refersTo_VariableValueComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-VariableDescriptorComponent"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["isDefinedBy_ReferenceVariable","@type"],
+  "additionalProperties": false
+},
+"target-VariableValueComponent": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/VariableValueComponent",
+  "anyOf": [
+    { "$ref": "#/defs/cls-VariableValueComponent" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

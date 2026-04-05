@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.VariableDescriptorComponent"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableDescriptorComponent"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.VariableDescriptorComponent-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableDescriptorComponent-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Role given to a represented variable in the context of a data structure to provide codes for variable identification.   
+
+Examples 
+========== 
+Consider {"income", "age"} to be the value domain of the represented variable working as a variable descriptor component.  The two codes, i.e. those designating "income" and "age", are descriptors used to identify which values in the variable value component correspond to income and which ones to age.   
+
+Explanatory notes 
+=================== 
+Whenever more than one variable appears in the same column, we need a mechanism to distinguish which values correspond to which variable. This mechanism is provided by the variable descriptor component, which contains the codes used to link the variables to their values.  This structure provides a flexible mechanism avoiding the need for a formal pointer.</body>
+      <annotatedElement xmi:idref="ddsc.VariableDescriptorComponent"/>
+   </ownedComment>
+   <name>VariableDescriptorComponent</name>
+   <ownedAttribute xmi:id="ddsc.VariableDescriptorComponent-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableDescriptorComponent-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.VariableValueComponent"/>
+      <association xmi:idref="ddsc.VariableDescriptorComponent_refersTo_VariableValueComponent"/>
+   </ownedAttribute>
+</packagedElement>

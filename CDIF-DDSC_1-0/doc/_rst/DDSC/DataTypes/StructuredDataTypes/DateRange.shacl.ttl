@@ -1,0 +1,39 @@
+# datatype DateRange
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::DateRange
+<#DateRange> a sh:NodeShape;
+    sh:targetClass ddsc:DateRange;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DateRange";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DateRange
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DateRange-endDate>;
+    sh:property <#DateRange-startDate>;
+
+
+
+.
+
+<#DateRange-endDate> a sh:PropertyShape ;
+    sh:path ddsc:DateRange-endDate;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:CombinedDate
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DateRange-startDate> a sh:PropertyShape ;
+    sh:path ddsc:DateRange-startDate;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:CombinedDate
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

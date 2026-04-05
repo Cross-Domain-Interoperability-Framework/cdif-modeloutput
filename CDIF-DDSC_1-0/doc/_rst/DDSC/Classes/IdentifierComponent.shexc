@@ -1,0 +1,12 @@
+# class IdentifierComponent
+# based on the UML class CDIF::DDSC::Classes::IdentifierComponent
+ddsc:IdentifierComponentShape CLOSED {
+	a [ddsc:IdentifierComponent];
+	^ddsc:WideDataStructure_has_IdentifierComponent @ddsc:WideDataStructureShape ;
+	^ddsc:LongDataStructure_has_IdentifierComponent @ddsc:LongDataStructureShape ;
+	^ddsc:DimensionalDataStructure_has_IdentifierComponent @ddsc:DimensionalDataStructureShape ;
+	ddsc:IdentifierComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	^ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent @ddsc:PrimaryKeyComponentShape ;
+	}
+

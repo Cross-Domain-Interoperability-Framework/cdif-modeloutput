@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.AttributeComponent"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#AttributeComponent"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.AttributeComponent-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#AttributeComponent-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.  
+
+Examples 
+========== 
+The publication status of an observation (e.g. provisional, final, revised).</body>
+      <annotatedElement xmi:idref="ddsc.AttributeComponent"/>
+   </ownedComment>
+   <name>AttributeComponent</name>
+   <ownedAttribute xmi:id="ddsc.AttributeComponent-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#AttributeComponent-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.InstanceVariable"/>
+      <association xmi:idref="ddsc.AttributeComponent_isDefinedBy_InstanceVariable"/>
+   </ownedAttribute>
+</packagedElement>

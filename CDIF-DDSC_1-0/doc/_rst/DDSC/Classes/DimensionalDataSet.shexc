@@ -1,0 +1,9 @@
+# class DimensionalDataSet
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataSet
+ddsc:DimensionalDataSetShape CLOSED {
+	a [ddsc:DimensionalDataSet];
+	ddsc:DimensionalDataSet-name	@ddsc:ObjectNameShape;
+	ddsc:DimensionalDataSet-physicalFileName	xsd:string;
+	^ddsc:LogicalRecord_organizes_DimensionalDataSet @ddsc:LogicalRecordShape +;
+	}
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.DimensionalDataSet"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.DimensionalDataSet-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Organized collection of multidimensional data. It is structured by a dimensional data structure.
+
+Examples
+==========
+A dimensional dataset with Income values in each data point, where the dimensions organizing the data points are Sex and Marital Status.
+
+Explanatory notes
+===================
+Similar to Structural N-Cube.</body>
+      <annotatedElement xmi:idref="ddsc.DimensionalDataSet"/>
+   </ownedComment>
+   <name>DimensionalDataSet</name>
+   <ownedAttribute xmi:id="ddsc.DimensionalDataSet-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.DimensionalDataSet-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.DimensionalDataSet-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.DimensionalDataSet-physicalFileName"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet-physicalFileName"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.DimensionalDataSet-physicalFileName-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet-physicalFileName-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Use when multiple physical segments are stored in a single file.</body>
+         <annotatedElement xmi:idref="ddsc.DimensionalDataSet-physicalFileName"/>
+      </ownedComment>
+      <name>physicalFileName</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

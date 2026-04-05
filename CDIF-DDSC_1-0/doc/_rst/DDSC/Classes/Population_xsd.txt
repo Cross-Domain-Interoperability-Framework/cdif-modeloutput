@@ -1,0 +1,89 @@
+  <xs:element name="Population"
+              type="PopulationXsdType"
+              xml:id="Population">
+    <!-- based on the UML class CDIF::DDSC::Classes::Population -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Universe with time and geography specified.
+            
+            Examples
+            ==========
+            1. Canadian adult persons residing in Canada on 13 November 1956.
+            2. US computer companies at the end of 2012.  
+            3. Universities in Denmark 1 January 2011.
+            
+            Explanatory notes
+            ===================
+            Population is the most specific in the conceptually narrowing hierarchy of unit type, universe and population. Several populations having differing time and or geography may specialize the same universe.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="PopulationXsdType"
+                  xml:id="PopulationXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Universe with time and geography specified.
+            
+            Examples
+            ==========
+            1. Canadian adult persons residing in Canada on 13 November 1956.
+            2. US computer companies at the end of 2012.  
+            3. Universities in Denmark 1 January 2011.
+            
+            Explanatory notes
+            ===================
+            Population is the most specific in the conceptually narrowing hierarchy of unit type, universe and population. Several populations having differing time and or geography may specialize the same universe.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="descriptiveText"
+                  type="InternationalStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Population-descriptiveText">
+        <xs:annotation>
+          <xs:documentation>A short natural language account of the characteristics of the object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Population-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Population_uses_Universe"
+                  minOccurs="1"
+                  maxOccurs="2"
+                  xml:id="Population_uses_Universe">
+        <xs:annotation>
+          <xs:documentation>The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="Population_uses_Universe-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="Population_uses_Universe-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="Universe"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

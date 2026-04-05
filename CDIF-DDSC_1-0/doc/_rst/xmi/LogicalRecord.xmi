@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.LogicalRecord"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.LogicalRecord-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Collection of instance variables.</body>
+      <annotatedElement xmi:idref="ddsc.LogicalRecord"/>
+   </ownedComment>
+   <name>LogicalRecord</name>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.WideDataSet"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-1-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-1-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_organizes_WideDataSet"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.LongDataSet"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-2-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-2-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_organizes_LongDataSet"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-3"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-3"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.DimensionalDataSet"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-3-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-3-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_organizes_DimensionalDataSet"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-4"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-4"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.InstanceVariable"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-4-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-4-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_has_InstanceVariable"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-5"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-5"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.UnitType"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-5-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-5-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_isDefinedBy_UnitType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-6"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-6"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.Universe"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-6-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-6-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_isDefinedBy_Universe"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LogicalRecord-ownedAttribute-7"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-7"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.Population"/>
+      <upperValue xmi:id="ddsc.LogicalRecord-ownedAttribute-7-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord-ownedAttribute-7-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.LogicalRecord_isDefinedBy_Population"/>
+   </ownedAttribute>
+</packagedElement>

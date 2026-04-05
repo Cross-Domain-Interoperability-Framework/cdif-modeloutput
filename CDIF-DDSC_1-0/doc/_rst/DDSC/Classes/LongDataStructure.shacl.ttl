@@ -1,0 +1,78 @@
+# class LongDataStructure
+# based on the UML class CDIF::DDSC::Classes::LongDataStructure
+<#LongDataStructure> a sh:NodeShape;
+    sh:targetClass ddsc:LongDataStructure;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataStructure";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LongDataStructure
+			 ) ;
+    ];
+    # attributes
+    # associations from LongDataStructure
+    sh:property <#LongDataStructure_has_IdentifierComponent>;
+    sh:property <#LongDataStructure_has_AttributeComponent>;
+    sh:property <#LongDataStructure_has_VariableDescriptorComponent>;
+    sh:property <#LongDataStructure_has_VariableValueComponent>;
+    # associations to LongDataStructure
+
+
+
+.
+
+
+<#LongDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_IdentifierComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:IdentifierComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_IdentifierComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_AttributeComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:AttributeComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_AttributeComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataStructure_has_VariableDescriptorComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_VariableDescriptorComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:VariableDescriptorComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_VariableDescriptorComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_VariableDescriptorComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataStructure_has_VariableValueComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_VariableValueComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:VariableValueComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_VariableValueComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_VariableValueComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

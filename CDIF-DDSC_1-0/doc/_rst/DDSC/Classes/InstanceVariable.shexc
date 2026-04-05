@@ -1,0 +1,23 @@
+# class InstanceVariable
+# based on the UML class CDIF::DDSC::Classes::InstanceVariable
+ddsc:InstanceVariableShape CLOSED {
+	a [ddsc:InstanceVariable];
+	ddsc:InstanceVariable-definition	@ddsc:InternationalStringShape;
+	ddsc:InstanceVariable-describedUnitOfMeasure	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:InstanceVariable-name	@ddsc:ObjectNameShape;
+	ddsc:InstanceVariable-unitOfMeasureKind	@ddsc:ControlledVocabularyEntryShape;
+	^ddsc:LogicalRecord_has_InstanceVariable @ddsc:LogicalRecordShape +;
+	ddsc:InstanceVariable_measures_Population	@ddsc:PopulationShape +;
+	
+	ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain	@ddsc:SubstantiveValueDomainShape ;
+	
+	ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain	@ddsc:SentinelValueDomainShape +;
+	
+	^ddsc:Descriptor_identifies_InstanceVariable @ddsc:DescriptorShape +;
+	^ddsc:IdentifierComponent_isDefinedBy_InstanceVariable @ddsc:IdentifierComponentShape ;
+	^ddsc:MeasureComponent_isDefinedBy_InstanceVariable @ddsc:MeasureComponentShape ;
+	^ddsc:AttributeComponent_isDefinedBy_InstanceVariable @ddsc:AttributeComponentShape ;
+	^ddsc:DimensionComponent_isDefinedBy_InstanceVariable @ddsc:DimensionComponentShape ;
+	^ddsc:ValueMapping_formats_InstanceVariable @ddsc:ValueMappingShape ;
+	}
+

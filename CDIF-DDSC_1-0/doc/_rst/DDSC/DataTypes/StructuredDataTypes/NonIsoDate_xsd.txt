@@ -1,0 +1,48 @@
+  <xs:element name="NonIsoDate"
+              type="NonIsoDateXsdType"
+              xml:id="NonIsoDate">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonIsoDate -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Used to preserve an historical date, formatted in a non-ISO fashion.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="NonIsoDateXsdType"
+                  xml:id="NonIsoDateXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Used to preserve an historical date, formatted in a non-ISO fashion.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="calendar"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonIsoDate-calendar">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dateContent"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonIsoDate-dateContent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nonIsoDateFormat"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="NonIsoDate-nonIsoDateFormat">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

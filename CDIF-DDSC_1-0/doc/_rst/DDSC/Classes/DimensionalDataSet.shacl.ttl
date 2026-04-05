@@ -1,0 +1,40 @@
+# class DimensionalDataSet
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataSet
+<#DimensionalDataSet> a sh:NodeShape;
+    sh:targetClass ddsc:DimensionalDataSet;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionalDataSet";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DimensionalDataSet
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DimensionalDataSet-name>;
+    sh:property <#DimensionalDataSet-physicalFileName>;
+    # associations from DimensionalDataSet
+    # associations to DimensionalDataSet
+    sh:property <#rev_LogicalRecord_organizes_DimensionalDataSet>;
+
+
+
+.
+
+<#DimensionalDataSet-name> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataSet-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DimensionalDataSet-physicalFileName> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataSet-physicalFileName;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+

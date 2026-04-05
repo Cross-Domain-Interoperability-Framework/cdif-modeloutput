@@ -1,0 +1,10 @@
+# class SubstantiveValueDomain
+# based on the UML class CDIF::DDSC::Classes::SubstantiveValueDomain
+ddsc:SubstantiveValueDomainShape CLOSED {
+	a [ddsc:SubstantiveValueDomain];
+	ddsc:SubstantiveValueDomain-recommendedDataType	@ddsc:ControlledVocabularyEntryShape;
+	^ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @ddsc:InstanceVariableShape ;
+	^ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @ddsc:RepresentedVariableShape +;
+	^ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain @ddsc:ReferenceVariableShape ;
+	}
+

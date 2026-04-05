@@ -1,0 +1,47 @@
+"dt-Reference": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/Reference",
+  "type": ["object"],
+  "properties": {
+    "ddiReference": {
+      "$comment": "cardinality 1..1 – from ddsc:Reference",
+      "$ref": "#/defs/dt-InternationalRegistrationDataIdentifier"
+    },
+    "deepLink": {
+      "$comment": "cardinality 1..1 – from ddsc:Reference",
+      "$ref": "#/defs/dt-Selector"
+    },
+    "description": {
+      "$comment": "cardinality 1..1 – from ddsc:Reference",
+      "$ref": "#/defs/xsd:string"
+    },
+    "location": {
+      "$comment": "cardinality 1..1 – from ddsc:Reference",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "nonDdiReference": {
+      "$comment": "cardinality 1..-1 – from ddsc:Reference",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-NonDdiIdentifier" } },
+      "else": { "$ref": "#/defs/dt-NonDdiIdentifier" }
+    },
+    "semantic": {
+      "$comment": "cardinality 1..1 – from ddsc:Reference",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "uri": {
+      "$comment": "cardinality 1..1 – from ddsc:Reference",
+      "$ref": "#/defs/xsd:anyURI"
+    },
+    "validType": {
+      "$comment": "cardinality 1..-1 – from ddsc:Reference",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/xsd:string" } },
+      "else": { "$ref": "#/defs/xsd:string" }
+    },
+    "@type": {
+      "const": "Reference"
+    }
+  },
+  "required": ["ddiReference","deepLink","description","location","nonDdiReference","semantic","uri","validType","@type"],
+  "additionalProperties": false
+},

@@ -1,0 +1,35 @@
+# datatype ObjectAttributeSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectAttributeSelector
+ddsc:ObjectAttributeSelector
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "ObjectAttributeSelector";
+  rdfs:comment "Definition\n==========\nA resource which describes a specific attribute of an object. It is defined in the style of selectors of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/. The selector can be nested dependent on the structure of the referenced object."@en;
+  
+  owl:hasKey (ddsc:ObjectAttributeSelector-refinedBy ddsc:ObjectAttributeSelector-refinedByOrderNumber ddsc:ObjectAttributeSelector-value);
+.
+
+ddsc:ObjectAttributeSelector-refinedBy
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "refinedBy";
+  
+  rdfs:domain ddsc:ObjectAttributeSelector;
+  rdfs:range ddsc:ObjectAttributeSelector;
+.
+
+ddsc:ObjectAttributeSelector-refinedByOrderNumber
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "refinedByOrderNumber";
+  
+  rdfs:domain ddsc:ObjectAttributeSelector;
+  rdfs:range xsd:integer;
+.
+
+ddsc:ObjectAttributeSelector-value
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "value";
+  
+  rdfs:domain ddsc:ObjectAttributeSelector;
+  rdfs:range xsd:string;
+.
+
+

@@ -1,0 +1,203 @@
+[
+  {
+    "id": "CDIF",
+    "name": "CDIF",
+    "parent": null
+  },
+  {
+    "id": "DDSC",
+    "name": "CDIF::DDSC",
+    "parent": "CDIF"
+  },
+  {
+    "id": "Classes",
+    "name": "CDIF::DDSC::Classes",
+    "parent": "DDSC"
+  },
+  {
+    "id": "AttributeComponent",
+    "name": "Classes::AttributeComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.",
+    "parent": "Classes"
+  },
+  {
+    "id": "ComponentPosition",
+    "name": "Classes::ComponentPosition",
+    "definition": "Indexes the components in a data structure using integers with a position indicated by incrementing upward from 0 or 1.",
+    "parent": "Classes"
+  },
+  {
+    "id": "DataStore",
+    "name": "Classes::DataStore",
+    "definition": "Collection of logical records.",
+    "parent": "Classes"
+  },
+  {
+    "id": "Descriptor",
+    "name": "Classes::Descriptor",
+    "definition": "Use of a code for variable identification in the context of a data structure and a variable descriptor component.",
+    "parent": "Classes"
+  },
+  {
+    "id": "DescriptorValueDomain",
+    "name": "Classes::DescriptorValueDomain",
+    "definition": "Set of permissible values for a variable playing the role of a variable descriptor component.",
+    "parent": "Classes"
+  },
+  {
+    "id": "DescriptorVariable",
+    "name": "Classes::DescriptorVariable",
+    "definition": "Variable that provides codes for variable identification in the context of a data structure. Variable playing the role of a variable descriptor component.",
+    "parent": "Classes"
+  },
+  {
+    "id": "DimensionComponent",
+    "name": "Classes::DimensionComponent",
+    "definition": "Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".",
+    "parent": "Classes"
+  },
+  {
+    "id": "DimensionalDataSet",
+    "name": "Classes::DimensionalDataSet",
+    "definition": "Organized collection of multidimensional data. It is structured by a dimensional data structure.",
+    "parent": "Classes"
+  },
+  {
+    "id": "DimensionalDataStructure",
+    "name": "Classes::DimensionalDataStructure",
+    "definition": "Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.",
+    "parent": "Classes"
+  },
+  {
+    "id": "IdentifierComponent",
+    "name": "Classes::IdentifierComponent",
+    "definition": "Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.",
+    "parent": "Classes"
+  },
+  {
+    "id": "InstanceVariable",
+    "name": "Classes::InstanceVariable",
+    "definition": "Use of a represented variable within a data set.",
+    "parent": "Classes"
+  },
+  {
+    "id": "LogicalRecord",
+    "name": "Classes::LogicalRecord",
+    "definition": "Collection of instance variables.",
+    "parent": "Classes"
+  },
+  {
+    "id": "LongDataSet",
+    "name": "Classes::LongDataSet",
+    "definition": "Organized collection of long data. It is structured by a long data structure.",
+    "parent": "Classes"
+  },
+  {
+    "id": "LongDataStructure",
+    "name": "Classes::LongDataStructure",
+    "definition": "Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.",
+    "parent": "Classes"
+  },
+  {
+    "id": "MeasureComponent",
+    "name": "Classes::MeasureComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to hold the observed/derived values.",
+    "parent": "Classes"
+  },
+  {
+    "id": "PhysicalSegmentLayout",
+    "name": "Classes::PhysicalSegmentLayout",
+    "definition": "Used as an extension point in the description of the different layout styles of data structure descriptions.",
+    "parent": "Classes"
+  },
+  {
+    "id": "Population",
+    "name": "Classes::Population",
+    "definition": "Universe with time and geography specified.",
+    "parent": "Classes"
+  },
+  {
+    "id": "PrimaryKey",
+    "name": "Classes::PrimaryKey",
+    "definition": "Role of a set of data structure components for content linkage purposes",
+    "parent": "Classes"
+  },
+  {
+    "id": "PrimaryKeyComponent",
+    "name": "Classes::PrimaryKeyComponent",
+    "definition": "Role of a data structure component for content identification purposes",
+    "parent": "Classes"
+  },
+  {
+    "id": "ReferenceVariable",
+    "name": "Classes::ReferenceVariable",
+    "definition": "Variable that records values of multiple variables in the context of a data structure. Variable playing the role of a variable value component.",
+    "parent": "Classes"
+  },
+  {
+    "id": "RepresentedVariable",
+    "name": "Classes::RepresentedVariable",
+    "definition": "Conceptual variable with a substantive value domain specified.",
+    "parent": "Classes"
+  },
+  {
+    "id": "SentinelValueDomain",
+    "name": "Classes::SentinelValueDomain",
+    "definition": "Value domain for a sentinel conceptual domain.",
+    "parent": "Classes"
+  },
+  {
+    "id": "SubstantiveValueDomain",
+    "name": "Classes::SubstantiveValueDomain",
+    "definition": "Value domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest.",
+    "parent": "Classes"
+  },
+  {
+    "id": "UnitType",
+    "name": "Classes::UnitType",
+    "definition": "Unit type is a type or class of objects of interest (units).",
+    "parent": "Classes"
+  },
+  {
+    "id": "Universe",
+    "name": "Classes::Universe",
+    "definition": "Specialized unit type, with the specialization based upon characteristics other than time and geography.",
+    "parent": "Classes"
+  },
+  {
+    "id": "ValueMapping",
+    "name": "Classes::ValueMapping",
+    "definition": "Physical characteristics for the value of an instance variable stored in a data point as part of a physical segment layout.",
+    "parent": "Classes"
+  },
+  {
+    "id": "ValueMappingPosition",
+    "name": "Classes::ValueMappingPosition",
+    "definition": "Denotes the position of a value mapping in a sequence.",
+    "parent": "Classes"
+  },
+  {
+    "id": "VariableDescriptorComponent",
+    "name": "Classes::VariableDescriptorComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to provide codes for variable identification.",
+    "parent": "Classes"
+  },
+  {
+    "id": "VariableValueComponent",
+    "name": "Classes::VariableValueComponent",
+    "definition": "Role given to a represented variable in the context of a data structure to record values of multiple variables.",
+    "parent": "Classes"
+  },
+  {
+    "id": "WideDataSet",
+    "name": "Classes::WideDataSet",
+    "definition": "Organized collection of wide data. It is structured by a wide data structure.",
+    "parent": "Classes"
+  },
+  {
+    "id": "WideDataStructure",
+    "name": "Classes::WideDataStructure",
+    "definition": "Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.",
+    "parent": "Classes"
+  }
+]

@@ -1,0 +1,67 @@
+  <xs:element name="VariableDescriptorComponent"
+              type="VariableDescriptorComponentXsdType"
+              xml:id="VariableDescriptorComponent">
+    <!-- based on the UML class CDIF::DDSC::Classes::VariableDescriptorComponent -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Role given to a represented variable in the context of a data structure to provide codes for variable identification.   
+            
+            Examples 
+            ========== 
+            Consider {"income", "age"} to be the value domain of the represented variable working as a variable descriptor component.  The two codes, i.e. those designating "income" and "age", are descriptors used to identify which values in the variable value component correspond to income and which ones to age.   
+            
+            Explanatory notes 
+            =================== 
+            Whenever more than one variable appears in the same column, we need a mechanism to distinguish which values correspond to which variable. This mechanism is provided by the variable descriptor component, which contains the codes used to link the variables to their values.  This structure provides a flexible mechanism avoiding the need for a formal pointer.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="VariableDescriptorComponentXsdType"
+                  xml:id="VariableDescriptorComponentXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Role given to a represented variable in the context of a data structure to provide codes for variable identification.   
+            
+            Examples 
+            ========== 
+            Consider {"income", "age"} to be the value domain of the represented variable working as a variable descriptor component.  The two codes, i.e. those designating "income" and "age", are descriptors used to identify which values in the variable value component correspond to income and which ones to age.   
+            
+            Explanatory notes 
+            =================== 
+            Whenever more than one variable appears in the same column, we need a mechanism to distinguish which values correspond to which variable. This mechanism is provided by the variable descriptor component, which contains the codes used to link the variables to their values.  This structure provides a flexible mechanism avoiding the need for a formal pointer.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="VariableDescriptorComponent_refersTo_VariableValueComponent"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="VariableDescriptorComponent_refersTo_VariableValueComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="VariableDescriptorComponent_refersTo_VariableValueComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="VariableDescriptorComponent_refersTo_VariableValueComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="VariableValueComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

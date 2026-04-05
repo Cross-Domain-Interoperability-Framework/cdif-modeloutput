@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.WideDataSet"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.WideDataSet-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Organized collection of wide data. It is structured by a wide data structure.
+
+Examples
+==========
+A unit dataset where each row corresponds to a set of data points capturing different characteristics of a unit.</body>
+      <annotatedElement xmi:idref="ddsc.WideDataSet"/>
+   </ownedComment>
+   <name>WideDataSet</name>
+   <ownedAttribute xmi:id="ddsc.WideDataSet-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.WideDataSet-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.WideDataSet-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.WideDataSet-physicalFileName"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet-physicalFileName"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.WideDataSet-physicalFileName-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet-physicalFileName-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Use when multiple physical segments are stored in a single file.</body>
+         <annotatedElement xmi:idref="ddsc.WideDataSet-physicalFileName"/>
+      </ownedComment>
+      <name>physicalFileName</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

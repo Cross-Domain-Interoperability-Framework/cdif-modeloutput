@@ -1,0 +1,23 @@
+# class PhysicalSegmentLayout
+# based on the UML class CDIF::DDSC::Classes::PhysicalSegmentLayout
+ddsc:PhysicalSegmentLayoutShape CLOSED {
+	a [ddsc:PhysicalSegmentLayout];
+	ddsc:PhysicalSegmentLayout-delimiter	xsd:string;
+	ddsc:PhysicalSegmentLayout-encoding	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:PhysicalSegmentLayout-escapeCharacter	xsd:string;
+	ddsc:PhysicalSegmentLayout-hasHeader	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-headerRowCount	xsd:integer;
+	ddsc:PhysicalSegmentLayout-isDelimited	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-isFixedWidth	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-lineTerminator	xsd:string+;
+	ddsc:PhysicalSegmentLayout-quoteCharacter	xsd:string;
+	ddsc:PhysicalSegmentLayout-skipInitialSpace	xsd:boolean;
+	ddsc:PhysicalSegmentLayout-trim	@ddsc:TrimValuesShape;
+	ddsc:PhysicalSegmentLayout_formats_LogicalRecord	@ddsc:LogicalRecordShape ;
+	
+	ddsc:PhysicalSegmentLayout_has_ValueMapping	@ddsc:ValueMappingShape +;
+	
+	ddsc:PhysicalSegmentLayout_has_ValueMappingPosition	@ddsc:ValueMappingPositionShape +;
+	
+	}
+

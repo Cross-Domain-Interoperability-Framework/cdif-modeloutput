@@ -1,0 +1,7 @@
+# class DescriptorValueDomain
+# based on the UML class CDIF::DDSC::Classes::DescriptorValueDomain
+ddsc:DescriptorValueDomainShape CLOSED {
+	a [ddsc:DescriptorValueDomain];
+	^ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain @ddsc:DescriptorVariableShape ;
+	}
+

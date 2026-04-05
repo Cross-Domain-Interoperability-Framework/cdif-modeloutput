@@ -1,0 +1,23 @@
+"dt-ObjectAttributeSelector": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/ObjectAttributeSelector",
+  "type": ["object"],
+  "properties": {
+    "refinedBy": {
+      "$comment": "cardinality 1..1 – from ddsc:ObjectAttributeSelector",
+      "$ref": "#/defs/dt-ObjectAttributeSelector"
+    },
+    "refinedByOrderNumber": {
+      "$comment": "cardinality 1..1 – from ddsc:ObjectAttributeSelector",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "value": {
+      "$comment": "cardinality 1..1 – from ddsc:ObjectAttributeSelector",
+      "$ref": "#/defs/xsd:string"
+    },
+    "@type": {
+      "const": "ObjectAttributeSelector"
+    }
+  },
+  "required": ["refinedBy","refinedByOrderNumber","value","@type"],
+  "additionalProperties": false
+},

@@ -1,0 +1,26 @@
+# datatype BibliographicName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::BibliographicName
+<#BibliographicName> a sh:NodeShape;
+    sh:targetClass ddsc:BibliographicName;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/BibliographicName";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:BibliographicName
+			 ) ;
+    ];
+    # attributes
+    sh:property <#BibliographicName-affiliation>;
+
+
+
+.
+
+<#BibliographicName-affiliation> a sh:PropertyShape ;
+    sh:path ddsc:BibliographicName-affiliation;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

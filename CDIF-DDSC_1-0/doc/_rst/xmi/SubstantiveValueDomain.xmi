@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.SubstantiveValueDomain"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SubstantiveValueDomain"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.SubstantiveValueDomain-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SubstantiveValueDomain-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+==========
+Value domain for a substantive conceptual domain. Typically a description and/or enumeration of allowed values of interest.  
+
+Examples 
+========
+All real decimal numbers relating to the subject matter of interest between 0 and 1 specified in Arabic numerals. (From the Generic Statistical Information Model [GSIM] 1.1). The codes "M" male and "F" for female .   
+
+Explanatory notes 
+=================
+In DDI-CDI the value domain for a variable is separated into "substantive" and "sentinel" values. Substantive values are the values of primary interest. Sentinel values are additional values that may carry supplementary information, such as reasons for missing. This duality is described in ISO 11404. Substantive values for height might be real numbers expressed in meters. The full value domain might also include codes for different kinds of missing values - one code for "refused" and another for "don’t know". Sentinel values may also convey some substantive information and at the same time represent missing values.
+
+An example might be where a numeric variable like number of employees be sometimes a count and sometimes a code representing a range of counts in order to avoid disclosure of information about a specific entity. The substantive value domain may use either a value description, for described values, or a codelist for enumerated values, or both. A value domain may consist of substantive values or sentinel values. Substantive values are those associated directly with some subject matter area. They do not address concerns around processing, such as missing values. Substantive values are called "regular values" in ISO/IEC 11404 - General Purpose Datatypes. The enumerated case is one where all values are listed.
+
+An example is the categorical values for gender: the conceptual domain could consist of the concept of male and the concept of female. These might be represented in codes and associated labels as 1 ("Male") 2 ("Female"). The described case is one where some description is needed to define the set of values. Take the following description for height in meters: "a real number between 0 and 3, represented to two Arabic decimal places". This description might be structured in some way to be machine actionable (datatype="double”, min="0", max="3", decimals="2").</body>
+      <annotatedElement xmi:idref="ddsc.SubstantiveValueDomain"/>
+   </ownedComment>
+   <name>SubstantiveValueDomain</name>
+   <ownedAttribute xmi:id="ddsc.SubstantiveValueDomain-recommendedDataType"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SubstantiveValueDomain-recommendedDataType"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.SubstantiveValueDomain-recommendedDataType-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SubstantiveValueDomain-recommendedDataType-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The data types that are recommended for use with this domain.</body>
+         <annotatedElement xmi:idref="ddsc.SubstantiveValueDomain-recommendedDataType"/>
+      </ownedComment>
+      <name>recommendedDataType</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+</packagedElement>

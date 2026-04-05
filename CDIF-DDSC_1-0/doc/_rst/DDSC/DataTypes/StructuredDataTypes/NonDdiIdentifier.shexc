@@ -1,0 +1,10 @@
+# datatype NonDdiIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonDdiIdentifier
+ddsc:NonDdiIdentifierShape CLOSED {
+	a [ddsc:NonDdiIdentifier];
+	ddsc:NonDdiIdentifier-managingAgency	xsd:string;
+	ddsc:NonDdiIdentifier-type	xsd:string;
+	ddsc:NonDdiIdentifier-value	xsd:string;
+	ddsc:NonDdiIdentifier-version	xsd:string;
+	}
+

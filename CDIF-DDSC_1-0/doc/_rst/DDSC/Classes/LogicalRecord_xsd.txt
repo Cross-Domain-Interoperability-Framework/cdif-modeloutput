@@ -1,0 +1,237 @@
+  <xs:element name="LogicalRecord"
+              type="LogicalRecordXsdType"
+              xml:id="LogicalRecord">
+    <!-- based on the UML class CDIF::DDSC::Classes::LogicalRecord -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Collection of instance variables.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="LogicalRecordXsdType"
+                  xml:id="LogicalRecordXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Collection of instance variables.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LogicalRecord_organizes_WideDataSet"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_organizes_WideDataSet">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_organizes_WideDataSet-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_organizes_WideDataSet-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="WideDataSet"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogicalRecord_organizes_LongDataSet"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_organizes_LongDataSet">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_organizes_LongDataSet-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_organizes_LongDataSet-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="LongDataSet"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogicalRecord_organizes_DimensionalDataSet"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_organizes_DimensionalDataSet">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_organizes_DimensionalDataSet-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_organizes_DimensionalDataSet-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="DimensionalDataSet"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogicalRecord_has_InstanceVariable"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_has_InstanceVariable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_has_InstanceVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_has_InstanceVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="InstanceVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogicalRecord_isDefinedBy_UnitType"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_isDefinedBy_UnitType">
+        <xs:annotation>
+          <xs:documentation>The conceptual basis for the collection of members.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_isDefinedBy_UnitType-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_isDefinedBy_UnitType-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="UnitType"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogicalRecord_isDefinedBy_Universe"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_isDefinedBy_Universe">
+        <xs:annotation>
+          <xs:documentation>The conceptual basis for the collection of members.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_isDefinedBy_Universe-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_isDefinedBy_Universe-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="Universe"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LogicalRecord_isDefinedBy_Population"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LogicalRecord_isDefinedBy_Population">
+        <xs:annotation>
+          <xs:documentation>The conceptual basis for the collection of members.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="LogicalRecord_isDefinedBy_Population-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="LogicalRecord_isDefinedBy_Population-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="Population"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

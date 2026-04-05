@@ -1,0 +1,21 @@
+# class PrimaryKeyComponent
+# based on the UML class CDIF::DDSC::Classes::PrimaryKeyComponent
+ddsc:PrimaryKeyComponent
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "PrimaryKeyComponent";
+  rdfs:comment "Definition\n============\nRole of a data structure component for content identification purposes\n\nExplanatory notes\n===================\nEquivalent to a primary key attribute (i.e. column) in the relational model.\nIt can be used in conjunction with a foreign key component to link data structures and their related datasets."@en;
+  
+.
+
+
+ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "correspondsTo_IdentifierComponent";
+  skos:altLabel "PrimaryKeyComponent_correspondsTo_IdentifierComponent";
+  
+  rdfs:domain ddsc:PrimaryKeyComponent;
+  rdfs:range ddsc:IdentifierComponent;
+.
+
+

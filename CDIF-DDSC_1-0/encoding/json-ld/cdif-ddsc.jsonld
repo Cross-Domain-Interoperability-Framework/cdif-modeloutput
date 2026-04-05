@@ -1,0 +1,1271 @@
+{
+  "@context": {
+    "ddsc": "http://w3id.org/cdif/ddsc/1.0/ddsc/",
+ 	"xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CDIF": "@included",
+    "DataStore": {
+      "@id": "ddsc:DataStore",
+      "@context": [
+          {
+            "name": {
+              "@id": "ddsc:DataStore-name",
+              "@type": "@id"
+            },
+            
+            "has_LogicalRecord": {
+              "@id": "ddsc:DataStore_has_LogicalRecord",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "LogicalRecord": {
+      "@id": "ddsc:LogicalRecord",
+      "@context": [
+          {
+            
+            "organizes_WideDataSet": {
+              "@id": "ddsc:LogicalRecord_organizes_WideDataSet",
+              "@type": "@id"
+            },
+            "organizes_LongDataSet": {
+              "@id": "ddsc:LogicalRecord_organizes_LongDataSet",
+              "@type": "@id"
+            },
+            "organizes_DimensionalDataSet": {
+              "@id": "ddsc:LogicalRecord_organizes_DimensionalDataSet",
+              "@type": "@id"
+            },
+            "has_InstanceVariable": {
+              "@id": "ddsc:LogicalRecord_has_InstanceVariable",
+              "@type": "@id"
+            },
+            "isDefinedBy_UnitType": {
+              "@id": "ddsc:LogicalRecord_isDefinedBy_UnitType",
+              "@type": "@id"
+            },
+            "isDefinedBy_Universe": {
+              "@id": "ddsc:LogicalRecord_isDefinedBy_Universe",
+              "@type": "@id"
+            },
+            "isDefinedBy_Population": {
+              "@id": "ddsc:LogicalRecord_isDefinedBy_Population",
+              "@type": "@id"
+            },
+            "has_LogicalRecord_OF_DataStore": {
+              "@reverse": "ddsc:DataStore_has_LogicalRecord",
+              "@type": "@id"
+            },
+            "formats_LogicalRecord_OF_PhysicalSegmentLayout": {
+              "@reverse": "ddsc:PhysicalSegmentLayout_formats_LogicalRecord",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "WideDataStructure": {
+      "@id": "ddsc:WideDataStructure",
+      "@context": [
+          {
+            
+            "has_PrimaryKey": {
+              "@id": "ddsc:WideDataStructure_has_PrimaryKey",
+              "@type": "@id"
+            },
+            "has_IdentifierComponent": {
+              "@id": "ddsc:WideDataStructure_has_IdentifierComponent",
+              "@type": "@id"
+            },
+            "has_AttributeComponent": {
+              "@id": "ddsc:WideDataStructure_has_AttributeComponent",
+              "@type": "@id"
+            },
+            "has_MeasureComponent": {
+              "@id": "ddsc:WideDataStructure_has_MeasureComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "LongDataStructure": {
+      "@id": "ddsc:LongDataStructure",
+      "@context": [
+          {
+            
+            "has_IdentifierComponent": {
+              "@id": "ddsc:LongDataStructure_has_IdentifierComponent",
+              "@type": "@id"
+            },
+            "has_AttributeComponent": {
+              "@id": "ddsc:LongDataStructure_has_AttributeComponent",
+              "@type": "@id"
+            },
+            "has_VariableDescriptorComponent": {
+              "@id": "ddsc:LongDataStructure_has_VariableDescriptorComponent",
+              "@type": "@id"
+            },
+            "has_VariableValueComponent": {
+              "@id": "ddsc:LongDataStructure_has_VariableValueComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "DimensionalDataStructure": {
+      "@id": "ddsc:DimensionalDataStructure",
+      "@context": [
+          {
+            
+            "has_IdentifierComponent": {
+              "@id": "ddsc:DimensionalDataStructure_has_IdentifierComponent",
+              "@type": "@id"
+            },
+            "has_AttributeComponent": {
+              "@id": "ddsc:DimensionalDataStructure_has_AttributeComponent",
+              "@type": "@id"
+            },
+            "has_MeasureComponent": {
+              "@id": "ddsc:DimensionalDataStructure_has_MeasureComponent",
+              "@type": "@id"
+            },
+            "has_ComponentPosition": {
+              "@id": "ddsc:DimensionalDataStructure_has_ComponentPosition",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "InstanceVariable": {
+      "@id": "ddsc:InstanceVariable",
+      "@context": [
+          {
+            "definition": {
+              "@id": "ddsc:InstanceVariable-definition",
+              "@type": "@id"
+            },
+            "describedUnitOfMeasure": {
+              "@id": "ddsc:InstanceVariable-describedUnitOfMeasure",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "ddsc:InstanceVariable-name",
+              "@type": "@id"
+            },
+            "unitOfMeasureKind": {
+              "@id": "ddsc:InstanceVariable-unitOfMeasureKind",
+              "@type": "@id"
+            },
+            
+            "measures_Population": {
+              "@id": "ddsc:InstanceVariable_measures_Population",
+              "@type": "@id"
+            },
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain": {
+              "@id": "ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+              "@type": "@id"
+            },
+            "takesSentinelValuesFrom_SentinelValueDomain": {
+              "@id": "ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+              "@type": "@id"
+            },
+            "has_InstanceVariable_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_has_InstanceVariable",
+              "@type": "@id"
+            },
+            "identifies_InstanceVariable_OF_Descriptor": {
+              "@reverse": "ddsc:Descriptor_identifies_InstanceVariable",
+              "@type": "@id"
+            },
+            "isDefinedBy_InstanceVariable_OF_IdentifierComponent": {
+              "@reverse": "ddsc:IdentifierComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "isDefinedBy_InstanceVariable_OF_MeasureComponent": {
+              "@reverse": "ddsc:MeasureComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "isDefinedBy_InstanceVariable_OF_AttributeComponent": {
+              "@reverse": "ddsc:AttributeComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "isDefinedBy_InstanceVariable_OF_DimensionComponent": {
+              "@reverse": "ddsc:DimensionComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "formats_InstanceVariable_OF_ValueMapping": {
+              "@reverse": "ddsc:ValueMapping_formats_InstanceVariable",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "RepresentedVariable": {
+      "@id": "ddsc:RepresentedVariable",
+      "@context": [
+          {
+            "definition": {
+              "@id": "ddsc:RepresentedVariable-definition",
+              "@type": "@id"
+            },
+            "describedUnitOfMeasure": {
+              "@id": "ddsc:RepresentedVariable-describedUnitOfMeasure",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "ddsc:RepresentedVariable-name",
+              "@type": "@id"
+            },
+            "unitOfMeasureKind": {
+              "@id": "ddsc:RepresentedVariable-unitOfMeasureKind",
+              "@type": "@id"
+            },
+            
+            "measures_Universe": {
+              "@id": "ddsc:RepresentedVariable_measures_Universe",
+              "@type": "@id"
+            },
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain": {
+              "@id": "ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+              "@type": "@id"
+            },
+            "takesSentinelValuesFrom_SentinelValueDomain": {
+              "@id": "ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain",
+              "@type": "@id"
+            },
+            "formats_RepresentedVariable_OF_ValueMapping": {
+              "@reverse": "ddsc:ValueMapping_formats_RepresentedVariable",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ReferenceVariable": {
+      "@id": "ddsc:ReferenceVariable",
+      "@context": [
+          {
+            "name": {
+              "@id": "ddsc:ReferenceVariable-name",
+              "@type": "@id"
+            },
+            
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain": {
+              "@id": "ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+              "@type": "@id"
+            },
+            "takesSentinelValuesFrom_SentinelValueDomain": {
+              "@id": "ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+              "@type": "@id"
+            },
+            "isDefinedBy_ReferenceVariable_OF_VariableValueComponent": {
+              "@reverse": "ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable",
+              "@type": "@id"
+            },
+            "formats_ReferenceVariable_OF_ValueMapping": {
+              "@reverse": "ddsc:ValueMapping_formats_ReferenceVariable",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "DescriptorVariable": {
+      "@id": "ddsc:DescriptorVariable",
+      "@context": [
+          {
+            "name": {
+              "@id": "ddsc:DescriptorVariable-name",
+              "@type": "@id"
+            },
+            
+            "takesSubstantiveValuesFrom_DescriptorValueDomain": {
+              "@id": "ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain",
+              "@type": "@id"
+            },
+            "formats_DescriptorVariable_OF_ValueMapping": {
+              "@reverse": "ddsc:ValueMapping_formats_DescriptorVariable",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "SubstantiveValueDomain": {
+      "@id": "ddsc:SubstantiveValueDomain",
+      "@context": [
+          {
+            "recommendedDataType": {
+              "@id": "ddsc:SubstantiveValueDomain-recommendedDataType",
+              "@type": "@id"
+            },
+            
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain_OF_InstanceVariable": {
+              "@reverse": "ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+              "@type": "@id"
+            },
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain_OF_RepresentedVariable": {
+              "@reverse": "ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+              "@type": "@id"
+            },
+            "takesSubstantiveValuesFrom_SubstantiveValueDomain_OF_ReferenceVariable": {
+              "@reverse": "ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "SentinelValueDomain": {
+      "@id": "ddsc:SentinelValueDomain",
+      "@context": [
+          {
+            "recommendedDataType": {
+              "@id": "ddsc:SentinelValueDomain-recommendedDataType",
+              "@type": "@id"
+            },
+            
+            "takesSentinelValuesFrom_SentinelValueDomain_OF_InstanceVariable": {
+              "@reverse": "ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+              "@type": "@id"
+            },
+            "takesSentinelValuesFrom_SentinelValueDomain_OF_RepresentedVariable": {
+              "@reverse": "ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain",
+              "@type": "@id"
+            },
+            "takesSentinelValuesFrom_SentinelValueDomain_OF_ReferenceVariable": {
+              "@reverse": "ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "DescriptorValueDomain": {
+      "@id": "ddsc:DescriptorValueDomain",
+      "@context": [
+          {
+            
+            "takesSubstantiveValuesFrom_DescriptorValueDomain_OF_DescriptorVariable": {
+              "@reverse": "ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "Descriptor": {
+      "@id": "ddsc:Descriptor",
+      "@context": [
+          {
+            "content": {
+              "@id": "ddsc:Descriptor-content",
+              "@type": "@id"
+            },
+            
+            "identifies_InstanceVariable": {
+              "@id": "ddsc:Descriptor_identifies_InstanceVariable",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "UnitType": {
+      "@id": "ddsc:UnitType",
+      "@context": [
+          {
+            "descriptiveText": {
+              "@id": "ddsc:UnitType-descriptiveText",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "ddsc:UnitType-name",
+              "@type": "@id"
+            },
+            
+            "isDefinedBy_UnitType_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_isDefinedBy_UnitType",
+              "@type": "@id"
+            },
+            "uses_UnitType_OF_Universe": {
+              "@reverse": "ddsc:Universe_uses_UnitType",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "Universe": {
+      "@id": "ddsc:Universe",
+      "@context": [
+          {
+            "descriptiveText": {
+              "@id": "ddsc:Universe-descriptiveText",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "ddsc:Universe-name",
+              "@type": "@id"
+            },
+            
+            "uses_UnitType": {
+              "@id": "ddsc:Universe_uses_UnitType",
+              "@type": "@id"
+            },
+            "isDefinedBy_Universe_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_isDefinedBy_Universe",
+              "@type": "@id"
+            },
+            "measures_Universe_OF_RepresentedVariable": {
+              "@reverse": "ddsc:RepresentedVariable_measures_Universe",
+              "@type": "@id"
+            },
+            "uses_Universe_OF_Population": {
+              "@reverse": "ddsc:Population_uses_Universe",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "Population": {
+      "@id": "ddsc:Population",
+      "@context": [
+          {
+            "descriptiveText": {
+              "@id": "ddsc:Population-descriptiveText",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "ddsc:Population-name",
+              "@type": "@id"
+            },
+            
+            "uses_Universe": {
+              "@id": "ddsc:Population_uses_Universe",
+              "@type": "@id"
+            },
+            "isDefinedBy_Population_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_isDefinedBy_Population",
+              "@type": "@id"
+            },
+            "measures_Population_OF_InstanceVariable": {
+              "@reverse": "ddsc:InstanceVariable_measures_Population",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "IdentifierComponent": {
+      "@id": "ddsc:IdentifierComponent",
+      "@context": [
+          {
+            
+            "isDefinedBy_InstanceVariable": {
+              "@id": "ddsc:IdentifierComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_IdentifierComponent_OF_WideDataStructure": {
+              "@reverse": "ddsc:WideDataStructure_has_IdentifierComponent",
+              "@type": "@id"
+            },
+            "has_IdentifierComponent_OF_LongDataStructure": {
+              "@reverse": "ddsc:LongDataStructure_has_IdentifierComponent",
+              "@type": "@id"
+            },
+            "has_IdentifierComponent_OF_DimensionalDataStructure": {
+              "@reverse": "ddsc:DimensionalDataStructure_has_IdentifierComponent",
+              "@type": "@id"
+            },
+            "correspondsTo_IdentifierComponent_OF_PrimaryKeyComponent": {
+              "@reverse": "ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "MeasureComponent": {
+      "@id": "ddsc:MeasureComponent",
+      "@context": [
+          {
+            
+            "isDefinedBy_InstanceVariable": {
+              "@id": "ddsc:MeasureComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_MeasureComponent_OF_WideDataStructure": {
+              "@reverse": "ddsc:WideDataStructure_has_MeasureComponent",
+              "@type": "@id"
+            },
+            "has_MeasureComponent_OF_DimensionalDataStructure": {
+              "@reverse": "ddsc:DimensionalDataStructure_has_MeasureComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "AttributeComponent": {
+      "@id": "ddsc:AttributeComponent",
+      "@context": [
+          {
+            
+            "isDefinedBy_InstanceVariable": {
+              "@id": "ddsc:AttributeComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "has_AttributeComponent_OF_WideDataStructure": {
+              "@reverse": "ddsc:WideDataStructure_has_AttributeComponent",
+              "@type": "@id"
+            },
+            "has_AttributeComponent_OF_LongDataStructure": {
+              "@reverse": "ddsc:LongDataStructure_has_AttributeComponent",
+              "@type": "@id"
+            },
+            "has_AttributeComponent_OF_DimensionalDataStructure": {
+              "@reverse": "ddsc:DimensionalDataStructure_has_AttributeComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "DimensionComponent": {
+      "@id": "ddsc:DimensionComponent",
+      "@context": [
+          {
+            
+            "isDefinedBy_InstanceVariable": {
+              "@id": "ddsc:DimensionComponent_isDefinedBy_InstanceVariable",
+              "@type": "@id"
+            },
+            "indexes_DimensionComponent_OF_ComponentPosition": {
+              "@reverse": "ddsc:ComponentPosition_indexes_DimensionComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ComponentPosition": {
+      "@id": "ddsc:ComponentPosition",
+      "@context": [
+          {
+            "value": {
+              "@id": "ddsc:ComponentPosition-value",
+              "@type": "xsd:integer"
+            },
+            
+            "indexes_DimensionComponent": {
+              "@id": "ddsc:ComponentPosition_indexes_DimensionComponent",
+              "@type": "@id"
+            },
+            "has_ComponentPosition_OF_DimensionalDataStructure": {
+              "@reverse": "ddsc:DimensionalDataStructure_has_ComponentPosition",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "PrimaryKey": {
+      "@id": "ddsc:PrimaryKey",
+      "@context": [
+          {
+            
+            "isComposedOf_PrimaryKeyComponent": {
+              "@id": "ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent",
+              "@type": "@id"
+            },
+            "has_PrimaryKey_OF_WideDataStructure": {
+              "@reverse": "ddsc:WideDataStructure_has_PrimaryKey",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "PrimaryKeyComponent": {
+      "@id": "ddsc:PrimaryKeyComponent",
+      "@context": [
+          {
+            
+            "correspondsTo_IdentifierComponent": {
+              "@id": "ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent",
+              "@type": "@id"
+            },
+            "isComposedOf_PrimaryKeyComponent_OF_PrimaryKey": {
+              "@reverse": "ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "VariableValueComponent": {
+      "@id": "ddsc:VariableValueComponent",
+      "@context": [
+          {
+            
+            "isDefinedBy_ReferenceVariable": {
+              "@id": "ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable",
+              "@type": "@id"
+            },
+            "has_VariableValueComponent_OF_LongDataStructure": {
+              "@reverse": "ddsc:LongDataStructure_has_VariableValueComponent",
+              "@type": "@id"
+            },
+            "refersTo_VariableValueComponent_OF_VariableDescriptorComponent": {
+              "@reverse": "ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "VariableDescriptorComponent": {
+      "@id": "ddsc:VariableDescriptorComponent",
+      "@context": [
+          {
+            
+            "refersTo_VariableValueComponent": {
+              "@id": "ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent",
+              "@type": "@id"
+            },
+            "has_VariableDescriptorComponent_OF_LongDataStructure": {
+              "@reverse": "ddsc:LongDataStructure_has_VariableDescriptorComponent",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "PhysicalSegmentLayout": {
+      "@id": "ddsc:PhysicalSegmentLayout",
+      "@context": [
+          {
+            "delimiter": {
+              "@id": "ddsc:PhysicalSegmentLayout-delimiter",
+              "@type": "xsd:string"
+            },
+            "encoding": {
+              "@id": "ddsc:PhysicalSegmentLayout-encoding",
+              "@type": "@id"
+            },
+            "escapeCharacter": {
+              "@id": "ddsc:PhysicalSegmentLayout-escapeCharacter",
+              "@type": "xsd:string"
+            },
+            "hasHeader": {
+              "@id": "ddsc:PhysicalSegmentLayout-hasHeader",
+              "@type": "xsd:boolean"
+            },
+            "headerRowCount": {
+              "@id": "ddsc:PhysicalSegmentLayout-headerRowCount",
+              "@type": "xsd:integer"
+            },
+            "isDelimited": {
+              "@id": "ddsc:PhysicalSegmentLayout-isDelimited",
+              "@type": "xsd:boolean"
+            },
+            "isFixedWidth": {
+              "@id": "ddsc:PhysicalSegmentLayout-isFixedWidth",
+              "@type": "xsd:boolean"
+            },
+            "lineTerminator": {
+              "@id": "ddsc:PhysicalSegmentLayout-lineTerminator",
+              "@type": "xsd:string"
+            },
+            "quoteCharacter": {
+              "@id": "ddsc:PhysicalSegmentLayout-quoteCharacter",
+              "@type": "xsd:string"
+            },
+            "skipInitialSpace": {
+              "@id": "ddsc:PhysicalSegmentLayout-skipInitialSpace",
+              "@type": "xsd:boolean"
+            },
+            "trim": {
+              "@id": "ddsc:PhysicalSegmentLayout-trim",
+              "@type": "@id"
+            },
+            
+            "formats_LogicalRecord": {
+              "@id": "ddsc:PhysicalSegmentLayout_formats_LogicalRecord",
+              "@type": "@id"
+            },
+            "has_ValueMapping": {
+              "@id": "ddsc:PhysicalSegmentLayout_has_ValueMapping",
+              "@type": "@id"
+            },
+            "has_ValueMappingPosition": {
+              "@id": "ddsc:PhysicalSegmentLayout_has_ValueMappingPosition",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ValueMapping": {
+      "@id": "ddsc:ValueMapping",
+      "@context": [
+          {
+            "decimalPositions": {
+              "@id": "ddsc:ValueMapping-decimalPositions",
+              "@type": "xsd:integer"
+            },
+            "defaultDecimalSeparator": {
+              "@id": "ddsc:ValueMapping-defaultDecimalSeparator",
+              "@type": "xsd:string"
+            },
+            "length": {
+              "@id": "ddsc:ValueMapping-length",
+              "@type": "xsd:integer"
+            },
+            "maximumLength": {
+              "@id": "ddsc:ValueMapping-maximumLength",
+              "@type": "xsd:integer"
+            },
+            "minimumLength": {
+              "@id": "ddsc:ValueMapping-minimumLength",
+              "@type": "xsd:integer"
+            },
+            
+            "formats_InstanceVariable": {
+              "@id": "ddsc:ValueMapping_formats_InstanceVariable",
+              "@type": "@id"
+            },
+            "formats_RepresentedVariable": {
+              "@id": "ddsc:ValueMapping_formats_RepresentedVariable",
+              "@type": "@id"
+            },
+            "formats_ReferenceVariable": {
+              "@id": "ddsc:ValueMapping_formats_ReferenceVariable",
+              "@type": "@id"
+            },
+            "formats_DescriptorVariable": {
+              "@id": "ddsc:ValueMapping_formats_DescriptorVariable",
+              "@type": "@id"
+            },
+            "has_ValueMapping_OF_PhysicalSegmentLayout": {
+              "@reverse": "ddsc:PhysicalSegmentLayout_has_ValueMapping",
+              "@type": "@id"
+            },
+            "indexes_ValueMapping_OF_ValueMappingPosition": {
+              "@reverse": "ddsc:ValueMappingPosition_indexes_ValueMapping",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ValueMappingPosition": {
+      "@id": "ddsc:ValueMappingPosition",
+      "@context": [
+          {
+            "value": {
+              "@id": "ddsc:ValueMappingPosition-value",
+              "@type": "xsd:integer"
+            },
+            
+            "indexes_ValueMapping": {
+              "@id": "ddsc:ValueMappingPosition_indexes_ValueMapping",
+              "@type": "@id"
+            },
+            "has_ValueMappingPosition_OF_PhysicalSegmentLayout": {
+              "@reverse": "ddsc:PhysicalSegmentLayout_has_ValueMappingPosition",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "WideDataSet": {
+      "@id": "ddsc:WideDataSet",
+      "@context": [
+          {
+            "name": {
+              "@id": "ddsc:WideDataSet-name",
+              "@type": "@id"
+            },
+            "physicalFileName": {
+              "@id": "ddsc:WideDataSet-physicalFileName",
+              "@type": "xsd:string"
+            },
+            
+            "organizes_WideDataSet_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_organizes_WideDataSet",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "LongDataSet": {
+      "@id": "ddsc:LongDataSet",
+      "@context": [
+          {
+            "name": {
+              "@id": "ddsc:LongDataSet-name",
+              "@type": "@id"
+            },
+            "physicalFileName": {
+              "@id": "ddsc:LongDataSet-physicalFileName",
+              "@type": "xsd:string"
+            },
+            
+            "organizes_LongDataSet_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_organizes_LongDataSet",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "DimensionalDataSet": {
+      "@id": "ddsc:DimensionalDataSet",
+      "@context": [
+          {
+            "name": {
+              "@id": "ddsc:DimensionalDataSet-name",
+              "@type": "@id"
+            },
+            "physicalFileName": {
+              "@id": "ddsc:DimensionalDataSet-physicalFileName",
+              "@type": "xsd:string"
+            },
+            
+            "organizes_DimensionalDataSet_OF_LogicalRecord": {
+              "@reverse": "ddsc:LogicalRecord_organizes_DimensionalDataSet",
+              "@type": "@id"
+            },
+            " comment ": "tag:json-should-support-trailing-commas"
+          }
+      ]
+    },
+    "ModelIdentification": {
+      "@id": "ddsc:ModelIdentification",
+      "@context": [
+          {
+            "acronym": {
+              "@id": "ddsc:ModelIdentification-acronym",
+              "@type": "xsd:string"
+            },
+            "language": {
+              "@id": "ddsc:ModelIdentification-language",
+              "@type": "xsd:string"
+            },
+            "majorVersion": {
+              "@id": "ddsc:ModelIdentification-majorVersion",
+              "@type": "xsd:integer"
+            },
+            "minorVersion": {
+              "@id": "ddsc:ModelIdentification-minorVersion",
+              "@type": "xsd:integer"
+            },
+            "subtitle": {
+              "@id": "ddsc:ModelIdentification-subtitle",
+              "@type": "xsd:string"
+            },
+            "title": {
+              "@id": "ddsc:ModelIdentification-title",
+              "@type": "xsd:string"
+            },
+            "uri": {
+              "@id": "ddsc:ModelIdentification-uri",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "ObjectName": {
+      "@id": "ddsc:ObjectName",
+      "@context": [
+          {
+            "context": {
+              "@id": "ddsc:ObjectName-context",
+              "@type": "@id"
+            },
+            "name": {
+              "@id": "ddsc:ObjectName-name",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "ControlledVocabularyEntry": {
+      "@id": "ddsc:ControlledVocabularyEntry",
+      "@context": [
+          {
+            "entryReference": {
+              "@id": "ddsc:ControlledVocabularyEntry-entryReference",
+              "@type": "@id"
+            },
+            "entryValue": {
+              "@id": "ddsc:ControlledVocabularyEntry-entryValue",
+              "@type": "xsd:string"
+            },
+            "name": {
+              "@id": "ddsc:ControlledVocabularyEntry-name",
+              "@type": "xsd:string"
+            },
+            "valueForOther": {
+              "@id": "ddsc:ControlledVocabularyEntry-valueForOther",
+              "@type": "xsd:string"
+            },
+            "vocabulary": {
+              "@id": "ddsc:ControlledVocabularyEntry-vocabulary",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "Reference": {
+      "@id": "ddsc:Reference",
+      "@context": [
+          {
+            "ddiReference": {
+              "@id": "ddsc:Reference-ddiReference",
+              "@type": "@id"
+            },
+            "deepLink": {
+              "@id": "ddsc:Reference-deepLink",
+              "@type": "@id"
+            },
+            "description": {
+              "@id": "ddsc:Reference-description",
+              "@type": "xsd:string"
+            },
+            "location": {
+              "@id": "ddsc:Reference-location",
+              "@type": "@id"
+            },
+            "nonDdiReference": {
+              "@id": "ddsc:Reference-nonDdiReference",
+              "@type": "@id"
+            },
+            "semantic": {
+              "@id": "ddsc:Reference-semantic",
+              "@type": "@id"
+            },
+            "uri": {
+              "@id": "ddsc:Reference-uri",
+              "@type": "xsd:anyURI"
+            },
+            "validType": {
+              "@id": "ddsc:Reference-validType",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "InternationalRegistrationDataIdentifier": {
+      "@id": "ddsc:InternationalRegistrationDataIdentifier",
+      "@context": [
+          {
+            "dataIdentifier": {
+              "@id": "ddsc:InternationalRegistrationDataIdentifier-dataIdentifier",
+              "@type": "xsd:string"
+            },
+            "registrationAuthorityIdentifier": {
+              "@id": "ddsc:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier",
+              "@type": "xsd:string"
+            },
+            "versionIdentifier": {
+              "@id": "ddsc:InternationalRegistrationDataIdentifier-versionIdentifier",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "Selector": {
+      "@id": "ddsc:Selector",
+      "@context": [
+          {
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "ObjectAttributeSelector": {
+      "@id": "ddsc:ObjectAttributeSelector",
+      "@context": [
+          {
+            "refinedBy": {
+              "@id": "ddsc:ObjectAttributeSelector-refinedBy",
+              "@type": "@id"
+            },
+            "refinedByOrderNumber": {
+              "@id": "ddsc:ObjectAttributeSelector-refinedByOrderNumber",
+              "@type": "xsd:integer"
+            },
+            "value": {
+              "@id": "ddsc:ObjectAttributeSelector-value",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "TextPositionSelector": {
+      "@id": "ddsc:TextPositionSelector",
+      "@context": [
+          {
+            "end": {
+              "@id": "ddsc:TextPositionSelector-end",
+              "@type": "xsd:integer"
+            },
+            "start": {
+              "@id": "ddsc:TextPositionSelector-start",
+              "@type": "xsd:integer"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "InternationalString": {
+      "@id": "ddsc:InternationalString",
+      "@context": [
+          {
+            "languageSpecificString": {
+              "@id": "ddsc:InternationalString-languageSpecificString",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "LanguageString": {
+      "@id": "ddsc:LanguageString",
+      "@context": [
+          {
+            "content": {
+              "@id": "ddsc:LanguageString-content",
+              "@type": "xsd:string"
+            },
+            "isTranslatable": {
+              "@id": "ddsc:LanguageString-isTranslatable",
+              "@type": "xsd:boolean"
+            },
+            "isTranslated": {
+              "@id": "ddsc:LanguageString-isTranslated",
+              "@type": "xsd:boolean"
+            },
+            "language": {
+              "@id": "ddsc:LanguageString-language",
+              "@type": "xsd:language"
+            },
+            "scope": {
+              "@id": "ddsc:LanguageString-scope",
+              "@type": "xsd:string"
+            },
+            "structureUsed": {
+              "@id": "ddsc:LanguageString-structureUsed",
+              "@type": "@id"
+            },
+            "translationDate": {
+              "@id": "ddsc:LanguageString-translationDate",
+              "@type": "xsd:date"
+            },
+            "translationSourceLanguage": {
+              "@id": "ddsc:LanguageString-translationSourceLanguage",
+              "@type": "xsd:language"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "BibliographicName": {
+      "@id": "ddsc:BibliographicName",
+      "@context": [
+          {
+            "affiliation": {
+              "@id": "ddsc:BibliographicName-affiliation",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "LabelForDisplay": {
+      "@id": "ddsc:LabelForDisplay",
+      "@context": [
+          {
+            "locationVariant": {
+              "@id": "ddsc:LabelForDisplay-locationVariant",
+              "@type": "@id"
+            },
+            "maxLength": {
+              "@id": "ddsc:LabelForDisplay-maxLength",
+              "@type": "xsd:integer"
+            },
+            "validDates": {
+              "@id": "ddsc:LabelForDisplay-validDates",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "DateRange": {
+      "@id": "ddsc:DateRange",
+      "@context": [
+          {
+            "endDate": {
+              "@id": "ddsc:DateRange-endDate",
+              "@type": "@id"
+            },
+            "startDate": {
+              "@id": "ddsc:DateRange-startDate",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "CombinedDate": {
+      "@id": "ddsc:CombinedDate",
+      "@context": [
+          {
+            "isoDate": {
+              "@id": "ddsc:CombinedDate-isoDate",
+              "@type": "xsd:date"
+            },
+            "nonIsoDate": {
+              "@id": "ddsc:CombinedDate-nonIsoDate",
+              "@type": "@id"
+            },
+            "semantics": {
+              "@id": "ddsc:CombinedDate-semantics",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "NonIsoDate": {
+      "@id": "ddsc:NonIsoDate",
+      "@context": [
+          {
+            "calendar": {
+              "@id": "ddsc:NonIsoDate-calendar",
+              "@type": "@id"
+            },
+            "dateContent": {
+              "@id": "ddsc:NonIsoDate-dateContent",
+              "@type": "xsd:string"
+            },
+            "nonIsoDateFormat": {
+              "@id": "ddsc:NonIsoDate-nonIsoDateFormat",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "NonDdiIdentifier": {
+      "@id": "ddsc:NonDdiIdentifier",
+      "@context": [
+          {
+            "managingAgency": {
+              "@id": "ddsc:NonDdiIdentifier-managingAgency",
+              "@type": "xsd:string"
+            },
+            "type": {
+              "@id": "ddsc:NonDdiIdentifier-type",
+              "@type": "xsd:string"
+            },
+            "value": {
+              "@id": "ddsc:NonDdiIdentifier-value",
+              "@type": "xsd:string"
+            },
+            "version": {
+              "@id": "ddsc:NonDdiIdentifier-version",
+              "@type": "xsd:string"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "OrganizationName": {
+      "@id": "ddsc:OrganizationName",
+      "@context": [
+          {
+            "abbreviation": {
+              "@id": "ddsc:OrganizationName-abbreviation",
+              "@type": "@id"
+            },
+            "effectiveDates": {
+              "@id": "ddsc:OrganizationName-effectiveDates",
+              "@type": "@id"
+            },
+            "isFormal": {
+              "@id": "ddsc:OrganizationName-isFormal",
+              "@type": "xsd:boolean"
+            },
+            "typeOfOrganizationName": {
+              "@id": "ddsc:OrganizationName-typeOfOrganizationName",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "TypedString": {
+      "@id": "ddsc:TypedString",
+      "@context": [
+          {
+            "content": {
+              "@id": "ddsc:TypedString-content",
+              "@type": "xsd:string"
+            },
+            "typeOfContent": {
+              "@id": "ddsc:TypedString-typeOfContent",
+              "@type": "@id"
+            },
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    },
+    "TrimValues": {
+      "@id": "ddsc:TrimValues",
+      "@context": [
+          {
+            
+            " comment ": "tag:json-should-support-trailing-commas" 
+          }
+      ]
+    }
+  },
+  "generatedBy": "This code was generated by the Eclipse Acceleo project UCMIS M2T on 2026-04-05 18:18:42.",
+  "basedOn": "based on the UML model CDIF"
+}

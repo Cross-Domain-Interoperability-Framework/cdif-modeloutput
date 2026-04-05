@@ -1,0 +1,12 @@
+"dt-TrimValues": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/TrimValues",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "TrimValues"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

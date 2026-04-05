@@ -1,0 +1,67 @@
+# datatype ModelIdentification
+# based on the UML data type CDIF::DDSC::ModelIdentification
+ddsc:ModelIdentification
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "ModelIdentification";
+  rdfs:comment "Definition\n==========\nAttributes for the model identification with constant values."@en;
+  
+  owl:hasKey (ddsc:ModelIdentification-acronym ddsc:ModelIdentification-language ddsc:ModelIdentification-majorVersion ddsc:ModelIdentification-minorVersion ddsc:ModelIdentification-subtitle ddsc:ModelIdentification-title ddsc:ModelIdentification-uri);
+.
+
+ddsc:ModelIdentification-acronym
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "acronym";
+  rdfs:comment "Acronym of the model."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:string;
+.
+
+ddsc:ModelIdentification-language
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "language";
+  rdfs:comment "Language of the model."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:string;
+.
+
+ddsc:ModelIdentification-majorVersion
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "majorVersion";
+  rdfs:comment "Major version number of the model."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:integer;
+.
+
+ddsc:ModelIdentification-minorVersion
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "minorVersion";
+  rdfs:comment "Minor version number of the model."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:integer;
+.
+
+ddsc:ModelIdentification-subtitle
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "subtitle";
+  rdfs:comment "Subtitle of the model."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:string;
+.
+
+ddsc:ModelIdentification-title
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "title";
+  rdfs:comment "Title of the model."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:string;
+.
+
+ddsc:ModelIdentification-uri
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "uri";
+  rdfs:comment "URI of the specification."@en;
+  rdfs:domain ddsc:ModelIdentification;
+  rdfs:range xsd:string;
+.
+
+

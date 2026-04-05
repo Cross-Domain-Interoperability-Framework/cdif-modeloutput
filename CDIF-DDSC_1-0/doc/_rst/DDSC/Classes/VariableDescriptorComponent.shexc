@@ -1,0 +1,9 @@
+# class VariableDescriptorComponent
+# based on the UML class CDIF::DDSC::Classes::VariableDescriptorComponent
+ddsc:VariableDescriptorComponentShape CLOSED {
+	a [ddsc:VariableDescriptorComponent];
+	^ddsc:LongDataStructure_has_VariableDescriptorComponent @ddsc:LongDataStructureShape ;
+	ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent	@ddsc:VariableValueComponentShape ;
+	
+	}
+

@@ -1,0 +1,41 @@
+# class IdentifierComponent
+# based on the UML class CDIF::DDSC::Classes::IdentifierComponent
+<#IdentifierComponent> a sh:NodeShape;
+    sh:targetClass ddsc:IdentifierComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/IdentifierComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:IdentifierComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from IdentifierComponent
+    sh:property <#IdentifierComponent_isDefinedBy_InstanceVariable>;
+    # associations to IdentifierComponent
+    sh:property <#rev_WideDataStructure_has_IdentifierComponent>;
+    sh:property <#rev_LongDataStructure_has_IdentifierComponent>;
+    sh:property <#rev_DimensionalDataStructure_has_IdentifierComponent>;
+    sh:property <#rev_PrimaryKeyComponent_correspondsTo_IdentifierComponent>;
+
+
+
+.
+
+
+<#IdentifierComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:IdentifierComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_IdentifierComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:IdentifierComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

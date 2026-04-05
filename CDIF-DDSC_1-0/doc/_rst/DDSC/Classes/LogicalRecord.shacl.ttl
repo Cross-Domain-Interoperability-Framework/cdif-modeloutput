@@ -1,0 +1,115 @@
+# class LogicalRecord
+# based on the UML class CDIF::DDSC::Classes::LogicalRecord
+<#LogicalRecord> a sh:NodeShape;
+    sh:targetClass ddsc:LogicalRecord;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LogicalRecord";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LogicalRecord
+			 ) ;
+    ];
+    # attributes
+    # associations from LogicalRecord
+    sh:property <#LogicalRecord_organizes_WideDataSet>;
+    sh:property <#LogicalRecord_organizes_LongDataSet>;
+    sh:property <#LogicalRecord_organizes_DimensionalDataSet>;
+    sh:property <#LogicalRecord_has_InstanceVariable>;
+    sh:property <#LogicalRecord_isDefinedBy_UnitType>;
+    sh:property <#LogicalRecord_isDefinedBy_Universe>;
+    sh:property <#LogicalRecord_isDefinedBy_Population>;
+    # associations to LogicalRecord
+    sh:property <#rev_DataStore_has_LogicalRecord>;
+    sh:property <#rev_PhysicalSegmentLayout_formats_LogicalRecord>;
+
+
+
+.
+
+
+<#LogicalRecord_organizes_WideDataSet> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_organizes_WideDataSet;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:WideDataSet
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_organizes_WideDataSet> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_organizes_WideDataSet ];
+    sh:minCount 1;
+.
+<#LogicalRecord_organizes_LongDataSet> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_organizes_LongDataSet;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LongDataSet
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_organizes_LongDataSet> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_organizes_LongDataSet ];
+    sh:minCount 1;
+.
+<#LogicalRecord_organizes_DimensionalDataSet> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_organizes_DimensionalDataSet;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DimensionalDataSet
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_organizes_DimensionalDataSet> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_organizes_DimensionalDataSet ];
+    sh:minCount 1;
+.
+<#LogicalRecord_has_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_has_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_has_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_has_InstanceVariable ];
+    sh:minCount 1;
+.
+<#LogicalRecord_isDefinedBy_UnitType> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_isDefinedBy_UnitType;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:UnitType
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_isDefinedBy_UnitType> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_isDefinedBy_UnitType ];
+    sh:minCount 1;
+.
+<#LogicalRecord_isDefinedBy_Universe> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_isDefinedBy_Universe;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Universe
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_isDefinedBy_Universe> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_isDefinedBy_Universe ];
+    sh:minCount 1;
+.
+<#LogicalRecord_isDefinedBy_Population> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_isDefinedBy_Population;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Population
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_isDefinedBy_Population> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_isDefinedBy_Population ];
+    sh:minCount 1;
+.
+

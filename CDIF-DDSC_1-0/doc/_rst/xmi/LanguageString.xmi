@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.LanguageString"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.LanguageString-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+A data type which describes a string specific to a language/scope combination. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.</body>
+      <annotatedElement xmi:idref="ddsc.LanguageString"/>
+   </ownedComment>
+   <name>LanguageString</name>
+   <ownedAttribute xmi:id="ddsc.LanguageString-content"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-content"
+                    xmi:type="uml:Property">
+      <name>content</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-isTranslatable"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-isTranslatable"
+                    xmi:type="uml:Property">
+      <name>isTranslatable</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-isTranslated"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-isTranslated"
+                    xmi:type="uml:Property">
+      <name>isTranslated</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-language"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-language"
+                    xmi:type="uml:Property">
+      <name>language</name>
+      <type xmi:idref="ddsc.XsdLanguage"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-scope"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-scope"
+                    xmi:type="uml:Property">
+      <name>scope</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-structureUsed"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-structureUsed"
+                    xmi:type="uml:Property">
+      <name>structureUsed</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-translationDate"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-translationDate"
+                    xmi:type="uml:Property">
+      <name>translationDate</name>
+      <type xmi:idref="ddsc.XsdDate"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.LanguageString-translationSourceLanguage"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-translationSourceLanguage"
+                    xmi:type="uml:Property">
+      <name>translationSourceLanguage</name>
+      <type xmi:idref="ddsc.XsdLanguage"/>
+      <upperValue xmi:id="ddsc.LanguageString-translationSourceLanguage-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LanguageString-translationSourceLanguage-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+</packagedElement>

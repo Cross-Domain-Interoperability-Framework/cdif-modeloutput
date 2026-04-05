@@ -1,0 +1,27 @@
+"dt-NonDdiIdentifier": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/NonDdiIdentifier",
+  "type": ["object"],
+  "properties": {
+    "managingAgency": {
+      "$comment": "cardinality 1..1 – from ddsc:NonDdiIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "type": {
+      "$comment": "cardinality 1..1 – from ddsc:NonDdiIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "value": {
+      "$comment": "cardinality 1..1 – from ddsc:NonDdiIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "version": {
+      "$comment": "cardinality 1..1 – from ddsc:NonDdiIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "@type": {
+      "const": "NonDdiIdentifier"
+    }
+  },
+  "required": ["managingAgency","type","value","version","@type"],
+  "additionalProperties": false
+},

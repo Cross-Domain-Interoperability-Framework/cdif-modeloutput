@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.DescriptorValueDomain"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorValueDomain"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.DescriptorValueDomain-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorValueDomain-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Set of permissible values for a variable playing the role of a variable descriptor component.
+
+Examples
+==========
+Consider two variables, i.e. income and age, with values appearing in the same column. 
+Codes "income" and "age" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable.</body>
+      <annotatedElement xmi:idref="ddsc.DescriptorValueDomain"/>
+   </ownedComment>
+   <name>DescriptorValueDomain</name>
+</packagedElement>

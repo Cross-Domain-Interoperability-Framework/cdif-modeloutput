@@ -1,0 +1,66 @@
+  <xs:element name="ControlledVocabularyEntry"
+              type="ControlledVocabularyEntryXsdType"
+              xml:id="ControlledVocabularyEntry">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ControlledVocabularyEntry -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the identifying attributes as needed to adequately identify the controlled vocabulary. Note that DDI has published a number of controlled vocabularies applicable to several locations using the external controlled vocabulary entry structure. If the code portion of the controlled vocabulary entry is language specific (i.e. a list of keywords or subject headings) use language to specify that language. In most cases the code portion of an entry is not language specific although the description and usage may be managed in one or more languages. Use of shared controlled vocabularies helps support interoperability and machine actionability.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ControlledVocabularyEntryXsdType"
+                  xml:id="ControlledVocabularyEntryXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the identifying attributes as needed to adequately identify the controlled vocabulary. Note that DDI has published a number of controlled vocabularies applicable to several locations using the external controlled vocabulary entry structure. If the code portion of the controlled vocabulary entry is language specific (i.e. a list of keywords or subject headings) use language to specify that language. In most cases the code portion of an entry is not language specific although the description and usage may be managed in one or more languages. Use of shared controlled vocabularies helps support interoperability and machine actionability.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="entryReference"
+                  type="ReferenceXsdType"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ControlledVocabularyEntry-entryReference">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="entryValue"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ControlledVocabularyEntry-entryValue">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ControlledVocabularyEntry-name">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valueForOther"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ControlledVocabularyEntry-valueForOther">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vocabulary"
+                  type="ReferenceXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ControlledVocabularyEntry-vocabulary">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

@@ -1,0 +1,39 @@
+# class MeasureComponent
+# based on the UML class CDIF::DDSC::Classes::MeasureComponent
+<#MeasureComponent> a sh:NodeShape;
+    sh:targetClass ddsc:MeasureComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/MeasureComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:MeasureComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from MeasureComponent
+    sh:property <#MeasureComponent_isDefinedBy_InstanceVariable>;
+    # associations to MeasureComponent
+    sh:property <#rev_WideDataStructure_has_MeasureComponent>;
+    sh:property <#rev_DimensionalDataStructure_has_MeasureComponent>;
+
+
+
+.
+
+
+<#MeasureComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:MeasureComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_MeasureComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:MeasureComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

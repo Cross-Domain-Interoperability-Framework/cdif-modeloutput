@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification"
+                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-ownedComment"
+                  xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-ownedComment"
+                  xmi:type="uml:Comment">
+      <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification"/>
+      <body>Definition
+==========
+Attributes for the model identification with constant values.</body>
+   </ownedComment>
+   <name>ModelIdentification</name>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-acronym"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-acronym"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-acronym-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-acronym-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-acronym"/>
+         <body>Acronym of the model.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-acronym-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-acronym-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-acronym-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-acronym-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>acronym</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-acronym-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-acronym-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>CDIF-DDSC</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#String"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-language"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-language"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-language-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-language-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-language"/>
+         <body>Language of the model.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-language-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-language-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-language-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-language-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>language</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-language-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-language-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>en</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#String"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-majorVersion"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-majorVersion"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-majorVersion-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-majorVersion-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-majorVersion"/>
+         <body>Major version number of the model.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-majorVersion-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-majorVersion-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-majorVersion-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-majorVersion-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>majorVersion</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-majorVersion-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-majorVersion-defaultValue"
+                     xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Integer"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-minorVersion"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-minorVersion"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-minorVersion-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-minorVersion-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-minorVersion"/>
+         <body>Minor version number of the model.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-minorVersion-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-minorVersion-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-minorVersion-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-minorVersion-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>minorVersion</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-minorVersion-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-minorVersion-defaultValue"
+                     xmi:type="uml:LiteralInteger">
+         <value>0</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#Integer"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-subtitle"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-subtitle"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-subtitle-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-subtitle-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-subtitle"/>
+         <body>Subtitle of the model.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-subtitle-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-subtitle-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-subtitle-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-subtitle-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>subtitle</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-subtitle-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-subtitle-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>A Standards‑Based Framework for Cross‑Domain Data Exchange and Reuse</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#String"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-title"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-title"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-title-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-title-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-title"/>
+         <body>Title of the model.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-title-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-title-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-title-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-title-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>title</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-title-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-title-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>UML Model for the Cross-Domain Interoperability Framework (CDIF)</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#String"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-uri"
+                    xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-uri"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-uri-ownedComment"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-uri-ownedComment"
+                     xmi:type="uml:Comment">
+         <annotatedElement xmi:idref="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-uri"/>
+         <body>URI of the specification.</body>
+      </ownedComment>
+      <lowerValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-uri-lowerValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-uri-lowerValue"
+                   xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </lowerValue>
+      <upperValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-uri-upperValue"
+                   xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-uri-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>1</value>
+      </upperValue>
+      <name>uri</name>
+      <defaultValue xmi:id="DDICDIModels-DDICDILibrary-DataTypes-ModelIdentification-uri-defaultValue"
+                     xmi:uuid="http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ModelIdentification-uri-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/</value>
+      </defaultValue>
+      <isReadOnly>true</isReadOnly>
+      <type href="http://www.eclipse.org/uml2/5.0.0/UML/PrimitiveTypes.xmi#String"
+             xmi:type="uml:PrimitiveType"/>
+   </ownedAttribute>
+</packagedElement>

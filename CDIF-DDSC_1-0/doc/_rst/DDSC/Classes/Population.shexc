@@ -1,0 +1,12 @@
+# class Population
+# based on the UML class CDIF::DDSC::Classes::Population
+ddsc:PopulationShape CLOSED {
+	a [ddsc:Population];
+	ddsc:Population-descriptiveText	@ddsc:InternationalStringShape;
+	ddsc:Population-name	@ddsc:ObjectNameShape;
+	^ddsc:LogicalRecord_isDefinedBy_Population @ddsc:LogicalRecordShape +;
+	^ddsc:InstanceVariable_measures_Population @ddsc:InstanceVariableShape ;
+	ddsc:Population_uses_Universe	@ddsc:UniverseShape ;
+	
+	}
+

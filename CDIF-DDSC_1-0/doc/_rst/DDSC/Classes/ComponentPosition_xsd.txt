@@ -1,0 +1,60 @@
+  <xs:element name="ComponentPosition"
+              type="ComponentPositionXsdType"
+              xml:id="ComponentPosition">
+    <!-- based on the UML class CDIF::DDSC::Classes::ComponentPosition -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Indexes the components in a data structure using integers with a position indicated by incrementing upward from 0 or 1.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ComponentPositionXsdType"
+                  xml:id="ComponentPositionXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Indexes the components in a data structure using integers with a position indicated by incrementing upward from 0 or 1.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="value"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ComponentPosition-value">
+        <xs:annotation>
+          <xs:documentation>Index value of the member in an ordered array.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ComponentPosition_indexes_DimensionComponent"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ComponentPosition_indexes_DimensionComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ComponentPosition_indexes_DimensionComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="ComponentPosition_indexes_DimensionComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="DimensionComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

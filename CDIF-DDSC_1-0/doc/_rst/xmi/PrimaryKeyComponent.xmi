@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.PrimaryKeyComponent"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKeyComponent"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.PrimaryKeyComponent-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKeyComponent-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Role of a data structure component for content identification purposes
+
+Explanatory notes
+===================
+Equivalent to a primary key attribute (i.e. column) in the relational model.
+It can be used in conjunction with a foreign key component to link data structures and their related datasets.</body>
+      <annotatedElement xmi:idref="ddsc.PrimaryKeyComponent"/>
+   </ownedComment>
+   <name>PrimaryKeyComponent</name>
+   <ownedAttribute xmi:id="ddsc.PrimaryKeyComponent-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKeyComponent-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.IdentifierComponent"/>
+      <association xmi:idref="ddsc.PrimaryKeyComponent_correspondsTo_IdentifierComponent"/>
+   </ownedAttribute>
+</packagedElement>

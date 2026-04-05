@@ -1,0 +1,39 @@
+  <xs:element name="DateRange"
+              type="DateRangeXsdType"
+              xml:id="DateRange">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::DateRange -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DateRangeXsdType"
+                  xml:id="DateRangeXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="endDate"
+                  type="CombinedDateXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DateRange-endDate">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startDate"
+                  type="CombinedDateXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DateRange-startDate">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

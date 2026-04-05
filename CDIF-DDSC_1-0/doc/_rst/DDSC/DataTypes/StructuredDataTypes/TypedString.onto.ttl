@@ -1,0 +1,27 @@
+# datatype TypedString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TypedString
+ddsc:TypedString
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "TypedString";
+  rdfs:comment "Definition\n============\nTypedString combines a type with content defined as a simple string. May be used wherever a simple string needs to support a type definition to clarify its content.\n\nExamples\n==========\nContent is a regular expression and the typeOfContent attribute is used to define the syntax of the regular expression content.\n\nExplanatory notes\n===================\nThis is a generic type + string where property name and documentation should be used to define any specification for the content. If international structured string content is required use TypedStructuredString."@en;
+  
+  owl:hasKey (ddsc:TypedString-content ddsc:TypedString-typeOfContent);
+.
+
+ddsc:TypedString-content
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "content";
+  
+  rdfs:domain ddsc:TypedString;
+  rdfs:range xsd:string;
+.
+
+ddsc:TypedString-typeOfContent
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "typeOfContent";
+  
+  rdfs:domain ddsc:TypedString;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+

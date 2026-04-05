@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.MeasureComponent"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#MeasureComponent"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.MeasureComponent-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#MeasureComponent-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Role given to a represented variable in the context of a data structure to hold the observed/derived values.  
+
+Examples 
+========== 
+Height of a person in a wide or long dataset or number of citizens in a country in a dataset for multiple countries (dimensional dataset).</body>
+      <annotatedElement xmi:idref="ddsc.MeasureComponent"/>
+   </ownedComment>
+   <name>MeasureComponent</name>
+   <ownedAttribute xmi:id="ddsc.MeasureComponent-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#MeasureComponent-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.InstanceVariable"/>
+      <association xmi:idref="ddsc.MeasureComponent_isDefinedBy_InstanceVariable"/>
+   </ownedAttribute>
+</packagedElement>

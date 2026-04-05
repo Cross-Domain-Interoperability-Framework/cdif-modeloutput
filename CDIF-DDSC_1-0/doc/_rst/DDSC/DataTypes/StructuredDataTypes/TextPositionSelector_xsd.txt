@@ -1,0 +1,39 @@
+  <xs:element name="TextPositionSelector"
+              type="TextPositionSelectorXsdType"
+              xml:id="TextPositionSelector">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TextPositionSelector -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Describes a range of text by recording the start and end positions of the selection in the object. Position 0 would be immediately before the first character, position 1 would be immediately before the second character, and so on. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#textpositionselector.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="TextPositionSelectorXsdType"
+                  xml:id="TextPositionSelectorXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Describes a range of text by recording the start and end positions of the selection in the object. Position 0 would be immediately before the first character, position 1 would be immediately before the second character, and so on. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#textpositionselector.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="end"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="TextPositionSelector-end">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="start"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="TextPositionSelector-start">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

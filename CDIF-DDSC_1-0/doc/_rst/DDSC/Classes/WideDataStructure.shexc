@@ -1,0 +1,14 @@
+# class WideDataStructure
+# based on the UML class CDIF::DDSC::Classes::WideDataStructure
+ddsc:WideDataStructureShape CLOSED {
+	a [ddsc:WideDataStructure];
+	ddsc:WideDataStructure_has_PrimaryKey	@ddsc:PrimaryKeyShape ;
+	
+	ddsc:WideDataStructure_has_IdentifierComponent	@ddsc:IdentifierComponentShape +;
+	
+	ddsc:WideDataStructure_has_AttributeComponent	@ddsc:AttributeComponentShape +;
+	
+	ddsc:WideDataStructure_has_MeasureComponent	@ddsc:MeasureComponentShape +;
+	
+	}
+

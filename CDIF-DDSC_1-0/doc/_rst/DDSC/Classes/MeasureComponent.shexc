@@ -1,0 +1,10 @@
+# class MeasureComponent
+# based on the UML class CDIF::DDSC::Classes::MeasureComponent
+ddsc:MeasureComponentShape CLOSED {
+	a [ddsc:MeasureComponent];
+	^ddsc:WideDataStructure_has_MeasureComponent @ddsc:WideDataStructureShape ;
+	^ddsc:DimensionalDataStructure_has_MeasureComponent @ddsc:DimensionalDataStructureShape ;
+	ddsc:MeasureComponent_isDefinedBy_InstanceVariable	@ddsc:InstanceVariableShape ;
+	
+	}
+

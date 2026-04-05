@@ -1,0 +1,27 @@
+# datatype ObjectName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectName
+ddsc:ObjectName
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "ObjectName";
+  rdfs:comment "Definition\n==========\nA standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.\n\nExplanatory notes\n=================\nUse in model: In general the property name should be \"name\" as it is the name of the class object of which it is an attribute. Use a specific name (i.e. xxxName) only when naming something other than the class object of which it is an attribute."@en;
+  
+  owl:hasKey (ddsc:ObjectName-context ddsc:ObjectName-name);
+.
+
+ddsc:ObjectName-context
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "context";
+  
+  rdfs:domain ddsc:ObjectName;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+ddsc:ObjectName-name
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "name";
+  
+  rdfs:domain ddsc:ObjectName;
+  rdfs:range xsd:string;
+.
+
+

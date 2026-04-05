@@ -1,0 +1,68 @@
+  <xs:element name="Descriptor"
+              type="DescriptorXsdType"
+              xml:id="Descriptor">
+    <!-- based on the UML class CDIF::DDSC::Classes::Descriptor -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Use of a code for variable identification in the context of a data structure and a variable descriptor component.
+            
+            Examples
+            ========
+            Consider two variables, i.e. income and age, with values appearing in the same column. Codes "income" and "age" are descriptors. They appear multiple time in a variable descriptor component, one for each value in the variable value component. Each descriptor references one of those values. This way it's possible to identify which values correspond to income and which ones to age.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DescriptorXsdType"
+                  xml:id="DescriptorXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Use of a code for variable identification in the context of a data structure and a variable descriptor component.
+            
+            Examples
+            ========
+            Consider two variables, i.e. income and age, with values appearing in the same column. Codes "income" and "age" are descriptors. They appear multiple time in a variable descriptor component, one for each value in the variable value component. Each descriptor references one of those values. This way it's possible to identify which values correspond to income and which ones to age.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="content"
+                  type="TypedStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Descriptor-content">
+        <xs:annotation>
+          <xs:documentation>The content of this value expressed as a string.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Descriptor_identifies_InstanceVariable"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="Descriptor_identifies_InstanceVariable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="Descriptor_identifies_InstanceVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="Descriptor_identifies_InstanceVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="InstanceVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

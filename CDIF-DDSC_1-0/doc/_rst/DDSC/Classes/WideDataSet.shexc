@@ -1,0 +1,9 @@
+# class WideDataSet
+# based on the UML class CDIF::DDSC::Classes::WideDataSet
+ddsc:WideDataSetShape CLOSED {
+	a [ddsc:WideDataSet];
+	ddsc:WideDataSet-name	@ddsc:ObjectNameShape;
+	ddsc:WideDataSet-physicalFileName	xsd:string;
+	^ddsc:LogicalRecord_organizes_WideDataSet @ddsc:LogicalRecordShape +;
+	}
+

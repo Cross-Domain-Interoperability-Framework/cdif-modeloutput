@@ -1,0 +1,17 @@
+"dt-InternationalString": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/InternationalString",
+  "type": ["object"],
+  "properties": {
+    "languageSpecificString": {
+      "$comment": "cardinality 1..-1 – from ddsc:InternationalString",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-LanguageString" } },
+      "else": { "$ref": "#/defs/dt-LanguageString" }
+    },
+    "@type": {
+      "const": "InternationalString"
+    }
+  },
+  "required": ["languageSpecificString","@type"],
+  "additionalProperties": false
+},

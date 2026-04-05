@@ -1,0 +1,7 @@
+# datatype BibliographicName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::BibliographicName
+ddsc:BibliographicNameShape CLOSED {
+	a [ddsc:BibliographicName];
+	ddsc:BibliographicName-affiliation	xsd:string;
+	}
+

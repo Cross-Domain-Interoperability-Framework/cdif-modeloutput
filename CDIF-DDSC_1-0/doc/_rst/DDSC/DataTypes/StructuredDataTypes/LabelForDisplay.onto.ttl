@@ -1,0 +1,35 @@
+# datatype LabelForDisplay
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LabelForDisplay
+ddsc:LabelForDisplay
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "LabelForDisplay";
+  rdfs:comment "Definition\n============\nA structured display label. Label provides display content of a fully human readable display for the identification of the object."@en;
+  
+  owl:hasKey (ddsc:LabelForDisplay-locationVariant ddsc:LabelForDisplay-maxLength ddsc:LabelForDisplay-validDates);
+.
+
+ddsc:LabelForDisplay-locationVariant
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "locationVariant";
+  
+  rdfs:domain ddsc:LabelForDisplay;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+ddsc:LabelForDisplay-maxLength
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "maxLength";
+  
+  rdfs:domain ddsc:LabelForDisplay;
+  rdfs:range xsd:integer;
+.
+
+ddsc:LabelForDisplay-validDates
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "validDates";
+  
+  rdfs:domain ddsc:LabelForDisplay;
+  rdfs:range ddsc:DateRange;
+.
+
+

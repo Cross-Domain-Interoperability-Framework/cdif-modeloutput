@@ -1,0 +1,56 @@
+  <xs:element name="CombinedDate"
+              type="CombinedDateXsdType"
+              xml:id="CombinedDate">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::CombinedDate -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Provides the structure of a single Date expressed in an ISO date structure along with equivalent expression in any number of non-ISO formats. While it supports the use of the ISO time interval structure this should only be used when the exact date is unclear (i.e. occurring at some point in time between the two specified dates) or in specified applications. Ranges with specified start and end dates should use the DateRange as a datatype. Commonly uses property names include: eventDate, issueDate, and releaseDate.
+            
+            Explanatory notes
+            ===================
+            Date allows one of a set of date-time (YYYY-MM-DDThh:mm:ss), date (YYYY-MM-DD), year-month (YYYY-MM), year (YYYY), time (hh:mm:ss) and duration (PnYnMnDnHnMnS), or time interval (YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss, YYYY-MM-DDThh:mm:ss/PnYnMnDnHnMnS, PnYnMnDnHnMnS/ YYYY-MM-DDThh:mm:ss) which is formatted according to ISO 8601 and backed supported by regular expressions in the BaseDateType. Time Zone designation and negative/positive prefixes are allowed as are dates before and after 0000 through 9999.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="CombinedDateXsdType"
+                  xml:id="CombinedDateXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Provides the structure of a single Date expressed in an ISO date structure along with equivalent expression in any number of non-ISO formats. While it supports the use of the ISO time interval structure this should only be used when the exact date is unclear (i.e. occurring at some point in time between the two specified dates) or in specified applications. Ranges with specified start and end dates should use the DateRange as a datatype. Commonly uses property names include: eventDate, issueDate, and releaseDate.
+            
+            Explanatory notes
+            ===================
+            Date allows one of a set of date-time (YYYY-MM-DDThh:mm:ss), date (YYYY-MM-DD), year-month (YYYY-MM), year (YYYY), time (hh:mm:ss) and duration (PnYnMnDnHnMnS), or time interval (YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss, YYYY-MM-DDThh:mm:ss/PnYnMnDnHnMnS, PnYnMnDnHnMnS/ YYYY-MM-DDThh:mm:ss) which is formatted according to ISO 8601 and backed supported by regular expressions in the BaseDateType. Time Zone designation and negative/positive prefixes are allowed as are dates before and after 0000 through 9999.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="isoDate"
+                  type="xs:date"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="CombinedDate-isoDate">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nonIsoDate"
+                  type="NonIsoDateXsdType"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="CombinedDate-nonIsoDate">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="semantics"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="CombinedDate-semantics">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

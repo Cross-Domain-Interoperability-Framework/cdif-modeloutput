@@ -1,0 +1,36 @@
+# datatype TypedString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TypedString
+<#TypedString> a sh:NodeShape;
+    sh:targetClass ddsc:TypedString;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/TypedString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:TypedString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#TypedString-content>;
+    sh:property <#TypedString-typeOfContent>;
+
+
+
+.
+
+<#TypedString-content> a sh:PropertyShape ;
+    sh:path ddsc:TypedString-content;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#TypedString-typeOfContent> a sh:PropertyShape ;
+    sh:path ddsc:TypedString-typeOfContent;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.TypedString"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TypedString"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.TypedString-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TypedString-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+TypedString combines a type with content defined as a simple string. May be used wherever a simple string needs to support a type definition to clarify its content.
+
+Examples
+==========
+Content is a regular expression and the typeOfContent attribute is used to define the syntax of the regular expression content.
+
+Explanatory notes
+===================
+This is a generic type + string where property name and documentation should be used to define any specification for the content. If international structured string content is required use TypedStructuredString.</body>
+      <annotatedElement xmi:idref="ddsc.TypedString"/>
+   </ownedComment>
+   <name>TypedString</name>
+   <ownedAttribute xmi:id="ddsc.TypedString-content"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TypedString-content"
+                    xmi:type="uml:Property">
+      <name>content</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.TypedString-typeOfContent"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TypedString-typeOfContent"
+                    xmi:type="uml:Property">
+      <name>typeOfContent</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+</packagedElement>

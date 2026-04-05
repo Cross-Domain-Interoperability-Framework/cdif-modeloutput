@@ -1,0 +1,198 @@
+[
+  {
+    "source": "AttributeComponent",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "ComponentPosition",
+    "target": "DimensionComponent"
+  },
+  {
+    "source": "DataStore",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "Descriptor",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "DescriptorVariable",
+    "target": "DescriptorValueDomain"
+  },
+  {
+    "source": "DimensionComponent",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "AttributeComponent"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "ComponentPosition"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "IdentifierComponent"
+  },
+  {
+    "source": "DimensionalDataStructure",
+    "target": "MeasureComponent"
+  },
+  {
+    "source": "IdentifierComponent",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "Population"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "InstanceVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "DimensionalDataSet"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "LongDataSet"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "Population"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "UnitType"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "Universe"
+  },
+  {
+    "source": "LogicalRecord",
+    "target": "WideDataSet"
+  },
+  {
+    "source": "LongDataStructure",
+    "target": "AttributeComponent"
+  },
+  {
+    "source": "LongDataStructure",
+    "target": "IdentifierComponent"
+  },
+  {
+    "source": "LongDataStructure",
+    "target": "VariableDescriptorComponent"
+  },
+  {
+    "source": "LongDataStructure",
+    "target": "VariableValueComponent"
+  },
+  {
+    "source": "MeasureComponent",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "PhysicalSegmentLayout",
+    "target": "LogicalRecord"
+  },
+  {
+    "source": "PhysicalSegmentLayout",
+    "target": "ValueMapping"
+  },
+  {
+    "source": "PhysicalSegmentLayout",
+    "target": "ValueMappingPosition"
+  },
+  {
+    "source": "Population",
+    "target": "Universe"
+  },
+  {
+    "source": "PrimaryKey",
+    "target": "PrimaryKeyComponent"
+  },
+  {
+    "source": "PrimaryKeyComponent",
+    "target": "IdentifierComponent"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "ReferenceVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "SentinelValueDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "SubstantiveValueDomain"
+  },
+  {
+    "source": "RepresentedVariable",
+    "target": "Universe"
+  },
+  {
+    "source": "Universe",
+    "target": "UnitType"
+  },
+  {
+    "source": "ValueMapping",
+    "target": "DescriptorVariable"
+  },
+  {
+    "source": "ValueMapping",
+    "target": "InstanceVariable"
+  },
+  {
+    "source": "ValueMapping",
+    "target": "ReferenceVariable"
+  },
+  {
+    "source": "ValueMapping",
+    "target": "RepresentedVariable"
+  },
+  {
+    "source": "ValueMappingPosition",
+    "target": "ValueMapping"
+  },
+  {
+    "source": "VariableDescriptorComponent",
+    "target": "VariableValueComponent"
+  },
+  {
+    "source": "VariableValueComponent",
+    "target": "ReferenceVariable"
+  },
+  {
+    "source": "WideDataStructure",
+    "target": "AttributeComponent"
+  },
+  {
+    "source": "WideDataStructure",
+    "target": "IdentifierComponent"
+  },
+  {
+    "source": "WideDataStructure",
+    "target": "MeasureComponent"
+  },
+  {
+    "source": "WideDataStructure",
+    "target": "PrimaryKey"
+  }
+]

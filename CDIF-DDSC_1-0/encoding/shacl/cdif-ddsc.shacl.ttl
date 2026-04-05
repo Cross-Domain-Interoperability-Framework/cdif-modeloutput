@@ -1,0 +1,2658 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc:    <http://purl.org/dc/elements/1.1/>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX ddsc:   <http://w3id.org/cdif/ddsc/1.0/ddsc/>
+PREFIX ucmis: <http://ddialliance.org/Specification/UCMIS/1.0/RDF>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+# class AttributeComponent
+# based on the UML class CDIF::DDSC::Classes::AttributeComponent
+<#AttributeComponent> a sh:NodeShape;
+    sh:targetClass ddsc:AttributeComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/AttributeComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:AttributeComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from AttributeComponent
+    sh:property <#AttributeComponent_isDefinedBy_InstanceVariable>;
+    # associations to AttributeComponent
+    sh:property <#rev_WideDataStructure_has_AttributeComponent>;
+    sh:property <#rev_LongDataStructure_has_AttributeComponent>;
+    sh:property <#rev_DimensionalDataStructure_has_AttributeComponent>;
+
+
+
+.
+
+
+<#AttributeComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:AttributeComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_AttributeComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:AttributeComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class ComponentPosition
+# based on the UML class CDIF::DDSC::Classes::ComponentPosition
+<#ComponentPosition> a sh:NodeShape;
+    sh:targetClass ddsc:ComponentPosition;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ComponentPosition";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ComponentPosition
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ComponentPosition-value>;
+    # associations from ComponentPosition
+    sh:property <#ComponentPosition_indexes_DimensionComponent>;
+    # associations to ComponentPosition
+    sh:property <#rev_DimensionalDataStructure_has_ComponentPosition>;
+
+
+
+.
+
+<#ComponentPosition-value> a sh:PropertyShape ;
+    sh:path ddsc:ComponentPosition-value;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ComponentPosition_indexes_DimensionComponent> a sh:PropertyShape ;
+    sh:path ddsc:ComponentPosition_indexes_DimensionComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DimensionComponent
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_ComponentPosition_indexes_DimensionComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ComponentPosition_indexes_DimensionComponent ];
+    sh:minCount 1;
+.
+
+# class DataStore
+# based on the UML class CDIF::DDSC::Classes::DataStore
+<#DataStore> a sh:NodeShape;
+    sh:targetClass ddsc:DataStore;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DataStore";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DataStore
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DataStore-name>;
+    # associations from DataStore
+    sh:property <#DataStore_has_LogicalRecord>;
+    # associations to DataStore
+
+
+
+.
+
+<#DataStore-name> a sh:PropertyShape ;
+    sh:path ddsc:DataStore-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#DataStore_has_LogicalRecord> a sh:PropertyShape ;
+    sh:path ddsc:DataStore_has_LogicalRecord;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LogicalRecord
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DataStore_has_LogicalRecord> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DataStore_has_LogicalRecord ];
+    sh:minCount 1;
+.
+
+# class Descriptor
+# based on the UML class CDIF::DDSC::Classes::Descriptor
+<#Descriptor> a sh:NodeShape;
+    sh:targetClass ddsc:Descriptor;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Descriptor";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Descriptor
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Descriptor-content>;
+    # associations from Descriptor
+    sh:property <#Descriptor_identifies_InstanceVariable>;
+    # associations to Descriptor
+
+
+
+.
+
+<#Descriptor-content> a sh:PropertyShape ;
+    sh:path ddsc:Descriptor-content;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:TypedString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#Descriptor_identifies_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:Descriptor_identifies_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_Descriptor_identifies_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:Descriptor_identifies_InstanceVariable ];
+    sh:minCount 1;
+.
+
+# class DescriptorValueDomain
+# based on the UML class CDIF::DDSC::Classes::DescriptorValueDomain
+<#DescriptorValueDomain> a sh:NodeShape;
+    sh:targetClass ddsc:DescriptorValueDomain;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorValueDomain";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DescriptorValueDomain
+			 ) ;
+    ];
+    # attributes
+    # associations from DescriptorValueDomain
+    # associations to DescriptorValueDomain
+    sh:property <#rev_DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain>;
+
+
+
+.
+
+
+
+# class DescriptorVariable
+# based on the UML class CDIF::DDSC::Classes::DescriptorVariable
+<#DescriptorVariable> a sh:NodeShape;
+    sh:targetClass ddsc:DescriptorVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DescriptorVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DescriptorVariable-name>;
+    # associations from DescriptorVariable
+    sh:property <#DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain>;
+    # associations to DescriptorVariable
+    sh:property <#rev_ValueMapping_formats_DescriptorVariable>;
+
+
+
+.
+
+<#DescriptorVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:DescriptorVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DescriptorValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class DimensionComponent
+# based on the UML class CDIF::DDSC::Classes::DimensionComponent
+<#DimensionComponent> a sh:NodeShape;
+    sh:targetClass ddsc:DimensionComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DimensionComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from DimensionComponent
+    sh:property <#DimensionComponent_isDefinedBy_InstanceVariable>;
+    # associations to DimensionComponent
+    sh:property <#rev_ComponentPosition_indexes_DimensionComponent>;
+
+
+
+.
+
+
+<#DimensionComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:DimensionComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_DimensionComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DimensionComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class DimensionalDataSet
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataSet
+<#DimensionalDataSet> a sh:NodeShape;
+    sh:targetClass ddsc:DimensionalDataSet;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionalDataSet";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DimensionalDataSet
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DimensionalDataSet-name>;
+    sh:property <#DimensionalDataSet-physicalFileName>;
+    # associations from DimensionalDataSet
+    # associations to DimensionalDataSet
+    sh:property <#rev_LogicalRecord_organizes_DimensionalDataSet>;
+
+
+
+.
+
+<#DimensionalDataSet-name> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataSet-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DimensionalDataSet-physicalFileName> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataSet-physicalFileName;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+
+# class DimensionalDataStructure
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataStructure
+<#DimensionalDataStructure> a sh:NodeShape;
+    sh:targetClass ddsc:DimensionalDataStructure;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionalDataStructure";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DimensionalDataStructure
+			 ) ;
+    ];
+    # attributes
+    # associations from DimensionalDataStructure
+    sh:property <#DimensionalDataStructure_has_IdentifierComponent>;
+    sh:property <#DimensionalDataStructure_has_AttributeComponent>;
+    sh:property <#DimensionalDataStructure_has_MeasureComponent>;
+    sh:property <#DimensionalDataStructure_has_ComponentPosition>;
+    # associations to DimensionalDataStructure
+
+
+
+.
+
+
+<#DimensionalDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataStructure_has_IdentifierComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:IdentifierComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DimensionalDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DimensionalDataStructure_has_IdentifierComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DimensionalDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataStructure_has_AttributeComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:AttributeComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DimensionalDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DimensionalDataStructure_has_AttributeComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DimensionalDataStructure_has_MeasureComponent> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataStructure_has_MeasureComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:MeasureComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DimensionalDataStructure_has_MeasureComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DimensionalDataStructure_has_MeasureComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DimensionalDataStructure_has_ComponentPosition> a sh:PropertyShape ;
+    sh:path ddsc:DimensionalDataStructure_has_ComponentPosition;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ComponentPosition
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_DimensionalDataStructure_has_ComponentPosition> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DimensionalDataStructure_has_ComponentPosition ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class IdentifierComponent
+# based on the UML class CDIF::DDSC::Classes::IdentifierComponent
+<#IdentifierComponent> a sh:NodeShape;
+    sh:targetClass ddsc:IdentifierComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/IdentifierComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:IdentifierComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from IdentifierComponent
+    sh:property <#IdentifierComponent_isDefinedBy_InstanceVariable>;
+    # associations to IdentifierComponent
+    sh:property <#rev_WideDataStructure_has_IdentifierComponent>;
+    sh:property <#rev_LongDataStructure_has_IdentifierComponent>;
+    sh:property <#rev_DimensionalDataStructure_has_IdentifierComponent>;
+    sh:property <#rev_PrimaryKeyComponent_correspondsTo_IdentifierComponent>;
+
+
+
+.
+
+
+<#IdentifierComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:IdentifierComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_IdentifierComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:IdentifierComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class InstanceVariable
+# based on the UML class CDIF::DDSC::Classes::InstanceVariable
+<#InstanceVariable> a sh:NodeShape;
+    sh:targetClass ddsc:InstanceVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/InstanceVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:InstanceVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#InstanceVariable-definition>;
+    sh:property <#InstanceVariable-describedUnitOfMeasure>;
+    sh:property <#InstanceVariable-name>;
+    sh:property <#InstanceVariable-unitOfMeasureKind>;
+    # associations from InstanceVariable
+    sh:property <#InstanceVariable_measures_Population>;
+    sh:property <#InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    # associations to InstanceVariable
+    sh:property <#rev_LogicalRecord_has_InstanceVariable>;
+    sh:property <#rev_Descriptor_identifies_InstanceVariable>;
+    sh:property <#rev_IdentifierComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_MeasureComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_AttributeComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_DimensionComponent_isDefinedBy_InstanceVariable>;
+    sh:property <#rev_ValueMapping_formats_InstanceVariable>;
+
+
+
+.
+
+<#InstanceVariable-definition> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-definition;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable-describedUnitOfMeasure> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-describedUnitOfMeasure;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable-unitOfMeasureKind> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable-unitOfMeasureKind;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#InstanceVariable_measures_Population> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable_measures_Population;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Population
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_InstanceVariable_measures_Population> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:InstanceVariable_measures_Population ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SubstantiveValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SentinelValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class LogicalRecord
+# based on the UML class CDIF::DDSC::Classes::LogicalRecord
+<#LogicalRecord> a sh:NodeShape;
+    sh:targetClass ddsc:LogicalRecord;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LogicalRecord";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LogicalRecord
+			 ) ;
+    ];
+    # attributes
+    # associations from LogicalRecord
+    sh:property <#LogicalRecord_organizes_WideDataSet>;
+    sh:property <#LogicalRecord_organizes_LongDataSet>;
+    sh:property <#LogicalRecord_organizes_DimensionalDataSet>;
+    sh:property <#LogicalRecord_has_InstanceVariable>;
+    sh:property <#LogicalRecord_isDefinedBy_UnitType>;
+    sh:property <#LogicalRecord_isDefinedBy_Universe>;
+    sh:property <#LogicalRecord_isDefinedBy_Population>;
+    # associations to LogicalRecord
+    sh:property <#rev_DataStore_has_LogicalRecord>;
+    sh:property <#rev_PhysicalSegmentLayout_formats_LogicalRecord>;
+
+
+
+.
+
+
+<#LogicalRecord_organizes_WideDataSet> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_organizes_WideDataSet;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:WideDataSet
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_organizes_WideDataSet> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_organizes_WideDataSet ];
+    sh:minCount 1;
+.
+<#LogicalRecord_organizes_LongDataSet> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_organizes_LongDataSet;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LongDataSet
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_organizes_LongDataSet> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_organizes_LongDataSet ];
+    sh:minCount 1;
+.
+<#LogicalRecord_organizes_DimensionalDataSet> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_organizes_DimensionalDataSet;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DimensionalDataSet
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_organizes_DimensionalDataSet> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_organizes_DimensionalDataSet ];
+    sh:minCount 1;
+.
+<#LogicalRecord_has_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_has_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_has_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_has_InstanceVariable ];
+    sh:minCount 1;
+.
+<#LogicalRecord_isDefinedBy_UnitType> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_isDefinedBy_UnitType;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:UnitType
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_isDefinedBy_UnitType> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_isDefinedBy_UnitType ];
+    sh:minCount 1;
+.
+<#LogicalRecord_isDefinedBy_Universe> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_isDefinedBy_Universe;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Universe
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_isDefinedBy_Universe> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_isDefinedBy_Universe ];
+    sh:minCount 1;
+.
+<#LogicalRecord_isDefinedBy_Population> a sh:PropertyShape ;
+    sh:path ddsc:LogicalRecord_isDefinedBy_Population;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Population
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LogicalRecord_isDefinedBy_Population> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LogicalRecord_isDefinedBy_Population ];
+    sh:minCount 1;
+.
+
+# class LongDataSet
+# based on the UML class CDIF::DDSC::Classes::LongDataSet
+<#LongDataSet> a sh:NodeShape;
+    sh:targetClass ddsc:LongDataSet;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataSet";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LongDataSet
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LongDataSet-name>;
+    sh:property <#LongDataSet-physicalFileName>;
+    # associations from LongDataSet
+    # associations to LongDataSet
+    sh:property <#rev_LogicalRecord_organizes_LongDataSet>;
+
+
+
+.
+
+<#LongDataSet-name> a sh:PropertyShape ;
+    sh:path ddsc:LongDataSet-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataSet-physicalFileName> a sh:PropertyShape ;
+    sh:path ddsc:LongDataSet-physicalFileName;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+
+# class LongDataStructure
+# based on the UML class CDIF::DDSC::Classes::LongDataStructure
+<#LongDataStructure> a sh:NodeShape;
+    sh:targetClass ddsc:LongDataStructure;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataStructure";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LongDataStructure
+			 ) ;
+    ];
+    # attributes
+    # associations from LongDataStructure
+    sh:property <#LongDataStructure_has_IdentifierComponent>;
+    sh:property <#LongDataStructure_has_AttributeComponent>;
+    sh:property <#LongDataStructure_has_VariableDescriptorComponent>;
+    sh:property <#LongDataStructure_has_VariableValueComponent>;
+    # associations to LongDataStructure
+
+
+
+.
+
+
+<#LongDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_IdentifierComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:IdentifierComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_IdentifierComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_AttributeComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:AttributeComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_AttributeComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataStructure_has_VariableDescriptorComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_VariableDescriptorComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:VariableDescriptorComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_VariableDescriptorComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_VariableDescriptorComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataStructure_has_VariableValueComponent> a sh:PropertyShape ;
+    sh:path ddsc:LongDataStructure_has_VariableValueComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:VariableValueComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_LongDataStructure_has_VariableValueComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:LongDataStructure_has_VariableValueComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class MeasureComponent
+# based on the UML class CDIF::DDSC::Classes::MeasureComponent
+<#MeasureComponent> a sh:NodeShape;
+    sh:targetClass ddsc:MeasureComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/MeasureComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:MeasureComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from MeasureComponent
+    sh:property <#MeasureComponent_isDefinedBy_InstanceVariable>;
+    # associations to MeasureComponent
+    sh:property <#rev_WideDataStructure_has_MeasureComponent>;
+    sh:property <#rev_DimensionalDataStructure_has_MeasureComponent>;
+
+
+
+.
+
+
+<#MeasureComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:MeasureComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_MeasureComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:MeasureComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class PhysicalSegmentLayout
+# based on the UML class CDIF::DDSC::Classes::PhysicalSegmentLayout
+<#PhysicalSegmentLayout> a sh:NodeShape;
+    sh:targetClass ddsc:PhysicalSegmentLayout;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/PhysicalSegmentLayout";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:PhysicalSegmentLayout
+			 ) ;
+    ];
+    # attributes
+    sh:property <#PhysicalSegmentLayout-delimiter>;
+    sh:property <#PhysicalSegmentLayout-encoding>;
+    sh:property <#PhysicalSegmentLayout-escapeCharacter>;
+    sh:property <#PhysicalSegmentLayout-hasHeader>;
+    sh:property <#PhysicalSegmentLayout-headerRowCount>;
+    sh:property <#PhysicalSegmentLayout-isDelimited>;
+    sh:property <#PhysicalSegmentLayout-isFixedWidth>;
+    sh:property <#PhysicalSegmentLayout-lineTerminator>;
+    sh:property <#PhysicalSegmentLayout-quoteCharacter>;
+    sh:property <#PhysicalSegmentLayout-skipInitialSpace>;
+    sh:property <#PhysicalSegmentLayout-trim>;
+    # associations from PhysicalSegmentLayout
+    sh:property <#PhysicalSegmentLayout_formats_LogicalRecord>;
+    sh:property <#PhysicalSegmentLayout_has_ValueMapping>;
+    sh:property <#PhysicalSegmentLayout_has_ValueMappingPosition>;
+    # associations to PhysicalSegmentLayout
+
+
+
+.
+
+<#PhysicalSegmentLayout-delimiter> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-delimiter;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-encoding> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-encoding;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-escapeCharacter> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-escapeCharacter;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-hasHeader> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-hasHeader;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-headerRowCount> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-headerRowCount;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-isDelimited> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-isDelimited;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-isFixedWidth> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-isFixedWidth;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-lineTerminator> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-lineTerminator;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+.
+<#PhysicalSegmentLayout-quoteCharacter> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-quoteCharacter;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-skipInitialSpace> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-skipInitialSpace;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-trim> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-trim;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:TrimValues
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#PhysicalSegmentLayout_formats_LogicalRecord> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout_formats_LogicalRecord;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LogicalRecord
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_PhysicalSegmentLayout_formats_LogicalRecord> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PhysicalSegmentLayout_formats_LogicalRecord ];
+    sh:minCount 1;
+.
+<#PhysicalSegmentLayout_has_ValueMapping> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout_has_ValueMapping;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ValueMapping
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_PhysicalSegmentLayout_has_ValueMapping> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PhysicalSegmentLayout_has_ValueMapping ];
+    sh:minCount 1;
+.
+<#PhysicalSegmentLayout_has_ValueMappingPosition> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout_has_ValueMappingPosition;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ValueMappingPosition
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_PhysicalSegmentLayout_has_ValueMappingPosition> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PhysicalSegmentLayout_has_ValueMappingPosition ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class Population
+# based on the UML class CDIF::DDSC::Classes::Population
+<#Population> a sh:NodeShape;
+    sh:targetClass ddsc:Population;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Population";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Population
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Population-descriptiveText>;
+    sh:property <#Population-name>;
+    # associations from Population
+    sh:property <#Population_uses_Universe>;
+    # associations to Population
+    sh:property <#rev_LogicalRecord_isDefinedBy_Population>;
+    sh:property <#rev_InstanceVariable_measures_Population>;
+
+
+
+.
+
+<#Population-descriptiveText> a sh:PropertyShape ;
+    sh:path ddsc:Population-descriptiveText;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Population-name> a sh:PropertyShape ;
+    sh:path ddsc:Population-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#Population_uses_Universe> a sh:PropertyShape ;
+    sh:path ddsc:Population_uses_Universe;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Universe
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 2;
+.
+<#rev_Population_uses_Universe> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:Population_uses_Universe ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class PrimaryKey
+# based on the UML class CDIF::DDSC::Classes::PrimaryKey
+<#PrimaryKey> a sh:NodeShape;
+    sh:targetClass ddsc:PrimaryKey;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKey";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:PrimaryKey
+			 ) ;
+    ];
+    # attributes
+    # associations from PrimaryKey
+    sh:property <#PrimaryKey_isComposedOf_PrimaryKeyComponent>;
+    # associations to PrimaryKey
+    sh:property <#rev_WideDataStructure_has_PrimaryKey>;
+
+
+
+.
+
+
+<#PrimaryKey_isComposedOf_PrimaryKeyComponent> a sh:PropertyShape ;
+    sh:path ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:PrimaryKeyComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_PrimaryKey_isComposedOf_PrimaryKeyComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class PrimaryKeyComponent
+# based on the UML class CDIF::DDSC::Classes::PrimaryKeyComponent
+<#PrimaryKeyComponent> a sh:NodeShape;
+    sh:targetClass ddsc:PrimaryKeyComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKeyComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:PrimaryKeyComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from PrimaryKeyComponent
+    sh:property <#PrimaryKeyComponent_correspondsTo_IdentifierComponent>;
+    # associations to PrimaryKeyComponent
+    sh:property <#rev_PrimaryKey_isComposedOf_PrimaryKeyComponent>;
+
+
+
+.
+
+
+<#PrimaryKeyComponent_correspondsTo_IdentifierComponent> a sh:PropertyShape ;
+    sh:path ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:IdentifierComponent
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_PrimaryKeyComponent_correspondsTo_IdentifierComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class ReferenceVariable
+# based on the UML class CDIF::DDSC::Classes::ReferenceVariable
+<#ReferenceVariable> a sh:NodeShape;
+    sh:targetClass ddsc:ReferenceVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ReferenceVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ReferenceVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ReferenceVariable-name>;
+    # associations from ReferenceVariable
+    sh:property <#ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    # associations to ReferenceVariable
+    sh:property <#rev_VariableValueComponent_isDefinedBy_ReferenceVariable>;
+    sh:property <#rev_ValueMapping_formats_ReferenceVariable>;
+
+
+
+.
+
+<#ReferenceVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:ReferenceVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SubstantiveValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SentinelValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class RepresentedVariable
+# based on the UML class CDIF::DDSC::Classes::RepresentedVariable
+<#RepresentedVariable> a sh:NodeShape;
+    sh:targetClass ddsc:RepresentedVariable;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/RepresentedVariable";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:RepresentedVariable
+			 ) ;
+    ];
+    # attributes
+    sh:property <#RepresentedVariable-definition>;
+    sh:property <#RepresentedVariable-describedUnitOfMeasure>;
+    sh:property <#RepresentedVariable-name>;
+    sh:property <#RepresentedVariable-unitOfMeasureKind>;
+    # associations from RepresentedVariable
+    sh:property <#RepresentedVariable_measures_Universe>;
+    sh:property <#RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    # associations to RepresentedVariable
+    sh:property <#rev_ValueMapping_formats_RepresentedVariable>;
+
+
+
+.
+
+<#RepresentedVariable-definition> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-definition;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable-describedUnitOfMeasure> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-describedUnitOfMeasure;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable-name> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable-unitOfMeasureKind> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable-unitOfMeasureKind;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#RepresentedVariable_measures_Universe> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable_measures_Universe;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Universe
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_RepresentedVariable_measures_Universe> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:RepresentedVariable_measures_Universe ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SubstantiveValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ];
+    sh:minCount 1;
+.
+<#RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:SentinelValueDomain
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain ];
+    sh:minCount 1;
+.
+
+# class SentinelValueDomain
+# based on the UML class CDIF::DDSC::Classes::SentinelValueDomain
+<#SentinelValueDomain> a sh:NodeShape;
+    sh:targetClass ddsc:SentinelValueDomain;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/SentinelValueDomain";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:SentinelValueDomain
+			 ) ;
+    ];
+    # attributes
+    sh:property <#SentinelValueDomain-recommendedDataType>;
+    # associations from SentinelValueDomain
+    # associations to SentinelValueDomain
+    sh:property <#rev_InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    sh:property <#rev_RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+    sh:property <#rev_ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain>;
+
+
+
+.
+
+<#SentinelValueDomain-recommendedDataType> a sh:PropertyShape ;
+    sh:path ddsc:SentinelValueDomain-recommendedDataType;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+
+# class SubstantiveValueDomain
+# based on the UML class CDIF::DDSC::Classes::SubstantiveValueDomain
+<#SubstantiveValueDomain> a sh:NodeShape;
+    sh:targetClass ddsc:SubstantiveValueDomain;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/SubstantiveValueDomain";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:SubstantiveValueDomain
+			 ) ;
+    ];
+    # attributes
+    sh:property <#SubstantiveValueDomain-recommendedDataType>;
+    # associations from SubstantiveValueDomain
+    # associations to SubstantiveValueDomain
+    sh:property <#rev_InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#rev_RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+    sh:property <#rev_ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain>;
+
+
+
+.
+
+<#SubstantiveValueDomain-recommendedDataType> a sh:PropertyShape ;
+    sh:path ddsc:SubstantiveValueDomain-recommendedDataType;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+
+# class UnitType
+# based on the UML class CDIF::DDSC::Classes::UnitType
+<#UnitType> a sh:NodeShape;
+    sh:targetClass ddsc:UnitType;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/UnitType";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:UnitType
+			 ) ;
+    ];
+    # attributes
+    sh:property <#UnitType-descriptiveText>;
+    sh:property <#UnitType-name>;
+    # associations from UnitType
+    # associations to UnitType
+    sh:property <#rev_LogicalRecord_isDefinedBy_UnitType>;
+    sh:property <#rev_Universe_uses_UnitType>;
+
+
+
+.
+
+<#UnitType-descriptiveText> a sh:PropertyShape ;
+    sh:path ddsc:UnitType-descriptiveText;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#UnitType-name> a sh:PropertyShape ;
+    sh:path ddsc:UnitType-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+
+# class Universe
+# based on the UML class CDIF::DDSC::Classes::Universe
+<#Universe> a sh:NodeShape;
+    sh:targetClass ddsc:Universe;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Universe";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Universe
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Universe-descriptiveText>;
+    sh:property <#Universe-name>;
+    # associations from Universe
+    sh:property <#Universe_uses_UnitType>;
+    # associations to Universe
+    sh:property <#rev_LogicalRecord_isDefinedBy_Universe>;
+    sh:property <#rev_RepresentedVariable_measures_Universe>;
+    sh:property <#rev_Population_uses_Universe>;
+
+
+
+.
+
+<#Universe-descriptiveText> a sh:PropertyShape ;
+    sh:path ddsc:Universe-descriptiveText;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Universe-name> a sh:PropertyShape ;
+    sh:path ddsc:Universe-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#Universe_uses_UnitType> a sh:PropertyShape ;
+    sh:path ddsc:Universe_uses_UnitType;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:UnitType
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_Universe_uses_UnitType> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:Universe_uses_UnitType ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class ValueMapping
+# based on the UML class CDIF::DDSC::Classes::ValueMapping
+<#ValueMapping> a sh:NodeShape;
+    sh:targetClass ddsc:ValueMapping;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ValueMapping";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ValueMapping
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ValueMapping-decimalPositions>;
+    sh:property <#ValueMapping-defaultDecimalSeparator>;
+    sh:property <#ValueMapping-length>;
+    sh:property <#ValueMapping-maximumLength>;
+    sh:property <#ValueMapping-minimumLength>;
+    # associations from ValueMapping
+    sh:property <#ValueMapping_formats_InstanceVariable>;
+    sh:property <#ValueMapping_formats_RepresentedVariable>;
+    sh:property <#ValueMapping_formats_ReferenceVariable>;
+    sh:property <#ValueMapping_formats_DescriptorVariable>;
+    # associations to ValueMapping
+    sh:property <#rev_PhysicalSegmentLayout_has_ValueMapping>;
+    sh:property <#rev_ValueMappingPosition_indexes_ValueMapping>;
+
+
+
+.
+
+<#ValueMapping-decimalPositions> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-decimalPositions;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-defaultDecimalSeparator> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-defaultDecimalSeparator;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-length> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-length;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-maximumLength> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-maximumLength;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-minimumLength> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-minimumLength;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ValueMapping_formats_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping_formats_RepresentedVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_RepresentedVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:RepresentedVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_RepresentedVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_RepresentedVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping_formats_ReferenceVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_ReferenceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ReferenceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_ReferenceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_ReferenceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping_formats_DescriptorVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_DescriptorVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DescriptorVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_DescriptorVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_DescriptorVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class ValueMappingPosition
+# based on the UML class CDIF::DDSC::Classes::ValueMappingPosition
+<#ValueMappingPosition> a sh:NodeShape;
+    sh:targetClass ddsc:ValueMappingPosition;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ValueMappingPosition";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ValueMappingPosition
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ValueMappingPosition-value>;
+    # associations from ValueMappingPosition
+    sh:property <#ValueMappingPosition_indexes_ValueMapping>;
+    # associations to ValueMappingPosition
+    sh:property <#rev_PhysicalSegmentLayout_has_ValueMappingPosition>;
+
+
+
+.
+
+<#ValueMappingPosition-value> a sh:PropertyShape ;
+    sh:path ddsc:ValueMappingPosition-value;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ValueMappingPosition_indexes_ValueMapping> a sh:PropertyShape ;
+    sh:path ddsc:ValueMappingPosition_indexes_ValueMapping;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ValueMapping
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMappingPosition_indexes_ValueMapping> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMappingPosition_indexes_ValueMapping ];
+    sh:minCount 1;
+.
+
+# class VariableDescriptorComponent
+# based on the UML class CDIF::DDSC::Classes::VariableDescriptorComponent
+<#VariableDescriptorComponent> a sh:NodeShape;
+    sh:targetClass ddsc:VariableDescriptorComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/VariableDescriptorComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:VariableDescriptorComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from VariableDescriptorComponent
+    sh:property <#VariableDescriptorComponent_refersTo_VariableValueComponent>;
+    # associations to VariableDescriptorComponent
+    sh:property <#rev_LongDataStructure_has_VariableDescriptorComponent>;
+
+
+
+.
+
+
+<#VariableDescriptorComponent_refersTo_VariableValueComponent> a sh:PropertyShape ;
+    sh:path ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:VariableValueComponent
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_VariableDescriptorComponent_refersTo_VariableValueComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class VariableValueComponent
+# based on the UML class CDIF::DDSC::Classes::VariableValueComponent
+<#VariableValueComponent> a sh:NodeShape;
+    sh:targetClass ddsc:VariableValueComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/VariableValueComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:VariableValueComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from VariableValueComponent
+    sh:property <#VariableValueComponent_isDefinedBy_ReferenceVariable>;
+    # associations to VariableValueComponent
+    sh:property <#rev_LongDataStructure_has_VariableValueComponent>;
+    sh:property <#rev_VariableDescriptorComponent_refersTo_VariableValueComponent>;
+
+
+
+.
+
+
+<#VariableValueComponent_isDefinedBy_ReferenceVariable> a sh:PropertyShape ;
+    sh:path ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ReferenceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_VariableValueComponent_isDefinedBy_ReferenceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# class WideDataSet
+# based on the UML class CDIF::DDSC::Classes::WideDataSet
+<#WideDataSet> a sh:NodeShape;
+    sh:targetClass ddsc:WideDataSet;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/WideDataSet";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:WideDataSet
+			 ) ;
+    ];
+    # attributes
+    sh:property <#WideDataSet-name>;
+    sh:property <#WideDataSet-physicalFileName>;
+    # associations from WideDataSet
+    # associations to WideDataSet
+    sh:property <#rev_LogicalRecord_organizes_WideDataSet>;
+
+
+
+.
+
+<#WideDataSet-name> a sh:PropertyShape ;
+    sh:path ddsc:WideDataSet-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataSet-physicalFileName> a sh:PropertyShape ;
+    sh:path ddsc:WideDataSet-physicalFileName;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+
+# class WideDataStructure
+# based on the UML class CDIF::DDSC::Classes::WideDataStructure
+<#WideDataStructure> a sh:NodeShape;
+    sh:targetClass ddsc:WideDataStructure;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/WideDataStructure";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:WideDataStructure
+			 ) ;
+    ];
+    # attributes
+    # associations from WideDataStructure
+    sh:property <#WideDataStructure_has_PrimaryKey>;
+    sh:property <#WideDataStructure_has_IdentifierComponent>;
+    sh:property <#WideDataStructure_has_AttributeComponent>;
+    sh:property <#WideDataStructure_has_MeasureComponent>;
+    # associations to WideDataStructure
+
+
+
+.
+
+
+<#WideDataStructure_has_PrimaryKey> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_PrimaryKey;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:PrimaryKey
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_WideDataStructure_has_PrimaryKey> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_PrimaryKey ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_IdentifierComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:IdentifierComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_WideDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_IdentifierComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_AttributeComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:AttributeComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_WideDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_AttributeComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataStructure_has_MeasureComponent> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_MeasureComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:MeasureComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_WideDataStructure_has_MeasureComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_MeasureComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype BibliographicName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::BibliographicName
+<#BibliographicName> a sh:NodeShape;
+    sh:targetClass ddsc:BibliographicName;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/BibliographicName";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:BibliographicName
+			 ) ;
+    ];
+    # attributes
+    sh:property <#BibliographicName-affiliation>;
+
+
+
+.
+
+<#BibliographicName-affiliation> a sh:PropertyShape ;
+    sh:path ddsc:BibliographicName-affiliation;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype CombinedDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::CombinedDate
+<#CombinedDate> a sh:NodeShape;
+    sh:targetClass ddsc:CombinedDate;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/CombinedDate";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:CombinedDate
+			 ) ;
+    ];
+    # attributes
+    sh:property <#CombinedDate-isoDate>;
+    sh:property <#CombinedDate-nonIsoDate>;
+    sh:property <#CombinedDate-semantics>;
+
+
+
+.
+
+<#CombinedDate-isoDate> a sh:PropertyShape ;
+    sh:path ddsc:CombinedDate-isoDate;
+    sh:datatype xsd:date;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#CombinedDate-nonIsoDate> a sh:PropertyShape ;
+    sh:path ddsc:CombinedDate-nonIsoDate;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:NonIsoDate
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#CombinedDate-semantics> a sh:PropertyShape ;
+    sh:path ddsc:CombinedDate-semantics;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype ControlledVocabularyEntry
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ControlledVocabularyEntry
+<#ControlledVocabularyEntry> a sh:NodeShape;
+    sh:targetClass ddsc:ControlledVocabularyEntry;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ControlledVocabularyEntry";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ControlledVocabularyEntry
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ControlledVocabularyEntry-entryReference>;
+    sh:property <#ControlledVocabularyEntry-entryValue>;
+    sh:property <#ControlledVocabularyEntry-name>;
+    sh:property <#ControlledVocabularyEntry-valueForOther>;
+    sh:property <#ControlledVocabularyEntry-vocabulary>;
+
+
+
+.
+
+<#ControlledVocabularyEntry-entryReference> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-entryReference;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Reference
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#ControlledVocabularyEntry-entryValue> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-entryValue;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+.
+<#ControlledVocabularyEntry-name> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-name;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ControlledVocabularyEntry-valueForOther> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-valueForOther;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ControlledVocabularyEntry-vocabulary> a sh:PropertyShape ;
+    sh:path ddsc:ControlledVocabularyEntry-vocabulary;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Reference
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype DateRange
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::DateRange
+<#DateRange> a sh:NodeShape;
+    sh:targetClass ddsc:DateRange;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DateRange";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DateRange
+			 ) ;
+    ];
+    # attributes
+    sh:property <#DateRange-endDate>;
+    sh:property <#DateRange-startDate>;
+
+
+
+.
+
+<#DateRange-endDate> a sh:PropertyShape ;
+    sh:path ddsc:DateRange-endDate;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:CombinedDate
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#DateRange-startDate> a sh:PropertyShape ;
+    sh:path ddsc:DateRange-startDate;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:CombinedDate
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype InternationalRegistrationDataIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalRegistrationDataIdentifier
+<#InternationalRegistrationDataIdentifier> a sh:NodeShape;
+    sh:targetClass ddsc:InternationalRegistrationDataIdentifier;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/InternationalRegistrationDataIdentifier";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:InternationalRegistrationDataIdentifier
+			 ) ;
+    ];
+    # attributes
+    sh:property <#InternationalRegistrationDataIdentifier-dataIdentifier>;
+    sh:property <#InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier>;
+    sh:property <#InternationalRegistrationDataIdentifier-versionIdentifier>;
+
+
+
+.
+
+<#InternationalRegistrationDataIdentifier-dataIdentifier> a sh:PropertyShape ;
+    sh:path ddsc:InternationalRegistrationDataIdentifier-dataIdentifier;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier> a sh:PropertyShape ;
+    sh:path ddsc:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#InternationalRegistrationDataIdentifier-versionIdentifier> a sh:PropertyShape ;
+    sh:path ddsc:InternationalRegistrationDataIdentifier-versionIdentifier;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype InternationalString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalString
+<#InternationalString> a sh:NodeShape;
+    sh:targetClass ddsc:InternationalString;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/InternationalString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:InternationalString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#InternationalString-languageSpecificString>;
+
+
+
+.
+
+<#InternationalString-languageSpecificString> a sh:PropertyShape ;
+    sh:path ddsc:InternationalString-languageSpecificString;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LanguageString
+      
+    ) ]];
+    sh:minCount 1;
+.
+
+# datatype LabelForDisplay
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LabelForDisplay
+<#LabelForDisplay> a sh:NodeShape;
+    sh:targetClass ddsc:LabelForDisplay;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LabelForDisplay";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LabelForDisplay
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LabelForDisplay-locationVariant>;
+    sh:property <#LabelForDisplay-maxLength>;
+    sh:property <#LabelForDisplay-validDates>;
+
+
+
+.
+
+<#LabelForDisplay-locationVariant> a sh:PropertyShape ;
+    sh:path ddsc:LabelForDisplay-locationVariant;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LabelForDisplay-maxLength> a sh:PropertyShape ;
+    sh:path ddsc:LabelForDisplay-maxLength;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LabelForDisplay-validDates> a sh:PropertyShape ;
+    sh:path ddsc:LabelForDisplay-validDates;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DateRange
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype LanguageString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LanguageString
+<#LanguageString> a sh:NodeShape;
+    sh:targetClass ddsc:LanguageString;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LanguageString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LanguageString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LanguageString-content>;
+    sh:property <#LanguageString-isTranslatable>;
+    sh:property <#LanguageString-isTranslated>;
+    sh:property <#LanguageString-language>;
+    sh:property <#LanguageString-scope>;
+    sh:property <#LanguageString-structureUsed>;
+    sh:property <#LanguageString-translationDate>;
+    sh:property <#LanguageString-translationSourceLanguage>;
+
+
+
+.
+
+<#LanguageString-content> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-content;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-isTranslatable> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-isTranslatable;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-isTranslated> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-isTranslated;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-language> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-language;
+    sh:datatype xsd:language;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-scope> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-scope;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-structureUsed> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-structureUsed;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-translationDate> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-translationDate;
+    sh:datatype xsd:date;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LanguageString-translationSourceLanguage> a sh:PropertyShape ;
+    sh:path ddsc:LanguageString-translationSourceLanguage;
+    sh:datatype xsd:language;
+    sh:minCount 1;
+.
+
+# datatype ModelIdentification
+# based on the UML data type CDIF::DDSC::ModelIdentification
+<#ModelIdentification> a sh:NodeShape;
+    sh:targetClass ddsc:ModelIdentification;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ModelIdentification";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ModelIdentification
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ModelIdentification-acronym>;
+    sh:property <#ModelIdentification-language>;
+    sh:property <#ModelIdentification-majorVersion>;
+    sh:property <#ModelIdentification-minorVersion>;
+    sh:property <#ModelIdentification-subtitle>;
+    sh:property <#ModelIdentification-title>;
+    sh:property <#ModelIdentification-uri>;
+
+
+
+.
+
+<#ModelIdentification-acronym> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-acronym;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-language> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-language;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-majorVersion> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-majorVersion;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-minorVersion> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-minorVersion;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-subtitle> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-subtitle;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-title> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-title;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ModelIdentification-uri> a sh:PropertyShape ;
+    sh:path ddsc:ModelIdentification-uri;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype NonDdiIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonDdiIdentifier
+<#NonDdiIdentifier> a sh:NodeShape;
+    sh:targetClass ddsc:NonDdiIdentifier;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/NonDdiIdentifier";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:NonDdiIdentifier
+			 ) ;
+    ];
+    # attributes
+    sh:property <#NonDdiIdentifier-managingAgency>;
+    sh:property <#NonDdiIdentifier-type>;
+    sh:property <#NonDdiIdentifier-value>;
+    sh:property <#NonDdiIdentifier-version>;
+
+
+
+.
+
+<#NonDdiIdentifier-managingAgency> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-managingAgency;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonDdiIdentifier-type> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-type;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonDdiIdentifier-value> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-value;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonDdiIdentifier-version> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-version;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype NonIsoDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonIsoDate
+<#NonIsoDate> a sh:NodeShape;
+    sh:targetClass ddsc:NonIsoDate;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/NonIsoDate";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:NonIsoDate
+			 ) ;
+    ];
+    # attributes
+    sh:property <#NonIsoDate-calendar>;
+    sh:property <#NonIsoDate-dateContent>;
+    sh:property <#NonIsoDate-nonIsoDateFormat>;
+
+
+
+.
+
+<#NonIsoDate-calendar> a sh:PropertyShape ;
+    sh:path ddsc:NonIsoDate-calendar;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonIsoDate-dateContent> a sh:PropertyShape ;
+    sh:path ddsc:NonIsoDate-dateContent;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonIsoDate-nonIsoDateFormat> a sh:PropertyShape ;
+    sh:path ddsc:NonIsoDate-nonIsoDateFormat;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype ObjectAttributeSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectAttributeSelector
+<#ObjectAttributeSelector> a sh:NodeShape;
+    sh:targetClass ddsc:ObjectAttributeSelector;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ObjectAttributeSelector";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ObjectAttributeSelector
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ObjectAttributeSelector-refinedBy>;
+    sh:property <#ObjectAttributeSelector-refinedByOrderNumber>;
+    sh:property <#ObjectAttributeSelector-value>;
+
+
+
+.
+
+<#ObjectAttributeSelector-refinedBy> a sh:PropertyShape ;
+    sh:path ddsc:ObjectAttributeSelector-refinedBy;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectAttributeSelector
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ObjectAttributeSelector-refinedByOrderNumber> a sh:PropertyShape ;
+    sh:path ddsc:ObjectAttributeSelector-refinedByOrderNumber;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ObjectAttributeSelector-value> a sh:PropertyShape ;
+    sh:path ddsc:ObjectAttributeSelector-value;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype ObjectName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectName
+<#ObjectName> a sh:NodeShape;
+    sh:targetClass ddsc:ObjectName;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ObjectName";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ObjectName
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ObjectName-context>;
+    sh:property <#ObjectName-name>;
+
+
+
+.
+
+<#ObjectName-context> a sh:PropertyShape ;
+    sh:path ddsc:ObjectName-context;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ObjectName-name> a sh:PropertyShape ;
+    sh:path ddsc:ObjectName-name;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype OrganizationName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::OrganizationName
+<#OrganizationName> a sh:NodeShape;
+    sh:targetClass ddsc:OrganizationName;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/OrganizationName";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:OrganizationName
+			 ) ;
+    ];
+    # attributes
+    sh:property <#OrganizationName-abbreviation>;
+    sh:property <#OrganizationName-effectiveDates>;
+    sh:property <#OrganizationName-isFormal>;
+    sh:property <#OrganizationName-typeOfOrganizationName>;
+
+
+
+.
+
+<#OrganizationName-abbreviation> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-abbreviation;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#OrganizationName-effectiveDates> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-effectiveDates;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DateRange
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#OrganizationName-isFormal> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-isFormal;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#OrganizationName-typeOfOrganizationName> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-typeOfOrganizationName;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype Reference
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Reference
+<#Reference> a sh:NodeShape;
+    sh:targetClass ddsc:Reference;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Reference";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Reference
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Reference-ddiReference>;
+    sh:property <#Reference-deepLink>;
+    sh:property <#Reference-description>;
+    sh:property <#Reference-location>;
+    sh:property <#Reference-nonDdiReference>;
+    sh:property <#Reference-semantic>;
+    sh:property <#Reference-uri>;
+    sh:property <#Reference-validType>;
+
+
+
+.
+
+<#Reference-ddiReference> a sh:PropertyShape ;
+    sh:path ddsc:Reference-ddiReference;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalRegistrationDataIdentifier
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-deepLink> a sh:PropertyShape ;
+    sh:path ddsc:Reference-deepLink;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Selector
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-description> a sh:PropertyShape ;
+    sh:path ddsc:Reference-description;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-location> a sh:PropertyShape ;
+    sh:path ddsc:Reference-location;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-nonDdiReference> a sh:PropertyShape ;
+    sh:path ddsc:Reference-nonDdiReference;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:NonDdiIdentifier
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#Reference-semantic> a sh:PropertyShape ;
+    sh:path ddsc:Reference-semantic;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-uri> a sh:PropertyShape ;
+    sh:path ddsc:Reference-uri;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Reference-validType> a sh:PropertyShape ;
+    sh:path ddsc:Reference-validType;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+.
+
+# datatype Selector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Selector
+<#Selector> a sh:NodeShape;
+    sh:targetClass ddsc:Selector;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Selector";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Selector
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+
+# datatype TextPositionSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TextPositionSelector
+<#TextPositionSelector> a sh:NodeShape;
+    sh:targetClass ddsc:TextPositionSelector;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/TextPositionSelector";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:TextPositionSelector
+			 ) ;
+    ];
+    # attributes
+    sh:property <#TextPositionSelector-end>;
+    sh:property <#TextPositionSelector-start>;
+
+
+
+.
+
+<#TextPositionSelector-end> a sh:PropertyShape ;
+    sh:path ddsc:TextPositionSelector-end;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#TextPositionSelector-start> a sh:PropertyShape ;
+    sh:path ddsc:TextPositionSelector-start;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+# datatype TrimValues
+# based on the UML data type CDIF::DDSC::DataTypes::Enumerations::TrimValues
+<#TrimValues> a sh:NodeShape;
+    sh:targetClass ddsc:TrimValues;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/TrimValues";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:TrimValues
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+
+# datatype TypedString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TypedString
+<#TypedString> a sh:NodeShape;
+    sh:targetClass ddsc:TypedString;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/TypedString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:TypedString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#TypedString-content>;
+    sh:property <#TypedString-typeOfContent>;
+
+
+
+.
+
+<#TypedString-content> a sh:PropertyShape ;
+    sh:path ddsc:TypedString-content;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#TypedString-typeOfContent> a sh:PropertyShape ;
+    sh:path ddsc:TypedString-typeOfContent;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

@@ -1,0 +1,43 @@
+# datatype ObjectAttributeSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectAttributeSelector
+<#ObjectAttributeSelector> a sh:NodeShape;
+    sh:targetClass ddsc:ObjectAttributeSelector;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ObjectAttributeSelector";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ObjectAttributeSelector
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ObjectAttributeSelector-refinedBy>;
+    sh:property <#ObjectAttributeSelector-refinedByOrderNumber>;
+    sh:property <#ObjectAttributeSelector-value>;
+
+
+
+.
+
+<#ObjectAttributeSelector-refinedBy> a sh:PropertyShape ;
+    sh:path ddsc:ObjectAttributeSelector-refinedBy;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectAttributeSelector
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ObjectAttributeSelector-refinedByOrderNumber> a sh:PropertyShape ;
+    sh:path ddsc:ObjectAttributeSelector-refinedByOrderNumber;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ObjectAttributeSelector-value> a sh:PropertyShape ;
+    sh:path ddsc:ObjectAttributeSelector-value;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

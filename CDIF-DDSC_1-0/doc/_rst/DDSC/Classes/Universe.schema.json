@@ -1,0 +1,76 @@
+"cls-Universe": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/Universe",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "Universe"
+    },
+    "descriptiveText": {
+      "$comment": "cardinality 1..1 – from ddsc:Universe",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:Universe",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "uses_UnitType": {
+      "description": "Universe_uses_UnitType",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-UnitType"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-UnitType"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_Universe_OF_LogicalRecord": {
+      "description": "LogicalRecord_isDefinedBy_Universe",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LogicalRecord"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LogicalRecord"
+          }
+        }
+      ]
+    },
+    "measures_Universe_OF_RepresentedVariable": {
+      "description": "RepresentedVariable_measures_Universe",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-RepresentedVariable"
+    },
+    "uses_Universe_OF_Population": {
+      "description": "Population_uses_Universe",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-Population"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["descriptiveText","name","uses_UnitType","@type"],
+  "additionalProperties": false
+},
+"target-Universe": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/Universe",
+  "anyOf": [
+    { "$ref": "#/defs/cls-Universe" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

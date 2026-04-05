@@ -1,0 +1,29 @@
+# class ValueMappingPosition
+# based on the UML class CDIF::DDSC::Classes::ValueMappingPosition
+ddsc:ValueMappingPosition
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "ValueMappingPosition";
+  rdfs:comment "Definition \n============ \nDenotes the position of a value mapping in a sequence."@en;
+  
+.
+
+ddsc:ValueMappingPosition-value
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "value";
+  rdfs:comment "Index value of the member in an ordered array."@en;
+  rdfs:domain ddsc:ValueMappingPosition;
+  rdfs:range xsd:integer;
+.
+
+
+ddsc:ValueMappingPosition_indexes_ValueMapping
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "indexes_ValueMapping";
+  skos:altLabel "ValueMappingPosition_indexes_ValueMapping";
+  rdfs:comment "Assigns a position to a value mapping within a physical segment."@en;
+  rdfs:domain ddsc:ValueMappingPosition;
+  rdfs:range ddsc:ValueMapping;
+.
+
+

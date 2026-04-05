@@ -1,0 +1,37 @@
+# class PrimaryKey
+# based on the UML class CDIF::DDSC::Classes::PrimaryKey
+<#PrimaryKey> a sh:NodeShape;
+    sh:targetClass ddsc:PrimaryKey;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKey";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:PrimaryKey
+			 ) ;
+    ];
+    # attributes
+    # associations from PrimaryKey
+    sh:property <#PrimaryKey_isComposedOf_PrimaryKeyComponent>;
+    # associations to PrimaryKey
+    sh:property <#rev_WideDataStructure_has_PrimaryKey>;
+
+
+
+.
+
+
+<#PrimaryKey_isComposedOf_PrimaryKeyComponent> a sh:PropertyShape ;
+    sh:path ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:PrimaryKeyComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_PrimaryKey_isComposedOf_PrimaryKeyComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

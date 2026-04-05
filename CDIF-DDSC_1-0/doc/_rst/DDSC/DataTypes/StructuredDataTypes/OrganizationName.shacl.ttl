@@ -1,0 +1,56 @@
+# datatype OrganizationName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::OrganizationName
+<#OrganizationName> a sh:NodeShape;
+    sh:targetClass ddsc:OrganizationName;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/OrganizationName";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:OrganizationName
+			 ) ;
+    ];
+    # attributes
+    sh:property <#OrganizationName-abbreviation>;
+    sh:property <#OrganizationName-effectiveDates>;
+    sh:property <#OrganizationName-isFormal>;
+    sh:property <#OrganizationName-typeOfOrganizationName>;
+
+
+
+.
+
+<#OrganizationName-abbreviation> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-abbreviation;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#OrganizationName-effectiveDates> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-effectiveDates;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DateRange
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#OrganizationName-isFormal> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-isFormal;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#OrganizationName-typeOfOrganizationName> a sh:PropertyShape ;
+    sh:path ddsc:OrganizationName-typeOfOrganizationName;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

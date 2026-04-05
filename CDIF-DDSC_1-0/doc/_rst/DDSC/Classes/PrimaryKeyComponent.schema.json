@@ -1,0 +1,39 @@
+"cls-PrimaryKeyComponent": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKeyComponent",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "PrimaryKeyComponent"
+    },
+    
+    "correspondsTo_IdentifierComponent": {
+      "description": "PrimaryKeyComponent_correspondsTo_IdentifierComponent",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-IdentifierComponent"
+    },
+    "isComposedOf_PrimaryKeyComponent_OF_PrimaryKey": {
+      "description": "PrimaryKey_isComposedOf_PrimaryKeyComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-PrimaryKey"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["correspondsTo_IdentifierComponent","@type"],
+  "additionalProperties": false
+},
+"target-PrimaryKeyComponent": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKeyComponent",
+  "anyOf": [
+    { "$ref": "#/defs/cls-PrimaryKeyComponent" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

@@ -1,0 +1,54 @@
+  <xs:element name="DimensionalDataSet"
+              type="DimensionalDataSetXsdType"
+              xml:id="DimensionalDataSet">
+    <!-- based on the UML class CDIF::DDSC::Classes::DimensionalDataSet -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Organized collection of multidimensional data. It is structured by a dimensional data structure.
+            
+            Examples
+            ==========
+            A dimensional dataset with Income values in each data point, where the dimensions organizing the data points are Sex and Marital Status.
+            
+            Explanatory notes
+            ===================
+            Similar to Structural N-Cube.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DimensionalDataSetXsdType"
+                  xml:id="DimensionalDataSetXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Organized collection of multidimensional data. It is structured by a dimensional data structure.
+            
+            Examples
+            ==========
+            A dimensional dataset with Income values in each data point, where the dimensions organizing the data points are Sex and Marital Status.
+            
+            Explanatory notes
+            ===================
+            Similar to Structural N-Cube.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DimensionalDataSet-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="physicalFileName"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DimensionalDataSet-physicalFileName">
+        <xs:annotation>
+          <xs:documentation>Use when multiple physical segments are stored in a single file.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

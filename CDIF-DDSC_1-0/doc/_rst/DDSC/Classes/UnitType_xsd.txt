@@ -1,0 +1,62 @@
+  <xs:element name="UnitType"
+              type="UnitTypeXsdType"
+              xml:id="UnitType">
+    <!-- based on the UML class CDIF::DDSC::Classes::UnitType -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Unit type is a type or class of objects of interest (units).
+            
+            Examples
+            ========
+            Person, Establishment, Household, State, Country, Dog, Automobile, Neutrino.
+            
+            Explanatory notes
+            =================
+            Unit type is the most general in the hierarchy of unit type, universe, and population. It is a description of the basic characteristics for a general set of Units. A universe is a set of entities defined by a specialization of a unit type. A Population further narrows the specification to a specific time and geography.
+            
+            A unit type is used to describe a class or group of Units based on a single characteristic with no specification of time and geography. For example, the unit type of "Person" groups together a set of Units based on the characteristic that they are "Persons".
+            
+            It concerns not only unit types used in dissemination, but anywhere in the statistical process. E.g. using administrative data might involve the use of a fiscal unit. [GSIM 1.1].</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="UnitTypeXsdType"
+                  xml:id="UnitTypeXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Unit type is a type or class of objects of interest (units).
+            
+            Examples
+            ========
+            Person, Establishment, Household, State, Country, Dog, Automobile, Neutrino.
+            
+            Explanatory notes
+            =================
+            Unit type is the most general in the hierarchy of unit type, universe, and population. It is a description of the basic characteristics for a general set of Units. A universe is a set of entities defined by a specialization of a unit type. A Population further narrows the specification to a specific time and geography.
+            
+            A unit type is used to describe a class or group of Units based on a single characteristic with no specification of time and geography. For example, the unit type of "Person" groups together a set of Units based on the characteristic that they are "Persons".
+            
+            It concerns not only unit types used in dissemination, but anywhere in the statistical process. E.g. using administrative data might involve the use of a fiscal unit. [GSIM 1.1].</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="descriptiveText"
+                  type="InternationalStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="UnitType-descriptiveText">
+        <xs:annotation>
+          <xs:documentation>A short natural language account of the characteristics of the object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="UnitType-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

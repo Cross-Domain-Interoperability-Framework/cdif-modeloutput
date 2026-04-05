@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.ComponentPosition"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.ComponentPosition-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Indexes the components in a data structure using integers with a position indicated by incrementing upward from 0 or 1.</body>
+      <annotatedElement xmi:idref="ddsc.ComponentPosition"/>
+   </ownedComment>
+   <name>ComponentPosition</name>
+   <ownedAttribute xmi:id="ddsc.ComponentPosition-value"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition-value"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.ComponentPosition-value-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition-value-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Index value of the member in an ordered array.</body>
+         <annotatedElement xmi:idref="ddsc.ComponentPosition-value"/>
+      </ownedComment>
+      <name>value</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ComponentPosition-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.DimensionComponent"/>
+      <association xmi:idref="ddsc.ComponentPosition_indexes_DimensionComponent"/>
+   </ownedAttribute>
+</packagedElement>

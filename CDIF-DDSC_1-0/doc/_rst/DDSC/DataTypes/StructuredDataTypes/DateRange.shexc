@@ -1,0 +1,8 @@
+# datatype DateRange
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::DateRange
+ddsc:DateRangeShape CLOSED {
+	a [ddsc:DateRange];
+	ddsc:DateRange-endDate	@ddsc:CombinedDateShape;
+	ddsc:DateRange-startDate	@ddsc:CombinedDateShape;
+	}
+

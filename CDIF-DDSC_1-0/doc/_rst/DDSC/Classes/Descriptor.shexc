@@ -1,0 +1,9 @@
+# class Descriptor
+# based on the UML class CDIF::DDSC::Classes::Descriptor
+ddsc:DescriptorShape CLOSED {
+	a [ddsc:Descriptor];
+	ddsc:Descriptor-content	@ddsc:TypedStringShape;
+	ddsc:Descriptor_identifies_InstanceVariable	@ddsc:InstanceVariableShape +;
+	
+	}
+

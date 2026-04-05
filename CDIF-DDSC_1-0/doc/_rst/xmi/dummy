@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+         Many important research questions demand a multi-disciplinary approach in which data and resources are used across domain and infrastructure boundaries. In such scenarios, domain-specific community standards fall short of the requirements for FAIR exchange of the critical metadata and other information needed. The Cross-Domain Interoperability Framework (CDIF) is designed to support FAIR implementation for these projects by establishing a ‘lingua franca’ for this information, based on existing standards and technology to support interoperability, in both human- and machine-actionable fashion. CDIF is a set of implementation recommendations, based on profiles of common, domain-neutral metadata standards which are aligned to work together to support core functions required by FAIR.
+         
+      
+      CDIF
+      
+         
+            Profile for Data Description
+            
+         
+         DDSC
+            
+         
+            
+               This package contains the definitions of the classes in the DDSC profile with all their relationships and attributes.
+               
+            
+            Classes
+            
+               DataStore_has_LogicalRecord
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               LogicalRecord_organizes_WideDataSet
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               LogicalRecord_organizes_LongDataSet
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               LogicalRecord_organizes_DimensionalDataSet
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               LogicalRecord_has_InstanceVariable
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The conceptual basis for the collection of members.
+                  
+               
+               LogicalRecord_isDefinedBy_UnitType
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The conceptual basis for the collection of members.
+                  
+               
+               LogicalRecord_isDefinedBy_Universe
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The conceptual basis for the collection of members.
+                  
+               
+               LogicalRecord_isDefinedBy_Population
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               WideDataStructure_has_PrimaryKey
+               
+                  
+                  
+               
+               
+               
+            
+            
+               WideDataStructure_has_IdentifierComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               WideDataStructure_has_AttributeComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               WideDataStructure_has_MeasureComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               LongDataStructure_has_IdentifierComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               LongDataStructure_has_AttributeComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               LongDataStructure_has_VariableDescriptorComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               LongDataStructure_has_VariableValueComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               DimensionalDataStructure_has_IdentifierComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               DimensionalDataStructure_has_AttributeComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               DimensionalDataStructure_has_MeasureComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               DimensionalDataStructure_has_ComponentPosition
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
+                  
+               
+               InstanceVariable_measures_Population
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.
+                  
+               
+               InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.
+                  
+               
+               InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
+                  
+               
+               RepresentedVariable_measures_Universe
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.
+                  
+               
+               RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.
+                  
+               
+               RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.
+                  
+               
+               ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.
+                  
+               
+               ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.
+                  
+               
+               DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain
+               
+                  
+                  
+               
+               
+               
+            
+            
+               Descriptor_identifies_InstanceVariable
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
+                  
+               
+               Universe_uses_UnitType
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.
+                  
+               
+               Population_uses_Universe
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Data structure component is defined by zero to one represented variable.
+                  
+               
+               IdentifierComponent_isDefinedBy_InstanceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Data structure component is defined by zero to one represented variable.
+                  
+               
+               MeasureComponent_isDefinedBy_InstanceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Data structure component is defined by zero to one represented variable.
+                  
+               
+               AttributeComponent_isDefinedBy_InstanceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Data structure component is defined by zero to one represented variable.
+                  
+               
+               DimensionComponent_isDefinedBy_InstanceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               ComponentPosition_indexes_DimensionComponent
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               PrimaryKey_isComposedOf_PrimaryKeyComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               PrimaryKeyComponent_correspondsTo_IdentifierComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Data structure component is defined by zero to one represented variable.
+                  
+               
+               VariableValueComponent_isDefinedBy_ReferenceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               VariableDescriptorComponent_refersTo_VariableValueComponent
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Logical record physically represented by the physical layout.
+                  
+               
+               PhysicalSegmentLayout_formats_LogicalRecord
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               PhysicalSegmentLayout_has_ValueMapping
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+               PhysicalSegmentLayout_has_ValueMappingPosition
+               
+                  
+                  
+               
+               
+               
+            
+            
+               ValueMapping_formats_InstanceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               ValueMapping_formats_RepresentedVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               ValueMapping_formats_ReferenceVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               ValueMapping_formats_DescriptorVariable
+               
+                  
+                  
+               
+               
+               
+            
+            
+               
+                  Assigns a position to a value mapping within a physical segment.
+                  
+               
+               ValueMappingPosition_indexes_ValueMapping
+               
+                  
+                  
+                     *
+                  
+                  
+               
+               
+               
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: DataStore
+- Target Class: DataStore
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DataStore
+- Subject Label: DDI-CDI DataStore
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DataStore
+- Object Label: CDIF DDSC DataStore
+- Predicate ID: skos:narrorMatch
+- Predicate Label: Object class has less attributes.
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 1.0
+- Comment: Object class has less attributes.
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DataStore_DataStore a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DataStore&amp;gt; ;
+    sssom:subject_label "DDI-CDI DataStore" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DataStore&amp;gt; ;
+    sssom:object_label "CDIF DDSC DataStore" ;
+    sssom:predicate_id skos:narrorMatch ;
+    sssom:predicate_label "Object class has less attributes." ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:confidence 1.0 ;
+    sssom:comment "Object class has less attributes." ;
+    mapping:mappingType "map" .
+
+                  
+               
+               DataStore_dependsOn_DataStore
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: LogicalRecord
+- Target Class: LogicalRecord
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord
+- Subject Label: LogicalRecord
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord
+- Object Label: LogicalRecord
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_LogicalRecord_LogicalRecord a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LogicalRecord&amp;gt; ;
+    sssom:subject_label "LogicalRecord" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LogicalRecord&amp;gt; ;
+    sssom:object_label "LogicalRecord" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               LogicalRecord_dependsOn_LogicalRecord
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: WideDataStructure
+- Target Class: WideDataStructure
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#WideDataStructure
+- Subject Label: WideDataStructure
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataStructure
+- Object Label: WideDataStructure
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_WideDataStructure_WideDataStructure a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#WideDataStructure&amp;gt; ;
+    sssom:subject_label "WideDataStructure" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataStructure&amp;gt; ;
+    sssom:object_label "WideDataStructure" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               WideDataStructure_dependsOn_WideDataStructure
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: LongDataStructure
+- Target Class: LongDataStructure
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LongDataStructure
+- Subject Label: LongDataStructure
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure
+- Object Label: LongDataStructure
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_LongDataStructure_LongDataStructure a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LongDataStructure&amp;gt; ;
+    sssom:subject_label "LongDataStructure" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataStructure&amp;gt; ;
+    sssom:object_label "LongDataStructure" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               LongDataStructure_dependsOn_LongDataStructure
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: DimensionalDataStructure
+- Target Class: DimensionalDataStructure
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionalDataStructure
+- Subject Label: DimensionalDataStructure
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure
+- Object Label: DimensionalDataStructure
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DimensionalDataStructure_DimensionalDataStructure a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionalDataStructure&amp;gt; ;
+    sssom:subject_label "DimensionalDataStructure" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure&amp;gt; ;
+    sssom:object_label "DimensionalDataStructure" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               DimensionalDataStructure_dependsOn_DimensionalDataStructure
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: InstanceVariable
+- Target Class: InstanceVariable
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable
+- Subject Label: InstanceVariable
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InstanceVariable
+- Object Label: InstanceVariable
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_InstanceVariable_InstanceVariable a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#InstanceVariable&amp;gt; ;
+    sssom:subject_label "InstanceVariable" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InstanceVariable&amp;gt; ;
+    sssom:object_label "InstanceVariable" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               InstanceVariable_dependsOn_InstanceVariable
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: RepresentedVariable
+- Target Class: RepresentedVariable
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#RepresentedVariable
+- Subject Label: RepresentedVariable
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable
+- Object Label: RepresentedVariable
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_RepresentedVariable_RepresentedVariable a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#RepresentedVariable&amp;gt; ;
+    sssom:subject_label "RepresentedVariable" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable&amp;gt; ;
+    sssom:object_label "RepresentedVariable" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               RepresentedVariable_dependsOn_RepresentedVariable
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: ReferenceVariable
+- Target Class: ReferenceVariable
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ReferenceVariable
+- Subject Label: ReferenceVariable
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ReferenceVariable
+- Object Label: ReferenceVariable
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_ReferenceVariable_ReferenceVariable a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ReferenceVariable&amp;gt; ;
+    sssom:subject_label "ReferenceVariable" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ReferenceVariable&amp;gt; ;
+    sssom:object_label "ReferenceVariable" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               ReferenceVariable_dependsOn_ReferenceVariable
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: DescriptorVariable
+- Target Class: DescriptorVariable
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DescriptorVariable
+- Subject Label: DescriptorVariable
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable
+- Object Label: DescriptorVariable
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DescriptorVariable_DescriptorVariable a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DescriptorVariable&amp;gt; ;
+    sssom:subject_label "DescriptorVariable" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorVariable&amp;gt; ;
+    sssom:object_label "DescriptorVariable" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               DescriptorVariable_dependsOn_DescriptorVariable
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: SubstantiveValueDomain
+- Target Class: SubstantiveValueDomain
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SubstantiveValueDomain
+- Subject Label: SubstantiveValueDomain
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SubstantiveValueDomain
+- Object Label: SubstantiveValueDomain
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_SubstantiveValueDomain_SubstantiveValueDomain a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SubstantiveValueDomain&amp;gt; ;
+    sssom:subject_label "SubstantiveValueDomain" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SubstantiveValueDomain&amp;gt; ;
+    sssom:object_label "SubstantiveValueDomain" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               SubstantiveValueDomain_dependsOn_SubstantiveValueDomain
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: SentinelValueDomain
+- Target Class: SentinelValueDomain
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SentinelValueDomain
+- Subject Label: SentinelValueDomain
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SentinelValueDomain
+- Object Label: SentinelValueDomain
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_SentinelValueDomain_SentinelValueDomain a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#SentinelValueDomain&amp;gt; ;
+    sssom:subject_label "SentinelValueDomain" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#SentinelValueDomain&amp;gt; ;
+    sssom:object_label "SentinelValueDomain" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               SentinelValueDomain_dependsOn_SentinelValueDomain
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: DescriptorValueDomain
+- Target Class: DescriptorValueDomain
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DescriptorValueDomain
+- Subject Label: DescriptorValueDomain
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorValueDomain
+- Object Label: DescriptorValueDomain
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DescriptorValueDomain_DescriptorValueDomain a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DescriptorValueDomain&amp;gt; ;
+    sssom:subject_label "DescriptorValueDomain" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DescriptorValueDomain&amp;gt; ;
+    sssom:object_label "DescriptorValueDomain" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               DescriptorValueDomain_dependsOn_DescriptorValueDomain
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: Descriptor
+- Target Class: Descriptor
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Descriptor
+- Subject Label: Descriptor
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor
+- Object Label: Descriptor
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_Descriptor_Descriptor a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Descriptor&amp;gt; ;
+    sssom:subject_label "Descriptor" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor&amp;gt; ;
+    sssom:object_label "Descriptor" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               Descriptor_dependsOn_Descriptor
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: UnitType
+- Target Class: UnitType
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#UnitType
+- Subject Label: UnitType
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType
+- Object Label: UnitType
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_UnitType_UnitType a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#UnitType&amp;gt; ;
+    sssom:subject_label "UnitType" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#UnitType&amp;gt; ;
+    sssom:object_label "UnitType" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               UnitType_dependsOn_UnitType
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: Universe
+- Target Class: Universe
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Universe
+- Subject Label: Universe
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe
+- Object Label: Universe
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_Universe_Universe a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Universe&amp;gt; ;
+    sssom:subject_label "Universe" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Universe&amp;gt; ;
+    sssom:object_label "Universe" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               Universe_dependsOn_Universe
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: Population
+- Target Class: Population
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Population
+- Subject Label: Population
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population
+- Object Label: Population
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_Population_Population a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#Population&amp;gt; ;
+    sssom:subject_label "Population" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population&amp;gt; ;
+    sssom:object_label "Population" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               Population_dependsOn_Population
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: IdentifierComponent
+- Target Class: IdentifierComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#IdentifierComponent
+- Subject Label: IdentifierComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#IdentifierComponent
+- Object Label: IdentifierComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_IdentifierComponent_IdentifierComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#IdentifierComponent&amp;gt; ;
+    sssom:subject_label "IdentifierComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#IdentifierComponent&amp;gt; ;
+    sssom:object_label "IdentifierComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               IdentifierComponent_dependsOn_IdentifierComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: MeasureComponent
+- Target Class: MeasureComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MeasureComponent
+- Subject Label: MeasureComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#MeasureComponent
+- Object Label: MeasureComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_MeasureComponent_MeasureComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#MeasureComponent&amp;gt; ;
+    sssom:subject_label "MeasureComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#MeasureComponent&amp;gt; ;
+    sssom:object_label "MeasureComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               MeasureComponent_dependsOn_MeasureComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: AttributeComponent
+- Target Class: AttributeComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#AttributeComponent
+- Subject Label: AttributeComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#AttributeComponent
+- Object Label: AttributeComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_AttributeComponent_AttributeComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#AttributeComponent&amp;gt; ;
+    sssom:subject_label "AttributeComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#AttributeComponent&amp;gt; ;
+    sssom:object_label "AttributeComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               AttributeComponent_dependsOn_AttributeComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: DimensionComponent
+- Target Class: DimensionComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionComponent
+- Subject Label: DimensionComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionComponent
+- Object Label: DimensionComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DimensionComponent_DimensionComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionComponent&amp;gt; ;
+    sssom:subject_label "DimensionComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionComponent&amp;gt; ;
+    sssom:object_label "DimensionComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               DimensionComponent_dependsOn_DimensionComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: ComponentPosition
+- Target Class: ComponentPosition
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ComponentPosition
+- Subject Label: ComponentPosition
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition
+- Object Label: ComponentPosition
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_ComponentPosition_ComponentPosition a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ComponentPosition&amp;gt; ;
+    sssom:subject_label "ComponentPosition" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ComponentPosition&amp;gt; ;
+    sssom:object_label "ComponentPosition" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               ComponentPosition_dependsOn_ComponentPosition
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: PrimaryKey
+- Target Class: PrimaryKey
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PrimaryKey
+- Subject Label: PrimaryKey
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKey
+- Object Label: PrimaryKey
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_PrimaryKey_PrimaryKey a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PrimaryKey&amp;gt; ;
+    sssom:subject_label "PrimaryKey" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKey&amp;gt; ;
+    sssom:object_label "PrimaryKey" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               PrimaryKey_dependsOn_PrimaryKey
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: PrimaryKeyComponent
+- Target Class: PrimaryKeyComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PrimaryKeyComponent
+- Subject Label: PrimaryKeyComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKeyComponent
+- Object Label: PrimaryKeyComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_PrimaryKeyComponent_PrimaryKeyComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PrimaryKeyComponent&amp;gt; ;
+    sssom:subject_label "PrimaryKeyComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKeyComponent&amp;gt; ;
+    sssom:object_label "PrimaryKeyComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               PrimaryKeyComponent_dependsOn_PrimaryKeyComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: VariableValueComponent
+- Target Class: VariableValueComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#VariableValueComponent
+- Subject Label: VariableValueComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableValueComponent
+- Object Label: VariableValueComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_VariableValueComponent_VariableValueComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#VariableValueComponent&amp;gt; ;
+    sssom:subject_label "VariableValueComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableValueComponent&amp;gt; ;
+    sssom:object_label "VariableValueComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               VariableValueComponent_dependsOn_VariableValueComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: VariableDescriptorComponent
+- Target Class: VariableDescriptorComponent
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#VariableDescriptorComponent
+- Subject Label: VariableDescriptorComponent
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableDescriptorComponent
+- Object Label: VariableDescriptorComponent
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_VariableDescriptorComponent_VariableDescriptorComponent a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#VariableDescriptorComponent&amp;gt; ;
+    sssom:subject_label "VariableDescriptorComponent" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#VariableDescriptorComponent&amp;gt; ;
+    sssom:object_label "VariableDescriptorComponent" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               VariableDescriptorComponent_dependsOn_VariableDescriptorComponent
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: PhysicalSegmentLayout
+- Target Class: PhysicalSegmentLayout
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalSegmentLayout
+- Subject Label: PhysicalSegmentLayout
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout
+- Object Label: PhysicalSegmentLayout
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_PhysicalSegmentLayout_PhysicalSegmentLayout a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalSegmentLayout&amp;gt; ;
+    sssom:subject_label "PhysicalSegmentLayout" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PhysicalSegmentLayout&amp;gt; ;
+    sssom:object_label "PhysicalSegmentLayout" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               PhysicalSegmentLayout_dependsOn_PhysicalSegmentLayout
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: ValueMapping
+- Target Class: ValueMapping
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ValueMapping
+- Subject Label: ValueMapping
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping
+- Object Label: ValueMapping
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_ValueMapping_ValueMapping a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ValueMapping&amp;gt; ;
+    sssom:subject_label "ValueMapping" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMapping&amp;gt; ;
+    sssom:object_label "ValueMapping" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               ValueMapping_dependsOn_ValueMapping
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: map
+- Source Class: ValueMappingPosition
+- Target Class: ValueMappingPosition
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ValueMappingPosition
+- Subject Label: ValueMappingPosition
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition
+- Object Label: ValueMappingPosition
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_ValueMappingPosition_ValueMappingPosition a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#ValueMappingPosition&amp;gt; ;
+    sssom:subject_label "ValueMappingPosition" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ValueMappingPosition&amp;gt; ;
+    sssom:object_label "ValueMappingPosition" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "map" .
+
+                  
+               
+               ValueMappingPosition_dependsOn_ValueMappingPosition
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: merge
+- Source Class: WideDataSet
+- Target Class: WideDataSet
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#WideDataSet
+- Subject Label: Merge of DDI-CDI WideDataSet and PhysicalDataSet
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet
+- Object Label: CDIF DDSC WideDataSet
+- Predicate ID: skos:relatedMatch
+- Predicate Label: Object class takes definition from WideDataSet and some attributes from PhysicalDataSet.
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 1.0
+- Comment: Object class takes definition from WideDataSet and some attributes from PhysicalDataSet.
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_WideDataSet_WideDataSet a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#WideDataSet&amp;gt; ;
+    sssom:subject_label "Merge of DDI-CDI WideDataSet and PhysicalDataSet" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet&amp;gt; ;
+    sssom:object_label "CDIF DDSC WideDataSet" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:predicate_label "Object class takes definition from WideDataSet and some attributes from PhysicalDataSet." ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:confidence 1.0 ;
+    sssom:comment "Object class takes definition from WideDataSet and some attributes from PhysicalDataSet." ;
+    mapping:mappingType "merge" .
+
+                  
+               
+               WideDataSet_dependsOn_WideDataSet
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: merge
+- Source Class: PhysicalDataSet
+- Target Class: WideDataSet
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet
+- Subject Label: Merge of DDI-CDI WideDataSet and PhysicalDataSet
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet
+- Object Label: CDIF DDSC WideDataSet
+- Predicate ID: skos:relatedMatch
+- Predicate Label: Object class takes definition from WideDataSet and some attributes from PhysicalDataSet.
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 1.0
+- Comment: Object class takes definition from WideDataSet and some attributes from PhysicalDataSet.
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_WideDataSet_PhysicalDataSet a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet&amp;gt; ;
+    sssom:subject_label "Merge of DDI-CDI WideDataSet and PhysicalDataSet" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#WideDataSet&amp;gt; ;
+    sssom:object_label "CDIF DDSC WideDataSet" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:predicate_label "Object class takes definition from WideDataSet and some attributes from PhysicalDataSet." ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:confidence 1.0 ;
+    sssom:comment "Object class takes definition from WideDataSet and some attributes from PhysicalDataSet." ;
+    mapping:mappingType "merge" .
+
+                  
+               
+               WideDataSet_dependsOn_PhysicalDataSet
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: merge
+- Source Class: LongDataSet
+- Target Class: LongDataSet
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LongDataSet
+- Subject Label: LongDataSet
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataSet
+- Object Label: LongDataSet
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_LongDataSet_LongDataSet a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#LongDataSet&amp;gt; ;
+    sssom:subject_label "LongDataSet" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataSet&amp;gt; ;
+    sssom:object_label "LongDataSet" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "merge" .
+
+                  
+               
+               LongDataSet_dependsOn_LongDataSet
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: merge
+- Source Class: PhysicalDataSet
+- Target Class: LongDataSet
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet
+- Subject Label: PhysicalDataSet
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataSet
+- Object Label: LongDataSet
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_LongDataSet_PhysicalDataSet a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet&amp;gt; ;
+    sssom:subject_label "PhysicalDataSet" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#LongDataSet&amp;gt; ;
+    sssom:object_label "LongDataSet" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "merge" .
+
+                  
+               
+               LongDataSet_dependsOn_PhysicalDataSet
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: merge
+- Source Class: DimensionalDataSet
+- Target Class: DimensionalDataSet
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionalDataSet
+- Subject Label: DimensionalDataSet
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet
+- Object Label: DimensionalDataSet
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DimensionalDataSet_DimensionalDataSet a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#DimensionalDataSet&amp;gt; ;
+    sssom:subject_label "DimensionalDataSet" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet&amp;gt; ;
+    sssom:object_label "DimensionalDataSet" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "merge" .
+
+                  
+               
+               DimensionalDataSet_dependsOn_DimensionalDataSet
+               
+            
+            
+               
+                  Provenance
+==========
+
+Transformation Information
+--------------------------
+
+- Mapping Type: merge
+- Source Class: PhysicalDataSet
+- Target Class: DimensionalDataSet
+
+SSSOM Mapping
+-------------
+
+- Subject ID: http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet
+- Subject Label: PhysicalDataSet
+- Object ID: http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet
+- Object Label: DimensionalDataSet
+- Predicate ID: sssom:mappingRelation
+- Predicate Label: 
+- Subject Category: UML Class
+- Object Category: UML Class
+- Confidence: 
+- Comment: 
+
+@prefix mapping: &amp;lt;http://example.org/transformation/mapping#&amp;gt; .
+@prefix sssom:   &amp;lt;https://w3id.org/sssom#&amp;gt; .
+@prefix src: &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/&amp;gt; .
+@prefix tgt: &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/&amp;gt; .
+
+mapping:Mapping_DimensionalDataSet_PhysicalDataSet a sssom:Mapping ;
+    sssom:subject_id &amp;lt;http://ddialliance.org/Specification/DDI-CDI/1.0/XMI/#PhysicalDataSet&amp;gt; ;
+    sssom:subject_label "PhysicalDataSet" ;
+    sssom:object_id &amp;lt;http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataSet&amp;gt; ;
+    sssom:object_label "DimensionalDataSet" ;
+    sssom:predicate_id sssom:mappingRelation ;
+    sssom:predicate_label "" ;
+    sssom:subjectCategory "UML Class" ;
+    sssom:objectCategory "UML Class" ;
+    sssom:comment "" ;
+    mapping:mappingType "merge" .
+
+                  
+               
+               DimensionalDataSet_dependsOn_PhysicalDataSet
+               
+            
+         
+         
+            DataTypes
+            
+               StructuredDataTypes
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+            
+            
+               Enumerations
+               
+            
+            
+               XMLSchemaDataTypes
+               
+               
+               
+            
+         
+      
+   

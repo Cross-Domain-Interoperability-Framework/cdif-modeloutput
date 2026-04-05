@@ -1,0 +1,19 @@
+"dt-ObjectName": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/ObjectName",
+  "type": ["object"],
+  "properties": {
+    "context": {
+      "$comment": "cardinality 1..1 – from ddsc:ObjectName",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:ObjectName",
+      "$ref": "#/defs/xsd:string"
+    },
+    "@type": {
+      "const": "ObjectName"
+    }
+  },
+  "required": ["context","name","@type"],
+  "additionalProperties": false
+},

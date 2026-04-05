@@ -1,0 +1,27 @@
+# class UnitType
+# based on the UML class CDIF::DDSC::Classes::UnitType
+ddsc:UnitType
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "UnitType";
+  rdfs:comment "Definition\n==========\nUnit type is a type or class of objects of interest (units).\n\nExamples\n========\nPerson, Establishment, Household, State, Country, Dog, Automobile, Neutrino.\n\nExplanatory notes\n=================\nUnit type is the most general in the hierarchy of unit type, universe, and population. It is a description of the basic characteristics for a general set of Units. A universe is a set of entities defined by a specialization of a unit type. A Population further narrows the specification to a specific time and geography.\n\nA unit type is used to describe a class or group of Units based on a single characteristic with no specification of time and geography. For example, the unit type of \"Person\" groups together a set of Units based on the characteristic that they are \"Persons\".\n\nIt concerns not only unit types used in dissemination, but anywhere in the statistical process. E.g. using administrative data might involve the use of a fiscal unit. [GSIM 1.1]."@en;
+  
+.
+
+ddsc:UnitType-descriptiveText
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "descriptiveText";
+  rdfs:comment "A short natural language account of the characteristics of the object."@en;
+  rdfs:domain ddsc:UnitType;
+  rdfs:range ddsc:InternationalString;
+.
+
+ddsc:UnitType-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:UnitType;
+  rdfs:range ddsc:ObjectName;
+.
+
+
+

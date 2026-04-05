@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.DimensionComponent"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionComponent"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.DimensionComponent-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionComponent-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+============ 
+Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional "cube".  
+
+Explanatory notes 
+=================== 
+The categories from each dimension often are used in combination to identify a cell. The meaning of the combination of the categories supplies meaning to the cell.</body>
+      <annotatedElement xmi:idref="ddsc.DimensionComponent"/>
+   </ownedComment>
+   <name>DimensionComponent</name>
+   <ownedAttribute xmi:id="ddsc.DimensionComponent-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionComponent-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.InstanceVariable"/>
+      <association xmi:idref="ddsc.DimensionComponent_isDefinedBy_InstanceVariable"/>
+   </ownedAttribute>
+</packagedElement>

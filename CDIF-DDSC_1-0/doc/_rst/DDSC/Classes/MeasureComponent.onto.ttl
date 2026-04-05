@@ -1,0 +1,21 @@
+# class MeasureComponent
+# based on the UML class CDIF::DDSC::Classes::MeasureComponent
+ddsc:MeasureComponent
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "MeasureComponent";
+  rdfs:comment "Definition \n============ \nRole given to a represented variable in the context of a data structure to hold the observed/derived values.  \n\nExamples \n========== \nHeight of a person in a wide or long dataset or number of citizens in a country in a dataset for multiple countries (dimensional dataset)."@en;
+  
+.
+
+
+ddsc:MeasureComponent_isDefinedBy_InstanceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_InstanceVariable";
+  skos:altLabel "MeasureComponent_isDefinedBy_InstanceVariable";
+  rdfs:comment "Data structure component is defined by zero to one represented variable."@en;
+  rdfs:domain ddsc:MeasureComponent;
+  rdfs:range ddsc:InstanceVariable;
+.
+
+

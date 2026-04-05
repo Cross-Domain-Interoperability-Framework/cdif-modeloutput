@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.BibliographicName"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#BibliographicName"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.BibliographicName-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#BibliographicName-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Personal names should be listed surname or family name first, followed by forename or given name. When in doubt, give the name as it appears, and do not invert. In the case of organizations where there is clearly a hierarchy present, list the parts of the hierarchy from largest to smallest, separated by full stops and a space. If it is not clear whether there is a hierarchy present, or unclear which is the larger or smaller portion of the body, give the name as it appears in the item. The name may be provided in one or more languages.</body>
+      <annotatedElement xmi:idref="ddsc.BibliographicName"/>
+   </ownedComment>
+   <name>BibliographicName</name>
+   <ownedAttribute xmi:id="ddsc.BibliographicName-affiliation"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#BibliographicName-affiliation"
+                    xmi:type="uml:Property">
+      <name>affiliation</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

@@ -1,0 +1,46 @@
+# datatype LabelForDisplay
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LabelForDisplay
+<#LabelForDisplay> a sh:NodeShape;
+    sh:targetClass ddsc:LabelForDisplay;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LabelForDisplay";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LabelForDisplay
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LabelForDisplay-locationVariant>;
+    sh:property <#LabelForDisplay-maxLength>;
+    sh:property <#LabelForDisplay-validDates>;
+
+
+
+.
+
+<#LabelForDisplay-locationVariant> a sh:PropertyShape ;
+    sh:path ddsc:LabelForDisplay-locationVariant;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LabelForDisplay-maxLength> a sh:PropertyShape ;
+    sh:path ddsc:LabelForDisplay-maxLength;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LabelForDisplay-validDates> a sh:PropertyShape ;
+    sh:path ddsc:LabelForDisplay-validDates;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DateRange
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

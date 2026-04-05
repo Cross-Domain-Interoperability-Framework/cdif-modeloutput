@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.TrimValues"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TrimValues"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.TrimValues-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TrimValues-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Specifies which spaces to remove from a data value (start, end, both, neither).</body>
+      <annotatedElement xmi:idref="ddsc.TrimValues"/>
+   </ownedComment>
+   <name>TrimValues</name>
+</packagedElement>

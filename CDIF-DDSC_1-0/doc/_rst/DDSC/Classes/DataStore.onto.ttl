@@ -1,0 +1,29 @@
+# class DataStore
+# based on the UML class CDIF::DDSC::Classes::DataStore
+ddsc:DataStore
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "DataStore";
+  rdfs:comment "Definition \n============ \nCollection of logical records.  \n\nExamples \n========== \nThe data lineage of an individual business process or an entire data pipeline are both examples of a logical record relation structures. In a data lineage we can observe how logical records are connected within a business process or across business processes.  \n\nExplanatory notes \n=================== \nKeep in mind that a logical records are definitions, not a \"datasets\". Logical records organized in a structured collection is called a logical record relation structure. Instances of logical records instantiated as organizations of data points hosting data are described in format description. A data store is reusable across studies. Each study has at most one data store."@en;
+  
+.
+
+ddsc:DataStore-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:DataStore;
+  rdfs:range ddsc:ObjectName;
+.
+
+
+ddsc:DataStore_has_LogicalRecord
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_LogicalRecord";
+  skos:altLabel "DataStore_has_LogicalRecord";
+  
+  rdfs:domain ddsc:DataStore;
+  rdfs:range ddsc:LogicalRecord;
+.
+
+

@@ -1,0 +1,38 @@
+# class DimensionComponent
+# based on the UML class CDIF::DDSC::Classes::DimensionComponent
+<#DimensionComponent> a sh:NodeShape;
+    sh:targetClass ddsc:DimensionComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:DimensionComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from DimensionComponent
+    sh:property <#DimensionComponent_isDefinedBy_InstanceVariable>;
+    # associations to DimensionComponent
+    sh:property <#rev_ComponentPosition_indexes_DimensionComponent>;
+
+
+
+.
+
+
+<#DimensionComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:DimensionComponent_isDefinedBy_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_DimensionComponent_isDefinedBy_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:DimensionComponent_isDefinedBy_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

@@ -1,0 +1,97 @@
+  <xs:element name="Universe"
+              type="UniverseXsdType"
+              xml:id="Universe">
+    <!-- based on the UML class CDIF::DDSC::Classes::Universe -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Specialized unit type, with the specialization based upon characteristics other than time and geography.
+            
+            Examples
+            ==========
+            1. Canadian adults (not limited to those residing in Canada)
+            2. Computer companies 
+            3. Universities
+            
+            Explanatory notes
+            ===================
+            Universe sits in a hierarchy between unit type and population, with unit type being most general and Population most specific. A universe is a set of entities defined by a more narrow specification than that of an underlying unit type. A population further narrows the specification to a specific time and geography.
+            
+            If the Universe consists of people, a number of factors may be used in defining membership in the Universe, such as age, sex, residence, income, veteran status, criminal convictions, etc. The universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. A universe may be described as "inclusive" or "exclusive". 
+            
+            Not to be confused with Population, which includes the specification of time and geography.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="UniverseXsdType"
+                  xml:id="UniverseXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Specialized unit type, with the specialization based upon characteristics other than time and geography.
+            
+            Examples
+            ==========
+            1. Canadian adults (not limited to those residing in Canada)
+            2. Computer companies 
+            3. Universities
+            
+            Explanatory notes
+            ===================
+            Universe sits in a hierarchy between unit type and population, with unit type being most general and Population most specific. A universe is a set of entities defined by a more narrow specification than that of an underlying unit type. A population further narrows the specification to a specific time and geography.
+            
+            If the Universe consists of people, a number of factors may be used in defining membership in the Universe, such as age, sex, residence, income, veteran status, criminal convictions, etc. The universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. A universe may be described as "inclusive" or "exclusive". 
+            
+            Not to be confused with Population, which includes the specification of time and geography.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="descriptiveText"
+                  type="InternationalStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Universe-descriptiveText">
+        <xs:annotation>
+          <xs:documentation>A short natural language account of the characteristics of the object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Universe-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Universe_uses_UnitType"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="Universe_uses_UnitType">
+        <xs:annotation>
+          <xs:documentation>The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="Universe_uses_UnitType-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="Universe_uses_UnitType-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="UnitType"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

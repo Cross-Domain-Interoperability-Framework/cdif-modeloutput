@@ -1,0 +1,46 @@
+# datatype NonIsoDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonIsoDate
+<#NonIsoDate> a sh:NodeShape;
+    sh:targetClass ddsc:NonIsoDate;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/NonIsoDate";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:NonIsoDate
+			 ) ;
+    ];
+    # attributes
+    sh:property <#NonIsoDate-calendar>;
+    sh:property <#NonIsoDate-dateContent>;
+    sh:property <#NonIsoDate-nonIsoDateFormat>;
+
+
+
+.
+
+<#NonIsoDate-calendar> a sh:PropertyShape ;
+    sh:path ddsc:NonIsoDate-calendar;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonIsoDate-dateContent> a sh:PropertyShape ;
+    sh:path ddsc:NonIsoDate-dateContent;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonIsoDate-nonIsoDateFormat> a sh:PropertyShape ;
+    sh:path ddsc:NonIsoDate-nonIsoDateFormat;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

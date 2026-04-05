@@ -1,0 +1,79 @@
+# class WideDataStructure
+# based on the UML class CDIF::DDSC::Classes::WideDataStructure
+<#WideDataStructure> a sh:NodeShape;
+    sh:targetClass ddsc:WideDataStructure;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/WideDataStructure";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:WideDataStructure
+			 ) ;
+    ];
+    # attributes
+    # associations from WideDataStructure
+    sh:property <#WideDataStructure_has_PrimaryKey>;
+    sh:property <#WideDataStructure_has_IdentifierComponent>;
+    sh:property <#WideDataStructure_has_AttributeComponent>;
+    sh:property <#WideDataStructure_has_MeasureComponent>;
+    # associations to WideDataStructure
+
+
+
+.
+
+
+<#WideDataStructure_has_PrimaryKey> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_PrimaryKey;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:PrimaryKey
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_WideDataStructure_has_PrimaryKey> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_PrimaryKey ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_IdentifierComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:IdentifierComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_WideDataStructure_has_IdentifierComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_IdentifierComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_AttributeComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:AttributeComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_WideDataStructure_has_AttributeComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_AttributeComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataStructure_has_MeasureComponent> a sh:PropertyShape ;
+    sh:path ddsc:WideDataStructure_has_MeasureComponent;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:MeasureComponent
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_WideDataStructure_has_MeasureComponent> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:WideDataStructure_has_MeasureComponent ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

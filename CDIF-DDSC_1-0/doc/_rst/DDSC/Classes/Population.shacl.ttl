@@ -1,0 +1,59 @@
+# class Population
+# based on the UML class CDIF::DDSC::Classes::Population
+<#Population> a sh:NodeShape;
+    sh:targetClass ddsc:Population;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Population";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Population
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Population-descriptiveText>;
+    sh:property <#Population-name>;
+    # associations from Population
+    sh:property <#Population_uses_Universe>;
+    # associations to Population
+    sh:property <#rev_LogicalRecord_isDefinedBy_Population>;
+    sh:property <#rev_InstanceVariable_measures_Population>;
+
+
+
+.
+
+<#Population-descriptiveText> a sh:PropertyShape ;
+    sh:path ddsc:Population-descriptiveText;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Population-name> a sh:PropertyShape ;
+    sh:path ddsc:Population-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#Population_uses_Universe> a sh:PropertyShape ;
+    sh:path ddsc:Population_uses_Universe;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:Universe
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 2;
+.
+<#rev_Population_uses_Universe> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:Population_uses_Universe ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

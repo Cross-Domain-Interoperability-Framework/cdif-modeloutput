@@ -1,0 +1,10 @@
+# class UnitType
+# based on the UML class CDIF::DDSC::Classes::UnitType
+ddsc:UnitTypeShape CLOSED {
+	a [ddsc:UnitType];
+	ddsc:UnitType-descriptiveText	@ddsc:InternationalStringShape;
+	ddsc:UnitType-name	@ddsc:ObjectNameShape;
+	^ddsc:LogicalRecord_isDefinedBy_UnitType @ddsc:LogicalRecordShape +;
+	^ddsc:Universe_uses_UnitType @ddsc:UniverseShape ;
+	}
+

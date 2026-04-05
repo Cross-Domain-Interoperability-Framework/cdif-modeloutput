@@ -1,0 +1,75 @@
+# datatype Reference
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Reference
+ddsc:Reference
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "Reference";
+  rdfs:comment "Definition\n============\nProvides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata."@en;
+  
+  owl:hasKey (ddsc:Reference-ddiReference ddsc:Reference-deepLink ddsc:Reference-description ddsc:Reference-location ddsc:Reference-nonDdiReference ddsc:Reference-semantic ddsc:Reference-uri ddsc:Reference-validType);
+.
+
+ddsc:Reference-ddiReference
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "ddiReference";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range ddsc:InternationalRegistrationDataIdentifier;
+.
+
+ddsc:Reference-deepLink
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "deepLink";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range ddsc:Selector;
+.
+
+ddsc:Reference-description
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "description";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range xsd:string;
+.
+
+ddsc:Reference-location
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "location";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range ddsc:InternationalString;
+.
+
+ddsc:Reference-nonDdiReference
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "nonDdiReference";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range ddsc:NonDdiIdentifier;
+.
+
+ddsc:Reference-semantic
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "semantic";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+ddsc:Reference-uri
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "uri";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range xsd:anyURI;
+.
+
+ddsc:Reference-validType
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "validType";
+  
+  rdfs:domain ddsc:Reference;
+  rdfs:range xsd:string;
+.
+
+

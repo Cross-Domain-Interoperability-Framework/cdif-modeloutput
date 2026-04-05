@@ -1,0 +1,110 @@
+"cls-PhysicalSegmentLayout": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/PhysicalSegmentLayout",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "PhysicalSegmentLayout"
+    },
+    "delimiter": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:string"
+    },
+    "encoding": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "escapeCharacter": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:string"
+    },
+    "hasHeader": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "headerRowCount": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "isDelimited": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "isFixedWidth": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "lineTerminator": {
+      "$comment": "cardinality 1..-1 – from ddsc:PhysicalSegmentLayout",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/xsd:string" } },
+      "else": { "$ref": "#/defs/xsd:string" }
+    },
+    "quoteCharacter": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:string"
+    },
+    "skipInitialSpace": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "trim": {
+      "$comment": "cardinality 1..1 – from ddsc:PhysicalSegmentLayout",
+      "$ref": "#/defs/dt-TrimValues"
+    },
+    "formats_LogicalRecord": {
+      "description": "PhysicalSegmentLayout_formats_LogicalRecord",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-LogicalRecord"
+    },
+    "has_ValueMapping": {
+      "description": "PhysicalSegmentLayout_has_ValueMapping",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-ValueMapping"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-ValueMapping"
+          }
+        }
+      ]
+    },
+    "has_ValueMappingPosition": {
+      "description": "PhysicalSegmentLayout_has_ValueMappingPosition",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-ValueMappingPosition"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-ValueMappingPosition"
+          }
+        }
+      ]
+    },
+    
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["delimiter","encoding","escapeCharacter","hasHeader","headerRowCount","isDelimited","isFixedWidth","lineTerminator","quoteCharacter","skipInitialSpace","trim","formats_LogicalRecord", "has_ValueMapping", "has_ValueMappingPosition","@type"],
+  "additionalProperties": false
+},
+"target-PhysicalSegmentLayout": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/PhysicalSegmentLayout",
+  "anyOf": [
+    { "$ref": "#/defs/cls-PhysicalSegmentLayout" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

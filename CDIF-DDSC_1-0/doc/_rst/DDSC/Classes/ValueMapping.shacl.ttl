@@ -1,0 +1,115 @@
+# class ValueMapping
+# based on the UML class CDIF::DDSC::Classes::ValueMapping
+<#ValueMapping> a sh:NodeShape;
+    sh:targetClass ddsc:ValueMapping;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ValueMapping";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ValueMapping
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ValueMapping-decimalPositions>;
+    sh:property <#ValueMapping-defaultDecimalSeparator>;
+    sh:property <#ValueMapping-length>;
+    sh:property <#ValueMapping-maximumLength>;
+    sh:property <#ValueMapping-minimumLength>;
+    # associations from ValueMapping
+    sh:property <#ValueMapping_formats_InstanceVariable>;
+    sh:property <#ValueMapping_formats_RepresentedVariable>;
+    sh:property <#ValueMapping_formats_ReferenceVariable>;
+    sh:property <#ValueMapping_formats_DescriptorVariable>;
+    # associations to ValueMapping
+    sh:property <#rev_PhysicalSegmentLayout_has_ValueMapping>;
+    sh:property <#rev_ValueMappingPosition_indexes_ValueMapping>;
+
+
+
+.
+
+<#ValueMapping-decimalPositions> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-decimalPositions;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-defaultDecimalSeparator> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-defaultDecimalSeparator;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-length> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-length;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-maximumLength> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-maximumLength;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping-minimumLength> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping-minimumLength;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ValueMapping_formats_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_InstanceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping_formats_RepresentedVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_RepresentedVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:RepresentedVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_RepresentedVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_RepresentedVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping_formats_ReferenceVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_ReferenceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ReferenceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_ReferenceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_ReferenceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#ValueMapping_formats_DescriptorVariable> a sh:PropertyShape ;
+    sh:path ddsc:ValueMapping_formats_DescriptorVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:DescriptorVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMapping_formats_DescriptorVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMapping_formats_DescriptorVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

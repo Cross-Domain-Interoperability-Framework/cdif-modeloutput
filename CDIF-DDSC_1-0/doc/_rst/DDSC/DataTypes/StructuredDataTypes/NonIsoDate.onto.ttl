@@ -1,0 +1,35 @@
+# datatype NonIsoDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonIsoDate
+ddsc:NonIsoDate
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "NonIsoDate";
+  rdfs:comment "Definition\n============\nUsed to preserve an historical date, formatted in a non-ISO fashion."@en;
+  
+  owl:hasKey (ddsc:NonIsoDate-calendar ddsc:NonIsoDate-dateContent ddsc:NonIsoDate-nonIsoDateFormat);
+.
+
+ddsc:NonIsoDate-calendar
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "calendar";
+  
+  rdfs:domain ddsc:NonIsoDate;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+ddsc:NonIsoDate-dateContent
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "dateContent";
+  
+  rdfs:domain ddsc:NonIsoDate;
+  rdfs:range xsd:string;
+.
+
+ddsc:NonIsoDate-nonIsoDateFormat
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "nonIsoDateFormat";
+  
+  rdfs:domain ddsc:NonIsoDate;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+

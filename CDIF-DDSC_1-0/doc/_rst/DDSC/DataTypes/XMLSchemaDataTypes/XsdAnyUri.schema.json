@@ -1,0 +1,12 @@
+"dt-XsdAnyUri": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/XsdAnyUri",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "XsdAnyUri"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

@@ -1,0 +1,12 @@
+"dt-Selector": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/Selector",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "Selector"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

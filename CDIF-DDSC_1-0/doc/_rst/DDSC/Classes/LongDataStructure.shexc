@@ -1,0 +1,14 @@
+# class LongDataStructure
+# based on the UML class CDIF::DDSC::Classes::LongDataStructure
+ddsc:LongDataStructureShape CLOSED {
+	a [ddsc:LongDataStructure];
+	ddsc:LongDataStructure_has_IdentifierComponent	@ddsc:IdentifierComponentShape +;
+	
+	ddsc:LongDataStructure_has_AttributeComponent	@ddsc:AttributeComponentShape +;
+	
+	ddsc:LongDataStructure_has_VariableDescriptorComponent	@ddsc:VariableDescriptorComponentShape +;
+	
+	ddsc:LongDataStructure_has_VariableValueComponent	@ddsc:VariableValueComponentShape +;
+	
+	}
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.TextPositionSelector"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TextPositionSelector"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.TextPositionSelector-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TextPositionSelector-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+Describes a range of text by recording the start and end positions of the selection in the object. Position 0 would be immediately before the first character, position 1 would be immediately before the second character, and so on. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#textpositionselector.</body>
+      <annotatedElement xmi:idref="ddsc.TextPositionSelector"/>
+   </ownedComment>
+   <name>TextPositionSelector</name>
+   <ownedAttribute xmi:id="ddsc.TextPositionSelector-end"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TextPositionSelector-end"
+                    xmi:type="uml:Property">
+      <name>end</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.TextPositionSelector-start"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#TextPositionSelector-start"
+                    xmi:type="uml:Property">
+      <name>start</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+</packagedElement>

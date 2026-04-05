@@ -1,0 +1,35 @@
+# datatype InternationalRegistrationDataIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalRegistrationDataIdentifier
+ddsc:InternationalRegistrationDataIdentifier
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "InternationalRegistrationDataIdentifier";
+  rdfs:comment "Definition\n==========\nPersistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip.\nThe uniqueness of an InternationalRegistrationDataIdentifier (IRDI) is determined by the combination of the values of three identifying attributes."@en;
+  
+  owl:hasKey (ddsc:InternationalRegistrationDataIdentifier-dataIdentifier ddsc:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier ddsc:InternationalRegistrationDataIdentifier-versionIdentifier);
+.
+
+ddsc:InternationalRegistrationDataIdentifier-dataIdentifier
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "dataIdentifier";
+  
+  rdfs:domain ddsc:InternationalRegistrationDataIdentifier;
+  rdfs:range xsd:string;
+.
+
+ddsc:InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "registrationAuthorityIdentifier";
+  
+  rdfs:domain ddsc:InternationalRegistrationDataIdentifier;
+  rdfs:range xsd:string;
+.
+
+ddsc:InternationalRegistrationDataIdentifier-versionIdentifier
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "versionIdentifier";
+  
+  rdfs:domain ddsc:InternationalRegistrationDataIdentifier;
+  rdfs:range xsd:string;
+.
+
+

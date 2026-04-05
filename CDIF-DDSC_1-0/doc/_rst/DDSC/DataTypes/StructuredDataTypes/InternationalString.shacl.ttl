@@ -1,0 +1,28 @@
+# datatype InternationalString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalString
+<#InternationalString> a sh:NodeShape;
+    sh:targetClass ddsc:InternationalString;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/InternationalString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:InternationalString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#InternationalString-languageSpecificString>;
+
+
+
+.
+
+<#InternationalString-languageSpecificString> a sh:PropertyShape ;
+    sh:path ddsc:InternationalString-languageSpecificString;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LanguageString
+      
+    ) ]];
+    sh:minCount 1;
+.
+

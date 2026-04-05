@@ -1,0 +1,27 @@
+# datatype TextPositionSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TextPositionSelector
+ddsc:TextPositionSelector
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "TextPositionSelector";
+  rdfs:comment "Definition\n==========\nDescribes a range of text by recording the start and end positions of the selection in the object. Position 0 would be immediately before the first character, position 1 would be immediately before the second character, and so on. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#textpositionselector."@en;
+  
+  owl:hasKey (ddsc:TextPositionSelector-end ddsc:TextPositionSelector-start);
+.
+
+ddsc:TextPositionSelector-end
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "end";
+  
+  rdfs:domain ddsc:TextPositionSelector;
+  rdfs:range xsd:integer;
+.
+
+ddsc:TextPositionSelector-start
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "start";
+  
+  rdfs:domain ddsc:TextPositionSelector;
+  rdfs:range xsd:integer;
+.
+
+

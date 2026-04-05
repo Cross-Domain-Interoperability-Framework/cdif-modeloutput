@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.XsdDate"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#XsdDate"
+                  xmi:type="uml:PrimitiveType">
+   <ownedComment xmi:id="ddsc.XsdDate-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#XsdDate-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Primitive data type "date" of the XML Schema data types.
+
+Definition from XML Schema Part 2: Datatypes Second Edition:
+"The value space of date consists of top-open intervals of exactly one day in length on the timelines of dateTime, beginning on the beginning moment of each day (in each timezone), i.e. '00:00:00', up to but not including '24:00:00' (which is identical with '00:00:00' of the next day). For nontimezoned values, the top-open intervals disjointly cover the nontimezoned timeline, one per day. For timezoned values, the intervals begin at every minute and therefore overlap." For details see https://www.w3.org/TR/xmlschema-2/#date.</body>
+      <annotatedElement xmi:idref="ddsc.XsdDate"/>
+   </ownedComment>
+   <name>XsdDate</name>
+</packagedElement>

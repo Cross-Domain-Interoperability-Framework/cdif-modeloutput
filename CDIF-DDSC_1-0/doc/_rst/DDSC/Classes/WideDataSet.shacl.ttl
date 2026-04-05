@@ -1,0 +1,40 @@
+# class WideDataSet
+# based on the UML class CDIF::DDSC::Classes::WideDataSet
+<#WideDataSet> a sh:NodeShape;
+    sh:targetClass ddsc:WideDataSet;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/WideDataSet";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:WideDataSet
+			 ) ;
+    ];
+    # attributes
+    sh:property <#WideDataSet-name>;
+    sh:property <#WideDataSet-physicalFileName>;
+    # associations from WideDataSet
+    # associations to WideDataSet
+    sh:property <#rev_LogicalRecord_organizes_WideDataSet>;
+
+
+
+.
+
+<#WideDataSet-name> a sh:PropertyShape ;
+    sh:path ddsc:WideDataSet-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#WideDataSet-physicalFileName> a sh:PropertyShape ;
+    sh:path ddsc:WideDataSet-physicalFileName;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+

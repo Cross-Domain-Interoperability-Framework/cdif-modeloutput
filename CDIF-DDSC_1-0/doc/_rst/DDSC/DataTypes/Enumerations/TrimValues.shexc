@@ -1,0 +1,6 @@
+# datatype TrimValues
+# based on the UML data type CDIF::DDSC::DataTypes::Enumerations::TrimValues
+ddsc:TrimValuesShape CLOSED {
+	a [ddsc:TrimValues];
+	}
+

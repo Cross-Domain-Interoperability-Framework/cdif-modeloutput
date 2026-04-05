@@ -1,0 +1,39 @@
+# class VariableValueComponent
+# based on the UML class CDIF::DDSC::Classes::VariableValueComponent
+<#VariableValueComponent> a sh:NodeShape;
+    sh:targetClass ddsc:VariableValueComponent;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/VariableValueComponent";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:VariableValueComponent
+			 ) ;
+    ];
+    # attributes
+    # associations from VariableValueComponent
+    sh:property <#VariableValueComponent_isDefinedBy_ReferenceVariable>;
+    # associations to VariableValueComponent
+    sh:property <#rev_LongDataStructure_has_VariableValueComponent>;
+    sh:property <#rev_VariableDescriptorComponent_refersTo_VariableValueComponent>;
+
+
+
+.
+
+
+<#VariableValueComponent_isDefinedBy_ReferenceVariable> a sh:PropertyShape ;
+    sh:path ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ReferenceVariable
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_VariableValueComponent_isDefinedBy_ReferenceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

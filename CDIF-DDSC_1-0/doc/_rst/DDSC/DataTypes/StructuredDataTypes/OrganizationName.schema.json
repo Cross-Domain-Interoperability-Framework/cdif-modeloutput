@@ -1,0 +1,27 @@
+"dt-OrganizationName": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/OrganizationName",
+  "type": ["object"],
+  "properties": {
+    "abbreviation": {
+      "$comment": "cardinality 1..1 – from ddsc:OrganizationName",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "effectiveDates": {
+      "$comment": "cardinality 1..1 – from ddsc:OrganizationName",
+      "$ref": "#/defs/dt-DateRange"
+    },
+    "isFormal": {
+      "$comment": "cardinality 1..1 – from ddsc:OrganizationName",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "typeOfOrganizationName": {
+      "$comment": "cardinality 1..1 – from ddsc:OrganizationName",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "@type": {
+      "const": "OrganizationName"
+    }
+  },
+  "required": ["abbreviation","effectiveDates","isFormal","typeOfOrganizationName","@type"],
+  "additionalProperties": false
+},

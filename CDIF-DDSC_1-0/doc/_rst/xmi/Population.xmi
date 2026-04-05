@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.Population"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.Population-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Universe with time and geography specified.
+
+Examples
+==========
+1. Canadian adult persons residing in Canada on 13 November 1956.
+2. US computer companies at the end of 2012.  
+3. Universities in Denmark 1 January 2011.
+
+Explanatory notes
+===================
+Population is the most specific in the conceptually narrowing hierarchy of unit type, universe and population. Several populations having differing time and or geography may specialize the same universe.</body>
+      <annotatedElement xmi:idref="ddsc.Population"/>
+   </ownedComment>
+   <name>Population</name>
+   <ownedAttribute xmi:id="ddsc.Population-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.Population-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.Population-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Population-descriptiveText"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-descriptiveText"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.Population-descriptiveText-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-descriptiveText-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>A short natural language account of the characteristics of the object.</body>
+         <annotatedElement xmi:idref="ddsc.Population-descriptiveText"/>
+      </ownedComment>
+      <name>descriptiveText</name>
+      <type xmi:idref="ddsc.InternationalString"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Population-ownedAttribute-3"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-ownedAttribute-3"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.Universe"/>
+      <upperValue xmi:id="ddsc.Population-ownedAttribute-3-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Population-ownedAttribute-3-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>2</value>
+      </upperValue>
+      <association xmi:idref="ddsc.Population_uses_Universe"/>
+   </ownedAttribute>
+</packagedElement>

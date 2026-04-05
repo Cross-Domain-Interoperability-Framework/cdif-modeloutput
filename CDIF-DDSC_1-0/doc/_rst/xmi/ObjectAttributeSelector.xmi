@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.ObjectAttributeSelector"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectAttributeSelector"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.ObjectAttributeSelector-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectAttributeSelector-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+A resource which describes a specific attribute of an object. It is defined in the style of selectors of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/. The selector can be nested dependent on the structure of the referenced object.</body>
+      <annotatedElement xmi:idref="ddsc.ObjectAttributeSelector"/>
+   </ownedComment>
+   <name>ObjectAttributeSelector</name>
+   <ownedAttribute xmi:id="ddsc.ObjectAttributeSelector-refinedBy"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectAttributeSelector-refinedBy"
+                    xmi:type="uml:Property">
+      <name>refinedBy</name>
+      <type xmi:idref="ddsc.ObjectAttributeSelector"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ObjectAttributeSelector-refinedByOrderNumber"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectAttributeSelector-refinedByOrderNumber"
+                    xmi:type="uml:Property">
+      <name>refinedByOrderNumber</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ObjectAttributeSelector-value"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ObjectAttributeSelector-value"
+                    xmi:type="uml:Property">
+      <name>value</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

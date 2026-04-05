@@ -1,0 +1,45 @@
+# class Descriptor
+# based on the UML class CDIF::DDSC::Classes::Descriptor
+<#Descriptor> a sh:NodeShape;
+    sh:targetClass ddsc:Descriptor;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Descriptor";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Descriptor
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Descriptor-content>;
+    # associations from Descriptor
+    sh:property <#Descriptor_identifies_InstanceVariable>;
+    # associations to Descriptor
+
+
+
+.
+
+<#Descriptor-content> a sh:PropertyShape ;
+    sh:path ddsc:Descriptor-content;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:TypedString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#Descriptor_identifies_InstanceVariable> a sh:PropertyShape ;
+    sh:path ddsc:Descriptor_identifies_InstanceVariable;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InstanceVariable
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_Descriptor_identifies_InstanceVariable> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:Descriptor_identifies_InstanceVariable ];
+    sh:minCount 1;
+.
+

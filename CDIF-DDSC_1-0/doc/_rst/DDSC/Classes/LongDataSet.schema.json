@@ -1,0 +1,52 @@
+"cls-LongDataSet": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataSet",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "LongDataSet"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:LongDataSet",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "physicalFileName": {
+      "$comment": "cardinality 1..1 – from ddsc:LongDataSet",
+      "$ref": "#/defs/xsd:string"
+    },
+    
+    "organizes_LongDataSet_OF_LogicalRecord": {
+      "description": "LogicalRecord_organizes_LongDataSet",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LogicalRecord"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LogicalRecord"
+          }
+        }
+      ]
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["name","physicalFileName","@type"],
+  "additionalProperties": false
+},
+"target-LongDataSet": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataSet",
+  "anyOf": [
+    { "$ref": "#/defs/cls-LongDataSet" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

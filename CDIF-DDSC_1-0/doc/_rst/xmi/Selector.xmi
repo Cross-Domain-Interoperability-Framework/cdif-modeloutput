@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.Selector"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Selector"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.Selector-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Selector-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+A resource which describes the segment of interest in a representation of a resource. This class is not used directly, only its subclasses. It is defined accordingly the related selector of the Web Annotation Vocabulary, see https://www.w3.org/TR/annotation-vocab/#selector.</body>
+      <annotatedElement xmi:idref="ddsc.Selector"/>
+   </ownedComment>
+   <name>Selector</name>
+</packagedElement>

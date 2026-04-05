@@ -1,0 +1,19 @@
+"dt-TextPositionSelector": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/TextPositionSelector",
+  "type": ["object"],
+  "properties": {
+    "end": {
+      "$comment": "cardinality 1..1 – from ddsc:TextPositionSelector",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "start": {
+      "$comment": "cardinality 1..1 – from ddsc:TextPositionSelector",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "@type": {
+      "const": "TextPositionSelector"
+    }
+  },
+  "required": ["end","start","@type"],
+  "additionalProperties": false
+},

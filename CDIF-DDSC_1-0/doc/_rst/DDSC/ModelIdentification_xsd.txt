@@ -1,0 +1,84 @@
+  <xs:element name="ModelIdentification"
+              type="ModelIdentificationXsdType"
+              xml:id="ModelIdentification">
+    <!-- based on the UML data type CDIF::DDSC::ModelIdentification -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Attributes for the model identification with constant values.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ModelIdentificationXsdType"
+                  xml:id="ModelIdentificationXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Attributes for the model identification with constant values.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="acronym"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-acronym">
+        <xs:annotation>
+          <xs:documentation>Acronym of the model.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="language"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-language">
+        <xs:annotation>
+          <xs:documentation>Language of the model.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="majorVersion"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-majorVersion">
+        <xs:annotation>
+          <xs:documentation>Major version number of the model.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minorVersion"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-minorVersion">
+        <xs:annotation>
+          <xs:documentation>Minor version number of the model.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="subtitle"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-subtitle">
+        <xs:annotation>
+          <xs:documentation>Subtitle of the model.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="title"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-title">
+        <xs:annotation>
+          <xs:documentation>Title of the model.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uri"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ModelIdentification-uri">
+        <xs:annotation>
+          <xs:documentation>URI of the specification.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

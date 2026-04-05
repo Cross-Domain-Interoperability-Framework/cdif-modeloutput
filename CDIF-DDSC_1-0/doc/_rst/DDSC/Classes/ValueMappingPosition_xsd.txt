@@ -1,0 +1,60 @@
+  <xs:element name="ValueMappingPosition"
+              type="ValueMappingPositionXsdType"
+              xml:id="ValueMappingPosition">
+    <!-- based on the UML class CDIF::DDSC::Classes::ValueMappingPosition -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Denotes the position of a value mapping in a sequence.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ValueMappingPositionXsdType"
+                  xml:id="ValueMappingPositionXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Denotes the position of a value mapping in a sequence.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="value"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ValueMappingPosition-value">
+        <xs:annotation>
+          <xs:documentation>Index value of the member in an ordered array.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ValueMappingPosition_indexes_ValueMapping"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ValueMappingPosition_indexes_ValueMapping">
+        <xs:annotation>
+          <xs:documentation>Assigns a position to a value mapping within a physical segment.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ValueMappingPosition_indexes_ValueMapping-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="ValueMappingPosition_indexes_ValueMapping-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="ValueMapping"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

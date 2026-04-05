@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.PrimaryKey"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKey"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.PrimaryKey-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKey-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Role of a set of data structure components for content linkage purposes
+
+Explanatory notes
+===================
+Equivalent to primary key in the relational model.
+A primary key essentially indicates which data structure components correspond to key members.
+It can also be used in conjunction with foreign key to link data structures and their related datasets.</body>
+      <annotatedElement xmi:idref="ddsc.PrimaryKey"/>
+   </ownedComment>
+   <name>PrimaryKey</name>
+   <ownedAttribute xmi:id="ddsc.PrimaryKey-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKey-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.PrimaryKeyComponent"/>
+      <upperValue xmi:id="ddsc.PrimaryKey-ownedAttribute-1-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#PrimaryKey-ownedAttribute-1-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.PrimaryKey_isComposedOf_PrimaryKeyComponent"/>
+   </ownedAttribute>
+</packagedElement>

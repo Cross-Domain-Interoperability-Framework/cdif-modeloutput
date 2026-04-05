@@ -1,0 +1,40 @@
+# class LongDataSet
+# based on the UML class CDIF::DDSC::Classes::LongDataSet
+<#LongDataSet> a sh:NodeShape;
+    sh:targetClass ddsc:LongDataSet;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/LongDataSet";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:LongDataSet
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LongDataSet-name>;
+    sh:property <#LongDataSet-physicalFileName>;
+    # associations from LongDataSet
+    # associations to LongDataSet
+    sh:property <#rev_LogicalRecord_organizes_LongDataSet>;
+
+
+
+.
+
+<#LongDataSet-name> a sh:PropertyShape ;
+    sh:path ddsc:LongDataSet-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#LongDataSet-physicalFileName> a sh:PropertyShape ;
+    sh:path ddsc:LongDataSet-physicalFileName;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+

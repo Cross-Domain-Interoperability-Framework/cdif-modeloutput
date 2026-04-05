@@ -1,0 +1,19 @@
+"dt-TypedString": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/TypedString",
+  "type": ["object"],
+  "properties": {
+    "content": {
+      "$comment": "cardinality 1..1 – from ddsc:TypedString",
+      "$ref": "#/defs/xsd:string"
+    },
+    "typeOfContent": {
+      "$comment": "cardinality 1..1 – from ddsc:TypedString",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "@type": {
+      "const": "TypedString"
+    }
+  },
+  "required": ["content","typeOfContent","@type"],
+  "additionalProperties": false
+},

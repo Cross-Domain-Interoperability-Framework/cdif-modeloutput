@@ -1,0 +1,71 @@
+"cls-Population": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/Population",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "Population"
+    },
+    "descriptiveText": {
+      "$comment": "cardinality 1..1 – from ddsc:Population",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:Population",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "uses_Universe": {
+      "description": "Population_uses_Universe",
+      "$comment": "cardinality 1..2",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-Universe"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-Universe"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_Population_OF_LogicalRecord": {
+      "description": "LogicalRecord_isDefinedBy_Population",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LogicalRecord"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LogicalRecord"
+          }
+        }
+      ]
+    },
+    "measures_Population_OF_InstanceVariable": {
+      "description": "InstanceVariable_measures_Population",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-InstanceVariable"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["descriptiveText","name","uses_Universe","@type"],
+  "additionalProperties": false
+},
+"target-Population": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/Population",
+  "anyOf": [
+    { "$ref": "#/defs/cls-Population" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

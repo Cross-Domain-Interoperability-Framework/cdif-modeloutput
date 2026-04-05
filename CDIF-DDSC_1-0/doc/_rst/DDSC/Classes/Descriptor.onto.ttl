@@ -1,0 +1,29 @@
+# class Descriptor
+# based on the UML class CDIF::DDSC::Classes::Descriptor
+ddsc:Descriptor
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "Descriptor";
+  rdfs:comment "Definition\n==========\nUse of a code for variable identification in the context of a data structure and a variable descriptor component.\n\nExamples\n========\nConsider two variables, i.e. income and age, with values appearing in the same column. Codes \"income\" and \"age\" are descriptors. They appear multiple time in a variable descriptor component, one for each value in the variable value component. Each descriptor references one of those values. This way it's possible to identify which values correspond to income and which ones to age."@en;
+  
+.
+
+ddsc:Descriptor-content
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "content";
+  rdfs:comment "The content of this value expressed as a string."@en;
+  rdfs:domain ddsc:Descriptor;
+  rdfs:range ddsc:TypedString;
+.
+
+
+ddsc:Descriptor_identifies_InstanceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "identifies_InstanceVariable";
+  skos:altLabel "Descriptor_identifies_InstanceVariable";
+  
+  rdfs:domain ddsc:Descriptor;
+  rdfs:range ddsc:InstanceVariable;
+.
+
+

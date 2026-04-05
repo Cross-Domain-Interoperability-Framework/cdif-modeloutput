@@ -1,0 +1,47 @@
+  <xs:element name="ObjectName"
+              type="ObjectNameXsdType"
+              xml:id="ObjectName">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectName -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.
+            
+            Explanatory notes
+            =================
+            Use in model: In general the property name should be "name" as it is the name of the class object of which it is an attribute. Use a specific name (i.e. xxxName) only when naming something other than the class object of which it is an attribute.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ObjectNameXsdType"
+                  xml:id="ObjectNameXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A standard means of expressing a name for a class object. A linguistic signifier. Human understandable name (word, phrase, or mnemonic) that reflects the ISO/IEC 11179-5 naming principles.
+            
+            Explanatory notes
+            =================
+            Use in model: In general the property name should be "name" as it is the name of the class object of which it is an attribute. Use a specific name (i.e. xxxName) only when naming something other than the class object of which it is an attribute.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="context"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ObjectName-context">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ObjectName-name">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

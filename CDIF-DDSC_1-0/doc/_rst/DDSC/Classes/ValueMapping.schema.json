@@ -1,0 +1,138 @@
+"cls-ValueMapping": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/ValueMapping",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "ValueMapping"
+    },
+    "decimalPositions": {
+      "$comment": "cardinality 1..1 – from ddsc:ValueMapping",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "defaultDecimalSeparator": {
+      "$comment": "cardinality 1..1 – from ddsc:ValueMapping",
+      "$ref": "#/defs/xsd:string"
+    },
+    "length": {
+      "$comment": "cardinality 1..1 – from ddsc:ValueMapping",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "maximumLength": {
+      "$comment": "cardinality 1..1 – from ddsc:ValueMapping",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "minimumLength": {
+      "$comment": "cardinality 1..1 – from ddsc:ValueMapping",
+      "$ref": "#/defs/xsd:integer"
+    },
+    "formats_InstanceVariable": {
+      "description": "ValueMapping_formats_InstanceVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-InstanceVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-InstanceVariable"
+          }
+        }
+      ]
+    },
+    "formats_RepresentedVariable": {
+      "description": "ValueMapping_formats_RepresentedVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-RepresentedVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-RepresentedVariable"
+          }
+        }
+      ]
+    },
+    "formats_ReferenceVariable": {
+      "description": "ValueMapping_formats_ReferenceVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-ReferenceVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-ReferenceVariable"
+          }
+        }
+      ]
+    },
+    "formats_DescriptorVariable": {
+      "description": "ValueMapping_formats_DescriptorVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-DescriptorVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-DescriptorVariable"
+          }
+        }
+      ]
+    },
+    "has_ValueMapping_OF_PhysicalSegmentLayout": {
+      "description": "PhysicalSegmentLayout_has_ValueMapping",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-PhysicalSegmentLayout"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-PhysicalSegmentLayout"
+          }
+        }
+      ]
+    },
+    "indexes_ValueMapping_OF_ValueMappingPosition": {
+      "description": "ValueMappingPosition_indexes_ValueMapping",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-ValueMappingPosition"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-ValueMappingPosition"
+          }
+        }
+      ]
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["decimalPositions","defaultDecimalSeparator","length","maximumLength","minimumLength","formats_InstanceVariable", "formats_RepresentedVariable", "formats_ReferenceVariable", "formats_DescriptorVariable","@type"],
+  "additionalProperties": false
+},
+"target-ValueMapping": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/ValueMapping",
+  "anyOf": [
+    { "$ref": "#/defs/cls-ValueMapping" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

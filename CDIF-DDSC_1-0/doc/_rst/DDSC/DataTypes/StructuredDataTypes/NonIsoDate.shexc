@@ -1,0 +1,9 @@
+# datatype NonIsoDate
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonIsoDate
+ddsc:NonIsoDateShape CLOSED {
+	a [ddsc:NonIsoDate];
+	ddsc:NonIsoDate-calendar	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:NonIsoDate-dateContent	xsd:string;
+	ddsc:NonIsoDate-nonIsoDateFormat	@ddsc:ControlledVocabularyEntryShape;
+	}
+

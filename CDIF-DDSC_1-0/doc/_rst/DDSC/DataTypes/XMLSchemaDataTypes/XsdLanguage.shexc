@@ -1,0 +1,6 @@
+# datatype XsdLanguage
+# based on the UML data type CDIF::DDSC::DataTypes::XMLSchemaDataTypes::XsdLanguage
+xsd:languageShape CLOSED {
+	a [xsd:language];
+	}
+

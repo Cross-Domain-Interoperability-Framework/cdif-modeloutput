@@ -1,0 +1,37 @@
+# class Universe
+# based on the UML class CDIF::DDSC::Classes::Universe
+ddsc:Universe
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "Universe";
+  rdfs:comment "Definition\n============\nSpecialized unit type, with the specialization based upon characteristics other than time and geography.\n\nExamples\n==========\n1. Canadian adults (not limited to those residing in Canada)\n2. Computer companies \n3. Universities\n\nExplanatory notes\n===================\nUniverse sits in a hierarchy between unit type and population, with unit type being most general and Population most specific. A universe is a set of entities defined by a more narrow specification than that of an underlying unit type. A population further narrows the specification to a specific time and geography.\n\nIf the Universe consists of people, a number of factors may be used in defining membership in the Universe, such as age, sex, residence, income, veteran status, criminal convictions, etc. The universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. A universe may be described as \"inclusive\" or \"exclusive\". \n\nNot to be confused with Population, which includes the specification of time and geography."@en;
+  
+.
+
+ddsc:Universe-descriptiveText
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "descriptiveText";
+  rdfs:comment "A short natural language account of the characteristics of the object."@en;
+  rdfs:domain ddsc:Universe;
+  rdfs:range ddsc:InternationalString;
+.
+
+ddsc:Universe-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:Universe;
+  rdfs:range ddsc:ObjectName;
+.
+
+
+ddsc:Universe_uses_UnitType
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "uses_UnitType";
+  skos:altLabel "Universe_uses_UnitType";
+  rdfs:comment "The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the \"DDI-Cross Domain Integration: Detailed Model\" document."@en;
+  rdfs:domain ddsc:Universe;
+  rdfs:range ddsc:UnitType;
+.
+
+

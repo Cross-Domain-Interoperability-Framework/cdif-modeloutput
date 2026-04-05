@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.Descriptor"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.Descriptor-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+Use of a code for variable identification in the context of a data structure and a variable descriptor component.
+
+Examples
+========
+Consider two variables, i.e. income and age, with values appearing in the same column. Codes "income" and "age" are descriptors. They appear multiple time in a variable descriptor component, one for each value in the variable value component. Each descriptor references one of those values. This way it's possible to identify which values correspond to income and which ones to age.</body>
+      <annotatedElement xmi:idref="ddsc.Descriptor"/>
+   </ownedComment>
+   <name>Descriptor</name>
+   <ownedAttribute xmi:id="ddsc.Descriptor-content"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor-content"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.Descriptor-content-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor-content-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The content of this value expressed as a string.</body>
+         <annotatedElement xmi:idref="ddsc.Descriptor-content"/>
+      </ownedComment>
+      <name>content</name>
+      <type xmi:idref="ddsc.TypedString"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Descriptor-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.InstanceVariable"/>
+      <upperValue xmi:id="ddsc.Descriptor-ownedAttribute-2-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Descriptor-ownedAttribute-2-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.Descriptor_identifies_InstanceVariable"/>
+   </ownedAttribute>
+</packagedElement>

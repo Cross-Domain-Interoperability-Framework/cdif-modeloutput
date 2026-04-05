@@ -1,0 +1,22 @@
+# class LogicalRecord
+# based on the UML class CDIF::DDSC::Classes::LogicalRecord
+ddsc:LogicalRecordShape CLOSED {
+	a [ddsc:LogicalRecord];
+	^ddsc:DataStore_has_LogicalRecord @ddsc:DataStoreShape +;
+	ddsc:LogicalRecord_organizes_WideDataSet	@ddsc:WideDataSetShape +;
+	
+	ddsc:LogicalRecord_organizes_LongDataSet	@ddsc:LongDataSetShape +;
+	
+	ddsc:LogicalRecord_organizes_DimensionalDataSet	@ddsc:DimensionalDataSetShape +;
+	
+	ddsc:LogicalRecord_has_InstanceVariable	@ddsc:InstanceVariableShape +;
+	
+	ddsc:LogicalRecord_isDefinedBy_UnitType	@ddsc:UnitTypeShape +;
+	
+	ddsc:LogicalRecord_isDefinedBy_Universe	@ddsc:UniverseShape +;
+	
+	ddsc:LogicalRecord_isDefinedBy_Population	@ddsc:PopulationShape +;
+	
+	^ddsc:PhysicalSegmentLayout_formats_LogicalRecord @ddsc:PhysicalSegmentLayoutShape +;
+	}
+

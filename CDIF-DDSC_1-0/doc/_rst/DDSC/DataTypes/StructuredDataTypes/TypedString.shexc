@@ -1,0 +1,8 @@
+# datatype TypedString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::TypedString
+ddsc:TypedStringShape CLOSED {
+	a [ddsc:TypedString];
+	ddsc:TypedString-content	xsd:string;
+	ddsc:TypedString-typeOfContent	@ddsc:ControlledVocabularyEntryShape;
+	}
+

@@ -1,0 +1,21 @@
+# class IdentifierComponent
+# based on the UML class CDIF::DDSC::Classes::IdentifierComponent
+ddsc:IdentifierComponent
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "IdentifierComponent";
+  rdfs:comment "Definition \n============ \nRole given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.  \n\nExamples \n========== \nThe personal identification number of a Swedish citizen for unit data or the name of a country in the European Union for dimensional data."@en;
+  
+.
+
+
+ddsc:IdentifierComponent_isDefinedBy_InstanceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_InstanceVariable";
+  skos:altLabel "IdentifierComponent_isDefinedBy_InstanceVariable";
+  rdfs:comment "Data structure component is defined by zero to one represented variable."@en;
+  rdfs:domain ddsc:IdentifierComponent;
+  rdfs:range ddsc:InstanceVariable;
+.
+
+

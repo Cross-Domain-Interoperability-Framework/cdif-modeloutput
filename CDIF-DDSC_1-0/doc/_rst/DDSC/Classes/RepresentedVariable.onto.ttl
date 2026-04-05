@@ -1,0 +1,73 @@
+# class RepresentedVariable
+# based on the UML class CDIF::DDSC::Classes::RepresentedVariable
+ddsc:RepresentedVariable
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "RepresentedVariable";
+  rdfs:comment "Definition \n========== \nConceptual variable with a substantive value domain specified.   \n\nExamples \n========== \nThe pair (Number of Employees, Integer), where \"Number of Employees\" is the characteristic of the population (variable) and \"Integer\" is how that measure will be represented (value domain).  \n\nExplanatory notes \n=================== \nExtends from conceptual variable and can contain all descriptive fields without creating a conceptual variable. By referencing a conceptual variable it can indicate a common relationship with represented variables expressing the same characteristic of a universe measured in another way, such as Age of Persons in hours rather than years. Represented variable constrains the coverage of the unit type to a specific universe. In the above case the universe with the measurement of Age in hours may be constrained to Persons under 5 days (120 hours old). Represented variable can define sentinel values for multiple storage systems which have the same conceptual domain but specialized value domains."@en;
+  
+.
+
+ddsc:RepresentedVariable-definition
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "definition";
+  rdfs:comment "Natural language statement conveying the meaning of a concept, differentiating it from other concepts. Supports the use of multiple languages and structured text. 'externalDefinition' can't be used if 'definition' is used."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:InternationalString;
+.
+
+ddsc:RepresentedVariable-describedUnitOfMeasure
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "describedUnitOfMeasure";
+  rdfs:comment "The unit in which the data values are measured (kg, pound, euro), expressed as a value from a controlled system of entries (i.e., QDT). Supports the provision of an identifier for the entry in the authoritative source (a URI, etc.), and the specific vocabulary."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+ddsc:RepresentedVariable-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:ObjectName;
+.
+
+ddsc:RepresentedVariable-unitOfMeasureKind
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "unitOfMeasureKind";
+  rdfs:comment "Kind of unit of measure, so that it may be prone to translation to equivalent UOMs. Example values include \"acceleration,\" \"temperature,\" \"salinity\", etc. This description exists at the conceptual level, indicating a limitation on the type of representations which may be used for the variable as it is made more concrete."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:ControlledVocabularyEntry;
+.
+
+
+ddsc:RepresentedVariable_measures_Universe
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "measures_Universe";
+  skos:altLabel "RepresentedVariable_measures_Universe";
+  rdfs:comment "The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the \"DDI-Cross Domain Integration: Detailed Model\" document."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:Universe;
+.
+
+ddsc:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "takesSubstantiveValuesFrom_SubstantiveValueDomain";
+  skos:altLabel "RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain";
+  rdfs:comment "The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship \"Measures\" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:SubstantiveValueDomain;
+.
+
+ddsc:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "takesSentinelValuesFrom_SentinelValueDomain";
+  skos:altLabel "RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain";
+  rdfs:comment "A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms."@en;
+  rdfs:domain ddsc:RepresentedVariable;
+  rdfs:range ddsc:SentinelValueDomain;
+.
+
+

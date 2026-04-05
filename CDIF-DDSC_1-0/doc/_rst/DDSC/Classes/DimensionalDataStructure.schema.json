@@ -1,0 +1,90 @@
+"cls-DimensionalDataStructure": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionalDataStructure",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "DimensionalDataStructure"
+    },
+    
+    "has_IdentifierComponent": {
+      "description": "DimensionalDataStructure_has_IdentifierComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-IdentifierComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-IdentifierComponent"
+          }
+        }
+      ]
+    },
+    "has_AttributeComponent": {
+      "description": "DimensionalDataStructure_has_AttributeComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-AttributeComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-AttributeComponent"
+          }
+        }
+      ]
+    },
+    "has_MeasureComponent": {
+      "description": "DimensionalDataStructure_has_MeasureComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-MeasureComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-MeasureComponent"
+          }
+        }
+      ]
+    },
+    "has_ComponentPosition": {
+      "description": "DimensionalDataStructure_has_ComponentPosition",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-ComponentPosition"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-ComponentPosition"
+          }
+        }
+      ]
+    },
+    
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["has_IdentifierComponent", "has_AttributeComponent", "has_MeasureComponent", "has_ComponentPosition","@type"],
+  "additionalProperties": false
+},
+"target-DimensionalDataStructure": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/DimensionalDataStructure",
+  "anyOf": [
+    { "$ref": "#/defs/cls-DimensionalDataStructure" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

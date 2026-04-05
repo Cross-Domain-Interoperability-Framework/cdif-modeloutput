@@ -1,0 +1,14 @@
+# datatype Reference
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Reference
+ddsc:ReferenceShape CLOSED {
+	a [ddsc:Reference];
+	ddsc:Reference-ddiReference	@ddsc:InternationalRegistrationDataIdentifierShape;
+	ddsc:Reference-deepLink	@ddsc:SelectorShape;
+	ddsc:Reference-description	xsd:string;
+	ddsc:Reference-location	@ddsc:InternationalStringShape;
+	ddsc:Reference-nonDdiReference	@ddsc:NonDdiIdentifierShape+;
+	ddsc:Reference-semantic	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:Reference-uri	xsd:anyURI;
+	ddsc:Reference-validType	xsd:string+;
+	}
+

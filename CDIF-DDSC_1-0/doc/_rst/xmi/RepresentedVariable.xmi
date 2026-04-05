@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.RepresentedVariable"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.RepresentedVariable-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition 
+========== 
+Conceptual variable with a substantive value domain specified.   
+
+Examples 
+========== 
+The pair (Number of Employees, Integer), where "Number of Employees" is the characteristic of the population (variable) and "Integer" is how that measure will be represented (value domain).  
+
+Explanatory notes 
+=================== 
+Extends from conceptual variable and can contain all descriptive fields without creating a conceptual variable. By referencing a conceptual variable it can indicate a common relationship with represented variables expressing the same characteristic of a universe measured in another way, such as Age of Persons in hours rather than years. Represented variable constrains the coverage of the unit type to a specific universe. In the above case the universe with the measurement of Age in hours may be constrained to Persons under 5 days (120 hours old). Represented variable can define sentinel values for multiple storage systems which have the same conceptual domain but specialized value domains.</body>
+      <annotatedElement xmi:idref="ddsc.RepresentedVariable"/>
+   </ownedComment>
+   <name>RepresentedVariable</name>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-name"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.RepresentedVariable-name-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-name-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</body>
+         <annotatedElement xmi:idref="ddsc.RepresentedVariable-name"/>
+      </ownedComment>
+      <name>name</name>
+      <type xmi:idref="ddsc.ObjectName"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-definition"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-definition"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.RepresentedVariable-definition-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-definition-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Natural language statement conveying the meaning of a concept, differentiating it from other concepts. Supports the use of multiple languages and structured text. 'externalDefinition' can't be used if 'definition' is used.</body>
+         <annotatedElement xmi:idref="ddsc.RepresentedVariable-definition"/>
+      </ownedComment>
+      <name>definition</name>
+      <type xmi:idref="ddsc.InternationalString"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-describedUnitOfMeasure"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-describedUnitOfMeasure"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.RepresentedVariable-describedUnitOfMeasure-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-describedUnitOfMeasure-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>The unit in which the data values are measured (kg, pound, euro), expressed as a value from a controlled system of entries (i.e., QDT). Supports the provision of an identifier for the entry in the authoritative source (a URI, etc.), and the specific vocabulary.</body>
+         <annotatedElement xmi:idref="ddsc.RepresentedVariable-describedUnitOfMeasure"/>
+      </ownedComment>
+      <name>describedUnitOfMeasure</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-unitOfMeasureKind"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-unitOfMeasureKind"
+                    xmi:type="uml:Property">
+      <ownedComment xmi:id="ddsc.RepresentedVariable-unitOfMeasureKind-ownedComment"
+                     xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-unitOfMeasureKind-ownedComment"
+                     xmi:type="uml:Comment">
+         <body>Kind of unit of measure, so that it may be prone to translation to equivalent UOMs. Example values include "acceleration," "temperature," "salinity", etc. This description exists at the conceptual level, indicating a limitation on the type of representations which may be used for the variable as it is made more concrete.</body>
+         <annotatedElement xmi:idref="ddsc.RepresentedVariable-unitOfMeasureKind"/>
+      </ownedComment>
+      <name>unitOfMeasureKind</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-ownedAttribute-5"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-ownedAttribute-5"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.Universe"/>
+      <upperValue xmi:id="ddsc.RepresentedVariable-ownedAttribute-5-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-ownedAttribute-5-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.RepresentedVariable_measures_Universe"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-ownedAttribute-6"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-ownedAttribute-6"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.SubstantiveValueDomain"/>
+      <association xmi:idref="ddsc.RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.RepresentedVariable-ownedAttribute-7"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-ownedAttribute-7"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.SentinelValueDomain"/>
+      <upperValue xmi:id="ddsc.RepresentedVariable-ownedAttribute-7-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#RepresentedVariable-ownedAttribute-7-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain"/>
+   </ownedAttribute>
+</packagedElement>

@@ -1,0 +1,59 @@
+# class Universe
+# based on the UML class CDIF::DDSC::Classes::Universe
+<#Universe> a sh:NodeShape;
+    sh:targetClass ddsc:Universe;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Universe";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Universe
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Universe-descriptiveText>;
+    sh:property <#Universe-name>;
+    # associations from Universe
+    sh:property <#Universe_uses_UnitType>;
+    # associations to Universe
+    sh:property <#rev_LogicalRecord_isDefinedBy_Universe>;
+    sh:property <#rev_RepresentedVariable_measures_Universe>;
+    sh:property <#rev_Population_uses_Universe>;
+
+
+
+.
+
+<#Universe-descriptiveText> a sh:PropertyShape ;
+    sh:path ddsc:Universe-descriptiveText;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:InternationalString
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Universe-name> a sh:PropertyShape ;
+    sh:path ddsc:Universe-name;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ObjectName
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#Universe_uses_UnitType> a sh:PropertyShape ;
+    sh:path ddsc:Universe_uses_UnitType;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:UnitType
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_Universe_uses_UnitType> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:Universe_uses_UnitType ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

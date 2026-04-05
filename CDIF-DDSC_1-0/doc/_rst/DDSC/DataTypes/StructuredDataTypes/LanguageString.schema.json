@@ -1,0 +1,45 @@
+"dt-LanguageString": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/LanguageString",
+  "type": ["object"],
+  "properties": {
+    "content": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/xsd:string"
+    },
+    "isTranslatable": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "isTranslated": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/xsd:boolean"
+    },
+    "language": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/xsd:language"
+    },
+    "scope": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/xsd:string"
+    },
+    "structureUsed": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "translationDate": {
+      "$comment": "cardinality 1..1 – from ddsc:LanguageString",
+      "$ref": "#/defs/xsd:date"
+    },
+    "translationSourceLanguage": {
+      "$comment": "cardinality 1..-1 – from ddsc:LanguageString",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/xsd:language" } },
+      "else": { "$ref": "#/defs/xsd:language" }
+    },
+    "@type": {
+      "const": "LanguageString"
+    }
+  },
+  "required": ["content","isTranslatable","isTranslated","language","scope","structureUsed","translationDate","translationSourceLanguage","@type"],
+  "additionalProperties": false
+},

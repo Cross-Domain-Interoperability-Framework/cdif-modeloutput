@@ -1,0 +1,19 @@
+"dt-DateRange": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/DateRange",
+  "type": ["object"],
+  "properties": {
+    "endDate": {
+      "$comment": "cardinality 1..1 – from ddsc:DateRange",
+      "$ref": "#/defs/dt-CombinedDate"
+    },
+    "startDate": {
+      "$comment": "cardinality 1..1 – from ddsc:DateRange",
+      "$ref": "#/defs/dt-CombinedDate"
+    },
+    "@type": {
+      "const": "DateRange"
+    }
+  },
+  "required": ["endDate","startDate","@type"],
+  "additionalProperties": false
+},

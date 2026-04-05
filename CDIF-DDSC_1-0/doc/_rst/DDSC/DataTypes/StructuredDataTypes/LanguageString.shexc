@@ -1,0 +1,14 @@
+# datatype LanguageString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LanguageString
+ddsc:LanguageStringShape CLOSED {
+	a [ddsc:LanguageString];
+	ddsc:LanguageString-content	xsd:string;
+	ddsc:LanguageString-isTranslatable	xsd:boolean;
+	ddsc:LanguageString-isTranslated	xsd:boolean;
+	ddsc:LanguageString-language	xsd:language;
+	ddsc:LanguageString-scope	xsd:string;
+	ddsc:LanguageString-structureUsed	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:LanguageString-translationDate	xsd:date;
+	ddsc:LanguageString-translationSourceLanguage	xsd:language+;
+	}
+

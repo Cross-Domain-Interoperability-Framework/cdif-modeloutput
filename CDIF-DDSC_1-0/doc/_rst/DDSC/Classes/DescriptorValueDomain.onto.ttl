@@ -1,0 +1,11 @@
+# class DescriptorValueDomain
+# based on the UML class CDIF::DDSC::Classes::DescriptorValueDomain
+ddsc:DescriptorValueDomain
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "DescriptorValueDomain";
+  rdfs:comment "Definition\n============\nSet of permissible values for a variable playing the role of a variable descriptor component.\n\nExamples\n==========\nConsider two variables, i.e. income and age, with values appearing in the same column. \nCodes \"income\" and \"age\" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable."@en;
+  
+.
+
+
+

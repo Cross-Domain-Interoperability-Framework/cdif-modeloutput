@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.DateRange"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DateRange"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.DateRange-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DateRange-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Expresses a date/time range using a start date and end date (both with the structure of Date and supporting the use of ISO and non-ISO date structures). Use in all locations where a range of dates is required, i.e. validFor, embargoPeriod, collectionPeriod, etc.</body>
+      <annotatedElement xmi:idref="ddsc.DateRange"/>
+   </ownedComment>
+   <name>DateRange</name>
+   <ownedAttribute xmi:id="ddsc.DateRange-endDate"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DateRange-endDate"
+                    xmi:type="uml:Property">
+      <name>endDate</name>
+      <type xmi:idref="ddsc.CombinedDate"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.DateRange-startDate"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DateRange-startDate"
+                    xmi:type="uml:Property">
+      <name>startDate</name>
+      <type xmi:idref="ddsc.CombinedDate"/>
+   </ownedAttribute>
+</packagedElement>

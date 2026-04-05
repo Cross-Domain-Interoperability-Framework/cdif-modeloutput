@@ -1,0 +1,23 @@
+"dt-NonIsoDate": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/NonIsoDate",
+  "type": ["object"],
+  "properties": {
+    "calendar": {
+      "$comment": "cardinality 1..1 – from ddsc:NonIsoDate",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "dateContent": {
+      "$comment": "cardinality 1..1 – from ddsc:NonIsoDate",
+      "$ref": "#/defs/xsd:string"
+    },
+    "nonIsoDateFormat": {
+      "$comment": "cardinality 1..1 – from ddsc:NonIsoDate",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "@type": {
+      "const": "NonIsoDate"
+    }
+  },
+  "required": ["calendar","dateContent","nonIsoDateFormat","@type"],
+  "additionalProperties": false
+},

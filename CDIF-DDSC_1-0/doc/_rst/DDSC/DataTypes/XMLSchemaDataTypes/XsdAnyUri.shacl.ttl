@@ -1,0 +1,19 @@
+# datatype XsdAnyUri
+# based on the UML data type CDIF::DDSC::DataTypes::XMLSchemaDataTypes::XsdAnyUri
+<#XsdAnyUri> a sh:NodeShape;
+    sh:targetClass xsd:anyURI;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/XsdAnyUri";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   xsd:anyURI
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+

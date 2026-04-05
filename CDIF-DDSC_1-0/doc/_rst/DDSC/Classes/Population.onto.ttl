@@ -1,0 +1,37 @@
+# class Population
+# based on the UML class CDIF::DDSC::Classes::Population
+ddsc:Population
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "Population";
+  rdfs:comment "Definition\n============\nUniverse with time and geography specified.\n\nExamples\n==========\n1. Canadian adult persons residing in Canada on 13 November 1956.\n2. US computer companies at the end of 2012.  \n3. Universities in Denmark 1 January 2011.\n\nExplanatory notes\n===================\nPopulation is the most specific in the conceptually narrowing hierarchy of unit type, universe and population. Several populations having differing time and or geography may specialize the same universe."@en;
+  
+.
+
+ddsc:Population-descriptiveText
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "descriptiveText";
+  rdfs:comment "A short natural language account of the characteristics of the object."@en;
+  rdfs:domain ddsc:Population;
+  rdfs:range ddsc:InternationalString;
+.
+
+ddsc:Population-name
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "name";
+  rdfs:comment "Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage."@en;
+  rdfs:domain ddsc:Population;
+  rdfs:range ddsc:ObjectName;
+.
+
+
+ddsc:Population_uses_Universe
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "uses_Universe";
+  skos:altLabel "Population_uses_Universe";
+  rdfs:comment "The uses association is intended to describe specific relationships between Concepts and several of its sub-classes. This is documented in section VII.D.5 of the \"DDI-Cross Domain Integration: Detailed Model\" document."@en;
+  rdfs:domain ddsc:Population;
+  rdfs:range ddsc:Universe;
+.
+
+

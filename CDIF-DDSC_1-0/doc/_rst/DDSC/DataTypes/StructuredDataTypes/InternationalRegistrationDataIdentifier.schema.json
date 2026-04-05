@@ -1,0 +1,23 @@
+"dt-InternationalRegistrationDataIdentifier": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/InternationalRegistrationDataIdentifier",
+  "type": ["object"],
+  "properties": {
+    "dataIdentifier": {
+      "$comment": "cardinality 1..1 – from ddsc:InternationalRegistrationDataIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "registrationAuthorityIdentifier": {
+      "$comment": "cardinality 1..1 – from ddsc:InternationalRegistrationDataIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "versionIdentifier": {
+      "$comment": "cardinality 1..1 – from ddsc:InternationalRegistrationDataIdentifier",
+      "$ref": "#/defs/xsd:string"
+    },
+    "@type": {
+      "const": "InternationalRegistrationDataIdentifier"
+    }
+  },
+  "required": ["dataIdentifier","registrationAuthorityIdentifier","versionIdentifier","@type"],
+  "additionalProperties": false
+},

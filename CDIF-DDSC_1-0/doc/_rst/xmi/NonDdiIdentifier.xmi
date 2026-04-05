@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.NonDdiIdentifier"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonDdiIdentifier"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.NonDdiIdentifier-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonDdiIdentifier-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+A unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity.</body>
+      <annotatedElement xmi:idref="ddsc.NonDdiIdentifier"/>
+   </ownedComment>
+   <name>NonDdiIdentifier</name>
+   <ownedAttribute xmi:id="ddsc.NonDdiIdentifier-managingAgency"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonDdiIdentifier-managingAgency"
+                    xmi:type="uml:Property">
+      <name>managingAgency</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.NonDdiIdentifier-type"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonDdiIdentifier-type"
+                    xmi:type="uml:Property">
+      <name>type</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.NonDdiIdentifier-value"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonDdiIdentifier-value"
+                    xmi:type="uml:Property">
+      <name>value</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.NonDdiIdentifier-version"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#NonDdiIdentifier-version"
+                    xmi:type="uml:Property">
+      <name>version</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

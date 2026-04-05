@@ -1,0 +1,93 @@
+  <xs:element name="LanguageString"
+              type="LanguageStringXsdType"
+              xml:id="LanguageString">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::LanguageString -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            A data type which describes a string specific to a language/scope combination. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="LanguageStringXsdType"
+                  xml:id="LanguageStringXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            A data type which describes a string specific to a language/scope combination. It contains the following attributes: language to designate the language, isTranslated with a default value of false to designate if an object is a translation of another language, isTranslatable with a default value of true to designate if the content can be translated, translationSourceLanguage to indicate the source languages used in creating this translation, translationDate, and scope which can be used to define intended audience or use such as internal, external, etc.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="content"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-content">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="isTranslatable"
+                  type="xs:boolean"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-isTranslatable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="isTranslated"
+                  type="xs:boolean"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-isTranslated">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="language"
+                  type="xs:language"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-language">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="scope"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-scope">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="structureUsed"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-structureUsed">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="translationDate"
+                  type="xs:date"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-translationDate">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="translationSourceLanguage"
+                  type="xs:language"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="LanguageString-translationSourceLanguage">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

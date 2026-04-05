@@ -1,0 +1,134 @@
+"cls-InstanceVariable": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/InstanceVariable",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "InstanceVariable"
+    },
+    "definition": {
+      "$comment": "cardinality 1..1 – from ddsc:InstanceVariable",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "describedUnitOfMeasure": {
+      "$comment": "cardinality 1..1 – from ddsc:InstanceVariable",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:InstanceVariable",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "unitOfMeasureKind": {
+      "$comment": "cardinality 1..1 – from ddsc:InstanceVariable",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    "measures_Population": {
+      "description": "InstanceVariable_measures_Population",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-Population"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-Population"
+          }
+        }
+      ]
+    },
+    "takesSubstantiveValuesFrom_SubstantiveValueDomain": {
+      "description": "InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-SubstantiveValueDomain"
+    },
+    "takesSentinelValuesFrom_SentinelValueDomain": {
+      "description": "InstanceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-SentinelValueDomain"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-SentinelValueDomain"
+          }
+        }
+      ]
+    },
+    "has_InstanceVariable_OF_LogicalRecord": {
+      "description": "LogicalRecord_has_InstanceVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LogicalRecord"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LogicalRecord"
+          }
+        }
+      ]
+    },
+    "identifies_InstanceVariable_OF_Descriptor": {
+      "description": "Descriptor_identifies_InstanceVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-Descriptor"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-Descriptor"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_InstanceVariable_OF_IdentifierComponent": {
+      "description": "IdentifierComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-IdentifierComponent"
+    },
+    "isDefinedBy_InstanceVariable_OF_MeasureComponent": {
+      "description": "MeasureComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-MeasureComponent"
+    },
+    "isDefinedBy_InstanceVariable_OF_AttributeComponent": {
+      "description": "AttributeComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-AttributeComponent"
+    },
+    "isDefinedBy_InstanceVariable_OF_DimensionComponent": {
+      "description": "DimensionComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-DimensionComponent"
+    },
+    "formats_InstanceVariable_OF_ValueMapping": {
+      "description": "ValueMapping_formats_InstanceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ValueMapping"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["definition","describedUnitOfMeasure","name","unitOfMeasureKind","measures_Population", "takesSubstantiveValuesFrom_SubstantiveValueDomain", "takesSentinelValuesFrom_SentinelValueDomain","@type"],
+  "additionalProperties": false
+},
+"target-InstanceVariable": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/InstanceVariable",
+  "anyOf": [
+    { "$ref": "#/defs/cls-InstanceVariable" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

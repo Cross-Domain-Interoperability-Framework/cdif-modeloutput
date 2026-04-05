@@ -1,0 +1,21 @@
+# class DimensionComponent
+# based on the UML class CDIF::DDSC::Classes::DimensionComponent
+ddsc:DimensionComponent
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "DimensionComponent";
+  rdfs:comment "Definition \n============ \nRole given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".  \n\nExplanatory notes \n=================== \nThe categories from each dimension often are used in combination to identify a cell. The meaning of the combination of the categories supplies meaning to the cell."@en;
+  
+.
+
+
+ddsc:DimensionComponent_isDefinedBy_InstanceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_InstanceVariable";
+  skos:altLabel "DimensionComponent_isDefinedBy_InstanceVariable";
+  rdfs:comment "Data structure component is defined by zero to one represented variable."@en;
+  rdfs:domain ddsc:DimensionComponent;
+  rdfs:range ddsc:InstanceVariable;
+.
+
+

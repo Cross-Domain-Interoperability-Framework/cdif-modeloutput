@@ -1,0 +1,43 @@
+# class ValueMappingPosition
+# based on the UML class CDIF::DDSC::Classes::ValueMappingPosition
+<#ValueMappingPosition> a sh:NodeShape;
+    sh:targetClass ddsc:ValueMappingPosition;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/ValueMappingPosition";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:ValueMappingPosition
+			 ) ;
+    ];
+    # attributes
+    sh:property <#ValueMappingPosition-value>;
+    # associations from ValueMappingPosition
+    sh:property <#ValueMappingPosition_indexes_ValueMapping>;
+    # associations to ValueMappingPosition
+    sh:property <#rev_PhysicalSegmentLayout_has_ValueMappingPosition>;
+
+
+
+.
+
+<#ValueMappingPosition-value> a sh:PropertyShape ;
+    sh:path ddsc:ValueMappingPosition-value;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#ValueMappingPosition_indexes_ValueMapping> a sh:PropertyShape ;
+    sh:path ddsc:ValueMappingPosition_indexes_ValueMapping;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ValueMapping
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_ValueMappingPosition_indexes_ValueMapping> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:ValueMappingPosition_indexes_ValueMapping ];
+    sh:minCount 1;
+.
+

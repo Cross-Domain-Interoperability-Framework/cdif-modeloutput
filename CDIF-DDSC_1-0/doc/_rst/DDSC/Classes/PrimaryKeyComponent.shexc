@@ -1,0 +1,9 @@
+# class PrimaryKeyComponent
+# based on the UML class CDIF::DDSC::Classes::PrimaryKeyComponent
+ddsc:PrimaryKeyComponentShape CLOSED {
+	a [ddsc:PrimaryKeyComponent];
+	^ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent @ddsc:PrimaryKeyShape ;
+	ddsc:PrimaryKeyComponent_correspondsTo_IdentifierComponent	@ddsc:IdentifierComponentShape ;
+	
+	}
+

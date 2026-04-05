@@ -1,0 +1,57 @@
+"cls-UnitType": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/UnitType",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "UnitType"
+    },
+    "descriptiveText": {
+      "$comment": "cardinality 1..1 – from ddsc:UnitType",
+      "$ref": "#/defs/dt-InternationalString"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:UnitType",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    
+    "isDefinedBy_UnitType_OF_LogicalRecord": {
+      "description": "LogicalRecord_isDefinedBy_UnitType",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LogicalRecord"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LogicalRecord"
+          }
+        }
+      ]
+    },
+    "uses_UnitType_OF_Universe": {
+      "description": "Universe_uses_UnitType",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-Universe"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["descriptiveText","name","@type"],
+  "additionalProperties": false
+},
+"target-UnitType": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/UnitType",
+  "anyOf": [
+    { "$ref": "#/defs/cls-UnitType" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

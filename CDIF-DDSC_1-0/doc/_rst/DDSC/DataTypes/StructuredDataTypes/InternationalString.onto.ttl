@@ -1,0 +1,19 @@
+# datatype InternationalString
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::InternationalString
+ddsc:InternationalString
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "InternationalString";
+  rdfs:comment "Definition\n============\nPackaging structure for multilingual versions of the same string content, represented by a set of LanguageString. Only one LanguageString per language/scope type is allowed. Where an element of this type (InternationalString) is repeatable, the expectation is that each repetition contains a different content, each of which can be expressed in multiple languages."@en;
+  
+  owl:hasKey (ddsc:InternationalString-languageSpecificString);
+.
+
+ddsc:InternationalString-languageSpecificString
+  a rdf:Property, owl:ObjectProperty, ucmis:Attribute;
+  rdfs:label "languageSpecificString";
+  
+  rdfs:domain ddsc:InternationalString;
+  rdfs:range ddsc:LanguageString;
+.
+
+

@@ -1,0 +1,103 @@
+  <xs:element name="ReferenceVariable"
+              type="ReferenceVariableXsdType"
+              xml:id="ReferenceVariable">
+    <!-- based on the UML class CDIF::DDSC::Classes::ReferenceVariable -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Variable that records values of multiple variables in the context of a data structure.
+            Variable playing the role of a variable value component.
+            
+            Examples
+            ==========
+            Consider two variables, i.e. income and age, with values appearing in the same column, e.g. 100000, 45, 85000, 34, etc. 
+            Values 100000, 45, 85000, 34 are reference values in the reference value domain corresponding to the reference variable.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ReferenceVariableXsdType"
+                  xml:id="ReferenceVariableXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Variable that records values of multiple variables in the context of a data structure.
+            Variable playing the role of a variable value component.
+            
+            Examples
+            ==========
+            Consider two variables, i.e. income and age, with values appearing in the same column, e.g. 100000, 45, 85000, 34, etc. 
+            Values 100000, 45, 85000, 34 are reference values in the reference value domain corresponding to the reference variable.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ReferenceVariable-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain">
+        <xs:annotation>
+          <xs:documentation>The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="SubstantiveValueDomain"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain">
+        <xs:annotation>
+          <xs:documentation>A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="SentinelValueDomain"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

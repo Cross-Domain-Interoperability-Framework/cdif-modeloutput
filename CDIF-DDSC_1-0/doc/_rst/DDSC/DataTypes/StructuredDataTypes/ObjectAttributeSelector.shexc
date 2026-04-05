@@ -1,0 +1,9 @@
+# datatype ObjectAttributeSelector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectAttributeSelector
+ddsc:ObjectAttributeSelectorShape CLOSED {
+	a [ddsc:ObjectAttributeSelector];
+	ddsc:ObjectAttributeSelector-refinedBy	@ddsc:ObjectAttributeSelectorShape;
+	ddsc:ObjectAttributeSelector-refinedByOrderNumber	xsd:integer;
+	ddsc:ObjectAttributeSelector-value	xsd:string;
+	}
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.ControlledVocabularyEntry"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.ControlledVocabularyEntry-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Allows for unstructured content which may be an entry from an externally maintained controlled vocabulary.If the content is from a controlled vocabulary provide the code value of the entry, as well as a reference to the controlled vocabulary from which the value is taken. Provide as many of the identifying attributes as needed to adequately identify the controlled vocabulary. Note that DDI has published a number of controlled vocabularies applicable to several locations using the external controlled vocabulary entry structure. If the code portion of the controlled vocabulary entry is language specific (i.e. a list of keywords or subject headings) use language to specify that language. In most cases the code portion of an entry is not language specific although the description and usage may be managed in one or more languages. Use of shared controlled vocabularies helps support interoperability and machine actionability.</body>
+      <annotatedElement xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedComment>
+   <name>ControlledVocabularyEntry</name>
+   <ownedAttribute xmi:id="ddsc.ControlledVocabularyEntry-entryReference"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-entryReference"
+                    xmi:type="uml:Property">
+      <name>entryReference</name>
+      <type xmi:idref="ddsc.Reference"/>
+      <upperValue xmi:id="ddsc.ControlledVocabularyEntry-entryReference-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-entryReference-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ControlledVocabularyEntry-entryValue"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-entryValue"
+                    xmi:type="uml:Property">
+      <name>entryValue</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <upperValue xmi:id="ddsc.ControlledVocabularyEntry-entryValue-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-entryValue-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ControlledVocabularyEntry-name"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-name"
+                    xmi:type="uml:Property">
+      <name>name</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ControlledVocabularyEntry-valueForOther"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-valueForOther"
+                    xmi:type="uml:Property">
+      <name>valueForOther</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.ControlledVocabularyEntry-vocabulary"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#ControlledVocabularyEntry-vocabulary"
+                    xmi:type="uml:Property">
+      <name>vocabulary</name>
+      <type xmi:idref="ddsc.Reference"/>
+   </ownedAttribute>
+</packagedElement>

@@ -1,0 +1,21 @@
+# class VariableValueComponent
+# based on the UML class CDIF::DDSC::Classes::VariableValueComponent
+ddsc:VariableValueComponent
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "VariableValueComponent";
+  rdfs:comment "Definition \n============ \nRole given to a represented variable in the context of a data structure to record values of multiple variables.   \n\nExamples \n========== \nConsider two variables, i.e. income and age, with their values living together in different entries in the same column.  The values of those two variables are now in the value domain of a single variable (the one working as a variable value component).  Another column, based on a variable descriptor component, use codes for \"income\" and \"age\" to distinguish income values from age values.   \n\nExplanatory notes \n=================== \nA variable value component captures the values of multiple variables that have been transposed into a single column.  The variable descriptor component provides a mechanism to identify which of those values correspond to which variable.   This structure provides a flexible mechanism avoiding the need for a formal pointer."@en;
+  
+.
+
+
+ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_ReferenceVariable";
+  skos:altLabel "VariableValueComponent_isDefinedBy_ReferenceVariable";
+  rdfs:comment "Data structure component is defined by zero to one represented variable."@en;
+  rdfs:domain ddsc:VariableValueComponent;
+  rdfs:range ddsc:ReferenceVariable;
+.
+
+

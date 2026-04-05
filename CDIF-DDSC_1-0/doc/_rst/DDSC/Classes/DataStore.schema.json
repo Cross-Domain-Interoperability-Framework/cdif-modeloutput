@@ -1,0 +1,48 @@
+"cls-DataStore": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/DataStore",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "DataStore"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:DataStore",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "has_LogicalRecord": {
+      "description": "DataStore_has_LogicalRecord",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LogicalRecord"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LogicalRecord"
+          }
+        }
+      ]
+    },
+    
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["name","has_LogicalRecord","@type"],
+  "additionalProperties": false
+},
+"target-DataStore": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/DataStore",
+  "anyOf": [
+    { "$ref": "#/defs/cls-DataStore" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

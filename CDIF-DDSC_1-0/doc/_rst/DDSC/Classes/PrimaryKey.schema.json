@@ -1,0 +1,49 @@
+"cls-PrimaryKey": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKey",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "PrimaryKey"
+    },
+    
+    "isComposedOf_PrimaryKeyComponent": {
+      "description": "PrimaryKey_isComposedOf_PrimaryKeyComponent",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-PrimaryKeyComponent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-PrimaryKeyComponent"
+          }
+        }
+      ]
+    },
+    "has_PrimaryKey_OF_WideDataStructure": {
+      "description": "WideDataStructure_has_PrimaryKey",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-WideDataStructure"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["isComposedOf_PrimaryKeyComponent","@type"],
+  "additionalProperties": false
+},
+"target-PrimaryKey": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/PrimaryKey",
+  "anyOf": [
+    { "$ref": "#/defs/cls-PrimaryKey" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

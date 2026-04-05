@@ -1,0 +1,13 @@
+# datatype ModelIdentification
+# based on the UML data type CDIF::DDSC::ModelIdentification
+ddsc:ModelIdentificationShape CLOSED {
+	a [ddsc:ModelIdentification];
+	ddsc:ModelIdentification-acronym	xsd:string;
+	ddsc:ModelIdentification-language	xsd:string;
+	ddsc:ModelIdentification-majorVersion	xsd:integer;
+	ddsc:ModelIdentification-minorVersion	xsd:integer;
+	ddsc:ModelIdentification-subtitle	xsd:string;
+	ddsc:ModelIdentification-title	xsd:string;
+	ddsc:ModelIdentification-uri	xsd:string;
+	}
+

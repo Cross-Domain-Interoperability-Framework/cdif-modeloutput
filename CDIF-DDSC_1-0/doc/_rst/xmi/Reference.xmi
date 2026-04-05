@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.Reference"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.Reference-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.</body>
+      <annotatedElement xmi:idref="ddsc.Reference"/>
+   </ownedComment>
+   <name>Reference</name>
+   <ownedAttribute xmi:id="ddsc.Reference-ddiReference"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-ddiReference"
+                    xmi:type="uml:Property">
+      <name>ddiReference</name>
+      <type xmi:idref="ddsc.InternationalRegistrationDataIdentifier"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-deepLink"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-deepLink"
+                    xmi:type="uml:Property">
+      <name>deepLink</name>
+      <type xmi:idref="ddsc.Selector"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-description"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-description"
+                    xmi:type="uml:Property">
+      <name>description</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-location"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-location"
+                    xmi:type="uml:Property">
+      <name>location</name>
+      <type xmi:idref="ddsc.InternationalString"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-nonDdiReference"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-nonDdiReference"
+                    xmi:type="uml:Property">
+      <name>nonDdiReference</name>
+      <type xmi:idref="ddsc.NonDdiIdentifier"/>
+      <upperValue xmi:id="ddsc.Reference-nonDdiReference-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-nonDdiReference-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-semantic"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-semantic"
+                    xmi:type="uml:Property">
+      <name>semantic</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-uri"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-uri"
+                    xmi:type="uml:Property">
+      <name>uri</name>
+      <type xmi:idref="ddsc.XsdAnyUri"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.Reference-validType"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-validType"
+                    xmi:type="uml:Property">
+      <name>validType</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <upperValue xmi:id="ddsc.Reference-validType-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#Reference-validType-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+   </ownedAttribute>
+</packagedElement>

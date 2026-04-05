@@ -1,0 +1,51 @@
+# class WideDataStructure
+# based on the UML class CDIF::DDSC::Classes::WideDataStructure
+ddsc:WideDataStructure
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "WideDataStructure";
+  rdfs:comment "Definition\n==========\nStructure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.\n\nExamples\n==========\nThe structure described by [Unit id, Income, Province] where Unit id identifies a statistical unit and Income and Province are two instance variables capturing characteristics."@en;
+  
+.
+
+
+ddsc:WideDataStructure_has_PrimaryKey
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_PrimaryKey";
+  skos:altLabel "WideDataStructure_has_PrimaryKey";
+  
+  rdfs:domain ddsc:WideDataStructure;
+  rdfs:range ddsc:PrimaryKey;
+.
+
+ddsc:WideDataStructure_has_IdentifierComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_IdentifierComponent";
+  skos:altLabel "WideDataStructure_has_IdentifierComponent";
+  
+  rdfs:domain ddsc:WideDataStructure;
+  rdfs:range ddsc:IdentifierComponent;
+.
+
+ddsc:WideDataStructure_has_AttributeComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_AttributeComponent";
+  skos:altLabel "WideDataStructure_has_AttributeComponent";
+  
+  rdfs:domain ddsc:WideDataStructure;
+  rdfs:range ddsc:AttributeComponent;
+.
+
+ddsc:WideDataStructure_has_MeasureComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_MeasureComponent";
+  skos:altLabel "WideDataStructure_has_MeasureComponent";
+  
+  rdfs:domain ddsc:WideDataStructure;
+  rdfs:range ddsc:MeasureComponent;
+.
+
+

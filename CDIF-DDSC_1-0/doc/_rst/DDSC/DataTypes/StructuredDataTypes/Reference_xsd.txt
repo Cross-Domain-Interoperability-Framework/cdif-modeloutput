@@ -1,0 +1,93 @@
+  <xs:element name="Reference"
+              type="ReferenceXsdType"
+              xml:id="Reference">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Reference -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ReferenceXsdType"
+                  xml:id="ReferenceXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Provides a way of pointing to resources outside of the information described in the set of DDI-CDI metadata.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ddiReference"
+                  type="InternationalRegistrationDataIdentifierXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Reference-ddiReference">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deepLink"
+                  type="SelectorXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Reference-deepLink">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Reference-description">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="location"
+                  type="InternationalStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Reference-location">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nonDdiReference"
+                  type="NonDdiIdentifierXsdType"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="Reference-nonDdiReference">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="semantic"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Reference-semantic">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uri"
+                  type="xs:anyURI"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="Reference-uri">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="validType"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="Reference-validType">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

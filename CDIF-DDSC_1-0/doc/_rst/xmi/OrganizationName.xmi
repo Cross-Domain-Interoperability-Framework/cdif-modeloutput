@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.OrganizationName"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#OrganizationName"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.OrganizationName-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#OrganizationName-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+Names by which the organization is known. Use the attribute isFormal with a value of True to designate the legal or formal name of the organization. Names may be typed with typeOfOrganizationName to indicate their appropriate usage.</body>
+      <annotatedElement xmi:idref="ddsc.OrganizationName"/>
+   </ownedComment>
+   <name>OrganizationName</name>
+   <ownedAttribute xmi:id="ddsc.OrganizationName-abbreviation"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#OrganizationName-abbreviation"
+                    xmi:type="uml:Property">
+      <name>abbreviation</name>
+      <type xmi:idref="ddsc.InternationalString"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.OrganizationName-effectiveDates"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#OrganizationName-effectiveDates"
+                    xmi:type="uml:Property">
+      <name>effectiveDates</name>
+      <type xmi:idref="ddsc.DateRange"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.OrganizationName-isFormal"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#OrganizationName-isFormal"
+                    xmi:type="uml:Property">
+      <name>isFormal</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Boolean"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.OrganizationName-typeOfOrganizationName"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#OrganizationName-typeOfOrganizationName"
+                    xmi:type="uml:Property">
+      <name>typeOfOrganizationName</name>
+      <type xmi:idref="ddsc.ControlledVocabularyEntry"/>
+   </ownedAttribute>
+</packagedElement>

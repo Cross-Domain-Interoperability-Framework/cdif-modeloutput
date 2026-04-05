@@ -1,0 +1,58 @@
+"cls-SubstantiveValueDomain": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/SubstantiveValueDomain",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "SubstantiveValueDomain"
+    },
+    "recommendedDataType": {
+      "$comment": "cardinality 1..1 – from ddsc:SubstantiveValueDomain",
+      "$ref": "#/defs/dt-ControlledVocabularyEntry"
+    },
+    
+    "takesSubstantiveValuesFrom_SubstantiveValueDomain_OF_InstanceVariable": {
+      "description": "InstanceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-InstanceVariable"
+    },
+    "takesSubstantiveValuesFrom_SubstantiveValueDomain_OF_RepresentedVariable": {
+      "description": "RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-RepresentedVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-RepresentedVariable"
+          }
+        }
+      ]
+    },
+    "takesSubstantiveValuesFrom_SubstantiveValueDomain_OF_ReferenceVariable": {
+      "description": "ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ReferenceVariable"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["recommendedDataType","@type"],
+  "additionalProperties": false
+},
+"target-SubstantiveValueDomain": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/SubstantiveValueDomain",
+  "anyOf": [
+    { "$ref": "#/defs/cls-SubstantiveValueDomain" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

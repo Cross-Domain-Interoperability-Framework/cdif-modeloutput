@@ -1,0 +1,152 @@
+  <xs:element name="WideDataStructure"
+              type="WideDataStructureXsdType"
+              xml:id="WideDataStructure">
+    <!-- based on the UML class CDIF::DDSC::Classes::WideDataStructure -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.
+            
+            Examples
+            ==========
+            The structure described by [Unit id, Income, Province] where Unit id identifies a statistical unit and Income and Province are two instance variables capturing characteristics.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="WideDataStructureXsdType"
+                  xml:id="WideDataStructureXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.
+            
+            Examples
+            ==========
+            The structure described by [Unit id, Income, Province] where Unit id identifies a statistical unit and Income and Province are two instance variables capturing characteristics.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="WideDataStructure_has_PrimaryKey"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="WideDataStructure_has_PrimaryKey">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_PrimaryKey-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_PrimaryKey-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="PrimaryKey"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WideDataStructure_has_IdentifierComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="WideDataStructure_has_IdentifierComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_IdentifierComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_IdentifierComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="IdentifierComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WideDataStructure_has_AttributeComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="WideDataStructure_has_AttributeComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_AttributeComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_AttributeComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="AttributeComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WideDataStructure_has_MeasureComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="WideDataStructure_has_MeasureComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_MeasureComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="WideDataStructure_has_MeasureComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="MeasureComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

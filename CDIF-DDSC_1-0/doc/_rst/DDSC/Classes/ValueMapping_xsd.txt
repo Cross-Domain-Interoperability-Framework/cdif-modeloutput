@@ -1,0 +1,205 @@
+  <xs:element name="ValueMapping"
+              type="ValueMappingXsdType"
+              xml:id="ValueMapping">
+    <!-- based on the UML class CDIF::DDSC::Classes::ValueMapping -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ==========
+            Physical characteristics for the value of an instance variable stored in a data point as part of a physical segment layout.
+            
+            Examples 
+            ========
+            A variable "age" might be represented in a file as a string with a maximum length of 5 characters and a number pattern of ##0.0  
+            
+            Explanatory notes 
+            =================
+            An instance variable has details of value domain and data type, but will not have the final details of how a value is physically represented in a data file. A variable for height, for example, may be represented as a real number, but may be represented as a string in multiple ways. The decimal separator might be, for example a period or a comma. The string representing the value of a payment might be preceded by a currency symbol. The same numeric value might be written as "1,234,567" or "1.234567". A missing value might be written as ".", "NA", ".R" or as "R". The value mapping describes how the value of an instance variable is physically expressed. The properties of the value mapping as intended to be compatible with the W3C Metadata Vocabulary for Tabular Data (https://www.w3.org/TR/tabular-metadata/) as well as common programming languages and statistical packages. The 'format' property, for example, can draw from an external controlled vocabulary such as the set of formats for Stata, SPSS, or SAS.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ValueMappingXsdType"
+                  xml:id="ValueMappingXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ==========
+            Physical characteristics for the value of an instance variable stored in a data point as part of a physical segment layout.
+            
+            Examples 
+            ========
+            A variable "age" might be represented in a file as a string with a maximum length of 5 characters and a number pattern of ##0.0  
+            
+            Explanatory notes 
+            =================
+            An instance variable has details of value domain and data type, but will not have the final details of how a value is physically represented in a data file. A variable for height, for example, may be represented as a real number, but may be represented as a string in multiple ways. The decimal separator might be, for example a period or a comma. The string representing the value of a payment might be preceded by a currency symbol. The same numeric value might be written as "1,234,567" or "1.234567". A missing value might be written as ".", "NA", ".R" or as "R". The value mapping describes how the value of an instance variable is physically expressed. The properties of the value mapping as intended to be compatible with the W3C Metadata Vocabulary for Tabular Data (https://www.w3.org/TR/tabular-metadata/) as well as common programming languages and statistical packages. The 'format' property, for example, can draw from an external controlled vocabulary such as the set of formats for Stata, SPSS, or SAS.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="decimalPositions"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ValueMapping-decimalPositions">
+        <xs:annotation>
+          <xs:documentation>The number of decimal positions expressed as an integer. Used when the decimal position is implied (no decimal separator is present) See DDI 3.2 ManagedNumericRepresentation_decimalPositions</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="defaultDecimalSeparator"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ValueMapping-defaultDecimalSeparator">
+        <xs:annotation>
+          <xs:documentation>Default value is "." (period). The character separating the integer part from the fractional part of a decimal or real number. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 6.4.2: "decimalChar: A string whose value is used to represent a decimal point within the number. If the supplied value is not a string, implementations MUST issue a warning and proceed as if the property had not been specified."</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="length"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ValueMapping-length">
+        <xs:annotation>
+          <xs:documentation>The length in characters of the physical representation of the value. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/)  5.11.2 "length: A numeric atomic property that contains a single integer that is the exact length of the value. The value of this property becomes the length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details." Corresponds to DDI2.5 var/location/width and DDI 3.2 PhysicalLocation/Width.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maximumLength"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ValueMapping-maximumLength">
+        <xs:annotation>
+          <xs:documentation>The largest possible value of the length of the physical representation of the value. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/) 5.11.2: "maxLength: A numeric atomic property that contains a single integer that is the maximum length of the value. The value of this property becomes the maximum length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details."</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minimumLength"
+                  type="xs:integer"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ValueMapping-minimumLength">
+        <xs:annotation>
+          <xs:documentation>The smallest possible value for the length of the physical representation of the value. From the W3C Recommendation "Metadata Vocabulary for Tabular Data" (https://www.w3.org/TR/tabular-metadata/)  5.11.2: "minLength: An atomic property that contains a single integer that is the minimum length of the value. The value of this property becomes the minimum length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details."</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ValueMapping_formats_InstanceVariable"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ValueMapping_formats_InstanceVariable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_InstanceVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_InstanceVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="InstanceVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValueMapping_formats_RepresentedVariable"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ValueMapping_formats_RepresentedVariable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_RepresentedVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_RepresentedVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="RepresentedVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValueMapping_formats_ReferenceVariable"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ValueMapping_formats_ReferenceVariable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_ReferenceVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_ReferenceVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="ReferenceVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValueMapping_formats_DescriptorVariable"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="ValueMapping_formats_DescriptorVariable">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_DescriptorVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ValueMapping_formats_DescriptorVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="DescriptorVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

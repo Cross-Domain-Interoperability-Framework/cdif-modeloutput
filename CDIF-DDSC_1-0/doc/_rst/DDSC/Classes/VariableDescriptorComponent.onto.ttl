@@ -1,0 +1,21 @@
+# class VariableDescriptorComponent
+# based on the UML class CDIF::DDSC::Classes::VariableDescriptorComponent
+ddsc:VariableDescriptorComponent
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "VariableDescriptorComponent";
+  rdfs:comment "Definition \n============ \nRole given to a represented variable in the context of a data structure to provide codes for variable identification.   \n\nExamples \n========== \nConsider {\"income\", \"age\"} to be the value domain of the represented variable working as a variable descriptor component.  The two codes, i.e. those designating \"income\" and \"age\", are descriptors used to identify which values in the variable value component correspond to income and which ones to age.   \n\nExplanatory notes \n=================== \nWhenever more than one variable appears in the same column, we need a mechanism to distinguish which values correspond to which variable. This mechanism is provided by the variable descriptor component, which contains the codes used to link the variables to their values.  This structure provides a flexible mechanism avoiding the need for a formal pointer."@en;
+  
+.
+
+
+ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "refersTo_VariableValueComponent";
+  skos:altLabel "VariableDescriptorComponent_refersTo_VariableValueComponent";
+  
+  rdfs:domain ddsc:VariableDescriptorComponent;
+  rdfs:range ddsc:VariableValueComponent;
+.
+
+

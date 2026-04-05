@@ -1,0 +1,19 @@
+# datatype Selector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Selector
+<#Selector> a sh:NodeShape;
+    sh:targetClass ddsc:Selector;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/Selector";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:Selector
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+

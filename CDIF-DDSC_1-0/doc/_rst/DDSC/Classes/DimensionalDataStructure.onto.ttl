@@ -1,0 +1,51 @@
+# class DimensionalDataStructure
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataStructure
+ddsc:DimensionalDataStructure
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "DimensionalDataStructure";
+  rdfs:comment "Definition\n============\nStructure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.\n\nExamples\n==========\nThe structure described by [City, Average Income, Total Population] where City is a dimension and Average Income and Total Population are measures."@en;
+  
+.
+
+
+ddsc:DimensionalDataStructure_has_IdentifierComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_IdentifierComponent";
+  skos:altLabel "DimensionalDataStructure_has_IdentifierComponent";
+  
+  rdfs:domain ddsc:DimensionalDataStructure;
+  rdfs:range ddsc:IdentifierComponent;
+.
+
+ddsc:DimensionalDataStructure_has_AttributeComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_AttributeComponent";
+  skos:altLabel "DimensionalDataStructure_has_AttributeComponent";
+  
+  rdfs:domain ddsc:DimensionalDataStructure;
+  rdfs:range ddsc:AttributeComponent;
+.
+
+ddsc:DimensionalDataStructure_has_MeasureComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_MeasureComponent";
+  skos:altLabel "DimensionalDataStructure_has_MeasureComponent";
+  
+  rdfs:domain ddsc:DimensionalDataStructure;
+  rdfs:range ddsc:MeasureComponent;
+.
+
+ddsc:DimensionalDataStructure_has_ComponentPosition
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_ComponentPosition";
+  skos:altLabel "DimensionalDataStructure_has_ComponentPosition";
+  
+  rdfs:domain ddsc:DimensionalDataStructure;
+  rdfs:range ddsc:ComponentPosition;
+.
+
+

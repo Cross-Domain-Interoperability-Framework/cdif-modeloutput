@@ -1,0 +1,35 @@
+"cls-DescriptorValueDomain": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorValueDomain",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "DescriptorValueDomain"
+    },
+    
+    
+    "takesSubstantiveValuesFrom_DescriptorValueDomain_OF_DescriptorVariable": {
+      "description": "DescriptorVariable_takesSubstantiveValuesFrom_DescriptorValueDomain",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-DescriptorVariable"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},
+"target-DescriptorValueDomain": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/DescriptorValueDomain",
+  "anyOf": [
+    { "$ref": "#/defs/cls-DescriptorValueDomain" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

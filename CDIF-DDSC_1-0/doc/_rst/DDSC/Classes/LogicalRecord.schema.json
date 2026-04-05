@@ -1,0 +1,164 @@
+"cls-LogicalRecord": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/LogicalRecord",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "LogicalRecord"
+    },
+    
+    "organizes_WideDataSet": {
+      "description": "LogicalRecord_organizes_WideDataSet",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-WideDataSet"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-WideDataSet"
+          }
+        }
+      ]
+    },
+    "organizes_LongDataSet": {
+      "description": "LogicalRecord_organizes_LongDataSet",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-LongDataSet"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-LongDataSet"
+          }
+        }
+      ]
+    },
+    "organizes_DimensionalDataSet": {
+      "description": "LogicalRecord_organizes_DimensionalDataSet",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-DimensionalDataSet"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-DimensionalDataSet"
+          }
+        }
+      ]
+    },
+    "has_InstanceVariable": {
+      "description": "LogicalRecord_has_InstanceVariable",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-InstanceVariable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-InstanceVariable"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_UnitType": {
+      "description": "LogicalRecord_isDefinedBy_UnitType",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-UnitType"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-UnitType"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_Universe": {
+      "description": "LogicalRecord_isDefinedBy_Universe",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-Universe"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-Universe"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_Population": {
+      "description": "LogicalRecord_isDefinedBy_Population",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-Population"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-Population"
+          }
+        }
+      ]
+    },
+    "has_LogicalRecord_OF_DataStore": {
+      "description": "DataStore_has_LogicalRecord",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-DataStore"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-DataStore"
+          }
+        }
+      ]
+    },
+    "formats_LogicalRecord_OF_PhysicalSegmentLayout": {
+      "description": "PhysicalSegmentLayout_formats_LogicalRecord",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-PhysicalSegmentLayout"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-PhysicalSegmentLayout"
+          }
+        }
+      ]
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["organizes_WideDataSet", "organizes_LongDataSet", "organizes_DimensionalDataSet", "has_InstanceVariable", "isDefinedBy_UnitType", "isDefinedBy_Universe", "isDefinedBy_Population","@type"],
+  "additionalProperties": false
+},
+"target-LogicalRecord": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/LogicalRecord",
+  "anyOf": [
+    { "$ref": "#/defs/cls-LogicalRecord" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

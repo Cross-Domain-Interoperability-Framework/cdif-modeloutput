@@ -1,0 +1,145 @@
+# class PhysicalSegmentLayout
+# based on the UML class CDIF::DDSC::Classes::PhysicalSegmentLayout
+<#PhysicalSegmentLayout> a sh:NodeShape;
+    sh:targetClass ddsc:PhysicalSegmentLayout;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/PhysicalSegmentLayout";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:PhysicalSegmentLayout
+			 ) ;
+    ];
+    # attributes
+    sh:property <#PhysicalSegmentLayout-delimiter>;
+    sh:property <#PhysicalSegmentLayout-encoding>;
+    sh:property <#PhysicalSegmentLayout-escapeCharacter>;
+    sh:property <#PhysicalSegmentLayout-hasHeader>;
+    sh:property <#PhysicalSegmentLayout-headerRowCount>;
+    sh:property <#PhysicalSegmentLayout-isDelimited>;
+    sh:property <#PhysicalSegmentLayout-isFixedWidth>;
+    sh:property <#PhysicalSegmentLayout-lineTerminator>;
+    sh:property <#PhysicalSegmentLayout-quoteCharacter>;
+    sh:property <#PhysicalSegmentLayout-skipInitialSpace>;
+    sh:property <#PhysicalSegmentLayout-trim>;
+    # associations from PhysicalSegmentLayout
+    sh:property <#PhysicalSegmentLayout_formats_LogicalRecord>;
+    sh:property <#PhysicalSegmentLayout_has_ValueMapping>;
+    sh:property <#PhysicalSegmentLayout_has_ValueMappingPosition>;
+    # associations to PhysicalSegmentLayout
+
+
+
+.
+
+<#PhysicalSegmentLayout-delimiter> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-delimiter;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-encoding> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-encoding;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ControlledVocabularyEntry
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-escapeCharacter> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-escapeCharacter;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-hasHeader> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-hasHeader;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-headerRowCount> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-headerRowCount;
+    sh:datatype xsd:integer;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-isDelimited> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-isDelimited;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-isFixedWidth> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-isFixedWidth;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-lineTerminator> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-lineTerminator;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+.
+<#PhysicalSegmentLayout-quoteCharacter> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-quoteCharacter;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-skipInitialSpace> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-skipInitialSpace;
+    sh:datatype xsd:boolean;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#PhysicalSegmentLayout-trim> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout-trim;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:TrimValues
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+
+<#PhysicalSegmentLayout_formats_LogicalRecord> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout_formats_LogicalRecord;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:LogicalRecord
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_PhysicalSegmentLayout_formats_LogicalRecord> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PhysicalSegmentLayout_formats_LogicalRecord ];
+    sh:minCount 1;
+.
+<#PhysicalSegmentLayout_has_ValueMapping> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout_has_ValueMapping;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ValueMapping
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_PhysicalSegmentLayout_has_ValueMapping> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PhysicalSegmentLayout_has_ValueMapping ];
+    sh:minCount 1;
+.
+<#PhysicalSegmentLayout_has_ValueMappingPosition> a sh:PropertyShape ;
+    sh:path ddsc:PhysicalSegmentLayout_has_ValueMappingPosition;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        ddsc:ValueMappingPosition
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#rev_PhysicalSegmentLayout_has_ValueMappingPosition> a sh:PropertyShape ;
+    sh:path [ sh:inversePath ddsc:PhysicalSegmentLayout_has_ValueMappingPosition ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

@@ -1,0 +1,12 @@
+"dt-XsdDate": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/XsdDate",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "XsdDate"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

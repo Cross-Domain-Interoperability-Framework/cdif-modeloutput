@@ -1,0 +1,63 @@
+  <xs:element name="PrimaryKey"
+              type="PrimaryKeyXsdType"
+              xml:id="PrimaryKey">
+    <!-- based on the UML class CDIF::DDSC::Classes::PrimaryKey -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Role of a set of data structure components for content linkage purposes
+            
+            Explanatory notes
+            ===================
+            Equivalent to primary key in the relational model.
+            A primary key essentially indicates which data structure components correspond to key members.
+            It can also be used in conjunction with foreign key to link data structures and their related datasets.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="PrimaryKeyXsdType"
+                  xml:id="PrimaryKeyXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Role of a set of data structure components for content linkage purposes
+            
+            Explanatory notes
+            ===================
+            Equivalent to primary key in the relational model.
+            A primary key essentially indicates which data structure components correspond to key members.
+            It can also be used in conjunction with foreign key to link data structures and their related datasets.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PrimaryKey_isComposedOf_PrimaryKeyComponent"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="PrimaryKey_isComposedOf_PrimaryKeyComponent">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="PrimaryKey_isComposedOf_PrimaryKeyComponent-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="PrimaryKey_isComposedOf_PrimaryKeyComponent-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="PrimaryKeyComponent"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

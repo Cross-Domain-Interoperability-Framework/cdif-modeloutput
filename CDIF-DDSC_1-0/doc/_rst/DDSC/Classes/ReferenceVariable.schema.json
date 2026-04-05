@@ -1,0 +1,62 @@
+"cls-ReferenceVariable": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/ReferenceVariable",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "ReferenceVariable"
+    },
+    "name": {
+      "$comment": "cardinality 1..1 – from ddsc:ReferenceVariable",
+      "$ref": "#/defs/dt-ObjectName"
+    },
+    "takesSubstantiveValuesFrom_SubstantiveValueDomain": {
+      "description": "ReferenceVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-SubstantiveValueDomain"
+    },
+    "takesSentinelValuesFrom_SentinelValueDomain": {
+      "description": "ReferenceVariable_takesSentinelValuesFrom_SentinelValueDomain",
+      "$comment": "cardinality 1..-1",
+      "anyOf": [
+        {
+          "$ref": "#/defs/target-SentinelValueDomain"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/defs/target-SentinelValueDomain"
+          }
+        }
+      ]
+    },
+    "isDefinedBy_ReferenceVariable_OF_VariableValueComponent": {
+      "description": "VariableValueComponent_isDefinedBy_ReferenceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-VariableValueComponent"
+    },
+    "formats_ReferenceVariable_OF_ValueMapping": {
+      "description": "ValueMapping_formats_ReferenceVariable",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ValueMapping"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["name","takesSubstantiveValuesFrom_SubstantiveValueDomain", "takesSentinelValuesFrom_SentinelValueDomain","@type"],
+  "additionalProperties": false
+},
+"target-ReferenceVariable": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/ReferenceVariable",
+  "anyOf": [
+    { "$ref": "#/defs/cls-ReferenceVariable" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

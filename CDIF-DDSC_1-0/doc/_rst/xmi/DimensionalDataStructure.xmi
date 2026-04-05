@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.DimensionalDataStructure"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="ddsc.DimensionalDataStructure-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+============
+Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.
+
+Examples
+==========
+The structure described by [City, Average Income, Total Population] where City is a dimension and Average Income and Total Population are measures.</body>
+      <annotatedElement xmi:idref="ddsc.DimensionalDataStructure"/>
+   </ownedComment>
+   <name>DimensionalDataStructure</name>
+   <ownedAttribute xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-1"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.IdentifierComponent"/>
+      <upperValue xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-1-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-1-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.DimensionalDataStructure_has_IdentifierComponent"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-2"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-2"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.AttributeComponent"/>
+      <upperValue xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-2-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-2-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.DimensionalDataStructure_has_AttributeComponent"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-3"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-3"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.MeasureComponent"/>
+      <upperValue xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-3-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-3-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.DimensionalDataStructure_has_MeasureComponent"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-4"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-4"
+                    xmi:type="uml:Property">
+      <type xmi:idref="ddsc.ComponentPosition"/>
+      <upperValue xmi:id="ddsc.DimensionalDataStructure-ownedAttribute-4-upperValue"
+                   xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#DimensionalDataStructure-ownedAttribute-4-upperValue"
+                   xmi:type="uml:LiteralUnlimitedNatural">
+         <value>*</value>
+      </upperValue>
+      <association xmi:idref="ddsc.DimensionalDataStructure_has_ComponentPosition"/>
+   </ownedAttribute>
+</packagedElement>

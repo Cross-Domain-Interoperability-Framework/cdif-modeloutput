@@ -1,0 +1,165 @@
+  <xs:element name="RepresentedVariable"
+              type="RepresentedVariableXsdType"
+              xml:id="RepresentedVariable">
+    <!-- based on the UML class CDIF::DDSC::Classes::RepresentedVariable -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ========== 
+            Conceptual variable with a substantive value domain specified.   
+            
+            Examples 
+            ========== 
+            The pair (Number of Employees, Integer), where "Number of Employees" is the characteristic of the population (variable) and "Integer" is how that measure will be represented (value domain).  
+            
+            Explanatory notes 
+            =================== 
+            Extends from conceptual variable and can contain all descriptive fields without creating a conceptual variable. By referencing a conceptual variable it can indicate a common relationship with represented variables expressing the same characteristic of a universe measured in another way, such as Age of Persons in hours rather than years. Represented variable constrains the coverage of the unit type to a specific universe. In the above case the universe with the measurement of Age in hours may be constrained to Persons under 5 days (120 hours old). Represented variable can define sentinel values for multiple storage systems which have the same conceptual domain but specialized value domains.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="RepresentedVariableXsdType"
+                  xml:id="RepresentedVariableXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ========== 
+            Conceptual variable with a substantive value domain specified.   
+            
+            Examples 
+            ========== 
+            The pair (Number of Employees, Integer), where "Number of Employees" is the characteristic of the population (variable) and "Integer" is how that measure will be represented (value domain).  
+            
+            Explanatory notes 
+            =================== 
+            Extends from conceptual variable and can contain all descriptive fields without creating a conceptual variable. By referencing a conceptual variable it can indicate a common relationship with represented variables expressing the same characteristic of a universe measured in another way, such as Age of Persons in hours rather than years. Represented variable constrains the coverage of the unit type to a specific universe. In the above case the universe with the measurement of Age in hours may be constrained to Persons under 5 days (120 hours old). Represented variable can define sentinel values for multiple storage systems which have the same conceptual domain but specialized value domains.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="definition"
+                  type="InternationalStringXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="RepresentedVariable-definition">
+        <xs:annotation>
+          <xs:documentation>Natural language statement conveying the meaning of a concept, differentiating it from other concepts. Supports the use of multiple languages and structured text. 'externalDefinition' can't be used if 'definition' is used.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="describedUnitOfMeasure"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="RepresentedVariable-describedUnitOfMeasure">
+        <xs:annotation>
+          <xs:documentation>The unit in which the data values are measured (kg, pound, euro), expressed as a value from a controlled system of entries (i.e., QDT). Supports the provision of an identifier for the entry in the authoritative source (a URI, etc.), and the specific vocabulary.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name"
+                  type="ObjectNameXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="RepresentedVariable-name">
+        <xs:annotation>
+          <xs:documentation>Human understandable name (linguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="unitOfMeasureKind"
+                  type="ControlledVocabularyEntryXsdType"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="RepresentedVariable-unitOfMeasureKind">
+        <xs:annotation>
+          <xs:documentation>Kind of unit of measure, so that it may be prone to translation to equivalent UOMs. Example values include "acceleration," "temperature," "salinity", etc. This description exists at the conceptual level, indicating a limitation on the type of representations which may be used for the variable as it is made more concrete.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RepresentedVariable_measures_Universe"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="RepresentedVariable_measures_Universe">
+        <xs:annotation>
+          <xs:documentation>The measures association is intended to describe specific relationships between the ConceptualVariable and UnitType classes, and similar relationships between their sub-classes. This is documented in section VII.D.5 of the "DDI-Cross Domain Integration: Detailed Model" document.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="RepresentedVariable_measures_Universe-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="RepresentedVariable_measures_Universe-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="Universe"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain">
+        <xs:annotation>
+          <xs:documentation>The substantive representation (substantive value domain) of the variable. This is equivalent to the relationship "Measures" in the Generic Statistical Information Model (GSIM) although GSIM makes no distinction between substantive and sentinel values.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="SubstantiveValueDomain"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  xml:id="RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain">
+        <xs:annotation>
+          <xs:documentation>A represented variable may have more than one sets of sentinel value domains, one for each type of software platform on which related instance variables might be instantiated. All of the sentinel value domains must have sentinel conceptual domains that correspond exactly. This allows codes for missing values to be explicitly matched across platforms.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="unbounded"
+                            xml:id="RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="SentinelValueDomain"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

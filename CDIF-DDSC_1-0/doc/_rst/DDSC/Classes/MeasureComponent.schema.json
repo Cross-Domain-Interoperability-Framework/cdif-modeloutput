@@ -1,0 +1,44 @@
+"cls-MeasureComponent": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/MeasureComponent",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "MeasureComponent"
+    },
+    
+    "isDefinedBy_InstanceVariable": {
+      "description": "MeasureComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-InstanceVariable"
+    },
+    "has_MeasureComponent_OF_WideDataStructure": {
+      "description": "WideDataStructure_has_MeasureComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-WideDataStructure"
+    },
+    "has_MeasureComponent_OF_DimensionalDataStructure": {
+      "description": "DimensionalDataStructure_has_MeasureComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-DimensionalDataStructure"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["isDefinedBy_InstanceVariable","@type"],
+  "additionalProperties": false
+},
+"target-MeasureComponent": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/MeasureComponent",
+  "anyOf": [
+    { "$ref": "#/defs/cls-MeasureComponent" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

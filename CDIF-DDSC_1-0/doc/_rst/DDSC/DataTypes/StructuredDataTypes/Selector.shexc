@@ -1,0 +1,6 @@
+# datatype Selector
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::Selector
+ddsc:SelectorShape CLOSED {
+	a [ddsc:Selector];
+	}
+

@@ -1,0 +1,47 @@
+# datatype NonDdiIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonDdiIdentifier
+<#NonDdiIdentifier> a sh:NodeShape;
+    sh:targetClass ddsc:NonDdiIdentifier;
+	sh:message "See http://w3id.org/cdif/ddsc/1.0/ddsc/NonDdiIdentifier";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   ddsc:NonDdiIdentifier
+			 ) ;
+    ];
+    # attributes
+    sh:property <#NonDdiIdentifier-managingAgency>;
+    sh:property <#NonDdiIdentifier-type>;
+    sh:property <#NonDdiIdentifier-value>;
+    sh:property <#NonDdiIdentifier-version>;
+
+
+
+.
+
+<#NonDdiIdentifier-managingAgency> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-managingAgency;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonDdiIdentifier-type> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-type;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonDdiIdentifier-value> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-value;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#NonDdiIdentifier-version> a sh:PropertyShape ;
+    sh:path ddsc:NonDdiIdentifier-version;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

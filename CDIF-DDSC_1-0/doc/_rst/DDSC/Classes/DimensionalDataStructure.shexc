@@ -1,0 +1,14 @@
+# class DimensionalDataStructure
+# based on the UML class CDIF::DDSC::Classes::DimensionalDataStructure
+ddsc:DimensionalDataStructureShape CLOSED {
+	a [ddsc:DimensionalDataStructure];
+	ddsc:DimensionalDataStructure_has_IdentifierComponent	@ddsc:IdentifierComponentShape +;
+	
+	ddsc:DimensionalDataStructure_has_AttributeComponent	@ddsc:AttributeComponentShape +;
+	
+	ddsc:DimensionalDataStructure_has_MeasureComponent	@ddsc:MeasureComponentShape +;
+	
+	ddsc:DimensionalDataStructure_has_ComponentPosition	@ddsc:ComponentPositionShape +;
+	
+	}
+

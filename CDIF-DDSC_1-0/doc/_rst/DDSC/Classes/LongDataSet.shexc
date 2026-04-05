@@ -1,0 +1,9 @@
+# class LongDataSet
+# based on the UML class CDIF::DDSC::Classes::LongDataSet
+ddsc:LongDataSetShape CLOSED {
+	a [ddsc:LongDataSet];
+	ddsc:LongDataSet-name	@ddsc:ObjectNameShape;
+	ddsc:LongDataSet-physicalFileName	xsd:string;
+	^ddsc:LogicalRecord_organizes_LongDataSet @ddsc:LogicalRecordShape +;
+	}
+

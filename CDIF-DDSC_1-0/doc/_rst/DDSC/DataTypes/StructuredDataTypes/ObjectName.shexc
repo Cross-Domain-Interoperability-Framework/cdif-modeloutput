@@ -1,0 +1,8 @@
+# datatype ObjectName
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::ObjectName
+ddsc:ObjectNameShape CLOSED {
+	a [ddsc:ObjectName];
+	ddsc:ObjectName-context	@ddsc:ControlledVocabularyEntryShape;
+	ddsc:ObjectName-name	xsd:string;
+	}
+

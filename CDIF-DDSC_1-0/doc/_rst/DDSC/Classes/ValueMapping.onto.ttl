@@ -1,0 +1,91 @@
+# class ValueMapping
+# based on the UML class CDIF::DDSC::Classes::ValueMapping
+ddsc:ValueMapping
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "ValueMapping";
+  rdfs:comment "Definition \n==========\nPhysical characteristics for the value of an instance variable stored in a data point as part of a physical segment layout.\n\nExamples \n========\nA variable \"age\" might be represented in a file as a string with a maximum length of 5 characters and a number pattern of ##0.0  \n\nExplanatory notes \n=================\nAn instance variable has details of value domain and data type, but will not have the final details of how a value is physically represented in a data file. A variable for height, for example, may be represented as a real number, but may be represented as a string in multiple ways. The decimal separator might be, for example a period or a comma. The string representing the value of a payment might be preceded by a currency symbol. The same numeric value might be written as \"1,234,567\" or \"1.234567\". A missing value might be written as \".\", \"NA\", \".R\" or as \"R\". The value mapping describes how the value of an instance variable is physically expressed. The properties of the value mapping as intended to be compatible with the W3C Metadata Vocabulary for Tabular Data (https://www.w3.org/TR/tabular-metadata/) as well as common programming languages and statistical packages. The 'format' property, for example, can draw from an external controlled vocabulary such as the set of formats for Stata, SPSS, or SAS."@en;
+  
+.
+
+ddsc:ValueMapping-decimalPositions
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "decimalPositions";
+  rdfs:comment "The number of decimal positions expressed as an integer. Used when the decimal position is implied (no decimal separator is present) See DDI 3.2 ManagedNumericRepresentation_decimalPositions"@en;
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range xsd:integer;
+.
+
+ddsc:ValueMapping-defaultDecimalSeparator
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "defaultDecimalSeparator";
+  rdfs:comment "Default value is \".\" (period). The character separating the integer part from the fractional part of a decimal or real number. From the W3C Recommendation \"Metadata Vocabulary for Tabular Data\" (https://www.w3.org/TR/tabular-metadata/) 6.4.2: \"decimalChar: A string whose value is used to represent a decimal point within the number. If the supplied value is not a string, implementations MUST issue a warning and proceed as if the property had not been specified.\""@en;
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range xsd:string;
+.
+
+ddsc:ValueMapping-length
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "length";
+  rdfs:comment "The length in characters of the physical representation of the value. From the W3C Recommendation \"Metadata Vocabulary for Tabular Data\" (https://www.w3.org/TR/tabular-metadata/)  5.11.2 \"length: A numeric atomic property that contains a single integer that is the exact length of the value. The value of this property becomes the length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details.\" Corresponds to DDI2.5 var/location/width and DDI 3.2 PhysicalLocation/Width."@en;
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range xsd:integer;
+.
+
+ddsc:ValueMapping-maximumLength
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "maximumLength";
+  rdfs:comment "The largest possible value of the length of the physical representation of the value. From the W3C Recommendation \"Metadata Vocabulary for Tabular Data\" (https://www.w3.org/TR/tabular-metadata/) 5.11.2: \"maxLength: A numeric atomic property that contains a single integer that is the maximum length of the value. The value of this property becomes the maximum length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details.\""@en;
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range xsd:integer;
+.
+
+ddsc:ValueMapping-minimumLength
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "minimumLength";
+  rdfs:comment "The smallest possible value for the length of the physical representation of the value. From the W3C Recommendation \"Metadata Vocabulary for Tabular Data\" (https://www.w3.org/TR/tabular-metadata/)  5.11.2: \"minLength: An atomic property that contains a single integer that is the minimum length of the value. The value of this property becomes the minimum length annotation for the described datatype. See Length Constraints in [tabular-data-model] for details.\""@en;
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range xsd:integer;
+.
+
+
+ddsc:ValueMapping_formats_InstanceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "formats_InstanceVariable";
+  skos:altLabel "ValueMapping_formats_InstanceVariable";
+  
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range ddsc:InstanceVariable;
+.
+
+ddsc:ValueMapping_formats_RepresentedVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "formats_RepresentedVariable";
+  skos:altLabel "ValueMapping_formats_RepresentedVariable";
+  
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range ddsc:RepresentedVariable;
+.
+
+ddsc:ValueMapping_formats_ReferenceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "formats_ReferenceVariable";
+  skos:altLabel "ValueMapping_formats_ReferenceVariable";
+  
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range ddsc:ReferenceVariable;
+.
+
+ddsc:ValueMapping_formats_DescriptorVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "formats_DescriptorVariable";
+  skos:altLabel "ValueMapping_formats_DescriptorVariable";
+  
+  rdfs:domain ddsc:ValueMapping;
+  rdfs:range ddsc:DescriptorVariable;
+.
+
+

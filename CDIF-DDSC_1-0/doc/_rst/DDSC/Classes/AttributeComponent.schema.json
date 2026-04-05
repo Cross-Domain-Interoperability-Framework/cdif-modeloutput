@@ -1,0 +1,49 @@
+"cls-AttributeComponent": {
+  "description": "http://w3id.org/cdif/ddsc/1.0/ddsc/AttributeComponent",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "AttributeComponent"
+    },
+    
+    "isDefinedBy_InstanceVariable": {
+      "description": "AttributeComponent_isDefinedBy_InstanceVariable",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-InstanceVariable"
+    },
+    "has_AttributeComponent_OF_WideDataStructure": {
+      "description": "WideDataStructure_has_AttributeComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-WideDataStructure"
+    },
+    "has_AttributeComponent_OF_LongDataStructure": {
+      "description": "LongDataStructure_has_AttributeComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-LongDataStructure"
+    },
+    "has_AttributeComponent_OF_DimensionalDataStructure": {
+      "description": "DimensionalDataStructure_has_AttributeComponent",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-DimensionalDataStructure"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["isDefinedBy_InstanceVariable","@type"],
+  "additionalProperties": false
+},
+"target-AttributeComponent": {
+  "description": "all subclasses of http://w3id.org/cdif/ddsc/1.0/ddsc/AttributeComponent",
+  "anyOf": [
+    { "$ref": "#/defs/cls-AttributeComponent" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

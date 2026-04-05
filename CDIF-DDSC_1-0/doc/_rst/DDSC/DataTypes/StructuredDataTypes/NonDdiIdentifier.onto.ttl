@@ -1,0 +1,43 @@
+# datatype NonDdiIdentifier
+# based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::NonDdiIdentifier
+ddsc:NonDdiIdentifier
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "NonDdiIdentifier";
+  rdfs:comment "Definition\n============\nA unique set of attributes, not conforming to the DDI identifier structure nor structured as a URI, used to identify some entity."@en;
+  
+  owl:hasKey (ddsc:NonDdiIdentifier-managingAgency ddsc:NonDdiIdentifier-type ddsc:NonDdiIdentifier-value ddsc:NonDdiIdentifier-version);
+.
+
+ddsc:NonDdiIdentifier-managingAgency
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "managingAgency";
+  
+  rdfs:domain ddsc:NonDdiIdentifier;
+  rdfs:range xsd:string;
+.
+
+ddsc:NonDdiIdentifier-type
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "type";
+  
+  rdfs:domain ddsc:NonDdiIdentifier;
+  rdfs:range xsd:string;
+.
+
+ddsc:NonDdiIdentifier-value
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "value";
+  
+  rdfs:domain ddsc:NonDdiIdentifier;
+  rdfs:range xsd:string;
+.
+
+ddsc:NonDdiIdentifier-version
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "version";
+  
+  rdfs:domain ddsc:NonDdiIdentifier;
+  rdfs:range xsd:string;
+.
+
+

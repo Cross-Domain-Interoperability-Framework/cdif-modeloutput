@@ -1,0 +1,10 @@
+# class VariableValueComponent
+# based on the UML class CDIF::DDSC::Classes::VariableValueComponent
+ddsc:VariableValueComponentShape CLOSED {
+	a [ddsc:VariableValueComponent];
+	^ddsc:LongDataStructure_has_VariableValueComponent @ddsc:LongDataStructureShape ;
+	ddsc:VariableValueComponent_isDefinedBy_ReferenceVariable	@ddsc:ReferenceVariableShape ;
+	
+	^ddsc:VariableDescriptorComponent_refersTo_VariableValueComponent @ddsc:VariableDescriptorComponentShape ;
+	}
+

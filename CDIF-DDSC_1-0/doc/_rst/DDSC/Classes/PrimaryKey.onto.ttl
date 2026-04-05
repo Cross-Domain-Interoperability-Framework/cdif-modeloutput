@@ -1,0 +1,21 @@
+# class PrimaryKey
+# based on the UML class CDIF::DDSC::Classes::PrimaryKey
+ddsc:PrimaryKey
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "PrimaryKey";
+  rdfs:comment "Definition\n============\nRole of a set of data structure components for content linkage purposes\n\nExplanatory notes\n===================\nEquivalent to primary key in the relational model.\nA primary key essentially indicates which data structure components correspond to key members.\nIt can also be used in conjunction with foreign key to link data structures and their related datasets."@en;
+  
+.
+
+
+ddsc:PrimaryKey_isComposedOf_PrimaryKeyComponent
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isComposedOf_PrimaryKeyComponent";
+  skos:altLabel "PrimaryKey_isComposedOf_PrimaryKeyComponent";
+  
+  rdfs:domain ddsc:PrimaryKey;
+  rdfs:range ddsc:PrimaryKeyComponent;
+.
+
+

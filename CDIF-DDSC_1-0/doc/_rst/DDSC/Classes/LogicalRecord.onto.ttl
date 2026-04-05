@@ -1,0 +1,81 @@
+# class LogicalRecord
+# based on the UML class CDIF::DDSC::Classes::LogicalRecord
+ddsc:LogicalRecord
+  a rdfs:Class, owl:Class, ucmis:Class;
+  rdfs:label "LogicalRecord";
+  rdfs:comment "Definition \n============ \nCollection of instance variables."@en;
+  
+.
+
+
+ddsc:LogicalRecord_organizes_WideDataSet
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "organizes_WideDataSet";
+  skos:altLabel "LogicalRecord_organizes_WideDataSet";
+  
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:WideDataSet;
+.
+
+ddsc:LogicalRecord_organizes_LongDataSet
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "organizes_LongDataSet";
+  skos:altLabel "LogicalRecord_organizes_LongDataSet";
+  
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:LongDataSet;
+.
+
+ddsc:LogicalRecord_organizes_DimensionalDataSet
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "organizes_DimensionalDataSet";
+  skos:altLabel "LogicalRecord_organizes_DimensionalDataSet";
+  
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:DimensionalDataSet;
+.
+
+ddsc:LogicalRecord_has_InstanceVariable
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "has_InstanceVariable";
+  skos:altLabel "LogicalRecord_has_InstanceVariable";
+  
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:InstanceVariable;
+.
+
+ddsc:LogicalRecord_isDefinedBy_UnitType
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_UnitType";
+  skos:altLabel "LogicalRecord_isDefinedBy_UnitType";
+  rdfs:comment "The conceptual basis for the collection of members."@en;
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:UnitType;
+.
+
+ddsc:LogicalRecord_isDefinedBy_Universe
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_Universe";
+  skos:altLabel "LogicalRecord_isDefinedBy_Universe";
+  rdfs:comment "The conceptual basis for the collection of members."@en;
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:Universe;
+.
+
+ddsc:LogicalRecord_isDefinedBy_Population
+  a rdf:Property, owl:ObjectProperty, ucmis:Association;
+  # ASSOCIATION
+  rdfs:label "isDefinedBy_Population";
+  skos:altLabel "LogicalRecord_isDefinedBy_Population";
+  rdfs:comment "The conceptual basis for the collection of members."@en;
+  rdfs:domain ddsc:LogicalRecord;
+  rdfs:range ddsc:Population;
+.
+
+

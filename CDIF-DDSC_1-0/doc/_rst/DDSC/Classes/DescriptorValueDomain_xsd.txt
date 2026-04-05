@@ -1,0 +1,29 @@
+  <xs:element name="DescriptorValueDomain"
+              type="DescriptorValueDomainXsdType"
+              xml:id="DescriptorValueDomain">
+    <!-- based on the UML class CDIF::DDSC::Classes::DescriptorValueDomain -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Set of permissible values for a variable playing the role of a variable descriptor component.
+            
+            Examples
+            ==========
+            Consider two variables, i.e. income and age, with values appearing in the same column. 
+            Codes "income" and "age" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DescriptorValueDomainXsdType"
+                  xml:id="DescriptorValueDomainXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Set of permissible values for a variable playing the role of a variable descriptor component.
+            
+            Examples
+            ==========
+            Consider two variables, i.e. income and age, with values appearing in the same column. 
+            Codes "income" and "age" are descriptors that appear in the descriptor value domain corresponding to the descriptor variable.</xs:documentation>
+    </xs:annotation>
+    
+  </xs:complexType>

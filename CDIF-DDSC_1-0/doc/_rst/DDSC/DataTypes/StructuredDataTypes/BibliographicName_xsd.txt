@@ -1,0 +1,30 @@
+  <xs:element name="BibliographicName"
+              type="BibliographicNameXsdType"
+              xml:id="BibliographicName">
+    <!-- based on the UML data type CDIF::DDSC::DataTypes::StructuredDataTypes::BibliographicName -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Personal names should be listed surname or family name first, followed by forename or given name. When in doubt, give the name as it appears, and do not invert. In the case of organizations where there is clearly a hierarchy present, list the parts of the hierarchy from largest to smallest, separated by full stops and a space. If it is not clear whether there is a hierarchy present, or unclear which is the larger or smaller portion of the body, give the name as it appears in the item. The name may be provided in one or more languages.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="BibliographicNameXsdType"
+                  xml:id="BibliographicNameXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ============
+            Personal names should be listed surname or family name first, followed by forename or given name. When in doubt, give the name as it appears, and do not invert. In the case of organizations where there is clearly a hierarchy present, list the parts of the hierarchy from largest to smallest, separated by full stops and a space. If it is not clear whether there is a hierarchy present, or unclear which is the larger or smaller portion of the body, give the name as it appears in the item. The name may be provided in one or more languages.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="affiliation"
+                  type="xs:string"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="BibliographicName-affiliation">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

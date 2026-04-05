@@ -1,0 +1,59 @@
+  <xs:element name="DimensionComponent"
+              type="DimensionComponentXsdType"
+              xml:id="DimensionComponent">
+    <!-- based on the UML class CDIF::DDSC::Classes::DimensionComponent -->
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional "cube".  
+            
+            Explanatory notes 
+            =================== 
+            The categories from each dimension often are used in combination to identify a cell. The meaning of the combination of the categories supplies meaning to the cell.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DimensionComponentXsdType"
+                  xml:id="DimensionComponentXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition 
+            ============ 
+            Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional "cube".  
+            
+            Explanatory notes 
+            =================== 
+            The categories from each dimension often are used in combination to identify a cell. The meaning of the combination of the categories supplies meaning to the cell.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DimensionComponent_isDefinedBy_InstanceVariable"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="DimensionComponent_isDefinedBy_InstanceVariable">
+        <xs:annotation>
+          <xs:documentation>Data structure component is defined by zero to one represented variable.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="DimensionComponent_isDefinedBy_InstanceVariable-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="DimensionComponent_isDefinedBy_InstanceVariable-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="InstanceVariable"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

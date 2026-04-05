@@ -1,0 +1,10 @@
+# class ComponentPosition
+# based on the UML class CDIF::DDSC::Classes::ComponentPosition
+ddsc:ComponentPositionShape CLOSED {
+	a [ddsc:ComponentPosition];
+	ddsc:ComponentPosition-value	xsd:integer;
+	^ddsc:DimensionalDataStructure_has_ComponentPosition @ddsc:DimensionalDataStructureShape ;
+	ddsc:ComponentPosition_indexes_DimensionComponent	@ddsc:DimensionComponentShape ;
+	
+	}
+

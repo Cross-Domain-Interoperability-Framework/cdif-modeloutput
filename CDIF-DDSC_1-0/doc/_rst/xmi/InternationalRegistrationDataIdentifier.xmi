@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="ddsc.InternationalRegistrationDataIdentifier"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalRegistrationDataIdentifier"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="ddsc.InternationalRegistrationDataIdentifier-ownedComment"
+                  xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalRegistrationDataIdentifier-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+Persistent, globally unique object identifier aligned with ISO/IEC 11179-6:2015, Information technology - Metadata registries (MDR) - Part 6: Registration, Annex A, Identifiers based on ISO/IEC 6523, http://standards.iso.org/ittf/PubliclyAvailableStandards/c060342_ISO_IEC_11179-6_2015.zip.
+The uniqueness of an InternationalRegistrationDataIdentifier (IRDI) is determined by the combination of the values of three identifying attributes.</body>
+      <annotatedElement xmi:idref="ddsc.InternationalRegistrationDataIdentifier"/>
+   </ownedComment>
+   <name>InternationalRegistrationDataIdentifier</name>
+   <ownedAttribute xmi:id="ddsc.InternationalRegistrationDataIdentifier-dataIdentifier"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalRegistrationDataIdentifier-dataIdentifier"
+                    xmi:type="uml:Property">
+      <name>dataIdentifier</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalRegistrationDataIdentifier-registrationAuthorityIdentifier"
+                    xmi:type="uml:Property">
+      <name>registrationAuthorityIdentifier</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="ddsc.InternationalRegistrationDataIdentifier-versionIdentifier"
+                    xmi:uuid="http://w3id.org/cdif/ddsc/1.0/ddsc/xmi/#InternationalRegistrationDataIdentifier-versionIdentifier"
+                    xmi:type="uml:Property">
+      <name>versionIdentifier</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>
