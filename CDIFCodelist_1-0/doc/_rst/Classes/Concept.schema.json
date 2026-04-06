@@ -1,0 +1,89 @@
+"cls-Concept": {
+  "description": "http://www.w3.org/2004/02/skos/core#Concept",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "Concept"
+    },
+    "altLabel": {
+      "$comment": "cardinality 0..-1 – from skos:Concept",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-LanguageString" } },
+      "else": { "$ref": "#/defs/dt-LanguageString" }
+    },
+    "definition": {
+      "$comment": "cardinality 1..-1 – from skos:Concept",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-LanguageString" } },
+      "else": { "$ref": "#/defs/dt-LanguageString" }
+    },
+    "identifier": {
+      "$comment": "cardinality 1..1 – from skos:Concept",
+      "$ref": "#/defs/xsd:anyURI"
+    },
+    "notation": {
+      "$comment": "cardinality 1..1 – from skos:Concept",
+      "$ref": "#/defs/xsd:string"
+    },
+    "prefLabel": {
+      "$comment": "cardinality 1..-1 – from skos:Concept",
+      "if": { "type": "array" },
+      "then": { "items": { "$ref": "#/defs/dt-LanguageString" } },
+      "else": { "$ref": "#/defs/dt-LanguageString" }
+    },
+    "narrower_Concept": {
+      "description": "Concept_narrower_Concept",
+      "$comment": "cardinality 0..1",
+       "$ref": "#/defs/target-Concept"
+    },
+    "inScheme_ConceptScheme": {
+      "description": "Concept_inScheme_ConceptScheme",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-ConceptScheme"
+    },
+    "topConceptOf_ConceptScheme": {
+      "description": "Concept_topConceptOf_ConceptScheme",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-ConceptScheme"
+    },
+    "broader_Concept": {
+      "description": "Concept_broader_Concept",
+      "$comment": "cardinality 0..1",
+       "$ref": "#/defs/target-Concept"
+    },
+    "narrower_Concept_OF_Concept": {
+      "description": "Concept_narrower_Concept",
+      "$comment": "cardinality 0..1",
+      "$ref": "#/defs/target-Concept"
+    },
+    "broader_Concept_OF_Concept": {
+      "description": "Concept_broader_Concept",
+      "$comment": "cardinality 0..1",
+      "$ref": "#/defs/target-Concept"
+    },
+    "hasTopConcept_Concept_OF_ConceptScheme": {
+      "description": "ConceptScheme_hasTopConcept_Concept",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-ConceptScheme"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["definition","identifier","notation","prefLabel","inScheme_ConceptScheme", "topConceptOf_ConceptScheme","@type"],
+  "additionalProperties": false
+},
+"target-Concept": {
+  "description": "all subclasses of http://www.w3.org/2004/02/skos/core#Concept",
+  "anyOf": [
+    { "$ref": "#/defs/cls-Concept" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

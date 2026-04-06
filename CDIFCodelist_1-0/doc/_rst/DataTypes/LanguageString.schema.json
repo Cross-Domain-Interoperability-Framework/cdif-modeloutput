@@ -1,0 +1,15 @@
+"dt-LanguageString": {
+  "description": "http://www.w3.org/2004/02/skos/core#LanguageString",
+  "type": ["object"],
+  "properties": {
+    "language": {
+      "$comment": "cardinality 1..1 – from skos:LanguageString",
+      "$ref": "#/defs/xsd:language"
+    },
+    "@type": {
+      "const": "LanguageString"
+    }
+  },
+  "required": ["language","@type"],
+  "additionalProperties": false
+},

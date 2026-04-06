@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body onload="redirect()">
+    <script>
+      var mappingTable = {
+        "Concept": "Classes/Concept.html",
+        "ConceptScheme": "Classes/ConceptScheme.html",
+        "LanguageString": "DataTypes/LanguageString.html",
+        "ModelIdentification": "ModelIdentification.html",
+        "XsdAnyUri": "DataTypes/XMLSchemaDataTypes/XsdAnyUri.html",
+        "XsdLanguage": "DataTypes/XMLSchemaDataTypes/XsdLanguage.html",
+      }
+      function redirect() {
+        pathname = window.location.pathname;
+        lastSlashPosition = pathname.lastIndexOf('/');
+        documentationRoot = pathname.substring(0, lastSlashPosition+1);
+        if (window.location.hash) {
+	      var fragmentIdentifier = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+	      window.location.replace(documentationRoot+mappingTable[[fragmentIdentifier]]);
+        } else {
+          window.location.replace(documentationRoot);
+        }
+      }
+    </script>
+  </body>
+</html>

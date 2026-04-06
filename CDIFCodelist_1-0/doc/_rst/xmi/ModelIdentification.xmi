@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="skos.PackageInformation"
+                  xmi:uuid="https://example.org/cdifcodelist#PackageInformation"
+                  xmi:type="uml:DataType">
+   <ownedComment xmi:id="skos.PackageInformation-ownedComment"
+                  xmi:uuid="https://example.org/cdifcodelist#PackageInformation-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+Attributes for the model identification with constant values.</body>
+      <annotatedElement xmi:idref="skos.PackageInformation"/>
+   </ownedComment>
+   <name>ModelIdentification</name>
+   <ownedAttribute xmi:id="skos.PackageInformation-acronym"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-acronym"
+                    xmi:type="uml:Property">
+      <name>acronym</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <defaultValue xmi:id="skos.PackageInformation-acronym-defaultValue"
+                     xmi:uuid="https://example.org/cdifcodelist#PackageInformation-acronym-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>CDIFCodelist</value>
+      </defaultValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-language"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-language"
+                    xmi:type="uml:Property">
+      <name>language</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <defaultValue xmi:id="skos.PackageInformation-language-defaultValue"
+                     xmi:uuid="https://example.org/cdifcodelist#PackageInformation-language-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>en</value>
+      </defaultValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-majorVersion"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-majorVersion"
+                    xmi:type="uml:Property">
+      <name>majorVersion</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+      <defaultValue xmi:id="skos.PackageInformation-majorVersion-defaultValue"
+                     xmi:uuid="https://example.org/cdifcodelist#PackageInformation-majorVersion-defaultValue"
+                     xmi:type="uml:LiteralInteger">
+         <value>1</value>
+      </defaultValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-minorVersion"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-minorVersion"
+                    xmi:type="uml:Property">
+      <name>minorVersion</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#Integer"/>
+      <defaultValue xmi:id="skos.PackageInformation-minorVersion-defaultValue"
+                     xmi:uuid="https://example.org/cdifcodelist#PackageInformation-minorVersion-defaultValue"
+                     xmi:type="uml:LiteralInteger">
+         <value>0</value>
+      </defaultValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-prefix"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-prefix"
+                    xmi:type="uml:Property">
+      <name>prefix</name>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <defaultValue xmi:id="skos.PackageInformation-prefix-defaultValue"
+                     xmi:uuid="https://example.org/cdifcodelist#PackageInformation-prefix-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>skos</value>
+      </defaultValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-subtitle"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-subtitle"
+                    xmi:type="uml:Property">
+      <name>subtitle</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-title"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-title"
+                    xmi:type="uml:Property">
+      <name>title</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+      <defaultValue xmi:id="skos.PackageInformation-title-defaultValue"
+                     xmi:uuid="https://example.org/cdifcodelist#PackageInformation-title-defaultValue"
+                     xmi:type="uml:LiteralString">
+         <value>CDIF Codelist Profile</value>
+      </defaultValue>
+   </ownedAttribute>
+   <ownedAttribute xmi:id="skos.PackageInformation-uri"
+                    xmi:uuid="https://example.org/cdifcodelist#PackageInformation-uri"
+                    xmi:type="uml:Property">
+      <name>uri</name>
+      <isReadOnly>true</isReadOnly>
+      <type xmi:type="uml:PrimitiveType"
+             href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+   </ownedAttribute>
+</packagedElement>

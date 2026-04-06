@@ -1,0 +1,12 @@
+"dt-XsdAnyUri": {
+  "description": "http://www.w3.org/2004/02/skos/core#XsdAnyUri",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "XsdAnyUri"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

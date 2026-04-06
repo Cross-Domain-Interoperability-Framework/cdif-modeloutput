@@ -1,0 +1,62 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc:    <http://purl.org/dc/elements/1.1/>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX ucmis: <http://ddialliance.org/Specification/UCMIS/1.0/RDF>
+
+start = @http://www.w3.org/2004/02/skos/core#:WideDataSetShape
+
+# class Concept
+# based on the UML class SKOS::Classes::Concept
+skos:ConceptShape CLOSED {
+	a [skos:Concept];
+	skos:Concept-altLabel	@skos:LanguageStringShape*;
+	skos:Concept-definition	@skos:LanguageStringShape+;
+	skos:Concept-identifier	xsd:anyURI;
+	skos:Concept-notation	xsd:string;
+	skos:Concept-prefLabel	@skos:LanguageStringShape+;
+	skos:Concept_narrower_Concept	@skos:ConceptShape ?;
+	
+	skos:Concept_inScheme_ConceptScheme	@skos:ConceptSchemeShape ;
+	
+	skos:Concept_topConceptOf_ConceptScheme	@skos:ConceptSchemeShape ;
+	
+	skos:Concept_broader_Concept	@skos:ConceptShape ?;
+	
+	^skos:ConceptScheme_hasTopConcept_Concept @skos:ConceptSchemeShape ;
+	}
+
+# class ConceptScheme
+# based on the UML class SKOS::Classes::ConceptScheme
+skos:ConceptSchemeShape CLOSED {
+	a [skos:ConceptScheme];
+	^skos:Concept_inScheme_ConceptScheme @skos:ConceptShape ;
+	^skos:Concept_topConceptOf_ConceptScheme @skos:ConceptShape ;
+	skos:ConceptScheme_hasTopConcept_Concept	@skos:ConceptShape ;
+	
+	}
+
+# datatype LanguageString
+# based on the UML data type SKOS::DataTypes::LanguageString
+skos:LanguageStringShape CLOSED {
+	a [skos:LanguageString];
+	skos:LanguageString-language	xsd:language;
+	}
+
+# datatype ModelIdentification
+# based on the UML data type SKOS::ModelIdentification
+skos:ModelIdentificationShape CLOSED {
+	a [skos:ModelIdentification];
+	skos:ModelIdentification-acronym	xsd:string;
+	skos:ModelIdentification-language	xsd:string;
+	skos:ModelIdentification-majorVersion	xsd:integer;
+	skos:ModelIdentification-minorVersion	xsd:integer;
+	skos:ModelIdentification-prefix	xsd:string;
+	skos:ModelIdentification-subtitle	xsd:string;
+	skos:ModelIdentification-title	xsd:string;
+	skos:ModelIdentification-uri	xsd:string;
+	}
+

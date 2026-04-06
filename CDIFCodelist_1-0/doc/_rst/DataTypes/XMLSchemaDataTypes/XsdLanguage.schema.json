@@ -1,0 +1,12 @@
+"dt-XsdLanguage": {
+  "description": "http://www.w3.org/2004/02/skos/core#XsdLanguage",
+  "type": ["object"],
+  "properties": {
+    
+    "@type": {
+      "const": "XsdLanguage"
+    }
+  },
+  "required": ["@type"],
+  "additionalProperties": false
+},

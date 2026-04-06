@@ -1,0 +1,6 @@
+# datatype XsdAnyUri
+# based on the UML data type SKOS::DataTypes::XMLSchemaDataTypes::XsdAnyUri
+xsd:anyURIShape CLOSED {
+	a [xsd:anyURI];
+	}
+

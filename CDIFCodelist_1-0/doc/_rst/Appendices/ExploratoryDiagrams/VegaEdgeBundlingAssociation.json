@@ -1,0 +1,14 @@
+[
+  {
+    "source": "Concept",
+    "target": "Concept"
+  },
+  {
+    "source": "Concept",
+    "target": "ConceptScheme"
+  },
+  {
+    "source": "ConceptScheme",
+    "target": "Concept"
+  }
+]

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="skos.LanguageString"
+                  xmi:uuid="https://example.org/cdifcodelist#LanguageString"
+                  xmi:type="uml:DataType">
+   <name>LanguageString</name>
+   <ownedAttribute xmi:id="skos.LanguageString-language"
+                    xmi:uuid="https://example.org/cdifcodelist#LanguageString-language"
+                    xmi:type="uml:Property">
+      <name>language</name>
+      <type xmi:idref="skos.XsdLanguage"/>
+   </ownedAttribute>
+</packagedElement>

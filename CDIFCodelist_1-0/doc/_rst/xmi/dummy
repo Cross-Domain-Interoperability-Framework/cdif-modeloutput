@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+         SKOS UML Model
+
+according to:
+
+D2.3: Cross-Domain Interoperability Framework (CDIF)
+(Report Synthesising Recommendations for Disciplines and Cross-Disciplinary Research Areas)
+https://doi.org/10.5281/zenodo.11236871
+Section 6.5. Controlled vocabularies, p70-74.
+
+         
+      
+      SKOS
+      https://example.org/cdifcodelist
+      
+      
+         Classes
+         
+            
+               https://www.w3.org/TR/skos-reference/#narrower
+               
+            
+            Concept_narrower_Concept
+            
+               
+               
+                  0
+               
+               
+            
+            
+            
+         
+         
+            
+               https://www.w3.org/TR/skos-reference/#inScheme
+               
+            
+            Concept_inScheme_ConceptScheme
+            
+               
+               
+            
+            
+            
+         
+         
+            
+               https://www.w3.org/TR/skos-reference/#topConceptOf
+               
+            
+            Concept_topConceptOf_ConceptScheme
+            
+               
+               
+            
+            
+            
+         
+         
+            
+               https://www.w3.org/TR/skos-reference/#broader
+               
+            
+            Concept_broader_Concept
+            
+               
+               
+                  0
+               
+               
+            
+            
+            
+         
+         
+            
+               https://www.w3.org/TR/skos-reference/#hasTopConcept
+               
+            
+            ConceptScheme_hasTopConcept_Concept
+            
+               
+               
+            
+            
+            
+         
+         
+         
+      
+      
+         DataTypes
+         
+         
+            
+               This package contains the datatypes as defined in the W3C XML Schema specifications (https://www.w3.org/XML/Schema).
+               
+            
+            XMLSchemaDataTypes
+            
+            
+         
+      
+   

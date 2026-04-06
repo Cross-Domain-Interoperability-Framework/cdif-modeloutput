@@ -1,0 +1,26 @@
+# datatype LanguageString
+# based on the UML data type SKOS::DataTypes::LanguageString
+<#LanguageString> a sh:NodeShape;
+    sh:targetClass skos:LanguageString;
+	sh:message "See http://www.w3.org/2004/02/skos/core#LanguageString";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   skos:LanguageString
+			 ) ;
+    ];
+    # attributes
+    sh:property <#LanguageString-language>;
+
+
+
+.
+
+<#LanguageString-language> a sh:PropertyShape ;
+    sh:path skos:LanguageString-language;
+    sh:datatype xsd:language;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packagedElement xmlns:uml="http://www.omg.org/spec/UML/20131001"
+                  xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+                  xmi:id="skos.ConceptScheme"
+                  xmi:uuid="https://example.org/cdifcodelist#ConceptScheme"
+                  xmi:type="uml:Class">
+   <ownedComment xmi:id="skos.ConceptScheme-ownedComment"
+                  xmi:uuid="https://example.org/cdifcodelist#ConceptScheme-ownedComment"
+                  xmi:type="uml:Comment">
+      <body>Definition
+==========
+A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.
+
+The notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems.
+
+See the SKOS primer [https://www.w3.org/TR/skos-primer/] for more examples of identifying and describing concept schemes.
+</body>
+      <annotatedElement xmi:idref="skos.ConceptScheme"/>
+   </ownedComment>
+   <name>ConceptScheme</name>
+   <ownedAttribute xmi:id="skos.ConceptScheme-ownedAttribute-1"
+                    xmi:uuid="https://example.org/cdifcodelist#ConceptScheme-ownedAttribute-1"
+                    xmi:type="uml:Property">
+      <type xmi:idref="skos.Concept"/>
+      <association xmi:idref="skos.ConceptScheme_hasTopConcept_Concept"/>
+   </ownedAttribute>
+</packagedElement>

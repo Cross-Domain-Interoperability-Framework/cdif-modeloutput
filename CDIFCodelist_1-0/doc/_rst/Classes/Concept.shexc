@@ -1,0 +1,20 @@
+# class Concept
+# based on the UML class SKOS::Classes::Concept
+skos:ConceptShape CLOSED {
+	a [skos:Concept];
+	skos:Concept-altLabel	@skos:LanguageStringShape*;
+	skos:Concept-definition	@skos:LanguageStringShape+;
+	skos:Concept-identifier	xsd:anyURI;
+	skos:Concept-notation	xsd:string;
+	skos:Concept-prefLabel	@skos:LanguageStringShape+;
+	skos:Concept_narrower_Concept	@skos:ConceptShape ?;
+	
+	skos:Concept_inScheme_ConceptScheme	@skos:ConceptSchemeShape ;
+	
+	skos:Concept_topConceptOf_ConceptScheme	@skos:ConceptSchemeShape ;
+	
+	skos:Concept_broader_Concept	@skos:ConceptShape ?;
+	
+	^skos:ConceptScheme_hasTopConcept_Concept @skos:ConceptSchemeShape ;
+	}
+

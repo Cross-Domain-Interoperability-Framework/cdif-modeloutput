@@ -1,0 +1,26 @@
+  <xs:element name="LanguageString"
+              type="LanguageStringXsdType"
+              xml:id="LanguageString">
+    <!-- based on the UML data type SKOS::DataTypes::LanguageString -->
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="LanguageStringXsdType"
+                  xml:id="LanguageStringXsdType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="language"
+                  type="xs:language"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="LanguageString-language">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+

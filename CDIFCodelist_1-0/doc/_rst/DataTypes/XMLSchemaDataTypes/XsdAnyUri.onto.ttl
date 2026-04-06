@@ -1,0 +1,11 @@
+# datatype XsdAnyUri
+# based on the UML data type SKOS::DataTypes::XMLSchemaDataTypes::XsdAnyUri
+xsd:anyURI
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "XsdAnyUri";
+  rdfs:comment "Definition\n============\nPrimitive data type \"anyURI\" of the XML Schema data types.\n\nDefinition from XML Schema Part 2: Datatypes Second Edition:\n\"anyURI\" represents a Uniform Resource Identifier Reference (URI). An \"anyURI\" value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a URI Reference). This type should be used to specify the intention that the value fulfills the role of a URI as defined by [RFC 2396], as amended by [RFC 2732]. For details see https://www.w3.org/TR/xmlschema-2/#anyURI."@en;
+  
+  owl:hasKey ();
+.
+
+

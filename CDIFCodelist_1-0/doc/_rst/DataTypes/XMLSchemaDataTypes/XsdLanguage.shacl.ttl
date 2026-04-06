@@ -1,0 +1,19 @@
+# datatype XsdLanguage
+# based on the UML data type SKOS::DataTypes::XMLSchemaDataTypes::XsdLanguage
+<#XsdLanguage> a sh:NodeShape;
+    sh:targetClass xsd:language;
+	sh:message "See http://www.w3.org/2004/02/skos/core#XsdLanguage";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   xsd:language
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+

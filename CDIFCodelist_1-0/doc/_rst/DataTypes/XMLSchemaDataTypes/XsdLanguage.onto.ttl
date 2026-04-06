@@ -1,0 +1,11 @@
+# datatype XsdLanguage
+# based on the UML data type SKOS::DataTypes::XMLSchemaDataTypes::XsdLanguage
+xsd:language
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "XsdLanguage";
+  rdfs:comment "Definition\n============\nDerived data type \"language\" of the XML Schema data types.\n\nDefinition from XML Schema Part 2: Datatypes Second Edition:\n\"language\" represents natural language identifiers as defined by by [RFC 3066]. The value space of \"language\" is the set of all strings that are valid language identifiers as defined [RFC 3066] . The lexical space of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*. The base type of \"language\" is token. https://www.w3.org/TR/xmlschema-2/#language."@en;
+  
+  owl:hasKey ();
+.
+
+

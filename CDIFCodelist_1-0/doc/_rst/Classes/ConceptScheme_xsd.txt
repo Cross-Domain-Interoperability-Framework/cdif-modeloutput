@@ -1,0 +1,59 @@
+  <xs:element name="ConceptScheme"
+              type="ConceptSchemeXsdType"
+              xml:id="ConceptScheme">
+    <!-- based on the UML class SKOS::Classes::ConceptScheme -->
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.
+            
+            The notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems.
+            
+            See the SKOS primer [https://www.w3.org/TR/skos-primer/] for more examples of identifying and describing concept schemes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="ConceptSchemeXsdType"
+                  xml:id="ConceptSchemeXsdType">
+    <xs:annotation>
+      <xs:documentation>Definition
+            ==========
+            A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.
+            
+            The notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems.
+            
+            See the SKOS primer [https://www.w3.org/TR/skos-primer/] for more examples of identifying and describing concept schemes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConceptScheme_hasTopConcept_Concept"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  xml:id="ConceptScheme_hasTopConcept_Concept">
+        <xs:annotation>
+          <xs:documentation>https://www.w3.org/TR/skos-reference/#hasTopConcept</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="AssociationReferenceXsdType">
+              <xs:sequence>
+                <xs:element name="ddiReference"
+                            type="InternationalRegistrationDataIdentifierXsdType"
+                            minOccurs="0"
+                            maxOccurs="1"
+                            xml:id="ConceptScheme_hasTopConcept_Concept-ddiReference"/>
+                <xs:element name="validType"
+                            minOccurs="1"
+                            maxOccurs="1"
+                            xml:id="ConceptScheme_hasTopConcept_Concept-validType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                      <xs:enumeration value="Concept"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>

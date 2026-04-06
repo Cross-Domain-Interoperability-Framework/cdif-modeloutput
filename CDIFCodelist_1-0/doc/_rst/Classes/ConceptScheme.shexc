@@ -1,0 +1,10 @@
+# class ConceptScheme
+# based on the UML class SKOS::Classes::ConceptScheme
+skos:ConceptSchemeShape CLOSED {
+	a [skos:ConceptScheme];
+	^skos:Concept_inScheme_ConceptScheme @skos:ConceptShape ;
+	^skos:Concept_topConceptOf_ConceptScheme @skos:ConceptShape ;
+	skos:ConceptScheme_hasTopConcept_Concept	@skos:ConceptShape ;
+	
+	}
+

@@ -1,0 +1,19 @@
+# datatype LanguageString
+# based on the UML data type SKOS::DataTypes::LanguageString
+skos:LanguageString
+  a rdfs:Class, owl:Class, ucmis:StructuredDataType;
+  rdfs:label "LanguageString";
+  
+  
+  owl:hasKey (skos:LanguageString-language);
+.
+
+skos:LanguageString-language
+  a rdf:Property, owl:DatatypeProperty, ucmis:Attribute;
+  rdfs:label "language";
+  
+  rdfs:domain skos:LanguageString;
+  rdfs:range xsd:language;
+.
+
+

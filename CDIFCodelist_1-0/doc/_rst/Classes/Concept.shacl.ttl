@@ -1,0 +1,121 @@
+# class Concept
+# based on the UML class SKOS::Classes::Concept
+<#Concept> a sh:NodeShape;
+    sh:targetClass skos:Concept;
+	sh:message "See http://www.w3.org/2004/02/skos/core#Concept";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   skos:Concept
+			 ) ;
+    ];
+    # attributes
+    sh:property <#Concept-altLabel>;
+    sh:property <#Concept-definition>;
+    sh:property <#Concept-identifier>;
+    sh:property <#Concept-notation>;
+    sh:property <#Concept-prefLabel>;
+    # associations from Concept
+    sh:property <#Concept_narrower_Concept>;
+    sh:property <#Concept_inScheme_ConceptScheme>;
+    sh:property <#Concept_topConceptOf_ConceptScheme>;
+    sh:property <#Concept_broader_Concept>;
+    # associations to Concept
+    sh:property <#rev_Concept_narrower_Concept>;
+    sh:property <#rev_Concept_broader_Concept>;
+    sh:property <#rev_ConceptScheme_hasTopConcept_Concept>;
+
+
+
+.
+
+<#Concept-altLabel> a sh:PropertyShape ;
+    sh:path skos:Concept-altLabel;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:LanguageString
+      
+    ) ]];
+.
+<#Concept-definition> a sh:PropertyShape ;
+    sh:path skos:Concept-definition;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:LanguageString
+      
+    ) ]];
+    sh:minCount 1;
+.
+<#Concept-identifier> a sh:PropertyShape ;
+    sh:path skos:Concept-identifier;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Concept-notation> a sh:PropertyShape ;
+    sh:path skos:Concept-notation;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Concept-prefLabel> a sh:PropertyShape ;
+    sh:path skos:Concept-prefLabel;
+    sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:LanguageString
+      
+    ) ]];
+    sh:minCount 1;
+.
+
+<#Concept_narrower_Concept> a sh:PropertyShape ;
+    sh:path skos:Concept_narrower_Concept;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:Concept
+      
+    ) ]];
+    sh:maxCount 1;
+.
+<#rev_Concept_narrower_Concept> a sh:PropertyShape ;
+    sh:path [ sh:inversePath skos:Concept_narrower_Concept ];
+    sh:maxCount 1;
+.
+<#Concept_inScheme_ConceptScheme> a sh:PropertyShape ;
+    sh:path skos:Concept_inScheme_ConceptScheme;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:ConceptScheme
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_Concept_inScheme_ConceptScheme> a sh:PropertyShape ;
+    sh:path [ sh:inversePath skos:Concept_inScheme_ConceptScheme ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Concept_topConceptOf_ConceptScheme> a sh:PropertyShape ;
+    sh:path skos:Concept_topConceptOf_ConceptScheme;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:ConceptScheme
+      
+    ) ]];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#rev_Concept_topConceptOf_ConceptScheme> a sh:PropertyShape ;
+    sh:path [ sh:inversePath skos:Concept_topConceptOf_ConceptScheme ];
+    sh:minCount 1;
+    sh:maxCount 1;
+.
+<#Concept_broader_Concept> a sh:PropertyShape ;
+    sh:path skos:Concept_broader_Concept;
+	sh:node [ sh:property [ sh:path rdf:type; sh:minCount 1; sh:in (
+        skos:Concept
+      
+    ) ]];
+    sh:maxCount 1;
+.
+<#rev_Concept_broader_Concept> a sh:PropertyShape ;
+    sh:path [ sh:inversePath skos:Concept_broader_Concept ];
+    sh:maxCount 1;
+.
+

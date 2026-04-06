@@ -1,0 +1,19 @@
+# datatype XsdAnyUri
+# based on the UML data type SKOS::DataTypes::XMLSchemaDataTypes::XsdAnyUri
+<#XsdAnyUri> a sh:NodeShape;
+    sh:targetClass xsd:anyURI;
+	sh:message "See http://www.w3.org/2004/02/skos/core#XsdAnyUri";
+	sh:closed true;
+	sh:ignoredProperties ( owl:sameAs );
+    sh:property [
+			sh:path rdf:type;
+			sh:in (   xsd:anyURI
+			 ) ;
+    ];
+    # attributes
+
+
+
+.
+
+

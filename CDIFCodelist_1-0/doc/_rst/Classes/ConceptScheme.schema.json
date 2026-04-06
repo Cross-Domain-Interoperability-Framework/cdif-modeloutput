@@ -1,0 +1,44 @@
+"cls-ConceptScheme": {
+  "description": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "$ref": "#/defs/at-context"
+    },
+    "@id": {
+      "type": "string",
+      "format": "iri-reference"
+    },
+    "@type": {
+      "const": "ConceptScheme"
+    },
+    
+    "hasTopConcept_Concept": {
+      "description": "ConceptScheme_hasTopConcept_Concept",
+      "$comment": "cardinality 1..1",
+       "$ref": "#/defs/target-Concept"
+    },
+    "inScheme_ConceptScheme_OF_Concept": {
+      "description": "Concept_inScheme_ConceptScheme",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-Concept"
+    },
+    "topConceptOf_ConceptScheme_OF_Concept": {
+      "description": "Concept_topConceptOf_ConceptScheme",
+      "$comment": "cardinality 1..1",
+      "$ref": "#/defs/target-Concept"
+    },
+    "sameAs": {
+      "$ref": "#/defs/owl:sameAs"
+    }
+  },
+  "required": ["hasTopConcept_Concept","@type"],
+  "additionalProperties": false
+},
+"target-ConceptScheme": {
+  "description": "all subclasses of http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "anyOf": [
+    { "$ref": "#/defs/cls-ConceptScheme" },
+    { "type": "string", "format": "iri-reference" }
+  ]
+},

@@ -1,0 +1,7 @@
+# datatype LanguageString
+# based on the UML data type SKOS::DataTypes::LanguageString
+skos:LanguageStringShape CLOSED {
+	a [skos:LanguageString];
+	skos:LanguageString-language	xsd:language;
+	}
+
